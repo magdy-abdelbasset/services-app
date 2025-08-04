@@ -8,6 +8,15 @@ export default function Page() {
     const [showOffers, setShowOffers] = useState(false);
     const [requestingOffers, setRequestingOffers] = useState(false);
 
+    const mainCategories = [
+        { id: 1, name: 'خدمات المنزل', icon: '🏠', color: 'bg-blue-500' },
+        { id: 2, name: 'الصيانة والإصلاح', icon: '🔧', color: 'bg-orange-500' },
+        { id: 3, name: 'التوصيل والنقل', icon: '🚚', color: 'bg-green-500' },
+        { id: 4, name: 'الجمال والعناية', icon: '💄', color: 'bg-pink-500' },
+        { id: 5, name: 'البستنة والحدائق', icon: '🌱', color: 'bg-emerald-500' },
+        { id: 6, name: 'التعليم والتدريب', icon: '📚', color: 'bg-purple-500' },
+    ];
+
     const services = [
         { id: 1, name: 'تنظيف المنزل', icon: '🏠' },
         { id: 2, name: 'صيانة السباكة', icon: '🔧' },
@@ -157,30 +166,44 @@ export default function Page() {
                 </div>
             </div>
 
-            {/* Services Grid */}
+            {/* Categories Section */}
             <div className="max-w-sm mx-auto px-4" data-oid="j7iu3-j">
-                <h2 className="text-xl font-bold text-gray-800 mb-4" data-oid="bv9j33t">
-                    الخدمات المتاحة
-                </h2>
+                <div className="flex items-center justify-between mb-4" data-oid="s-krqj.">
+                    <h2 className="text-xl font-bold text-gray-800" data-oid="bv9j33t">
+                        التصنيفات الرئيسية
+                    </h2>
+                    <Link
+                        href="/categories"
+                        className="text-blue-600 text-sm font-semibold"
+                        data-oid="cp3s4wn"
+                    >
+                        عرض الكل
+                    </Link>
+                </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6" data-oid="4iv2282">
-                    {services.map((service) => (
-                        <div
-                            key={service.id}
-                            onClick={() => setSelectedService(service)}
+                    {mainCategories.map((category) => (
+                        <Link
+                            key={category.id}
+                            href={`/services?category=${category.id}`}
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 cursor-pointer hover:shadow-md transition-shadow"
                             data-oid="g_btnrw"
                         >
-                            <div className="text-3xl mb-3 text-center" data-oid="v05.9vt">
-                                {service.icon}
+                            <div
+                                className={`w-12 h-12 ${category.color} rounded-2xl flex items-center justify-center mb-3 mx-auto`}
+                                data-oid="2sp0jw1"
+                            >
+                                <span className="text-2xl" data-oid="e-acah_">
+                                    {category.icon}
+                                </span>
                             </div>
                             <h3
                                 className="font-semibold text-gray-800 text-sm text-center"
                                 data-oid="uwu0t-l"
                             >
-                                {service.name}
+                                {category.name}
                             </h3>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
@@ -239,46 +262,58 @@ export default function Page() {
                             </span>
                         </button>
                         <Link
-                            href="/orders"
+                            href="/categories"
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="8_p4_:k"
                         >
                             <span className="text-xl" data-oid="1jeb521">
-                                📋
+                                📂
                             </span>
                             <span className="text-xs" data-oid="uogpuq.">
+                                التصنيفات
+                            </span>
+                        </Link>
+                        <Link
+                            href="/orders"
+                            className="flex flex-col items-center space-y-1 text-gray-400"
+                            data-oid="h6k:-up"
+                        >
+                            <span className="text-xl" data-oid="3:lt_0k">
+                                📋
+                            </span>
+                            <span className="text-xs" data-oid="w0ag1d3">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/offers"
                             className="flex flex-col items-center space-y-1 text-gray-400 relative"
-                            data-oid="h6k:-up"
+                            data-oid="z8z-zqn"
                         >
-                            <div className="relative" data-oid="vzte:_3">
-                                <span className="text-xl" data-oid="3:lt_0k">
+                            <div className="relative" data-oid="92_l_hg">
+                                <span className="text-xl" data-oid="7w-l7oj">
                                     💰
                                 </span>
                                 <span
                                     className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold"
-                                    data-oid="2j0_a6n"
+                                    data-oid="ajww6f-"
                                 >
                                     2
                                 </span>
                             </div>
-                            <span className="text-xs" data-oid="w0ag1d3">
+                            <span className="text-xs" data-oid="h-8dt2y">
                                 العروض
                             </span>
                         </Link>
                         <Link
                             href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="z8z-zqn"
+                            data-oid="j2ecagv"
                         >
-                            <span className="text-xl" data-oid="7w-l7oj">
+                            <span className="text-xl" data-oid="eitf05x">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="h-8dt2y">
+                            <span className="text-xs" data-oid="vk9w5u.">
                                 الرسائل
                             </span>
                         </Link>
