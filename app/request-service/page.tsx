@@ -104,9 +104,22 @@ export default function RequestServicePage() {
         // Simulate API call
         setTimeout(() => {
             setIsSubmitting(false);
+
+            // Show success notification
+            if (typeof window !== 'undefined' && (window as any).showNotification) {
+                (window as any).showNotification({
+                    type: 'success',
+                    title: 'تم إرسال طلبك بنجاح!',
+                    message: 'سيتم التواصل معك من قبل مقدم الخدمة قريباً',
+                    duration: 4000,
+                });
+            }
+
             // Generate order ID and redirect to confirmation page
             const orderId = Math.floor(Math.random() * 100000);
-            window.location.href = `/order-confirmation?orderId=${orderId}`;
+            setTimeout(() => {
+                window.location.href = `/order-confirmation?orderId=${orderId}`;
+            }, 1000);
         }, 2000);
     };
 

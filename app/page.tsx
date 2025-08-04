@@ -111,14 +111,21 @@ export default function Page() {
                                 </p>
                             </div>
                         </div>
-                        <div
-                            className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
+                        <Link
+                            href="/notifications"
+                            className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center relative"
                             data-oid="vpojtor"
                         >
                             <span className="text-lg" data-oid="nyff552">
                                 🔔
                             </span>
-                        </div>
+                            <span
+                                className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold"
+                                data-oid="msadv2v"
+                            >
+                                3
+                            </span>
+                        </Link>
                     </div>
 
                     <h1 className="text-2xl font-bold mb-2" data-oid="e0abzle">

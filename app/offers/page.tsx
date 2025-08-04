@@ -63,9 +63,20 @@ export default function OffersPage() {
     ];
 
     const handleSelectOffer = (serviceRequest, offer) => {
-        alert(
-            `تم اختيار العرض من ${offer.providerName} لخدمة ${serviceRequest.serviceName} بسعر ${offer.price}`,
-        );
+        // Show success notification
+        if (typeof window !== 'undefined' && (window as any).showNotification) {
+            (window as any).showNotification({
+                type: 'success',
+                title: 'تم قبول العرض!',
+                message: `تم اختيار العرض من ${offer.providerName} بسعر ${offer.price}`,
+                duration: 4000,
+            });
+        }
+
+        // Simulate order creation
+        setTimeout(() => {
+            window.location.href = '/orders';
+        }, 2000);
     };
     return (
         <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="-12r:ar">

@@ -149,8 +149,20 @@ export default function ServicesPage() {
     }, [services, sortBy, filterBy]);
 
     const handleRequestService = (provider: ServiceProvider) => {
+        // Show notification
+        if (typeof window !== 'undefined' && (window as any).showNotification) {
+            (window as any).showNotification({
+                type: 'info',
+                title: 'جاري تحضير طلبك',
+                message: `سيتم توجيهك لصفحة طلب الخدمة من ${provider.name}`,
+                duration: 3000,
+            });
+        }
+
         const serviceName = getSubCategoryName() || getCategoryName();
-        window.location.href = `/request-service?provider=${provider.id}&service=${encodeURIComponent(serviceName)}`;
+        setTimeout(() => {
+            window.location.href = `/request-service?provider=${provider.id}&service=${encodeURIComponent(serviceName)}`;
+        }, 1000);
     };
 
     const getCategoryName = () => {
