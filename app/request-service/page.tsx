@@ -25,6 +25,7 @@ interface ServiceRequest {
     serviceName: string;
     price: string;
     estimatedTime: string;
+    expectedPrice: string;
     address: string;
     phoneNumber: string;
     scheduledDate: string;
@@ -46,6 +47,7 @@ export default function RequestServicePage() {
         serviceName: serviceName || '',
         price: '',
         estimatedTime: '',
+        expectedPrice: '',
         address: '',
         phoneNumber: '',
         scheduledDate: '',
@@ -53,6 +55,24 @@ export default function RequestServicePage() {
         notes: '',
         urgency: 'normal',
     });
+
+    // Service minimum prices (in SAR)
+    const serviceMinPrices: { [key: string]: number } = {
+        'تنظيف المنزل': 30,
+        'صيانة السباكة': 50,
+        'توصيل الطعام': 15,
+        'تصليح الأجهزة': 40,
+        'خدمات التجميل': 60,
+        'صيانة الكهرباء': 45,
+        'تنظيف السيارات': 25,
+        'خدمات الحدائق': 35,
+    };
+
+    const getMinPrice = () => {
+        return serviceMinPrices[serviceRequest.serviceName] || 20;
+    };
+
+    const [priceError, setPriceError] = useState('');
 
     // Mock provider data
     const mockProvider: ServiceProvider = {
@@ -84,6 +104,14 @@ export default function RequestServicePage() {
             ...prev,
             [field]: value,
         }));
+
+        // Validate expected price
+        if (field === 'expectedPrice') {
+            setPriceError('');
+            if (value && parseFloat(value) < getMinPrice()) {
+                setPriceError(`الحد الأدنى للسعر هو ${getMinPrice()} ريال`);
+            }
+        }
     };
 
     const handleNextStep = () => {
@@ -127,7 +155,11 @@ export default function RequestServicePage() {
         switch (currentStep) {
             case 1:
                 return (
-                    serviceRequest.address.trim() !== '' && serviceRequest.phoneNumber.trim() !== ''
+                    serviceRequest.address.trim() !== '' &&
+                    serviceRequest.phoneNumber.trim() !== '' &&
+                    serviceRequest.expectedPrice.trim() !== '' &&
+                    !priceError &&
+                    parseFloat(serviceRequest.expectedPrice) >= getMinPrice()
                 );
 
             case 2:
@@ -324,6 +356,64 @@ export default function RequestServicePage() {
                                     className="w-full p-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500"
                                     data-oid="myni70z"
                                 />
+                            </div>
+
+                            <div data-oid="ch.mady">
+                                <label
+                                    className="block text-sm font-semibold text-gray-700 mb-2"
+                                    data-oid="13n_ehi"
+                                >
+                                    السعر المتوقع *
+                                </label>
+                                <div className="relative" data-oid="i55f-z_">
+                                    <input
+                                        type="number"
+                                        value={serviceRequest.expectedPrice}
+                                        onChange={(e) =>
+                                            handleInputChange('expectedPrice', e.target.value)
+                                        }
+                                        placeholder={`أدخل السعر المتوقع (الحد الأدنى: ${getMinPrice()} ريال)`}
+                                        min={getMinPrice()}
+                                        className={`w-full p-3 border rounded-xl outline-none focus:border-blue-500 ${
+                                            priceError ? 'border-red-500' : 'border-gray-200'
+                                        }`}
+                                        data-oid="cdd2c_0"
+                                    />
+
+                                    <span
+                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+                                        data-oid="x2xwxji"
+                                    >
+                                        ريال
+                                    </span>
+                                </div>
+                                {priceError && (
+                                    <p className="text-red-500 text-xs mt-1" data-oid="v0oaqoj">
+                                        {priceError}
+                                    </p>
+                                )}
+                                <div className="bg-blue-50 p-3 rounded-lg mt-2" data-oid="d8-453n">
+                                    <div
+                                        className="flex items-center space-x-2 space-x-reverse mb-1"
+                                        data-oid="ox98fu_"
+                                    >
+                                        <span className="text-blue-600" data-oid="nyoydhz">
+                                            💰
+                                        </span>
+                                        <span
+                                            className="text-sm font-semibold text-blue-800"
+                                            data-oid="fn3-7p0"
+                                        >
+                                            معلومات السعر
+                                        </span>
+                                    </div>
+                                    <p className="text-xs text-blue-700" data-oid="du7v9s7">
+                                        الحد الأدنى لخدمة {serviceRequest.serviceName}:{' '}
+                                        {getMinPrice()} ريال
+                                        <br data-oid="nbhrn13" />
+                                        السعر المقترح من مقدم الخدمة: {mockProvider.price}
+                                    </p>
+                                </div>
                             </div>
 
                             <div data-oid="btj_a0v">
@@ -557,11 +647,25 @@ export default function RequestServicePage() {
                                     data-oid="xfq8i_f"
                                 >
                                     <span className="text-gray-600" data-oid="xjxz9xr">
-                                        السعر:
+                                        السعر المتوقع:
                                     </span>
                                     <span
                                         className="font-semibold text-blue-600"
                                         data-oid="y9x1_16"
+                                    >
+                                        {serviceRequest.expectedPrice} ريال
+                                    </span>
+                                </div>
+                                <div
+                                    className="flex justify-between items-center py-2 border-b border-gray-100"
+                                    data-oid="ajq7ktm"
+                                >
+                                    <span className="text-gray-600" data-oid=":yld3eu">
+                                        سعر مقدم الخدمة:
+                                    </span>
+                                    <span
+                                        className="font-semibold text-gray-600"
+                                        data-oid="o3j2qv6"
                                     >
                                         {serviceRequest.price}
                                     </span>
@@ -641,6 +745,78 @@ export default function RequestServicePage() {
                                 )}
                             </div>
                         </div>
+
+                        {/* Price Comparison */}
+                        {(() => {
+                            const expectedPrice = parseFloat(serviceRequest.expectedPrice);
+                            const providerPrice = parseFloat(
+                                mockProvider.price.replace(' ريال', ''),
+                            );
+                            const priceDifference = expectedPrice - providerPrice;
+
+                            return (
+                                <div
+                                    className={`p-4 rounded-xl ${
+                                        priceDifference > 0
+                                            ? 'bg-green-50'
+                                            : priceDifference < 0
+                                              ? 'bg-yellow-50'
+                                              : 'bg-blue-50'
+                                    }`}
+                                    data-oid="w1-t:5a"
+                                >
+                                    <div
+                                        className="flex items-center space-x-2 space-x-reverse mb-2"
+                                        data-oid="o4bc3sx"
+                                    >
+                                        <span
+                                            className={
+                                                priceDifference > 0
+                                                    ? 'text-green-600'
+                                                    : priceDifference < 0
+                                                      ? 'text-yellow-600'
+                                                      : 'text-blue-600'
+                                            }
+                                            data-oid="ljickbp"
+                                        >
+                                            {priceDifference > 0
+                                                ? '💰'
+                                                : priceDifference < 0
+                                                  ? '⚠️'
+                                                  : 'ℹ️'}
+                                        </span>
+                                        <span
+                                            className={`text-sm font-semibold ${
+                                                priceDifference > 0
+                                                    ? 'text-green-800'
+                                                    : priceDifference < 0
+                                                      ? 'text-yellow-800'
+                                                      : 'text-blue-800'
+                                            }`}
+                                            data-oid="wog0xbu"
+                                        >
+                                            مقارنة الأسعار
+                                        </span>
+                                    </div>
+                                    <p
+                                        className={`text-sm ${
+                                            priceDifference > 0
+                                                ? 'text-green-700'
+                                                : priceDifference < 0
+                                                  ? 'text-yellow-700'
+                                                  : 'text-blue-700'
+                                        }`}
+                                        data-oid="7k1_bxq"
+                                    >
+                                        {priceDifference > 0
+                                            ? `السعر المتوقع أعلى بـ ${priceDifference} ريال من سعر مقدم الخدمة`
+                                            : priceDifference < 0
+                                              ? `السعر المتوقع أقل بـ ${Math.abs(priceDifference)} ريال من سعر مقدم الخدمة`
+                                              : 'السعر المتوقع مطابق لسعر مقدم الخدمة'}
+                                    </p>
+                                </div>
+                            );
+                        })()}
 
                         <div className="bg-green-50 p-4 rounded-xl" data-oid="-30f7gz">
                             <div
