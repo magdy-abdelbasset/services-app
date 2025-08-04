@@ -74,48 +74,48 @@ export default function ProviderEarnings() {
     const maxAmount = Math.max(...weeklyStats.map((stat) => stat.amount));
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="mss-eu6">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="9b2x3wk">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid="j4bcklq"
+                data-oid="f06c4t1"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="4qtxa_4">
-                    <div className="flex items-center justify-between mb-4" data-oid="i5pkh8g">
-                        <Link href="/provider-dashboard" className="text-white" data-oid="y_-u1ym">
-                            <span className="text-2xl" data-oid="3m..46k">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="ph590rk">
+                    <div className="flex items-center justify-between mb-4" data-oid="95908iy">
+                        <Link href="/provider" className="text-white" data-oid="ti:v0_c">
+                            <span className="text-2xl" data-oid="mjmz:u:">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="30aacmw">
+                        <h1 className="text-xl font-bold" data-oid="ls9mm2.">
                             الأرباح والمحفظة
                         </h1>
-                        <div className="w-8" data-oid="9ql:miq"></div>
+                        <div className="w-8" data-oid="0rkg-tm"></div>
                     </div>
 
                     {/* Current Balance */}
-                    <div className="bg-white/10 rounded-2xl p-4 mb-4" data-oid=".qbf7p2">
-                        <div className="text-center" data-oid="foq1_zu">
-                            <p className="text-white/80 text-sm mb-1" data-oid="10izpye">
+                    <div className="bg-white/10 rounded-2xl p-4 mb-4" data-oid="tott8xe">
+                        <div className="text-center" data-oid="8:q-fcl">
+                            <p className="text-white/80 text-sm mb-1" data-oid="50-y9y-">
                                 الرصيد الحالي
                             </p>
-                            <p className="text-3xl font-bold mb-2" data-oid="k51wisn">
+                            <p className="text-3xl font-bold mb-2" data-oid="0ich5.3">
                                 2,450 ريال
                             </p>
                             <div
                                 className="flex items-center justify-center space-x-4 space-x-reverse"
-                                data-oid="t.5_uc_"
+                                data-oid="hmsicri"
                             >
                                 <button
                                     className="bg-white/20 px-4 py-2 rounded-xl text-sm font-semibold"
-                                    data-oid="tog7ahl"
+                                    data-oid=":5bgkom"
                                 >
                                     سحب الأموال
                                 </button>
                                 <Link
-                                    href="/provider-payment-methods"
+                                    href="/provider/payment-methods"
                                     className="bg-white/20 px-4 py-2 rounded-xl text-sm font-semibold"
-                                    data-oid="06b_8:2"
+                                    data-oid="arucjf2"
                                 >
                                     طرق الدفع
                                 </Link>
@@ -126,9 +126,9 @@ export default function ProviderEarnings() {
             </div>
 
             {/* Period Selector */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="qn84:0:">
-                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="ieo_hep">
-                    <div className="flex space-x-2 space-x-reverse" data-oid="sly7b.d">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="edn.2su">
+                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="hq_c74.">
+                    <div className="flex space-x-2 space-x-reverse" data-oid="k8a5k:l">
                         {[
                             { key: 'today', label: 'اليوم' },
                             { key: 'week', label: 'الأسبوع' },
@@ -143,7 +143,7 @@ export default function ProviderEarnings() {
                                         ? 'bg-green-500 text-white'
                                         : 'text-gray-600 hover:bg-gray-100'
                                 }`}
-                                data-oid="4pmrhgc"
+                                data-oid="57067__"
                             >
                                 {period.label}
                             </button>
@@ -153,22 +153,22 @@ export default function ProviderEarnings() {
             </div>
 
             {/* Earnings Summary */}
-            <div className="max-w-sm mx-auto px-4" data-oid="tkt-p::">
+            <div className="max-w-sm mx-auto px-4" data-oid="xf.wftc">
                 <div
                     className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6"
-                    data-oid="_2jdk1e"
+                    data-oid="rzi-rq1"
                 >
-                    <div className="text-center mb-4" data-oid="dyk2ajj">
-                        <p className="text-gray-600 text-sm mb-1" data-oid="v0p.jgi">
+                    <div className="text-center mb-4" data-oid="dg80e4a">
+                        <p className="text-gray-600 text-sm mb-1" data-oid="xyz0lyg">
                             {selectedPeriod === 'today' && 'أرباح اليوم'}
                             {selectedPeriod === 'week' && 'أرباح هذا الأسبوع'}
                             {selectedPeriod === 'month' && 'أرباح هذا الشهر'}
                             {selectedPeriod === 'total' && 'إجمالي الأرباح'}
                         </p>
-                        <p className="text-4xl font-bold text-green-600 mb-2" data-oid="s5va9lp">
+                        <p className="text-4xl font-bold text-green-600 mb-2" data-oid=":av-m47">
                             {earningsData[selectedPeriod as keyof typeof earningsData].amount} ريال
                         </p>
-                        <p className="text-gray-500 text-sm" data-oid="5c:ggll">
+                        <p className="text-gray-500 text-sm" data-oid="bgyfdk4">
                             من {earningsData[selectedPeriod as keyof typeof earningsData].orders}{' '}
                             طلب مكتمل
                         </p>
@@ -176,22 +176,22 @@ export default function ProviderEarnings() {
 
                     {/* Weekly Chart */}
                     {selectedPeriod === 'week' && (
-                        <div className="mt-6" data-oid="fk33.od">
+                        <div className="mt-6" data-oid=".xm_pn1">
                             <h3
                                 className="text-sm font-semibold text-gray-800 mb-3"
-                                data-oid="anmu5c_"
+                                data-oid="tjuiy8-"
                             >
                                 الأرباح اليومية
                             </h3>
                             <div
                                 className="flex items-end justify-between space-x-2 space-x-reverse h-32"
-                                data-oid="7yiabj0"
+                                data-oid="7jihg1j"
                             >
                                 {weeklyStats.map((stat, index) => (
                                     <div
                                         key={index}
                                         className="flex-1 flex flex-col items-center"
-                                        data-oid="fnb4d-t"
+                                        data-oid="y7.xlvf"
                                     >
                                         <div
                                             className="bg-green-500 rounded-t w-full mb-2 transition-all duration-300"
@@ -199,17 +199,17 @@ export default function ProviderEarnings() {
                                                 height: `${(stat.amount / maxAmount) * 100}%`,
                                                 minHeight: '8px',
                                             }}
-                                            data-oid="ju_d.1f"
+                                            data-oid="fes3nd2"
                                         ></div>
                                         <p
                                             className="text-xs text-gray-600 text-center"
-                                            data-oid="ey19l69"
+                                            data-oid="5sk.f_k"
                                         >
                                             {stat.day}
                                         </p>
                                         <p
                                             className="text-xs font-semibold text-gray-800"
-                                            data-oid="guvx6_g"
+                                            data-oid="x34d3r-"
                                         >
                                             {stat.amount}
                                         </p>
@@ -221,34 +221,34 @@ export default function ProviderEarnings() {
                 </div>
 
                 {/* Recent Transactions */}
-                <div className="mb-6" data-oid="8b_0.2e">
-                    <div className="flex items-center justify-between mb-4" data-oid="yh240wi">
-                        <h2 className="text-xl font-bold text-gray-800" data-oid="xafi.sy">
+                <div className="mb-6" data-oid="y81t9aj">
+                    <div className="flex items-center justify-between mb-4" data-oid="2ja9ld:">
+                        <h2 className="text-xl font-bold text-gray-800" data-oid="tb1k28p">
                             المعاملات الأخيرة
                         </h2>
                         <Link
-                            href="/provider-transaction-history"
+                            href="/provider/transaction-history"
                             className="text-green-600 text-sm font-semibold"
-                            data-oid="dxtv1ju"
+                            data-oid="o0ay:wd"
                         >
                             عرض الكل
                         </Link>
                     </div>
 
-                    <div className="space-y-3" data-oid="0o.uo6s">
+                    <div className="space-y-3" data-oid="mh2hg-2">
                         {recentTransactions.map((transaction) => (
                             <div
                                 key={transaction.id}
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="1lu5ukq"
+                                data-oid="pz28.m2"
                             >
                                 <div
                                     className="flex items-center justify-between"
-                                    data-oid="od4aa::"
+                                    data-oid="hv0kkvn"
                                 >
                                     <div
                                         className="flex items-center space-x-3 space-x-reverse"
-                                        data-oid="nk:y3_3"
+                                        data-oid="4hsgv72"
                                     >
                                         <div
                                             className={`w-10 h-10 rounded-full flex items-center justify-center ${
@@ -256,35 +256,35 @@ export default function ProviderEarnings() {
                                                     ? 'bg-green-100 text-green-600'
                                                     : 'bg-blue-100 text-blue-600'
                                             }`}
-                                            data-oid="g3wqkwl"
+                                            data-oid="o57uae5"
                                         >
-                                            <span className="text-lg" data-oid="3gsfeq8">
+                                            <span className="text-lg" data-oid=":_le9aj">
                                                 {transaction.type === 'earning' ? '💰' : '🏦'}
                                             </span>
                                         </div>
-                                        <div data-oid="kdrns15">
+                                        <div data-oid="n608a1n">
                                             <h3
                                                 className="font-semibold text-gray-800"
-                                                data-oid="bbi_.hw"
+                                                data-oid="hx36k__"
                                             >
                                                 {transaction.service}
                                             </h3>
-                                            <p className="text-sm text-gray-600" data-oid="6qdmw7s">
+                                            <p className="text-sm text-gray-600" data-oid="czaxnai">
                                                 {transaction.customer}
                                             </p>
-                                            <p className="text-xs text-gray-500" data-oid="_a2pqpm">
+                                            <p className="text-xs text-gray-500" data-oid="760o-v0">
                                                 {transaction.date}
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="text-left" data-oid="ozjw4k7">
+                                    <div className="text-left" data-oid="qfc5g:m">
                                         <p
                                             className={`text-lg font-bold ${
                                                 transaction.type === 'earning'
                                                     ? 'text-green-600'
                                                     : 'text-blue-600'
                                             }`}
-                                            data-oid="t5cstol"
+                                            data-oid="n2_lm7l"
                                         >
                                             {transaction.amount} ريال
                                         </p>
@@ -294,7 +294,7 @@ export default function ProviderEarnings() {
                                                     ? 'bg-green-100 text-green-600'
                                                     : 'bg-yellow-100 text-yellow-600'
                                             }`}
-                                            data-oid="i0m0_p3"
+                                            data-oid="b4nupc5"
                                         >
                                             {transaction.status === 'completed'
                                                 ? 'مكتمل'
@@ -308,68 +308,68 @@ export default function ProviderEarnings() {
                 </div>
 
                 {/* Quick Actions */}
-                <div className="mb-6" data-oid="dzzmy-a">
-                    <h2 className="text-xl font-bold text-gray-800 mb-4" data-oid="o8p4jyy">
+                <div className="mb-6" data-oid="781jjxq">
+                    <h2 className="text-xl font-bold text-gray-800 mb-4" data-oid="uc_ae14">
                         إجراءات سريعة
                     </h2>
 
-                    <div className="grid grid-cols-2 gap-4" data-oid="hlleu88">
+                    <div className="grid grid-cols-2 gap-4" data-oid="f_5pq-1">
                         <button
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center"
-                            data-oid="35rq010"
+                            data-oid="wv0y0p8"
                         >
-                            <div className="text-3xl mb-2" data-oid="987v19k">
+                            <div className="text-3xl mb-2" data-oid="d_67w.r">
                                 💳
                             </div>
-                            <p className="font-semibold text-gray-800" data-oid="6ja4uvj">
+                            <p className="font-semibold text-gray-800" data-oid="s:k725g">
                                 سحب الأموال
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="ngihmzi">
+                            <p className="text-xs text-gray-500" data-oid="26a1r2j">
                                 تحويل إلى البنك
                             </p>
                         </button>
                         <Link
-                            href="/provider-transaction-history"
+                            href="/provider/transaction-history"
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center"
-                            data-oid="lgwz-hg"
+                            data-oid="7hz.0l7"
                         >
-                            <div className="text-3xl mb-2" data-oid="9n_-hdi">
+                            <div className="text-3xl mb-2" data-oid="jt0n169">
                                 📊
                             </div>
-                            <p className="font-semibold text-gray-800" data-oid="iclnzjr">
+                            <p className="font-semibold text-gray-800" data-oid="bh8:.t.">
                                 تقرير مفصل
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="tijbwty">
+                            <p className="text-xs text-gray-500" data-oid="o29_bu-">
                                 جميع المعاملات
                             </p>
                         </Link>
                         <Link
-                            href="/provider-tax-report"
+                            href="/provider/tax-report"
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center"
-                            data-oid="ark_xj9"
+                            data-oid="r:mu:sp"
                         >
-                            <div className="text-3xl mb-2" data-oid="m_ftwqh">
+                            <div className="text-3xl mb-2" data-oid="1emm9vw">
                                 📋
                             </div>
-                            <p className="font-semibold text-gray-800" data-oid="nqz2dxm">
+                            <p className="font-semibold text-gray-800" data-oid="ppqavm5">
                                 التقرير الضريبي
                             </p>
-                            <p className="text-xs text-gray-500" data-oid=":1-d8n4">
+                            <p className="text-xs text-gray-500" data-oid="a3e8.xn">
                                 للمحاسبة
                             </p>
                         </Link>
                         <Link
-                            href="/provider-payment-methods"
+                            href="/provider/payment-methods"
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center"
-                            data-oid="2ee-lks"
+                            data-oid="_fa:52i"
                         >
-                            <div className="text-3xl mb-2" data-oid="o_0_223">
+                            <div className="text-3xl mb-2" data-oid="z.rv9ns">
                                 ⚙️
                             </div>
-                            <p className="font-semibold text-gray-800" data-oid="qb-3gmt">
+                            <p className="font-semibold text-gray-800" data-oid="cju_ck4">
                                 إعدادات الدفع
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="1qg80nt">
+                            <p className="text-xs text-gray-500" data-oid="idfdhc1">
                                 طرق الاستلام
                             </p>
                         </Link>
@@ -380,66 +380,66 @@ export default function ProviderEarnings() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="m2h73qx"
+                data-oid="zx9_84:"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="99sp4yk">
-                    <div className="flex justify-around" data-oid="f30oedy">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="0zr9.p8">
+                    <div className="flex justify-around" data-oid="y_linql">
                         <Link
-                            href="/provider-dashboard"
+                            href="/provider"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="mp59kac"
+                            data-oid="-eo8k0j"
                         >
-                            <span className="text-xl" data-oid="7mxiwsi">
+                            <span className="text-xl" data-oid="3mnmqqb">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="kqvtu8b">
+                            <span className="text-xs" data-oid="rc:ygwc">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
-                            href="/provider-requests"
+                            href="/provider/requests"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="2c.gzf9"
+                            data-oid="mscq934"
                         >
-                            <span className="text-xl" data-oid="yonh-lw">
+                            <span className="text-xl" data-oid="zm.iuj8">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="yct:l0.">
+                            <span className="text-xs" data-oid="yqi1p-8">
                                 الطلبات
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-green-600"
-                            data-oid="-gtlhui"
+                            data-oid="yvucu2e"
                         >
-                            <span className="text-xl" data-oid="tzljwq7">
+                            <span className="text-xl" data-oid="3mvxvvj">
                                 💰
                             </span>
-                            <span className="text-xs font-semibold" data-oid="d8s818d">
+                            <span className="text-xs font-semibold" data-oid="6rhpbqj">
                                 الأرباح
                             </span>
                         </button>
                         <Link
-                            href="/provider-messages"
+                            href="/provider/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="vesuo1g"
+                            data-oid="ow.21xp"
                         >
-                            <span className="text-xl" data-oid="l:tq7h2">
+                            <span className="text-xl" data-oid="z1t.gi2">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="d3mbww4">
+                            <span className="text-xs" data-oid="dudr764">
                                 الرسائل
                             </span>
                         </Link>
                         <Link
-                            href="/provider-profile"
+                            href="/provider/profile"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="lnu4396"
+                            data-oid="t9b6i.4"
                         >
-                            <span className="text-xl" data-oid="txj:4gw">
+                            <span className="text-xl" data-oid="9gev-gi">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid=".m:qiv2">
+                            <span className="text-xs" data-oid="5_3:kn9">
                                 الملف الشخصي
                             </span>
                         </Link>
@@ -448,7 +448,7 @@ export default function ProviderEarnings() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="3f0u8sv"></div>
+            <div className="h-20" data-oid="7iz8.7t"></div>
         </div>
     );
 }
