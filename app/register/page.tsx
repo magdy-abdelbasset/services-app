@@ -42,6 +42,10 @@ export default function RegisterPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [currentStep, setCurrentStep] = useState(1);
+    const [phoneVerificationCode, setPhoneVerificationCode] = useState('');
+    const [isPhoneVerified, setIsPhoneVerified] = useState(false);
+    const [showPhoneVerification, setShowPhoneVerification] = useState(false);
+    const [verificationTimer, setVerificationTimer] = useState(0);
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
@@ -68,12 +72,14 @@ export default function RegisterPage() {
             newErrors.email = 'البريد الإلكتروني غير صحيح';
         }
 
-        // Phone validation
+        // Phone validation (Enhanced)
         const phoneRegex = /^(05|5)[0-9]{8}$/;
         if (!formData.phone.trim()) {
-            newErrors.phone = 'رقم الجوال مطلوب';
+            newErrors.phone = 'رقم الجوال مطلوب - هذا الحقل إجباري للتسجيل';
         } else if (!phoneRegex.test(formData.phone.replace(/\s/g, ''))) {
-            newErrors.phone = 'رقم الجوال غير صحيح (يجب أن يبدأ بـ 05)';
+            newErrors.phone = 'رقم الجوال غير صحيح (يجب أن يبدأ بـ 05 ويتكون من 10 أرقام)';
+        } else if (!isPhoneVerified) {
+            newErrors.phone = 'يجب تأكيد رقم الجوال أولاً';
         }
 
         // Password validation
@@ -99,6 +105,76 @@ export default function RegisterPage() {
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
+    };
+
+    const sendVerificationCode = async () => {
+        const phoneRegex = /^(05|5)[0-9]{8}$/;
+        if (!phoneRegex.test(formData.phone.replace(/\s/g, ''))) {
+            setErrors({ phone: 'يرجى إدخال رقم جوال صحيح أولاً' });
+            return;
+        }
+
+        setShowPhoneVerification(true);
+        setVerificationTimer(60);
+
+        // Start countdown timer
+        const timer = setInterval(() => {
+            setVerificationTimer((prev) => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+
+        // Show notification
+        if (typeof window !== 'undefined' && (window as any).showNotification) {
+            (window as any).showNotification({
+                type: 'success',
+                title: 'تم إرسال رمز التحقق',
+                message: `تم إرسال رمز التحقق إلى ${formData.phone}`,
+                duration: 4000,
+            });
+        }
+    };
+
+    const verifyPhoneCode = async () => {
+        if (phoneVerificationCode.length !== 4) {
+            if (typeof window !== 'undefined' && (window as any).showNotification) {
+                (window as any).showNotification({
+                    type: 'error',
+                    title: 'رمز التحقق غير صحيح',
+                    message: 'يرجى إدخال رمز التحقق المكون من 4 أرقام',
+                    duration: 4000,
+                });
+            }
+            return;
+        }
+
+        // Simulate verification (in real app, verify with backend)
+        if (phoneVerificationCode === '1234') {
+            setIsPhoneVerified(true);
+            setShowPhoneVerification(false);
+
+            if (typeof window !== 'undefined' && (window as any).showNotification) {
+                (window as any).showNotification({
+                    type: 'success',
+                    title: 'تم تأكيد رقم الجوال',
+                    message: 'تم تأكيد رقم الجوال بنجاح',
+                    duration: 4000,
+                });
+            }
+        } else {
+            if (typeof window !== 'undefined' && (window as any).showNotification) {
+                (window as any).showNotification({
+                    type: 'error',
+                    title: 'رمز التحقق خاطئ',
+                    message: 'رمز التحقق المدخل غير صحيح، يرجى المحاولة مرة أخرى',
+                    duration: 4000,
+                });
+            }
+        }
     };
 
     const handleInputChange = (field: keyof FormData, value: string | boolean) => {
@@ -374,9 +450,9 @@ export default function RegisterPage() {
                                 )}
                             </div>
 
-                            {/* Phone Field */}
+                            {/* Phone Field - Enhanced */}
                             <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
+                                className="bg-white rounded-2xl p-4 shadow-sm border-2 border-blue-200"
                                 data-oid="fye21ua"
                             >
                                 <label
@@ -384,26 +460,73 @@ export default function RegisterPage() {
                                     data-oid="5akaeop"
                                 >
                                     رقم الجوال *
+                                    <span className="text-blue-600 text-xs mr-1" data-oid="ha5dhtm">
+                                        (مطلوب للتحقق)
+                                    </span>
                                 </label>
-                                <input
-                                    type="tel"
-                                    value={formData.phone}
-                                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    className={`w-full p-3 border rounded-xl outline-none transition-colors ${
-                                        errors.phone
-                                            ? 'border-red-500'
-                                            : 'border-gray-300 focus:border-blue-500'
-                                    }`}
-                                    placeholder="05xxxxxxxx"
-                                    dir="ltr"
-                                    data-oid="4l:0210"
-                                />
+                                <div className="flex space-x-2 space-x-reverse" data-oid="hwddm47">
+                                    <input
+                                        type="tel"
+                                        value={formData.phone}
+                                        onChange={(e) => {
+                                            handleInputChange('phone', e.target.value);
+                                            setIsPhoneVerified(false);
+                                        }}
+                                        className={`flex-1 p-3 border rounded-xl outline-none transition-colors ${
+                                            errors.phone
+                                                ? 'border-red-500'
+                                                : isPhoneVerified
+                                                  ? 'border-green-500 bg-green-50'
+                                                  : 'border-gray-300 focus:border-blue-500'
+                                        }`}
+                                        placeholder="05xxxxxxxx"
+                                        dir="ltr"
+                                        data-oid="4l:0210"
+                                    />
+
+                                    <button
+                                        type="button"
+                                        onClick={sendVerificationCode}
+                                        disabled={!formData.phone || isPhoneVerified}
+                                        className={`px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                                            isPhoneVerified
+                                                ? 'bg-green-500 text-white'
+                                                : formData.phone
+                                                  ? 'bg-blue-500 text-white hover:bg-blue-600'
+                                                  : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                                        }`}
+                                        data-oid="lf3wwcu"
+                                    >
+                                        {isPhoneVerified ? '✓ مؤكد' : 'تحقق'}
+                                    </button>
+                                </div>
 
                                 {errors.phone && (
                                     <p className="text-red-500 text-xs mt-1" data-oid="t6.b00b">
                                         {errors.phone}
                                     </p>
                                 )}
+
+                                {isPhoneVerified && (
+                                    <p
+                                        className="text-green-600 text-xs mt-1 flex items-center"
+                                        data-oid="0ms651o"
+                                    >
+                                        <span className="mr-1" data-oid="e_-el74">
+                                            ✓
+                                        </span>
+                                        تم تأكيد رقم الجوال بنجاح
+                                    </p>
+                                )}
+
+                                <div className="mt-2 text-xs text-gray-600" data-oid="1lr182l">
+                                    <p data-oid="s19bid.">
+                                        • سيتم إرسال رمز تحقق عبر الرسائل النصية
+                                    </p>
+                                    <p data-oid=".z65ljm">
+                                        • رقم الجوال مطلوب لتأمين حسابك وإرسال الإشعارات
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Next Button */}
