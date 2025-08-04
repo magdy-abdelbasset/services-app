@@ -2,9 +2,12 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import PriceQuoteModal from '../../../components/PriceQuoteModal';
 
 export default function ProviderRequests() {
     const [activeFilter, setActiveFilter] = useState('all');
+    const [selectedRequest, setSelectedRequest] = useState<any>(null);
+    const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
     const requests = [
         {
@@ -55,6 +58,18 @@ export default function ProviderRequests() {
             status: 'rejected',
             distance: '6.2 كم',
         },
+        {
+            id: 5,
+            service: 'خدمات التجميل',
+            customer: 'نورا أحمد',
+            location: 'الرياض - حي الصحافة',
+            price: '90 ريال',
+            time: 'منذ 30 دقيقة',
+            urgent: false,
+            description: 'جلسة مكياج للمناسبات',
+            status: 'quoted',
+            distance: '3.7 كم',
+        },
     ];
 
     const filteredRequests = requests.filter((request) => {
@@ -70,6 +85,32 @@ export default function ProviderRequests() {
         alert(`تم رفض الطلب رقم ${requestId}`);
     };
 
+    const handleSubmitQuote = (requestId: number) => {
+        const request = requests.find((r) => r.id === requestId);
+        if (request) {
+            setSelectedRequest(request);
+            setIsQuoteModalOpen(true);
+        }
+    };
+
+    const handleQuoteSubmit = (quoteData: any) => {
+        // Show success notification
+        if (typeof window !== 'undefined' && (window as any).showNotification) {
+            (window as any).showNotification({
+                type: 'success',
+                title: 'تم إرسال العرض!',
+                message: `تم إرسال عرض السعر بقيمة ${quoteData.price} ريال بنجاح`,
+                duration: 4000,
+            });
+        }
+
+        // Here you would typically send the quote to your backend
+        console.log('Quote submitted:', {
+            requestId: selectedRequest?.id,
+            ...quoteData,
+        });
+    };
+
     const getStatusColor = (status: string) => {
         switch (status) {
             case 'pending':
@@ -78,6 +119,8 @@ export default function ProviderRequests() {
                 return 'bg-green-100 text-green-600';
             case 'rejected':
                 return 'bg-red-100 text-red-600';
+            case 'quoted':
+                return 'bg-blue-100 text-blue-600';
             default:
                 return 'bg-gray-100 text-gray-600';
         }
@@ -91,6 +134,8 @@ export default function ProviderRequests() {
                 return 'مقبول';
             case 'rejected':
                 return 'مرفوض';
+            case 'quoted':
+                return 'تم تقديم عرض';
             default:
                 return 'غير محدد';
         }
@@ -147,6 +192,17 @@ export default function ProviderRequests() {
                             data-oid="uy4kexw"
                         >
                             جديد ({requests.filter((r) => r.status === 'pending').length})
+                        </button>
+                        <button
+                            onClick={() => setActiveFilter('quoted')}
+                            className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
+                                activeFilter === 'quoted'
+                                    ? 'bg-blue-500 text-white'
+                                    : 'text-gray-600 hover:bg-gray-100'
+                            }`}
+                            data-oid="h66fe6:"
+                        >
+                            عروض ({requests.filter((r) => r.status === 'quoted').length})
                         </button>
                         <button
                             onClick={() => setActiveFilter('accepted')}
@@ -236,28 +292,45 @@ export default function ProviderRequests() {
 
                             {/* Action Buttons */}
                             {request.status === 'pending' && (
-                                <div className="flex space-x-3 space-x-reverse" data-oid="sta0029">
-                                    <button
-                                        onClick={() => handleAcceptRequest(request.id)}
-                                        className="flex-1 bg-green-500 text-white py-2 rounded-xl font-semibold"
-                                        data-oid="l38ck.6"
+                                <div className="space-y-2" data-oid="sta0029">
+                                    <div
+                                        className="flex space-x-2 space-x-reverse"
+                                        data-oid="stf1xm7"
                                     >
-                                        قبول الطلب
-                                    </button>
-                                    <button
-                                        onClick={() => handleRejectRequest(request.id)}
-                                        className="flex-1 bg-gray-200 text-gray-700 py-2 rounded-xl font-semibold"
-                                        data-oid="x8:kn-i"
+                                        <button
+                                            onClick={() => handleSubmitQuote(request.id)}
+                                            className="flex-1 bg-blue-500 text-white py-2 rounded-xl font-semibold"
+                                            data-oid="qh1ljtc"
+                                        >
+                                            تقديم عرض سعر
+                                        </button>
+                                        <Link
+                                            href={`/provider/chat/${request.id}`}
+                                            className="px-4 py-2 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center"
+                                            data-oid="b7yaj_l"
+                                        >
+                                            💬
+                                        </Link>
+                                    </div>
+                                    <div
+                                        className="flex space-x-2 space-x-reverse"
+                                        data-oid="f09eo70"
                                     >
-                                        رفض
-                                    </button>
-                                    <Link
-                                        href={`/provider/chat/${request.id}`}
-                                        className="px-4 py-2 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center"
-                                        data-oid="b7yaj_l"
-                                    >
-                                        💬
-                                    </Link>
+                                        <button
+                                            onClick={() => handleAcceptRequest(request.id)}
+                                            className="flex-1 bg-green-500 text-white py-2 rounded-xl font-semibold"
+                                            data-oid="l38ck.6"
+                                        >
+                                            قبول مباشر
+                                        </button>
+                                        <button
+                                            onClick={() => handleRejectRequest(request.id)}
+                                            className="flex-1 bg-gray-200 text-gray-700 py-2 rounded-xl font-semibold"
+                                            data-oid="x8:kn-i"
+                                        >
+                                            رفض
+                                        </button>
+                                    </div>
                                 </div>
                             )}
 
@@ -283,6 +356,47 @@ export default function ProviderRequests() {
                                     >
                                         📞
                                     </button>
+                                </div>
+                            )}
+
+                            {request.status === 'quoted' && (
+                                <div className="space-y-2" data-oid="p.97hgq">
+                                    <div
+                                        className="bg-blue-50 rounded-xl p-3 text-center"
+                                        data-oid="dkzeq80"
+                                    >
+                                        <p
+                                            className="text-sm text-blue-700 font-semibold"
+                                            data-oid="dxzx17g"
+                                        >
+                                            ✅ تم إرسال عرض السعر
+                                        </p>
+                                        <p
+                                            className="text-xs text-blue-600 mt-1"
+                                            data-oid="vv4wavq"
+                                        >
+                                            في انتظار رد العميل
+                                        </p>
+                                    </div>
+                                    <div
+                                        className="flex space-x-2 space-x-reverse"
+                                        data-oid="ofhj407"
+                                    >
+                                        <Link
+                                            href={`/provider/chat/${request.id}`}
+                                            className="flex-1 bg-blue-100 text-blue-700 py-2 rounded-xl font-semibold text-center"
+                                            data-oid="bhpqgwk"
+                                        >
+                                            💬 تواصل مع العميل
+                                        </Link>
+                                        <button
+                                            onClick={() => handleSubmitQuote(request.id)}
+                                            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl"
+                                            data-oid="fcnyy94"
+                                        >
+                                            ✏️
+                                        </button>
+                                    </div>
                                 </div>
                             )}
 
@@ -386,6 +500,20 @@ export default function ProviderRequests() {
                     </div>
                 </div>
             </div>
+
+            {/* Price Quote Modal */}
+            {selectedRequest && (
+                <PriceQuoteModal
+                    isOpen={isQuoteModalOpen}
+                    onClose={() => {
+                        setIsQuoteModalOpen(false);
+                        setSelectedRequest(null);
+                    }}
+                    onSubmit={handleQuoteSubmit}
+                    request={selectedRequest}
+                    data-oid="g00ldv3"
+                />
+            )}
         </div>
     );
 }
