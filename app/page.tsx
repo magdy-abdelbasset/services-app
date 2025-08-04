@@ -1,17 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Page() {
     const [selectedService, setSelectedService] = useState(null);
 
     const services = [
-        { id: 1, name: 'تنظيف المنزل', icon: '🏠', price: '50 ريال', rating: 4.8 },
-        { id: 2, name: 'صيانة السباكة', icon: '🔧', price: '80 ريال', rating: 4.9 },
-        { id: 3, name: 'توصيل الطعام', icon: '🍕', price: '15 ريال', rating: 4.7 },
-        { id: 4, name: 'خدمات التجميل', icon: '💄', price: '120 ريال', rating: 4.6 },
-        { id: 5, name: 'تصليح الأجهزة', icon: '📱', price: '100 ريال', rating: 4.8 },
-        { id: 6, name: 'خدمات البستنة', icon: '🌱', price: '60 ريال', rating: 4.5 },
+        { id: 1, name: 'تنظيف المنزل', icon: '🏠' },
+        { id: 2, name: 'صيانة السباكة', icon: '🔧' },
+        { id: 3, name: 'توصيل الطعام', icon: '🍕' },
+        { id: 4, name: 'خدمات التجميل', icon: '💄' },
+        { id: 5, name: 'تصليح الأجهزة', icon: '📱' },
+        { id: 6, name: 'خدمات البستنة', icon: '🌱' },
     ];
 
     return (
@@ -89,12 +90,13 @@ export default function Page() {
                     >
                         طلب سريع
                     </button>
-                    <button
-                        className="flex-1 bg-green-500 text-white py-3 rounded-xl font-semibold"
+                    <Link
+                        href="/orders"
+                        className="flex-1 bg-green-500 text-white py-3 rounded-xl font-semibold text-center"
                         data-oid="9r2w_lg"
                     >
                         طلباتي
-                    </button>
+                    </Link>
                 </div>
             </div>
 
@@ -116,30 +118,11 @@ export default function Page() {
                                 {service.icon}
                             </div>
                             <h3
-                                className="font-semibold text-gray-800 text-sm mb-2 text-center"
+                                className="font-semibold text-gray-800 text-sm text-center"
                                 data-oid="uwu0t-l"
                             >
                                 {service.name}
                             </h3>
-                            <div
-                                className="flex items-center justify-between text-xs"
-                                data-oid="9louc2y"
-                            >
-                                <span className="text-blue-600 font-semibold" data-oid="3gqy45k">
-                                    {service.price}
-                                </span>
-                                <div
-                                    className="flex items-center space-x-1 space-x-reverse"
-                                    data-oid=".j:-d--"
-                                >
-                                    <span className="text-yellow-500" data-oid="c8qtcxp">
-                                        ⭐
-                                    </span>
-                                    <span className="text-gray-600" data-oid="-bniasb">
-                                        {service.rating}
-                                    </span>
-                                </div>
-                            </div>
                         </div>
                     ))}
                 </div>
@@ -163,34 +146,6 @@ export default function Page() {
                                     <h4 className="font-semibold text-gray-800" data-oid="qbqmqe.">
                                         {service.name}
                                     </h4>
-                                    <div
-                                        className="flex items-center justify-between mt-1"
-                                        data-oid="ajr21sf"
-                                    >
-                                        <span
-                                            className="text-blue-600 font-semibold text-sm"
-                                            data-oid="xvatxmb"
-                                        >
-                                            {service.price}
-                                        </span>
-                                        <div
-                                            className="flex items-center space-x-1 space-x-reverse"
-                                            data-oid="8ennn_o"
-                                        >
-                                            <span
-                                                className="text-yellow-500 text-sm"
-                                                data-oid="tgn:qgp"
-                                            >
-                                                ⭐
-                                            </span>
-                                            <span
-                                                className="text-gray-600 text-sm"
-                                                data-oid="igabn.1"
-                                            >
-                                                {service.rating}
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
                                 <button
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold"
@@ -222,7 +177,8 @@ export default function Page() {
                                 الرئيسية
                             </span>
                         </button>
-                        <button
+                        <Link
+                            href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="8_p4_:k"
                         >
@@ -232,7 +188,7 @@ export default function Page() {
                             <span className="text-xs" data-oid="uogpuq.">
                                 طلباتي
                             </span>
-                        </button>
+                        </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="h6k:-up"
@@ -288,31 +244,9 @@ export default function Page() {
                             </p>
 
                             <div
-                                className="flex items-center justify-center space-x-4 space-x-reverse mb-6"
+                                className="flex items-center justify-center mb-6"
                                 data-oid="4hzh_mu"
                             >
-                                <div className="text-center" data-oid="z9nzarm">
-                                    <p
-                                        className="text-2xl font-bold text-blue-600"
-                                        data-oid="551glsx"
-                                    >
-                                        {selectedService.price}
-                                    </p>
-                                    <p className="text-xs text-gray-500" data-oid="6q8403q">
-                                        السعر
-                                    </p>
-                                </div>
-                                <div className="text-center" data-oid="4rw0tei">
-                                    <p
-                                        className="text-2xl font-bold text-yellow-500"
-                                        data-oid="-fp367v"
-                                    >
-                                        {selectedService.rating}
-                                    </p>
-                                    <p className="text-xs text-gray-500" data-oid="s1-2mfd">
-                                        التقييم
-                                    </p>
-                                </div>
                                 <div className="text-center" data-oid="tjq1r9z">
                                     <p
                                         className="text-2xl font-bold text-green-500"
