@@ -588,13 +588,25 @@ export default function Page() {
                                             >
                                                 اختيار هذا العرض
                                             </button>
-                                            <Link
-                                                href={`/chat/${offer.id}`}
-                                                className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
-                                                data-oid="xvzbfz2"
+                                            <div
+                                                className="flex space-x-2 space-x-reverse"
+                                                data-oid="5ytbqp9"
                                             >
-                                                💬
-                                            </Link>
+                                                <Link
+                                                    href={`/chat/${offer.id}`}
+                                                    className="px-3 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
+                                                    data-oid="xvzbfz2"
+                                                >
+                                                    💬
+                                                </Link>
+                                                <Link
+                                                    href={`/provider-profile/${offer.id}`}
+                                                    className="px-3 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
+                                                    data-oid="0m5hjdd"
+                                                >
+                                                    👁️
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}

@@ -432,13 +432,13 @@ export default function ServicesPage() {
                                     >
                                         💬
                                     </Link>
-                                    <button
-                                        onClick={() => setSelectedProvider(provider)}
-                                        className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl"
+                                    <Link
+                                        href={`/provider-profile/${provider.id}`}
+                                        className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
                                         data-oid="w17hpi_"
                                     >
                                         👁️
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
