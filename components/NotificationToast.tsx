@@ -83,23 +83,37 @@ export function NotificationToast({
                 isLeaving ? 'translate-y-[-100px] opacity-0' : 'translate-y-0 opacity-100'
             }`}
             dir="rtl"
+            data-oid="y:5qscs"
         >
-            <div className={`bg-white rounded-2xl shadow-lg border-2 ${styles.border} p-4`}>
-                <div className="flex items-start space-x-3 space-x-reverse">
+            <div
+                className={`bg-white rounded-2xl shadow-lg border-2 ${styles.border} p-4`}
+                data-oid=":of1fcs"
+            >
+                <div className="flex items-start space-x-3 space-x-reverse" data-oid="mslfuv9">
                     <div
                         className={`w-10 h-10 ${styles.bg} rounded-xl flex items-center justify-center flex-shrink-0`}
+                        data-oid="b2d1gh9"
                     >
-                        <span className="text-lg">{styles.icon}</span>
+                        <span className="text-lg" data-oid="hxlodg-">
+                            {styles.icon}
+                        </span>
                     </div>
-                    <div className="flex-1 min-w-0">
-                        <h4 className="font-semibold text-gray-800 mb-1">{title}</h4>
-                        <p className="text-sm text-gray-600">{message}</p>
+                    <div className="flex-1 min-w-0" data-oid="tjm8oh:">
+                        <h4 className="font-semibold text-gray-800 mb-1" data-oid="9m290-k">
+                            {title}
+                        </h4>
+                        <p className="text-sm text-gray-600" data-oid="gy6_l_h">
+                            {message}
+                        </p>
                     </div>
                     <button
                         onClick={handleClose}
                         className="text-gray-400 hover:text-gray-600 transition-colors"
+                        data-oid="fj-47-2"
                     >
-                        <span className="text-lg">✕</span>
+                        <span className="text-lg" data-oid="co9l4r.">
+                            ✕
+                        </span>
                     </button>
                 </div>
             </div>

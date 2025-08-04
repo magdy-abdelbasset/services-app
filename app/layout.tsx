@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="en" data-oid="1rcqw8v">
-            <body className="" data-oid="5pabqc5">
+        <html lang="en" data-oid="kstoj8p">
+            <body className="" data-oid="fr0kg:-">
                 {children}
-                <NotificationManager data-oid="q4tiucv" />
+                <NotificationManager data-oid=":h1sp40" />
             </body>
         </html>
     );

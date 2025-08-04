@@ -29,11 +29,11 @@ export function NotificationManager() {
     }
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
-            <div className="space-y-2 p-4">
+        <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none" data-oid="ee_b_9z">
+            <div className="space-y-2 p-4" data-oid="y.hk7me">
                 {toasts.map((toast) => (
-                    <div key={toast.id} className="pointer-events-auto">
-                        <NotificationToast {...toast} onClose={removeToast} />
+                    <div key={toast.id} className="pointer-events-auto" data-oid="885q0a5">
+                        <NotificationToast {...toast} onClose={removeToast} data-oid=":8-tg9k" />
                     </div>
                 ))}
             </div>
