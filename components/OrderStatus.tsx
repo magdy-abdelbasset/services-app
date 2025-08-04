@@ -55,10 +55,10 @@ export function OrderStatus({ status }: OrderStatusProps) {
     return (
         <span
             className={`${statusInfo.color} text-white px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center space-x-1 space-x-reverse`}
-            data-oid="nd5.98c"
+            data-oid="fuzr3q2"
         >
-            <span data-oid="myvadxh">{statusInfo.icon}</span>
-            <span data-oid=":zzy8xw">{statusInfo.text}</span>
+            <span data-oid="0dqy.wq">{statusInfo.icon}</span>
+            <span data-oid="s7avodl">{statusInfo.text}</span>
         </span>
     );
 }

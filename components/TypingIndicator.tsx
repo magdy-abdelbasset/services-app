@@ -1,24 +1,24 @@
 export function TypingIndicator() {
     return (
-        <div className="flex justify-start" data-oid="609:ags">
+        <div className="flex justify-start" data-oid="56bb576">
             <div
                 className="bg-white text-gray-800 border border-gray-200 px-4 py-2 rounded-2xl"
-                data-oid="t:odfz_"
+                data-oid="be6arl8"
             >
-                <div className="flex space-x-1" data-oid="9_pq2k9">
+                <div className="flex space-x-1" data-oid="rer:ud.">
                     <div
                         className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                        data-oid="9l3fcqy"
+                        data-oid="1hc2ouo"
                     ></div>
                     <div
                         className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
                         style={{ animationDelay: '0.1s' }}
-                        data-oid="jhpcvdh"
+                        data-oid="1p3yxuc"
                     ></div>
                     <div
                         className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
                         style={{ animationDelay: '0.2s' }}
-                        data-oid="fdgc95g"
+                        data-oid="nraxpi."
                     ></div>
                 </div>
             </div>

@@ -230,120 +230,120 @@ export default function ProviderProfilePage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="pjdxayo">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="rika..k">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="ario7d3"
+                data-oid="pi_-xuw"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="pnjz_2j">
-                    <div className="flex items-center justify-between mb-6" data-oid=":p41-63">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="fsr6:.m">
+                    <div className="flex items-center justify-between mb-6" data-oid="jn2:vn-">
                         <Link
                             href="/services"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="kmudhde"
+                            data-oid="dvvu4nj"
                         >
-                            <span className="text-lg" data-oid="mu-ubf.">
+                            <span className="text-lg" data-oid="o0utz12">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-lg font-bold" data-oid="m:08-1p">
+                        <h1 className="text-lg font-bold" data-oid="gpl_wpn">
                             الملف الشخصي
                         </h1>
                         <button
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="ie-:skx"
+                            data-oid="ru6vyrk"
                         >
-                            <span className="text-lg" data-oid="9uzjunv">
+                            <span className="text-lg" data-oid="1y:8t4f">
                                 ⋯
                             </span>
                         </button>
                     </div>
 
                     {/* Provider Basic Info */}
-                    <div className="text-center" data-oid="gh9kjj-">
-                        <div className="relative inline-block mb-4" data-oid="okxj6br">
+                    <div className="text-center" data-oid="gea4qm.">
+                        <div className="relative inline-block mb-4" data-oid="e035rvi">
                             <div
                                 className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center text-4xl"
-                                data-oid="v6c4x7s"
+                                data-oid="zexk3mc"
                             >
                                 {provider.avatar}
                             </div>
                             {provider.isOnline && (
                                 <div
                                     className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white flex items-center justify-center"
-                                    data-oid="8yg10ee"
+                                    data-oid="bdo5tzm"
                                 >
                                     <div
                                         className="w-2 h-2 bg-white rounded-full"
-                                        data-oid="b9cwr0q"
+                                        data-oid="qdavdqy"
                                     ></div>
                                 </div>
                             )}
                             {provider.verified && (
                                 <div
                                     className="absolute -top-2 -left-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center"
-                                    data-oid="gbnfh.j"
+                                    data-oid="xz6fw64"
                                 >
-                                    <span className="text-white text-sm" data-oid="o:lmfv7">
+                                    <span className="text-white text-sm" data-oid="-.rr3lu">
                                         ✓
                                     </span>
                                 </div>
                             )}
                         </div>
 
-                        <h2 className="text-2xl font-bold mb-2" data-oid="5hg:gu8">
+                        <h2 className="text-2xl font-bold mb-2" data-oid="n9ab474">
                             {provider.name}
                         </h2>
                         <div
                             className="flex items-center justify-center space-x-2 space-x-reverse mb-2"
-                            data-oid="8euegm6"
+                            data-oid="2_eep-1"
                         >
-                            <span className="text-yellow-300 text-lg" data-oid="m:51blu">
+                            <span className="text-yellow-300 text-lg" data-oid="9.qk.fw">
                                 {getRatingStars(provider.rating)}
                             </span>
-                            <span className="font-semibold" data-oid="aod68s2">
+                            <span className="font-semibold" data-oid="-nz5356">
                                 {provider.rating}
                             </span>
-                            <span className="text-white/80" data-oid="oxbqn_0">
+                            <span className="text-white/80" data-oid="-hhiy1w">
                                 ({provider.completedJobs} تقييم)
                             </span>
                         </div>
-                        <p className="text-white/90 text-sm mb-4" data-oid="72s.34:">
+                        <p className="text-white/90 text-sm mb-4" data-oid="hxtqom:">
                             {provider.location}
                         </p>
 
                         <div
                             className="flex items-center justify-center space-x-4 space-x-reverse text-sm"
-                            data-oid="07_7rdq"
+                            data-oid=":x1newm"
                         >
                             <div
                                 className="flex items-center space-x-1 space-x-reverse"
-                                data-oid="rj5xh2q"
+                                data-oid="_dqkq7y"
                             >
-                                <span data-oid="apv55.5">📍</span>
-                                <span data-oid="rp86a4_">{provider.responseTime}</span>
+                                <span data-oid="8jka5fy">📍</span>
+                                <span data-oid="ozuw-0c">{provider.responseTime}</span>
                             </div>
                             <div
                                 className="flex items-center space-x-1 space-x-reverse"
-                                data-oid="_:p191w"
+                                data-oid="3uo1apa"
                             >
-                                <span data-oid="d0xj7e8">📅</span>
-                                <span data-oid="wx__nr7">عضو منذ {getJoinDuration()}</span>
+                                <span data-oid="2q.o5h6">📅</span>
+                                <span data-oid="zm.veuf">عضو منذ {getJoinDuration()}</span>
                             </div>
                             <div
                                 className="flex items-center space-x-1 space-x-reverse"
-                                data-oid="i-uya8d"
+                                data-oid="s0.5:gs"
                             >
                                 <span
                                     className={
                                         provider.isOnline ? 'text-green-300' : 'text-gray-300'
                                     }
-                                    data-oid="n8unwln"
+                                    data-oid="fdip51g"
                                 >
                                     ●
                                 </span>
-                                <span data-oid="4004kra">
+                                <span data-oid="ulj6xr8">
                                     {provider.isOnline ? 'متصل الآن' : 'غير متصل'}
                                 </span>
                             </div>
@@ -353,36 +353,36 @@ export default function ProviderProfilePage() {
             </div>
 
             {/* Action Buttons */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="6ed.ynj">
-                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="ebvq8.a">
-                    <div className="grid grid-cols-2 gap-3" data-oid="u89v6qi">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="34f852w">
+                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="cfekv3t">
+                    <div className="grid grid-cols-2 gap-3" data-oid="gd250qe">
                         <button
                             onClick={handleContactProvider}
                             className="flex items-center justify-center space-x-2 space-x-reverse bg-blue-500 text-white py-3 rounded-xl font-semibold"
-                            data-oid="4lvbpyk"
+                            data-oid="-tx-v4g"
                         >
-                            <span data-oid="k9y68oc">💬</span>
-                            <span data-oid="i9.b-8f">تواصل</span>
+                            <span data-oid="3:w8pgg">💬</span>
+                            <span data-oid="a.4qbmr">تواصل</span>
                         </button>
                         <Link
                             href={`/chat/${provider.id}`}
                             className="flex items-center justify-center space-x-2 space-x-reverse bg-green-500 text-white py-3 rounded-xl font-semibold"
-                            data-oid="u0d4rjx"
+                            data-oid="wej573v"
                         >
-                            <span data-oid="1:kkq6r">📞</span>
-                            <span data-oid="x7ywev9">اتصال</span>
+                            <span data-oid="z7_2-zs">📞</span>
+                            <span data-oid="fcvl177">اتصال</span>
                         </Link>
                     </div>
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 mb-6" data-oid="wu1h_yu">
+            <div className="max-w-sm mx-auto px-4 mb-6" data-oid="nsk2cxl">
                 <div
                     className="bg-white rounded-2xl p-1 shadow-sm border border-gray-100"
-                    data-oid="n4s.9vj"
+                    data-oid=".oh5zhp"
                 >
-                    <div className="grid grid-cols-4 gap-1" data-oid="0l3n64r">
+                    <div className="grid grid-cols-4 gap-1" data-oid="rj-c:dh">
                         {[
                             { key: 'services', label: 'الخدمات', icon: '🛠️' },
                             { key: 'reviews', label: 'التقييمات', icon: '⭐' },
@@ -397,14 +397,14 @@ export default function ProviderProfilePage() {
                                         ? 'bg-blue-500 text-white'
                                         : 'text-gray-600'
                                 }`}
-                                data-oid="2pb2he0"
+                                data-oid="58vuybi"
                             >
                                 <div
                                     className="flex flex-col items-center space-y-1"
-                                    data-oid="kt_oipb"
+                                    data-oid="nk_ypet"
                                 >
-                                    <span data-oid="q6zp89d">{tab.icon}</span>
-                                    <span data-oid="yfzcw_y">{tab.label}</span>
+                                    <span data-oid="lm6duc1">{tab.icon}</span>
+                                    <span data-oid="zthmi3q">{tab.label}</span>
                                 </div>
                             </button>
                         ))}
@@ -413,50 +413,50 @@ export default function ProviderProfilePage() {
             </div>
 
             {/* Tab Content */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="iihhv6g">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="cxcznd:">
                 {/* Services Tab */}
                 {activeTab === 'services' && (
-                    <div className="space-y-4" data-oid="7sf9i5h">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="h6flhiz">
+                    <div className="space-y-4" data-oid="uq66wae">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="cq6mwiv">
                             الخدمات المتاحة ({provider.services.length})
                         </h3>
                         {provider.services.map((service) => (
                             <div
                                 key={service.id}
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="ez305uu"
+                                data-oid="v71:6xm"
                             >
                                 <div
                                     className="flex items-start justify-between mb-3"
-                                    data-oid="01z_3kf"
+                                    data-oid="8eyq7t5"
                                 >
-                                    <div className="flex-1" data-oid="b25f9.l">
+                                    <div className="flex-1" data-oid="68i:c_7">
                                         <h4
                                             className="font-semibold text-gray-800 mb-1"
-                                            data-oid="q74bcwa"
+                                            data-oid="urtfz:y"
                                         >
                                             {service.name}
                                         </h4>
                                         <p
                                             className="text-sm text-gray-600 mb-2"
-                                            data-oid="s7.-bhf"
+                                            data-oid=".v5p7-f"
                                         >
                                             {service.description}
                                         </p>
                                         <div
                                             className="flex items-center space-x-3 space-x-reverse text-sm text-gray-500"
-                                            data-oid="wf2-8st"
+                                            data-oid="zktig0h"
                                         >
-                                            <span data-oid="gy_sa2z">📂 {service.category}</span>
-                                            <span data-oid="p.urydp">
+                                            <span data-oid="94-f6k:">📂 {service.category}</span>
+                                            <span data-oid="9on70iu">
                                                 ⏱️ {service.estimatedTime}
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="text-right" data-oid="_dukb1n">
+                                    <div className="text-right" data-oid="cr:y9lp">
                                         <p
                                             className="text-lg font-bold text-blue-600"
-                                            data-oid="8uhlfp_"
+                                            data-oid="zldedkn"
                                         >
                                             {service.price}
                                         </p>
@@ -465,7 +465,7 @@ export default function ProviderProfilePage() {
                                 <button
                                     onClick={() => handleRequestService(service)}
                                     className="w-full bg-blue-500 text-white py-2 rounded-xl font-semibold"
-                                    data-oid=".yvmiev"
+                                    data-oid="59udt4a"
                                 >
                                     طلب الخدمة
                                 </button>
@@ -476,19 +476,19 @@ export default function ProviderProfilePage() {
 
                 {/* Reviews Tab */}
                 {activeTab === 'reviews' && (
-                    <div className="space-y-4" data-oid="u8kl0z2">
-                        <div className="flex items-center justify-between mb-4" data-oid="80ggegv">
-                            <h3 className="text-lg font-semibold text-gray-800" data-oid="igpgmlp">
+                    <div className="space-y-4" data-oid="n-rbwkp">
+                        <div className="flex items-center justify-between mb-4" data-oid="dyf006a">
+                            <h3 className="text-lg font-semibold text-gray-800" data-oid="_eqf_ky">
                                 التقييمات ({provider.reviews.length})
                             </h3>
-                            <div className="text-right" data-oid="2kq4ojw">
+                            <div className="text-right" data-oid="90pi7a2">
                                 <div
                                     className="text-2xl font-bold text-blue-600"
-                                    data-oid="3w5:yut"
+                                    data-oid="lcor0hd"
                                 >
                                     {provider.rating}
                                 </div>
-                                <div className="text-sm text-gray-500" data-oid=".3mbm_d">
+                                <div className="text-sm text-gray-500" data-oid=".277nsb">
                                     من 5
                                 </div>
                             </div>
@@ -498,48 +498,48 @@ export default function ProviderProfilePage() {
                             <div
                                 key={review.id}
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="8_c1:4p"
+                                data-oid="mstc6tu"
                             >
                                 <div
                                     className="flex items-start space-x-3 space-x-reverse mb-3"
-                                    data-oid="j5ba9rt"
+                                    data-oid="bl1jy_h"
                                 >
-                                    <div className="text-2xl" data-oid="izl7qnl">
+                                    <div className="text-2xl" data-oid="muumug1">
                                         {review.customerAvatar}
                                     </div>
-                                    <div className="flex-1" data-oid="mxh-pp6">
+                                    <div className="flex-1" data-oid="4dwqmg1">
                                         <div
                                             className="flex items-center justify-between mb-1"
-                                            data-oid="f4qpghc"
+                                            data-oid="2h66tir"
                                         >
                                             <h4
                                                 className="font-semibold text-gray-800"
-                                                data-oid="u742jd9"
+                                                data-oid="kap2tam"
                                             >
                                                 {review.customerName}
                                             </h4>
                                             <span
                                                 className="text-xs text-gray-500"
-                                                data-oid="ig8mmd5"
+                                                data-oid="tq5fkvs"
                                             >
                                                 {review.date}
                                             </span>
                                         </div>
                                         <div
                                             className="flex items-center space-x-2 space-x-reverse mb-2"
-                                            data-oid="x.nzqeq"
+                                            data-oid="zx_9xj5"
                                         >
-                                            <span className="text-yellow-500" data-oid="tiasa6m">
+                                            <span className="text-yellow-500" data-oid="ws0i4kb">
                                                 {getRatingStars(review.rating)}
                                             </span>
                                             <span
                                                 className="text-sm text-blue-600"
-                                                data-oid="bv4ohwa"
+                                                data-oid="of2rrkl"
                                             >
                                                 {review.serviceName}
                                             </span>
                                         </div>
-                                        <p className="text-sm text-gray-700" data-oid="qrfjzpc">
+                                        <p className="text-sm text-gray-700" data-oid="5.r71vc">
                                             {review.comment}
                                         </p>
                                     </div>
@@ -551,30 +551,30 @@ export default function ProviderProfilePage() {
 
                 {/* Portfolio Tab */}
                 {activeTab === 'portfolio' && (
-                    <div className="space-y-4" data-oid=".8-zzs2">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="8ty.t88">
+                    <div className="space-y-4" data-oid="ion_mud">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="bq_twgx">
                             معرض الأعمال ({provider.portfolio.length})
                         </h3>
-                        <div className="grid grid-cols-2 gap-4" data-oid="44j50sv">
+                        <div className="grid grid-cols-2 gap-4" data-oid="26jicy7">
                             {provider.portfolio.map((item) => (
                                 <div
                                     key={item.id}
                                     className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    data-oid="0jh:x0d"
+                                    data-oid="xjlnzlm"
                                 >
-                                    <div className="text-4xl text-center mb-3" data-oid="a5d5cx7">
+                                    <div className="text-4xl text-center mb-3" data-oid="b7wo7sg">
                                         {item.image}
                                     </div>
                                     <h4
                                         className="font-semibold text-gray-800 text-sm mb-1"
-                                        data-oid="w4w-up:"
+                                        data-oid="3d3291_"
                                     >
                                         {item.title}
                                     </h4>
-                                    <p className="text-xs text-gray-600 mb-2" data-oid="jfb40qz">
+                                    <p className="text-xs text-gray-600 mb-2" data-oid="uu5p6oc">
                                         {item.description}
                                     </p>
-                                    <span className="text-xs text-gray-500" data-oid="vts:oxb">
+                                    <span className="text-xs text-gray-500" data-oid="u1u_la5">
                                         {item.date}
                                     </span>
                                 </div>
@@ -585,19 +585,19 @@ export default function ProviderProfilePage() {
 
                 {/* About Tab */}
                 {activeTab === 'about' && (
-                    <div className="space-y-6" data-oid="resv1o3">
+                    <div className="space-y-6" data-oid="t2uf_o4">
                         {/* Description */}
                         <div
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="b4i-qc7"
+                            data-oid=".jsv6.f"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid="o4g:_vw"
+                                data-oid="tbfnag0"
                             >
                                 نبذة عني
                             </h3>
-                            <p className="text-gray-700 text-sm leading-relaxed" data-oid="3yb0pa4">
+                            <p className="text-gray-700 text-sm leading-relaxed" data-oid="k20pas2">
                                 {provider.description}
                             </p>
                         </div>
@@ -605,30 +605,30 @@ export default function ProviderProfilePage() {
                         {/* Working Hours */}
                         <div
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="kkdqb6m"
+                            data-oid="ixvycd2"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid="9t7a7.i"
+                                data-oid="auzsqi:"
                             >
                                 ساعات العمل
                             </h3>
-                            <div className="space-y-2" data-oid="0as4wfy">
+                            <div className="space-y-2" data-oid="yg2fjmq">
                                 {Object.entries(provider.workingHours).map(([day, hours]) => (
                                     <div
                                         key={day}
                                         className="flex items-center justify-between py-1"
-                                        data-oid="9bu63mi"
+                                        data-oid="8:43sc8"
                                     >
                                         <span
                                             className="text-sm font-medium text-gray-700"
-                                            data-oid=".-4mrdi"
+                                            data-oid="h66r-cj"
                                         >
                                             {day}
                                         </span>
                                         <span
                                             className={`text-sm ${hours.available ? 'text-green-600' : 'text-red-500'}`}
-                                            data-oid="rh8s6vy"
+                                            data-oid="4u20y_v"
                                         >
                                             {hours.available
                                                 ? `${hours.start} - ${hours.end}`
@@ -642,20 +642,20 @@ export default function ProviderProfilePage() {
                         {/* Languages */}
                         <div
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="hlrsgur"
+                            data-oid="sia6vmt"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid="n8rkc33"
+                                data-oid="5.pyayw"
                             >
                                 اللغات
                             </h3>
-                            <div className="flex flex-wrap gap-2" data-oid="e9eltqa">
+                            <div className="flex flex-wrap gap-2" data-oid="w4wqmlz">
                                 {provider.languages.map((language, index) => (
                                     <span
                                         key={index}
                                         className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                                        data-oid="79txth9"
+                                        data-oid="uli6qo2"
                                     >
                                         {language}
                                     </span>
@@ -666,24 +666,24 @@ export default function ProviderProfilePage() {
                         {/* Certifications */}
                         <div
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="9b-b.ag"
+                            data-oid=".4114bc"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid="h5e.rm_"
+                                data-oid="s8y6syg"
                             >
                                 الشهادات والمؤهلات
                             </h3>
-                            <div className="space-y-3" data-oid="nlhoz1j">
+                            <div className="space-y-3" data-oid="9md322w">
                                 {provider.certifications.map((cert) => (
                                     <div
                                         key={cert.id}
                                         className="flex items-start space-x-3 space-x-reverse"
-                                        data-oid="j07lu_q"
+                                        data-oid="uvv782m"
                                     >
                                         <div
                                             className={`w-8 h-8 rounded-full flex items-center justify-center ${cert.verified ? 'bg-green-100' : 'bg-gray-100'}`}
-                                            data-oid="qkwonyr"
+                                            data-oid="huwj_xi"
                                         >
                                             <span
                                                 className={
@@ -691,22 +691,22 @@ export default function ProviderProfilePage() {
                                                         ? 'text-green-600'
                                                         : 'text-gray-500'
                                                 }
-                                                data-oid="f7gkuek"
+                                                data-oid="h2nv2t8"
                                             >
                                                 {cert.verified ? '✓' : '📜'}
                                             </span>
                                         </div>
-                                        <div className="flex-1" data-oid="sk54vy2">
+                                        <div className="flex-1" data-oid="3wmad12">
                                             <h4
                                                 className="font-semibold text-gray-800 text-sm"
-                                                data-oid="rxpn00h"
+                                                data-oid="6043wnx"
                                             >
                                                 {cert.name}
                                             </h4>
-                                            <p className="text-xs text-gray-600" data-oid="8w0hs.4">
+                                            <p className="text-xs text-gray-600" data-oid="5phsi-h">
                                                 {cert.issuer}
                                             </p>
-                                            <p className="text-xs text-gray-500" data-oid="202m7c6">
+                                            <p className="text-xs text-gray-500" data-oid="4_r2kh3">
                                                 {cert.date}
                                             </p>
                                         </div>
@@ -718,34 +718,34 @@ export default function ProviderProfilePage() {
                         {/* Contact Info */}
                         <div
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid=":rwo0cl"
+                            data-oid="7walqei"
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid=":3n:.nz"
+                                data-oid="1:ms:g:"
                             >
                                 معلومات التواصل
                             </h3>
-                            <div className="space-y-3" data-oid="eais04x">
+                            <div className="space-y-3" data-oid="ubxg2w5">
                                 <div
                                     className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="hfulaec"
+                                    data-oid="w-jtr_q"
                                 >
-                                    <span className="text-gray-500" data-oid="pbffa70">
+                                    <span className="text-gray-500" data-oid="ba9ny10">
                                         📍
                                     </span>
-                                    <span className="text-sm text-gray-700" data-oid="ufgfhkh">
+                                    <span className="text-sm text-gray-700" data-oid="7pkd35w">
                                         {provider.location}
                                     </span>
                                 </div>
                                 <div
                                     className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="unz33si"
+                                    data-oid="nsxpr.o"
                                 >
-                                    <span className="text-gray-500" data-oid="l960we-">
+                                    <span className="text-gray-500" data-oid="xecaodb">
                                         ⏱️
                                     </span>
-                                    <span className="text-sm text-gray-700" data-oid="bwms9ke">
+                                    <span className="text-sm text-gray-700" data-oid="f79iu_g">
                                         يرد خلال {provider.responseTime}
                                     </span>
                                 </div>
@@ -760,44 +760,44 @@ export default function ProviderProfilePage() {
                 <div
                     className="fixed inset-0 bg-black/50 flex items-end z-50"
                     onClick={() => setShowContactModal(false)}
-                    data-oid="84fsls3"
+                    data-oid="6.owh_p"
                 >
                     <div
                         className="bg-white w-full max-w-sm mx-auto rounded-t-3xl p-6"
                         onClick={(e) => e.stopPropagation()}
-                        data-oid="w2m..-g"
+                        data-oid="6-ayfkr"
                     >
                         <div
                             className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-6"
-                            data-oid="xgn83mo"
+                            data-oid="izf8mdb"
                         ></div>
 
                         <h3
                             className="text-xl font-bold text-gray-800 mb-4 text-center"
-                            data-oid="vn033rl"
+                            data-oid="o6ptg-u"
                         >
                             تواصل مع {provider.name}
                         </h3>
 
-                        <div className="space-y-3" data-oid="y6zskkn">
+                        <div className="space-y-3" data-oid="5.axdxe">
                             <Link
                                 href={`/chat/${provider.id}`}
                                 className="w-full bg-blue-500 text-white py-4 rounded-2xl font-semibold text-center block"
-                                data-oid="2l3y_k7"
+                                data-oid="x40nr3x"
                             >
                                 💬 إرسال رسالة
                             </Link>
                             <a
                                 href={`tel:${provider.phone}`}
                                 className="w-full bg-green-500 text-white py-4 rounded-2xl font-semibold text-center block"
-                                data-oid="wvholrv"
+                                data-oid="5b5exk."
                             >
                                 📞 اتصال هاتفي
                             </a>
                             <button
                                 onClick={() => setShowContactModal(false)}
                                 className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold"
-                                data-oid="gtm.rd9"
+                                data-oid="engbppv"
                             >
                                 إلغاء
                             </button>
@@ -809,67 +809,67 @@ export default function ProviderProfilePage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="vw_j19i"
+                data-oid="xt8leza"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="4lhd1j-">
-                    <div className="flex justify-around" data-oid="07ihou_">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="cg3wken">
+                    <div className="flex justify-around" data-oid="-y5dzlu">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid=".a46m_."
+                            data-oid="u2i3vzp"
                         >
-                            <span className="text-xl" data-oid="odpkcz_">
+                            <span className="text-xl" data-oid="ywbr2e-">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="1pf:v4v">
+                            <span className="text-xs" data-oid="fk.2tnd">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/categories"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="j5:9i-h"
+                            data-oid="-8rrcl_"
                         >
-                            <span className="text-xl" data-oid="7bau22d">
+                            <span className="text-xl" data-oid="0xp-6pr">
                                 📂
                             </span>
-                            <span className="text-xs" data-oid="f:_d4.h">
+                            <span className="text-xs" data-oid="s:8fbj1">
                                 التصنيفات
                             </span>
                         </Link>
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="3htu7vq"
+                            data-oid="qsavz3e"
                         >
-                            <span className="text-xl" data-oid="lgc7tuq">
+                            <span className="text-xl" data-oid="96fx6p4">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="_c940_k">
+                            <span className="text-xs" data-oid="ifxdt0c">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/offers"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="2fh71p-"
+                            data-oid="1x0cczf"
                         >
-                            <span className="text-xl" data-oid="v4tnrwn">
+                            <span className="text-xl" data-oid="bw:rvt2">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="c44-w-w">
+                            <span className="text-xs" data-oid="r7w7a.d">
                                 العروض
                             </span>
                         </Link>
                         <Link
                             href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="hh.5dyh"
+                            data-oid="hil1ma5"
                         >
-                            <span className="text-xl" data-oid="8coonfz">
+                            <span className="text-xl" data-oid="zzc8m3v">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="5x6yq-c">
+                            <span className="text-xs" data-oid="u4evq80">
                                 الرسائل
                             </span>
                         </Link>
@@ -878,7 +878,7 @@ export default function ProviderProfilePage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="7xiyajb"></div>
+            <div className="h-20" data-oid="e_.gwi9"></div>
         </div>
     );
 }

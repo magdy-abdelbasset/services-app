@@ -129,37 +129,37 @@ export default function NotificationsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="338bqx7">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="r:nphcs">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="2_ogp8u"
+                data-oid=":pvle7w"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="n2.6p.l">
-                    <div className="flex items-center justify-between mb-4" data-oid="m04l1al">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="b4bkmpo">
+                    <div className="flex items-center justify-between mb-4" data-oid="h4vxb30">
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="-wr9w_f"
+                            data-oid="p-c1_o8"
                         >
-                            <span className="text-lg" data-oid="hcvvjxt">
+                            <span className="text-lg" data-oid="8r:0g9d">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="lmnmcd8">
+                        <h1 className="text-xl font-bold" data-oid="24-9luo">
                             الإشعارات
                         </h1>
                         {unreadCount > 0 && (
                             <button
                                 onClick={markAllAsRead}
                                 className="text-sm bg-white/20 px-3 py-1 rounded-full"
-                                data-oid="4650:b6"
+                                data-oid="j_965hf"
                             >
                                 قراءة الكل
                             </button>
                         )}
                     </div>
-                    <p className="text-white/90 text-sm text-center" data-oid="wwypbs5">
+                    <p className="text-white/90 text-sm text-center" data-oid="yjsei:h">
                         {unreadCount > 0
                             ? `لديك ${unreadCount} إشعار غير مقروء`
                             : 'جميع الإشعارات مقروءة'}
@@ -168,18 +168,18 @@ export default function NotificationsPage() {
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 py-4" data-oid="znq:fsn">
+            <div className="max-w-sm mx-auto px-4 py-4" data-oid="seo-15y">
                 <div
                     className="bg-white rounded-2xl p-1 shadow-sm border border-gray-100"
-                    data-oid="nyq2_0h"
+                    data-oid="bppfrzm"
                 >
-                    <div className="flex" data-oid="j9brth7">
+                    <div className="flex" data-oid="-gik745">
                         <button
                             onClick={() => setActiveTab('all')}
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
                                 activeTab === 'all' ? 'bg-blue-500 text-white' : 'text-gray-600'
                             }`}
-                            data-oid="9s1zasu"
+                            data-oid="3tfo-eg"
                         >
                             جميع الإشعارات ({notifications.length})
                         </button>
@@ -188,13 +188,13 @@ export default function NotificationsPage() {
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors relative ${
                                 activeTab === 'unread' ? 'bg-blue-500 text-white' : 'text-gray-600'
                             }`}
-                            data-oid="ztzea42"
+                            data-oid="fr-i4wx"
                         >
                             غير المقروءة ({unreadCount})
                             {unreadCount > 0 && activeTab !== 'unread' && (
                                 <span
                                     className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                                    data-oid=".7iqa0e"
+                                    data-oid="htl.l_z"
                                 >
                                     {unreadCount}
                                 </span>
@@ -205,9 +205,9 @@ export default function NotificationsPage() {
             </div>
 
             {/* Notifications List */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="-01xr0w">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid=".4jv-lg">
                 {filteredNotifications.length > 0 ? (
-                    <div className="space-y-3" data-oid="dpxmrlg">
+                    <div className="space-y-3" data-oid="5ih8nd9">
                         {filteredNotifications.map((notification) => (
                             <div
                                 key={notification.id}
@@ -215,42 +215,42 @@ export default function NotificationsPage() {
                                 className={`bg-white rounded-2xl p-4 shadow-sm border border-gray-100 cursor-pointer hover:shadow-md transition-shadow ${
                                     !notification.isRead ? 'border-l-4 border-l-blue-500' : ''
                                 }`}
-                                data-oid="rxh2i8k"
+                                data-oid="34q8or-"
                             >
                                 <div
                                     className="flex items-start space-x-3 space-x-reverse"
-                                    data-oid="z1cnk4y"
+                                    data-oid="7865u2."
                                 >
                                     {/* Icon */}
                                     <div
                                         className={`w-12 h-12 ${notification.color} rounded-2xl flex items-center justify-center flex-shrink-0`}
-                                        data-oid="5v491c7"
+                                        data-oid="5aoko6g"
                                     >
-                                        <span className="text-2xl" data-oid="_xglndm">
+                                        <span className="text-2xl" data-oid="aov2o.3">
                                             {notification.icon}
                                         </span>
                                     </div>
 
                                     {/* Content */}
-                                    <div className="flex-1 min-w-0" data-oid="gserdst">
+                                    <div className="flex-1 min-w-0" data-oid="4g:afad">
                                         <div
                                             className="flex items-start justify-between mb-1"
-                                            data-oid="t3s43h-"
+                                            data-oid="8orjl_1"
                                         >
                                             <h3
                                                 className={`font-semibold text-gray-800 ${!notification.isRead ? 'text-blue-800' : ''}`}
-                                                data-oid="vatqibg"
+                                                data-oid="5.jgtbi"
                                             >
                                                 {notification.title}
                                             </h3>
                                             <div
                                                 className="flex items-center space-x-2 space-x-reverse"
-                                                data-oid="t8bq-t6"
+                                                data-oid="ymjcltc"
                                             >
                                                 {!notification.isRead && (
                                                     <div
                                                         className="w-2 h-2 bg-blue-500 rounded-full"
-                                                        data-oid="owsxbyp"
+                                                        data-oid="1em-plg"
                                                     ></div>
                                                 )}
                                                 <button
@@ -259,9 +259,9 @@ export default function NotificationsPage() {
                                                         deleteNotification(notification.id);
                                                     }}
                                                     className="text-gray-400 hover:text-red-500 transition-colors"
-                                                    data-oid="qlteppr"
+                                                    data-oid="p3z7y6a"
                                                 >
-                                                    <span className="text-sm" data-oid="460u:.u">
+                                                    <span className="text-sm" data-oid="-x27.hi">
                                                         🗑️
                                                     </span>
                                                 </button>
@@ -269,24 +269,24 @@ export default function NotificationsPage() {
                                         </div>
                                         <p
                                             className={`text-sm mb-2 ${!notification.isRead ? 'text-gray-800' : 'text-gray-600'}`}
-                                            data-oid="ed97r3r"
+                                            data-oid="38lqyht"
                                         >
                                             {notification.message}
                                         </p>
                                         <div
                                             className="flex items-center justify-between"
-                                            data-oid=":rqwd9_"
+                                            data-oid="-z873-6"
                                         >
                                             <span
                                                 className="text-xs text-gray-500"
-                                                data-oid="48n-8o5"
+                                                data-oid="zwb_:k9"
                                             >
                                                 {notification.timestamp}
                                             </span>
                                             {notification.actionUrl && (
                                                 <span
                                                     className="text-xs text-blue-600 font-semibold"
-                                                    data-oid="hm067vl"
+                                                    data-oid="23yv44b"
                                                 >
                                                     اضغط للعرض ←
                                                 </span>
@@ -298,16 +298,16 @@ export default function NotificationsPage() {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center py-12" data-oid="i033jqr">
-                        <div className="text-6xl mb-4" data-oid=".qijao4">
+                    <div className="text-center py-12" data-oid="1tjai1p">
+                        <div className="text-6xl mb-4" data-oid="ue8w832">
                             🔔
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="9z23ia8">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="o7.i8ix">
                             {activeTab === 'unread'
                                 ? 'لا توجد إشعارات غير مقروءة'
                                 : 'لا توجد إشعارات'}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-6" data-oid="cd9c:p1">
+                        <p className="text-gray-600 text-sm mb-6" data-oid="674jdw2">
                             {activeTab === 'unread'
                                 ? 'جميع إشعاراتك مقروءة'
                                 : 'ستظهر الإشعارات هنا عند وصولها'}
@@ -316,7 +316,7 @@ export default function NotificationsPage() {
                             <Link
                                 href="/"
                                 className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold inline-block"
-                                data-oid="5gw_p1b"
+                                data-oid="2m8:xoa"
                             >
                                 العودة للرئيسية
                             </Link>
@@ -328,76 +328,76 @@ export default function NotificationsPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="_d-mv_b"
+                data-oid="ayk8zvo"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="z.5s931">
-                    <div className="flex justify-around" data-oid="_c6i8ma">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="ythn9rp">
+                    <div className="flex justify-around" data-oid="cog7ap.">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="mguht9p"
+                            data-oid="gcoirkj"
                         >
-                            <span className="text-xl" data-oid=".o69kec">
+                            <span className="text-xl" data-oid=".erxg3-">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="_ryqpme">
+                            <span className="text-xs" data-oid="t30zz1_">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/categories"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="wurqyfr"
+                            data-oid="r96dlhf"
                         >
-                            <span className="text-xl" data-oid="q1:ux0g">
+                            <span className="text-xl" data-oid="0d2ol_p">
                                 📂
                             </span>
-                            <span className="text-xs" data-oid="wk57we0">
+                            <span className="text-xs" data-oid=":ypb6:.">
                                 التصنيفات
                             </span>
                         </Link>
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="tp7toec"
+                            data-oid="l265_u4"
                         >
-                            <span className="text-xl" data-oid="7sop6g9">
+                            <span className="text-xl" data-oid="y0r:u3:">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="hpaqoxm">
+                            <span className="text-xs" data-oid="jnd_izk">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/offers"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="tcf0wfj"
+                            data-oid="i89_bj0"
                         >
-                            <span className="text-xl" data-oid="akpzdqn">
+                            <span className="text-xl" data-oid="5r75lll">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="ejgbksk">
+                            <span className="text-xs" data-oid="5nfa3tp">
                                 العروض
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="w76mo9e"
+                            data-oid="_6swmq4"
                         >
-                            <div className="relative" data-oid="11zb2p.">
-                                <span className="text-xl" data-oid="y0fnxow">
+                            <div className="relative" data-oid="jlomiaz">
+                                <span className="text-xl" data-oid="oxw6-.e">
                                     🔔
                                 </span>
                                 {unreadCount > 0 && (
                                     <span
                                         className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold"
-                                        data-oid="thr5kqm"
+                                        data-oid="u662zby"
                                     >
                                         {unreadCount}
                                     </span>
                                 )}
                             </div>
-                            <span className="text-xs font-semibold" data-oid="-yrm57s">
+                            <span className="text-xs font-semibold" data-oid="-wjy:11">
                                 الإشعارات
                             </span>
                         </button>
@@ -406,7 +406,7 @@ export default function NotificationsPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid=".f11gdl"></div>
+            <div className="h-20" data-oid="vh6qlp0"></div>
         </div>
     );
 }
