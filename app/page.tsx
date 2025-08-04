@@ -5,6 +5,8 @@ import Link from 'next/link';
 
 export default function Page() {
     const [selectedService, setSelectedService] = useState(null);
+    const [showOffers, setShowOffers] = useState(false);
+    const [requestingOffers, setRequestingOffers] = useState(false);
 
     const services = [
         { id: 1, name: 'تنظيف المنزل', icon: '🏠' },
@@ -14,6 +16,61 @@ export default function Page() {
         { id: 5, name: 'تصليح الأجهزة', icon: '📱' },
         { id: 6, name: 'خدمات البستنة', icon: '🌱' },
     ];
+
+    // Sample offers data
+    const sampleOffers = [
+        {
+            id: 1,
+            providerName: 'أحمد علي',
+            rating: 4.9,
+            completedJobs: 156,
+            price: '45 ريال',
+            estimatedTime: '25 دقيقة',
+            description: 'خبرة 5 سنوات في تنظيف المنازل، أستخدم مواد تنظيف صديقة للبيئة',
+            avatar: '👨‍💼',
+            verified: true,
+            responseTime: '5 دقائق',
+        },
+        {
+            id: 2,
+            providerName: 'فاطمة محمد',
+            rating: 4.8,
+            completedJobs: 203,
+            price: '50 ريال',
+            estimatedTime: '30 دقيقة',
+            description: 'متخصصة في التنظيف العميق، خدمة سريعة ومضمونة',
+            avatar: '👩‍💼',
+            verified: true,
+            responseTime: '3 دقائق',
+        },
+        {
+            id: 3,
+            providerName: 'محمد حسن',
+            rating: 4.7,
+            completedJobs: 89,
+            price: '40 ريال',
+            estimatedTime: '35 دقيقة',
+            description: 'خدمة تنظيف شاملة بأسعار منافسة',
+            avatar: '👨‍🔧',
+            verified: false,
+            responseTime: '10 دقائق',
+        },
+    ];
+
+    const handleRequestOffers = () => {
+        setRequestingOffers(true);
+        // Simulate API call
+        setTimeout(() => {
+            setRequestingOffers(false);
+            setShowOffers(true);
+            setSelectedService(null);
+        }, 2000);
+    };
+
+    const handleSelectOffer = (offer) => {
+        alert(`تم اختيار العرض من ${offer.providerName} بسعر ${offer.price}`);
+        setShowOffers(false);
+    };
 
     return (
         <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="7yyknsz">
@@ -148,6 +205,10 @@ export default function Page() {
                                     </h4>
                                 </div>
                                 <button
+                                    onClick={() => {
+                                        setSelectedService(service);
+                                        handleRequestOffers();
+                                    }}
                                     className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold"
                                     data-oid="qhqp86-"
                                 >
@@ -189,17 +250,26 @@ export default function Page() {
                                 طلباتي
                             </span>
                         </Link>
-                        <button
-                            className="flex flex-col items-center space-y-1 text-gray-400"
+                        <Link
+                            href="/offers"
+                            className="flex flex-col items-center space-y-1 text-gray-400 relative"
                             data-oid="h6k:-up"
                         >
-                            <span className="text-xl" data-oid="3:lt_0k">
-                                💬
-                            </span>
+                            <div className="relative" data-oid="vzte:_3">
+                                <span className="text-xl" data-oid="3:lt_0k">
+                                    💰
+                                </span>
+                                <span
+                                    className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold"
+                                    data-oid="2j0_a6n"
+                                >
+                                    2
+                                </span>
+                            </div>
                             <span className="text-xs" data-oid="w0ag1d3">
-                                الرسائل
+                                العروض
                             </span>
-                        </button>
+                        </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="z8z-zqn"
@@ -263,10 +333,11 @@ export default function Page() {
 
                         <div className="space-y-3" data-oid="pq.g9.3">
                             <button
+                                onClick={handleRequestOffers}
                                 className="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg"
                                 data-oid="je2qt1i"
                             >
-                                احجز الآن
+                                طلب عروض من مقدمي الخدمة
                             </button>
                             <button
                                 onClick={() => setSelectedService(null)}
@@ -275,6 +346,230 @@ export default function Page() {
                             >
                                 إلغاء
                             </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Requesting Offers Modal */}
+            {requestingOffers && (
+                <div
+                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+                    data-oid="x112_nl"
+                >
+                    <div
+                        className="bg-white w-full max-w-sm mx-4 rounded-3xl p-8 text-center"
+                        data-oid="jxsmd_y"
+                    >
+                        <div
+                            className="animate-spin w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"
+                            data-oid="81_68uk"
+                        ></div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-2" data-oid="2g8g4gi">
+                            جاري البحث عن مقدمي الخدمة
+                        </h3>
+                        <p className="text-gray-600 text-sm" data-oid="qg8m42x">
+                            يرجى الانتظار بينما نجمع أفضل العروض لك...
+                        </p>
+                    </div>
+                </div>
+            )}
+
+            {/* Offers Modal */}
+            {showOffers && (
+                <div className="fixed inset-0 bg-black/50 flex items-end z-50" data-oid="h-1phvw">
+                    <div
+                        className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-hidden"
+                        data-oid="erjn_6t"
+                    >
+                        {/* Header */}
+                        <div className="p-6 border-b border-gray-200" data-oid="a7gb3xi">
+                            <div
+                                className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-4"
+                                data-oid="cx_:bc_"
+                            ></div>
+                            <div className="flex items-center justify-between" data-oid="2jzl2f5">
+                                <h3 className="text-xl font-bold text-gray-800" data-oid="sjejpg9">
+                                    العروض المتاحة
+                                </h3>
+                                <button
+                                    onClick={() => setShowOffers(false)}
+                                    className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center"
+                                    data-oid="xukcbdw"
+                                >
+                                    <span className="text-gray-600" data-oid="tap8bxq">
+                                        ✕
+                                    </span>
+                                </button>
+                            </div>
+                            <p className="text-gray-600 text-sm mt-2" data-oid="27w6d7l">
+                                اختر أفضل عرض يناسبك
+                            </p>
+                        </div>
+
+                        {/* Offers List */}
+                        <div
+                            className="overflow-y-auto max-h-[calc(90vh-120px)] p-4"
+                            data-oid="rtbykkj"
+                        >
+                            <div className="space-y-4" data-oid="b_qetoy">
+                                {sampleOffers.map((offer) => (
+                                    <div
+                                        key={offer.id}
+                                        className="bg-gray-50 rounded-2xl p-4 border border-gray-100"
+                                        data-oid="v2ls08j"
+                                    >
+                                        {/* Provider Info */}
+                                        <div
+                                            className="flex items-start space-x-3 space-x-reverse mb-4"
+                                            data-oid="7jqhtu1"
+                                        >
+                                            <div className="text-3xl" data-oid="9h9:w.j">
+                                                {offer.avatar}
+                                            </div>
+                                            <div className="flex-1" data-oid="ncmfntg">
+                                                <div
+                                                    className="flex items-center space-x-2 space-x-reverse mb-1"
+                                                    data-oid="8yd-des"
+                                                >
+                                                    <h4
+                                                        className="font-semibold text-gray-800"
+                                                        data-oid="flc-y44"
+                                                    >
+                                                        {offer.providerName}
+                                                    </h4>
+                                                    {offer.verified && (
+                                                        <span
+                                                            className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full"
+                                                            data-oid="mfv_2jw"
+                                                        >
+                                                            موثق
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <div
+                                                    className="flex items-center space-x-4 space-x-reverse text-sm text-gray-600"
+                                                    data-oid="9fpynk-"
+                                                >
+                                                    <div
+                                                        className="flex items-center space-x-1 space-x-reverse"
+                                                        data-oid="f:6f86l"
+                                                    >
+                                                        <span
+                                                            className="text-yellow-500"
+                                                            data-oid="vjj.ts3"
+                                                        >
+                                                            ⭐
+                                                        </span>
+                                                        <span data-oid="yyj9s3g">
+                                                            {offer.rating}
+                                                        </span>
+                                                    </div>
+                                                    <span data-oid="k.ckkmi">
+                                                        ({offer.completedJobs} خدمة مكتملة)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Offer Details */}
+                                        <div
+                                            className="bg-white rounded-xl p-3 mb-4"
+                                            data-oid="o_xt574"
+                                        >
+                                            <div
+                                                className="grid grid-cols-3 gap-4 text-center mb-3"
+                                                data-oid="5326x8g"
+                                            >
+                                                <div data-oid="6oci6.1">
+                                                    <p
+                                                        className="text-lg font-bold text-blue-600"
+                                                        data-oid="9f7u7jy"
+                                                    >
+                                                        {offer.price}
+                                                    </p>
+                                                    <p
+                                                        className="text-xs text-gray-500"
+                                                        data-oid="ymlb5me"
+                                                    >
+                                                        السعر
+                                                    </p>
+                                                </div>
+                                                <div data-oid="mgpi:fn">
+                                                    <p
+                                                        className="text-lg font-bold text-green-600"
+                                                        data-oid="zbsw:qq"
+                                                    >
+                                                        {offer.estimatedTime}
+                                                    </p>
+                                                    <p
+                                                        className="text-xs text-gray-500"
+                                                        data-oid="5a44bbt"
+                                                    >
+                                                        المدة المتوقعة
+                                                    </p>
+                                                </div>
+                                                <div data-oid="sjmk-39">
+                                                    <p
+                                                        className="text-lg font-bold text-orange-600"
+                                                        data-oid="cvuwgrs"
+                                                    >
+                                                        {offer.responseTime}
+                                                    </p>
+                                                    <p
+                                                        className="text-xs text-gray-500"
+                                                        data-oid="m2fuf00"
+                                                    >
+                                                        وقت الاستجابة
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p
+                                                className="text-sm text-gray-700 text-center"
+                                                data-oid="0s.2y4r"
+                                            >
+                                                {offer.description}
+                                            </p>
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div
+                                            className="flex space-x-3 space-x-reverse"
+                                            data-oid="3ma6z6u"
+                                        >
+                                            <button
+                                                onClick={() => handleSelectOffer(offer)}
+                                                className="flex-1 bg-blue-500 text-white py-3 rounded-xl font-semibold"
+                                                data-oid="ec9qad4"
+                                            >
+                                                اختيار هذا العرض
+                                            </button>
+                                            <button
+                                                className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl"
+                                                data-oid="xvzbfz2"
+                                            >
+                                                💬
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Request More Offers */}
+                            <div
+                                className="mt-6 p-4 bg-blue-50 rounded-2xl text-center"
+                                data-oid=":v0p3.7"
+                            >
+                                <p className="text-sm text-gray-600 mb-3" data-oid="0tiw-v3">
+                                    لم تجد العرض المناسب؟
+                                </p>
+                                <button
+                                    className="bg-blue-500 text-white px-6 py-2 rounded-xl font-semibold"
+                                    data-oid="5q:t09-"
+                                >
+                                    طلب المزيد من العروض
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
