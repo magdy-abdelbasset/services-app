@@ -149,7 +149,8 @@ export default function ServicesPage() {
     }, [services, sortBy, filterBy]);
 
     const handleRequestService = (provider: ServiceProvider) => {
-        alert(`تم طلب الخدمة من ${provider.name} بسعر ${provider.price}`);
+        const serviceName = getSubCategoryName() || getCategoryName();
+        window.location.href = `/request-service?provider=${provider.id}&service=${encodeURIComponent(serviceName)}`;
     };
 
     const getCategoryName = () => {

@@ -150,12 +150,13 @@ export default function Page() {
             {/* Quick Actions */}
             <div className="max-w-sm mx-auto px-4 mb-6" data-oid="t8e2:2j">
                 <div className="flex space-x-4 space-x-reverse" data-oid="fcrmsun">
-                    <button
-                        className="flex-1 bg-orange-500 text-white py-3 rounded-xl font-semibold"
+                    <Link
+                        href="/request-service?service=طلب سريع"
+                        className="flex-1 bg-orange-500 text-white py-3 rounded-xl font-semibold text-center"
                         data-oid="cfe7saj"
                     >
                         طلب سريع
-                    </button>
+                    </Link>
                     <Link
                         href="/orders"
                         className="flex-1 bg-green-500 text-white py-3 rounded-xl font-semibold text-center"
