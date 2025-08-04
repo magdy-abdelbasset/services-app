@@ -244,70 +244,70 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="nh4-7bl">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="q8rlc.3">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="f75ok1:"
+                data-oid="f1_rckt"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="fuaf_8m">
-                    <div className="flex items-center justify-between mb-4" data-oid="5k_bqdq">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="4.xhcqg">
+                    <div className="flex items-center justify-between mb-4" data-oid="5ekpd9f">
                         <Link
                             href="/login"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="h-xe98m"
+                            data-oid="pw38ibr"
                         >
-                            <span className="text-lg" data-oid="u68rei4">
+                            <span className="text-lg" data-oid="qm4ruyl">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="8a66eh8">
+                        <h1 className="text-xl font-bold" data-oid="p295a35">
                             إنشاء حساب جديد
                         </h1>
-                        <div className="w-10" data-oid="f46a1zy"></div>
+                        <div className="w-10" data-oid="21_e3nb"></div>
                     </div>
-                    <p className="text-white/90 text-sm text-center" data-oid="fuo-_lh">
+                    <p className="text-white/90 text-sm text-center" data-oid="n.-dy10">
                         انضم إلينا واحصل على أفضل الخدمات
                     </p>
                 </div>
             </div>
 
             {/* Progress Indicator */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10 mb-6" data-oid="osc5ljl">
-                <div className="bg-white rounded-2xl shadow-lg p-4" data-oid="ggm.is8">
-                    <div className="flex items-center justify-between mb-2" data-oid="k-8tnis">
-                        <span className="text-sm text-gray-600" data-oid="b.o6y2q">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10 mb-6" data-oid="78x59gw">
+                <div className="bg-white rounded-2xl shadow-lg p-4" data-oid="ypgb:7-">
+                    <div className="flex items-center justify-between mb-2" data-oid="wc-a5er">
+                        <span className="text-sm text-gray-600" data-oid="dvkk3ri">
                             الخطوة {currentStep} من 2
                         </span>
-                        <span className="text-sm text-gray-600" data-oid="vsakq0-">
+                        <span className="text-sm text-gray-600" data-oid="66cvpnz">
                             {currentStep === 1 ? 'المعلومات الأساسية' : 'كلمة المرور والتفضيلات'}
                         </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2" data-oid="j68kmgj">
+                    <div className="w-full bg-gray-200 rounded-full h-2" data-oid="kf:sd8k">
                         <div
                             className="bg-blue-500 h-2 rounded-full transition-all duration-300"
                             style={{ width: `${(currentStep / 2) * 100}%` }}
-                            data-oid="rhgb2vs"
+                            data-oid="zt_s_77"
                         ></div>
                     </div>
                 </div>
             </div>
 
             {/* Registration Form */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="hey5l4d">
-                <form onSubmit={handleSubmit} className="space-y-6" data-oid="f9o4s3r">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid=":oq2ibb">
+                <form onSubmit={handleSubmit} className="space-y-6" data-oid="rc7n.rg">
                     {/* Step 1: Basic Information */}
                     {currentStep === 1 && (
-                        <div className="space-y-4" data-oid="ns9mr88">
+                        <div className="space-y-4" data-oid="18a9pqt">
                             {/* User Type Selection */}
                             <div
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="69vwpg9"
+                                data-oid="pr8zcxi"
                             >
-                                <h3 className="font-semibold text-gray-800 mb-3" data-oid="qnxvqs1">
+                                <h3 className="font-semibold text-gray-800 mb-3" data-oid="-diu6tr">
                                     نوع الحساب
                                 </h3>
-                                <div className="grid grid-cols-2 gap-3" data-oid="1.4yjv9">
+                                <div className="grid grid-cols-2 gap-3" data-oid="ox6ugyc">
                                     <button
                                         type="button"
                                         onClick={() => handleInputChange('userType', 'customer')}
@@ -316,15 +316,15 @@ export default function RegisterPage() {
                                                 ? 'border-blue-500 bg-blue-50 text-blue-700'
                                                 : 'border-gray-200 bg-white text-gray-700'
                                         }`}
-                                        data-oid="cs17net"
+                                        data-oid="kklbhns"
                                     >
-                                        <div className="text-2xl mb-2" data-oid="pkqo9vq">
+                                        <div className="text-2xl mb-2" data-oid="e8s2vz0">
                                             👤
                                         </div>
-                                        <div className="font-semibold text-sm" data-oid="ef.7bo9">
+                                        <div className="font-semibold text-sm" data-oid="4upesd.">
                                             عميل
                                         </div>
-                                        <div className="text-xs text-gray-600" data-oid="3uholko">
+                                        <div className="text-xs text-gray-600" data-oid=":tpfq:1">
                                             أطلب الخدمات
                                         </div>
                                     </button>
@@ -336,15 +336,15 @@ export default function RegisterPage() {
                                                 ? 'border-blue-500 bg-blue-50 text-blue-700'
                                                 : 'border-gray-200 bg-white text-gray-700'
                                         }`}
-                                        data-oid=".1r3g8y"
+                                        data-oid="t-ot:la"
                                     >
-                                        <div className="text-2xl mb-2" data-oid="m6-3ltn">
+                                        <div className="text-2xl mb-2" data-oid="op7ewct">
                                             🔧
                                         </div>
-                                        <div className="font-semibold text-sm" data-oid="3stvy92">
+                                        <div className="font-semibold text-sm" data-oid="380o749">
                                             مقدم خدمة
                                         </div>
-                                        <div className="text-xs text-gray-600" data-oid="1j:.ix3">
+                                        <div className="text-xs text-gray-600" data-oid="2g6.dxk">
                                             أقدم الخدمات
                                         </div>
                                     </button>
@@ -352,14 +352,14 @@ export default function RegisterPage() {
                             </div>
 
                             {/* Name Fields */}
-                            <div className="grid grid-cols-2 gap-3" data-oid="43mj4mf">
+                            <div className="grid grid-cols-2 gap-3" data-oid="t0h8t2d">
                                 <div
                                     className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    data-oid="fv4t-kz"
+                                    data-oid=".xluc1x"
                                 >
                                     <label
                                         className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="qcxum1s"
+                                        data-oid="i0d25lb"
                                     >
                                         الاسم الأول *
                                     </label>
@@ -375,11 +375,11 @@ export default function RegisterPage() {
                                                 : 'border-gray-300 focus:border-blue-500'
                                         }`}
                                         placeholder="أدخل اسمك الأول"
-                                        data-oid="9qf3k5j"
+                                        data-oid="hws1do0"
                                     />
 
                                     {errors.firstName && (
-                                        <p className="text-red-500 text-xs mt-1" data-oid="q2s4m5t">
+                                        <p className="text-red-500 text-xs mt-1" data-oid="yt1c2a_">
                                             {errors.firstName}
                                         </p>
                                     )}
@@ -387,11 +387,11 @@ export default function RegisterPage() {
 
                                 <div
                                     className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    data-oid="buuq457"
+                                    data-oid="w3jahu."
                                 >
                                     <label
                                         className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="42nghhh"
+                                        data-oid="0hx5.er"
                                     >
                                         اسم العائلة *
                                     </label>
@@ -407,11 +407,11 @@ export default function RegisterPage() {
                                                 : 'border-gray-300 focus:border-blue-500'
                                         }`}
                                         placeholder="أدخل اسم العائلة"
-                                        data-oid="3carnu5"
+                                        data-oid="7it:dv1"
                                     />
 
                                     {errors.lastName && (
-                                        <p className="text-red-500 text-xs mt-1" data-oid="x1p8-fs">
+                                        <p className="text-red-500 text-xs mt-1" data-oid="y9trv7_">
                                             {errors.lastName}
                                         </p>
                                     )}
@@ -421,11 +421,11 @@ export default function RegisterPage() {
                             {/* Email Field */}
                             <div
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="6wvnhko"
+                                data-oid="-aak5b7"
                             >
                                 <label
                                     className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="die7d-e"
+                                    data-oid="a_k.qj7"
                                 >
                                     البريد الإلكتروني *
                                 </label>
@@ -440,11 +440,11 @@ export default function RegisterPage() {
                                     }`}
                                     placeholder="example@email.com"
                                     dir="ltr"
-                                    data-oid="t7kkqp-"
+                                    data-oid="c81njww"
                                 />
 
                                 {errors.email && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="8v6h.cd">
+                                    <p className="text-red-500 text-xs mt-1" data-oid="ngwch_n">
                                         {errors.email}
                                     </p>
                                 )}
@@ -453,18 +453,18 @@ export default function RegisterPage() {
                             {/* Phone Field - Enhanced */}
                             <div
                                 className="bg-white rounded-2xl p-4 shadow-sm border-2 border-blue-200"
-                                data-oid="4od1y6o"
+                                data-oid="7qk-gdz"
                             >
                                 <label
                                     className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="1.oltgq"
+                                    data-oid="q17mfmp"
                                 >
                                     رقم الجوال *
-                                    <span className="text-blue-600 text-xs mr-1" data-oid=":cbsbpm">
+                                    <span className="text-blue-600 text-xs mr-1" data-oid="61-uu-x">
                                         (مطلوب للتحقق)
                                     </span>
                                 </label>
-                                <div className="flex space-x-2 space-x-reverse" data-oid="f:hj4vj">
+                                <div className="flex space-x-2 space-x-reverse" data-oid="o0qpda2">
                                     <input
                                         type="tel"
                                         value={formData.phone}
@@ -481,7 +481,7 @@ export default function RegisterPage() {
                                         }`}
                                         placeholder="05xxxxxxxx"
                                         dir="ltr"
-                                        data-oid="z6f7oqf"
+                                        data-oid="r1e.-v9"
                                     />
 
                                     <button
@@ -495,14 +495,14 @@ export default function RegisterPage() {
                                                   ? 'bg-blue-500 text-white hover:bg-blue-600'
                                                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                         }`}
-                                        data-oid="y19jqd2"
+                                        data-oid="1r-gtpz"
                                     >
                                         {isPhoneVerified ? '✓ مؤكد' : 'تحقق'}
                                     </button>
                                 </div>
 
                                 {errors.phone && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="zm6pnhv">
+                                    <p className="text-red-500 text-xs mt-1" data-oid="6.jz_s-">
                                         {errors.phone}
                                     </p>
                                 )}
@@ -510,20 +510,20 @@ export default function RegisterPage() {
                                 {isPhoneVerified && (
                                     <p
                                         className="text-green-600 text-xs mt-1 flex items-center"
-                                        data-oid="towsm:s"
+                                        data-oid="lzork3d"
                                     >
-                                        <span className="mr-1" data-oid="oc9w5zv">
+                                        <span className="mr-1" data-oid="etj6rul">
                                             ✓
                                         </span>
                                         تم تأكيد رقم الجوال بنجاح
                                     </p>
                                 )}
 
-                                <div className="mt-2 text-xs text-gray-600" data-oid="5m0u5fz">
-                                    <p data-oid="9qs6izi">
+                                <div className="mt-2 text-xs text-gray-600" data-oid="ygcqsy0">
+                                    <p data-oid="o82-6vg">
                                         • سيتم إرسال رمز تحقق عبر الرسائل النصية
                                     </p>
-                                    <p data-oid="3_7i027">
+                                    <p data-oid="tlflu4w">
                                         • رقم الجوال مطلوب لتأمين حسابك وإرسال الإشعارات
                                     </p>
                                 </div>
@@ -534,7 +534,7 @@ export default function RegisterPage() {
                                 type="button"
                                 onClick={nextStep}
                                 className="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-colors"
-                                data-oid="67q28zt"
+                                data-oid="qevt:20"
                             >
                                 التالي
                             </button>
@@ -543,19 +543,19 @@ export default function RegisterPage() {
 
                     {/* Step 2: Password and Preferences */}
                     {currentStep === 2 && (
-                        <div className="space-y-4" data-oid="au.1r.b">
+                        <div className="space-y-4" data-oid="-w_uqo.">
                             {/* Password Field */}
                             <div
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="_0z8s5q"
+                                data-oid="3tjoszz"
                             >
                                 <label
                                     className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid=":3e6_mi"
+                                    data-oid="yjiqyp_"
                                 >
                                     كلمة المرور *
                                 </label>
-                                <div className="relative" data-oid="7ttbgwu">
+                                <div className="relative" data-oid="epd_glp">
                                     <input
                                         type={showPassword ? 'text' : 'password'}
                                         value={formData.password}
@@ -569,32 +569,32 @@ export default function RegisterPage() {
                                         }`}
                                         placeholder="أدخل كلمة مرور قوية"
                                         dir="ltr"
-                                        data-oid="s7016k4"
+                                        data-oid="kl_4ckq"
                                     />
 
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
                                         className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                                        data-oid="p-9vt.c"
+                                        data-oid="h.-iew8"
                                     >
                                         {showPassword ? '🙈' : '👁️'}
                                     </button>
                                 </div>
                                 {errors.password && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="ydd3b-n">
+                                    <p className="text-red-500 text-xs mt-1" data-oid="68k7d.r">
                                         {errors.password}
                                     </p>
                                 )}
-                                <div className="mt-2 text-xs text-gray-600" data-oid="f4gaw11">
-                                    <p data-oid="hy7e1w0">كلمة المرور يجب أن تحتوي على:</p>
+                                <div className="mt-2 text-xs text-gray-600" data-oid="4.8iha9">
+                                    <p data-oid="46zj6ps">كلمة المرور يجب أن تحتوي على:</p>
                                     <ul
                                         className="list-disc list-inside mt-1 space-y-1"
-                                        data-oid="1z1e1ba"
+                                        data-oid="sy4jnqu"
                                     >
-                                        <li data-oid="-5o7f6t">8 أحرف على الأقل</li>
-                                        <li data-oid="dv0m:e9">حروف كبيرة وصغيرة</li>
-                                        <li data-oid="he78myo">أرقام</li>
+                                        <li data-oid="n7:w:tx">8 أحرف على الأقل</li>
+                                        <li data-oid="kl_hdia">حروف كبيرة وصغيرة</li>
+                                        <li data-oid="dgkjt4s">أرقام</li>
                                     </ul>
                                 </div>
                             </div>
@@ -602,15 +602,15 @@ export default function RegisterPage() {
                             {/* Confirm Password Field */}
                             <div
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="r4yv1uv"
+                                data-oid="9k536to"
                             >
                                 <label
                                     className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="c6le8:c"
+                                    data-oid="egrvwbo"
                                 >
                                     تأكيد كلمة المرور *
                                 </label>
-                                <div className="relative" data-oid="bpr-87i">
+                                <div className="relative" data-oid="r6jm.2m">
                                     <input
                                         type={showConfirmPassword ? 'text' : 'password'}
                                         value={formData.confirmPassword}
@@ -624,20 +624,20 @@ export default function RegisterPage() {
                                         }`}
                                         placeholder="أعد إدخال كلمة المرور"
                                         dir="ltr"
-                                        data-oid="2pm.z3j"
+                                        data-oid="ep7xf88"
                                     />
 
                                     <button
                                         type="button"
                                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                         className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                                        data-oid="igknhrx"
+                                        data-oid="s783so0"
                                     >
                                         {showConfirmPassword ? '🙈' : '👁️'}
                                     </button>
                                 </div>
                                 {errors.confirmPassword && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="eqy1nfv">
+                                    <p className="text-red-500 text-xs mt-1" data-oid="nnb9a_j">
                                         {errors.confirmPassword}
                                     </p>
                                 )}
@@ -646,11 +646,11 @@ export default function RegisterPage() {
                             {/* Terms Agreement */}
                             <div
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="0n72e3p"
+                                data-oid="k2a5hmt"
                             >
                                 <label
                                     className="flex items-start space-x-3 space-x-reverse cursor-pointer"
-                                    data-oid="f05epby"
+                                    data-oid="wrvo53n"
                                 >
                                     <input
                                         type="checkbox"
@@ -659,30 +659,30 @@ export default function RegisterPage() {
                                             handleInputChange('agreeToTerms', e.target.checked)
                                         }
                                         className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                                        data-oid="jyi1_.i"
+                                        data-oid="30juae6"
                                     />
 
-                                    <div className="text-sm text-gray-700" data-oid="mdms070">
-                                        <span data-oid="9h_1pww">أوافق على </span>
+                                    <div className="text-sm text-gray-700" data-oid="nzbhlx_">
+                                        <span data-oid="c5as9j_">أوافق على </span>
                                         <Link
                                             href="/terms"
                                             className="text-blue-600 underline"
-                                            data-oid="lgkvo0n"
+                                            data-oid="0jb.h2x"
                                         >
                                             الشروط والأحكام
                                         </Link>
-                                        <span data-oid="4vrd.w:"> و </span>
+                                        <span data-oid="-7s:bl8"> و </span>
                                         <Link
                                             href="/privacy"
                                             className="text-blue-600 underline"
-                                            data-oid="h0i0eif"
+                                            data-oid="s4n1p2g"
                                         >
                                             سياسة الخصوصية
                                         </Link>
                                     </div>
                                 </label>
                                 {errors.agreeToTerms && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid=":vq_0e_">
+                                    <p className="text-red-500 text-xs mt-1" data-oid="6ssiqw8">
                                         {errors.agreeToTerms}
                                     </p>
                                 )}
@@ -692,21 +692,21 @@ export default function RegisterPage() {
                             {errors.general && (
                                 <div
                                     className="bg-red-50 border border-red-200 rounded-2xl p-4"
-                                    data-oid="xy_z-co"
+                                    data-oid="bduwazw"
                                 >
-                                    <p className="text-red-600 text-sm" data-oid="oip35ew">
+                                    <p className="text-red-600 text-sm" data-oid="9hfckjg">
                                         {errors.general}
                                     </p>
                                 </div>
                             )}
 
                             {/* Action Buttons */}
-                            <div className="flex space-x-3 space-x-reverse" data-oid="l8luxk.">
+                            <div className="flex space-x-3 space-x-reverse" data-oid="zsiwnxa">
                                 <button
                                     type="button"
                                     onClick={prevStep}
                                     className="flex-1 bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition-colors"
-                                    data-oid="7pr1cho"
+                                    data-oid="kwm:h:n"
                                 >
                                     السابق
                                 </button>
@@ -714,18 +714,18 @@ export default function RegisterPage() {
                                     type="submit"
                                     disabled={isLoading}
                                     className="flex-1 bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                                    data-oid="jksgioe"
+                                    data-oid="8xtlcww"
                                 >
                                     {isLoading ? (
                                         <div
                                             className="flex items-center justify-center space-x-2 space-x-reverse"
-                                            data-oid="-xy.4s."
+                                            data-oid="a0xt-.3"
                                         >
                                             <div
                                                 className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                                                data-oid="5umngx2"
+                                                data-oid="ahagai."
                                             ></div>
-                                            <span data-oid="47zjr:a">جاري إنشاء الحساب...</span>
+                                            <span data-oid="oh7o2nl">جاري إنشاء الحساب...</span>
                                         </div>
                                     ) : (
                                         'إنشاء الحساب'
@@ -737,13 +737,13 @@ export default function RegisterPage() {
                 </form>
 
                 {/* Login Link */}
-                <div className="mt-6 text-center" data-oid="p_2k8yd">
-                    <p className="text-gray-600 text-sm" data-oid="3lgond2">
+                <div className="mt-6 text-center" data-oid="e8s.u53">
+                    <p className="text-gray-600 text-sm" data-oid="5u4o0:b">
                         لديك حساب بالفعل؟{' '}
                         <Link
                             href="/login"
                             className="text-blue-600 font-semibold"
-                            data-oid="useg3xv"
+                            data-oid="viw.zd:"
                         >
                             تسجيل الدخول
                         </Link>
@@ -751,42 +751,42 @@ export default function RegisterPage() {
                 </div>
 
                 {/* Social Registration */}
-                <div className="mt-6" data-oid="wo3ni3w">
-                    <div className="relative" data-oid="7cy3-ys">
-                        <div className="absolute inset-0 flex items-center" data-oid="4:r7gpk">
+                <div className="mt-6" data-oid="49t8pp1">
+                    <div className="relative" data-oid="hs81:y_">
+                        <div className="absolute inset-0 flex items-center" data-oid="smpve-q">
                             <div
                                 className="w-full border-t border-gray-300"
-                                data-oid="2fe6g.."
+                                data-oid="fr_lqbf"
                             ></div>
                         </div>
-                        <div className="relative flex justify-center text-sm" data-oid="77z-1zo">
-                            <span className="px-2 bg-gray-50 text-gray-500" data-oid="x75q9j6">
+                        <div className="relative flex justify-center text-sm" data-oid="cfmm2.u">
+                            <span className="px-2 bg-gray-50 text-gray-500" data-oid="xekiomg">
                                 أو
                             </span>
                         </div>
                     </div>
 
-                    <div className="mt-6 space-y-3" data-oid="ug-k-f4">
+                    <div className="mt-6 space-y-3" data-oid="-i3h4uh">
                         <button
                             type="button"
                             className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-2xl font-semibold flex items-center justify-center space-x-2 space-x-reverse hover:bg-gray-50 transition-colors"
-                            data-oid="1cpauc3"
+                            data-oid="eopowan"
                         >
-                            <span className="text-xl" data-oid="k4hoq4.">
+                            <span className="text-xl" data-oid="4yg.r66">
                                 📱
                             </span>
-                            <span data-oid="lipuzwh">التسجيل باستخدام أبشر</span>
+                            <span data-oid="fcy4nh9">التسجيل باستخدام أبشر</span>
                         </button>
 
                         <button
                             type="button"
                             className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-2xl font-semibold flex items-center justify-center space-x-2 space-x-reverse hover:bg-gray-50 transition-colors"
-                            data-oid="e48sk8c"
+                            data-oid=".0z8-j:"
                         >
-                            <span className="text-xl" data-oid="apzb_x1">
+                            <span className="text-xl" data-oid="4un9nz5">
                                 🍎
                             </span>
-                            <span data-oid="v5ow6v7">التسجيل باستخدام Apple</span>
+                            <span data-oid="30imx6k">التسجيل باستخدام Apple</span>
                         </button>
                     </div>
                 </div>

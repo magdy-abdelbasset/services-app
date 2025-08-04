@@ -160,39 +160,39 @@ export default function CategoriesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="bj8h08:">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="ihuw8_b">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="yfcxy50"
+                data-oid="p9xu.ef"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="yjdwwxb">
-                    <div className="flex items-center justify-between mb-4" data-oid="f_4jvmi">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="x7_-d4i">
+                    <div className="flex items-center justify-between mb-4" data-oid="q25x17b">
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="qy4n1xk"
+                            data-oid="2_yl:v:"
                         >
-                            <span className="text-lg" data-oid="7df5:k.">
+                            <span className="text-lg" data-oid="p0vfa2e">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="se8_l4g">
+                        <h1 className="text-xl font-bold" data-oid="re_agwv">
                             تصنيفات الخدمات
                         </h1>
-                        <div className="w-10 h-10" data-oid="qff74co"></div>
+                        <div className="w-10 h-10" data-oid="m6q2sdu"></div>
                     </div>
-                    <p className="text-white/90 text-sm text-center" data-oid="6-1gzdy">
+                    <p className="text-white/90 text-sm text-center" data-oid="2now422">
                         اختر التصنيف المناسب لإيجاد الخدمة التي تحتاجها
                     </p>
                 </div>
             </div>
 
             {/* Search Bar */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="921ef0s">
-                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="klmujrn">
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid=":_5:s04">
-                        <span className="text-gray-400" data-oid="xtv.7k-">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="poax3kd">
+                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="51:ux82">
+                    <div className="flex items-center space-x-3 space-x-reverse" data-oid=":tq5nko">
+                        <span className="text-gray-400" data-oid=":cx0iy:">
                             🔍
                         </span>
                         <input
@@ -201,37 +201,37 @@ export default function CategoriesPage() {
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="ابحث في التصنيفات..."
                             className="flex-1 outline-none text-gray-700"
-                            data-oid="ven2p:3"
+                            data-oid="17-ixs8"
                         />
                     </div>
                 </div>
             </div>
 
             {/* Categories Grid */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="e93xsm:">
-                <div className="grid grid-cols-2 gap-4 mb-6" data-oid="g.sk7s-">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="swl2fmt">
+                <div className="grid grid-cols-2 gap-4 mb-6" data-oid="evbcs.y">
                     {filteredCategories.map((category) => (
                         <div
                             key={category.id}
                             onClick={() => setSelectedCategory(category)}
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 cursor-pointer hover:shadow-md transition-shadow"
-                            data-oid="wqs.iij"
+                            data-oid="_b_ufui"
                         >
                             <div
                                 className={`w-12 h-12 ${category.color} rounded-2xl flex items-center justify-center mb-3 mx-auto`}
-                                data-oid="qzxjiq4"
+                                data-oid="77c9bqk"
                             >
-                                <span className="text-2xl" data-oid=".mwju8v">
+                                <span className="text-2xl" data-oid="4ln7qax">
                                     {category.icon}
                                 </span>
                             </div>
                             <h3
                                 className="font-semibold text-gray-800 text-sm text-center mb-1"
-                                data-oid=":ongw3x"
+                                data-oid="9o.o01k"
                             >
                                 {category.name}
                             </h3>
-                            <p className="text-xs text-gray-500 text-center" data-oid="etnu6nk">
+                            <p className="text-xs text-gray-500 text-center" data-oid="4n6v:j7">
                                 {category.subCategories.length} تصنيف فرعي
                             </p>
                         </div>
@@ -239,38 +239,38 @@ export default function CategoriesPage() {
                 </div>
 
                 {/* Popular Categories */}
-                <div className="mb-6" data-oid="3e6lzh6">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-3" data-oid="z_12cqd">
+                <div className="mb-6" data-oid="mvd14z4">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-3" data-oid="tiid0nc">
                         التصنيفات الأكثر طلباً
                     </h3>
-                    <div className="space-y-3" data-oid="1w8.-oh">
+                    <div className="space-y-3" data-oid="lf70:q4">
                         {categories.slice(0, 4).map((category) => (
                             <div
                                 key={category.id}
                                 onClick={() => setSelectedCategory(category)}
                                 className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex items-center space-x-4 space-x-reverse cursor-pointer hover:shadow-md transition-shadow"
-                                data-oid="8xg3ggp"
+                                data-oid="8fge7pl"
                             >
                                 <div
                                     className={`w-10 h-10 ${category.color} rounded-xl flex items-center justify-center`}
-                                    data-oid="j2tyqo4"
+                                    data-oid="knw6r63"
                                 >
-                                    <span className="text-lg" data-oid="fopbp_h">
+                                    <span className="text-lg" data-oid="_ae.u9d">
                                         {category.icon}
                                     </span>
                                 </div>
-                                <div className="flex-1" data-oid="08oe44w">
+                                <div className="flex-1" data-oid="lnzms2m">
                                     <h4
                                         className="font-semibold text-gray-800 text-sm"
-                                        data-oid="mwlzy-b"
+                                        data-oid="ocvg26y"
                                     >
                                         {category.name}
                                     </h4>
-                                    <p className="text-xs text-gray-500" data-oid="zhmwdgp">
+                                    <p className="text-xs text-gray-500" data-oid="t_2lft0">
                                         {category.description}
                                     </p>
                                 </div>
-                                <div className="text-xs text-gray-400" data-oid="yo4u39e">
+                                <div className="text-xs text-gray-400" data-oid="9xdoch9">
                                     {category.subCategories.reduce(
                                         (sum, sub) => sum + sub.servicesCount,
                                         0,
@@ -288,43 +288,43 @@ export default function CategoriesPage() {
                 <div
                     className="fixed inset-0 bg-black/50 flex items-end z-50"
                     onClick={() => setSelectedCategory(null)}
-                    data-oid="4cl8l68"
+                    data-oid="ct6-bdr"
                 >
                     <div
                         className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
-                        data-oid="9trjjfv"
+                        data-oid="6u-ib8x"
                     >
                         {/* Header */}
-                        <div className="p-6 border-b border-gray-200" data-oid="xs7aacr">
+                        <div className="p-6 border-b border-gray-200" data-oid="je5_mao">
                             <div
                                 className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-4"
-                                data-oid="i.si7_0"
+                                data-oid="yvlntr0"
                             ></div>
                             <div
                                 className="flex items-center justify-between mb-4"
-                                data-oid="nxquq6m"
+                                data-oid="io-0:sh"
                             >
                                 <div
                                     className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="5qelg0g"
+                                    data-oid="zg.4v3x"
                                 >
                                     <div
                                         className={`w-12 h-12 ${selectedCategory.color} rounded-2xl flex items-center justify-center`}
-                                        data-oid="-piu8fq"
+                                        data-oid="eeqalr0"
                                     >
-                                        <span className="text-2xl" data-oid="hkz06zb">
+                                        <span className="text-2xl" data-oid="opf_kla">
                                             {selectedCategory.icon}
                                         </span>
                                     </div>
-                                    <div data-oid="2oyvn9x">
+                                    <div data-oid="qcl-mui">
                                         <h3
                                             className="text-xl font-bold text-gray-800"
-                                            data-oid="fenkhgz"
+                                            data-oid="-c:9nfi"
                                         >
                                             {selectedCategory.name}
                                         </h3>
-                                        <p className="text-sm text-gray-600" data-oid="pnqdc.j">
+                                        <p className="text-sm text-gray-600" data-oid="_ti4i1l">
                                             {selectedCategory.description}
                                         </p>
                                     </div>
@@ -332,9 +332,9 @@ export default function CategoriesPage() {
                                 <button
                                     onClick={() => setSelectedCategory(null)}
                                     className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center"
-                                    data-oid="oqk3c8m"
+                                    data-oid="x8ew276"
                                 >
-                                    <span className="text-gray-600" data-oid="xy3c7vj">
+                                    <span className="text-gray-600" data-oid="1mwy8ig">
                                         ✕
                                     </span>
                                 </button>
@@ -344,9 +344,9 @@ export default function CategoriesPage() {
                         {/* Subcategories List */}
                         <div
                             className="overflow-y-auto max-h-[calc(90vh-200px)] p-4"
-                            data-oid="s953do4"
+                            data-oid="jokea8_"
                         >
-                            <div className="space-y-3" data-oid="i5xji2_">
+                            <div className="space-y-3" data-oid="-5ysoil">
                                 {selectedCategory.subCategories.map((subCategory) => (
                                     <div
                                         key={subCategory.id}
@@ -354,31 +354,31 @@ export default function CategoriesPage() {
                                             handleSubCategoryClick(selectedCategory, subCategory)
                                         }
                                         className="bg-gray-50 rounded-2xl p-4 border border-gray-100 cursor-pointer hover:bg-gray-100 transition-colors"
-                                        data-oid="k1w6pre"
+                                        data-oid="xani39d"
                                     >
                                         <div
                                             className="flex items-center space-x-3 space-x-reverse"
-                                            data-oid="p.ih4ys"
+                                            data-oid="itm54f3"
                                         >
-                                            <div className="text-2xl" data-oid="crqmmpd">
+                                            <div className="text-2xl" data-oid="ez333mz">
                                                 {subCategory.icon}
                                             </div>
-                                            <div className="flex-1" data-oid="7mg4h7k">
+                                            <div className="flex-1" data-oid="q2c8oj6">
                                                 <h4
                                                     className="font-semibold text-gray-800"
-                                                    data-oid="liwavlg"
+                                                    data-oid="o.9zeqz"
                                                 >
                                                     {subCategory.name}
                                                 </h4>
                                                 <p
                                                     className="text-sm text-gray-600"
-                                                    data-oid="tnt3puc"
+                                                    data-oid="3ire3ai"
                                                 >
                                                     {subCategory.servicesCount} مقدم خدمة متاح
                                                 </p>
                                             </div>
-                                            <div className="text-gray-400" data-oid="fia:g3d">
-                                                <span data-oid="8imebf2">←</span>
+                                            <div className="text-gray-400" data-oid="kkm7gwf">
+                                                <span data-oid="-8_b703">←</span>
                                             </div>
                                         </div>
                                     </div>
@@ -392,66 +392,66 @@ export default function CategoriesPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="ydx_w.t"
+                data-oid="jvl6ofy"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="1f1dgyk">
-                    <div className="flex justify-around" data-oid="71vn15:">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="hc9ijuw">
+                    <div className="flex justify-around" data-oid="77sfk:5">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="fpilsu2"
+                            data-oid=".f:hk_d"
                         >
-                            <span className="text-xl" data-oid="_1_hikt">
+                            <span className="text-xl" data-oid="k9-ow72">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="vdnz1v5">
+                            <span className="text-xs" data-oid="w._xa9i">
                                 الرئيسية
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="lf8.j8d"
+                            data-oid="x54z167"
                         >
-                            <span className="text-xl" data-oid="9ohc5v_">
+                            <span className="text-xl" data-oid="ni.sehi">
                                 📂
                             </span>
-                            <span className="text-xs font-semibold" data-oid="rl8.18n">
+                            <span className="text-xs font-semibold" data-oid="herfick">
                                 التصنيفات
                             </span>
                         </button>
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="1ttxycn"
+                            data-oid="2.d_z62"
                         >
-                            <span className="text-xl" data-oid="50:wyho">
+                            <span className="text-xl" data-oid="t2i-pgw">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="k5dzx1f">
+                            <span className="text-xs" data-oid="5dvkkhk">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/offers"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="-la1_6a"
+                            data-oid="b8-3fjm"
                         >
-                            <span className="text-xl" data-oid="v7:f98y">
+                            <span className="text-xl" data-oid="-wy.3t7">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="pel99ok">
+                            <span className="text-xs" data-oid="bx8apej">
                                 العروض
                             </span>
                         </Link>
                         <Link
                             href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="gzp-l.a"
+                            data-oid="45yhxb2"
                         >
-                            <span className="text-xl" data-oid="zzeetge">
+                            <span className="text-xl" data-oid="gbn8-22">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="e6_18of">
+                            <span className="text-xs" data-oid="i71uc_z">
                                 الرسائل
                             </span>
                         </Link>
@@ -460,7 +460,7 @@ export default function CategoriesPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="fwzjt--"></div>
+            <div className="h-20" data-oid="rn:u.j:"></div>
         </div>
     );
 }

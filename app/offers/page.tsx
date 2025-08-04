@@ -79,116 +79,116 @@ export default function OffersPage() {
         }, 2000);
     };
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="1hv4_3u">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="2r99:97">
             {' '}
             {/* Header */}{' '}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="fi1didq"
+                data-oid="e-7waa9"
             >
                 {' '}
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid=":i5_0mw">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="cm0hpzk">
                     {' '}
-                    <div className="flex items-center justify-between mb-4" data-oid="88uo4dn">
+                    <div className="flex items-center justify-between mb-4" data-oid="cuwd:0:">
                         {' '}
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="xtrh2d8"
+                            data-oid="psxhk7m"
                         >
                             {' '}
-                            <span className="text-lg" data-oid="hlyywi:">
+                            <span className="text-lg" data-oid="s8sfx2a">
                                 {' '}
                                 ←{' '}
                             </span>{' '}
                         </Link>{' '}
-                        <h1 className="text-xl font-bold" data-oid="92k9bwy">
+                        <h1 className="text-xl font-bold" data-oid="l4ivu1w">
                             {' '}
                             العروض المتاحة{' '}
                         </h1>{' '}
-                        <div className="w-10 h-10" data-oid="anysu7o"></div>{' '}
+                        <div className="w-10 h-10" data-oid="r3f5eux"></div>{' '}
                     </div>{' '}
-                    <p className="text-white/90 text-sm text-center" data-oid=".tlyb:v">
+                    <p className="text-white/90 text-sm text-center" data-oid="9tl4cc0">
                         {' '}
                         اختر أفضل العروض من مقدمي الخدمات{' '}
                     </p>{' '}
                 </div>{' '}
             </div>{' '}
             {/* Pending Requests */}{' '}
-            <div className="max-w-sm mx-auto px-4 py-6" data-oid="aa18nip">
+            <div className="max-w-sm mx-auto px-4 py-6" data-oid="7hw7kke">
                 {' '}
                 {pendingOffers.length > 0 ? (
-                    <div className="space-y-6" data-oid="acl:8b7">
+                    <div className="space-y-6" data-oid="khem3or">
                         {' '}
                         {pendingOffers.map((request) => (
                             <div
                                 key={request.id}
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="mwy-6dl"
+                                data-oid="7dazg7b"
                             >
                                 {' '}
                                 {/* Service Info */}{' '}
                                 <div
                                     className="flex items-center space-x-3 space-x-reverse mb-4"
-                                    data-oid="tc:v:g_"
+                                    data-oid="nhjj7bw"
                                 >
                                     {' '}
-                                    <div className="text-2xl" data-oid="5m9zzun">
+                                    <div className="text-2xl" data-oid="a3d88da">
                                         {' '}
                                         {request.serviceIcon}{' '}
                                     </div>{' '}
-                                    <div className="flex-1" data-oid="wd_i8x4">
+                                    <div className="flex-1" data-oid="wtywda-">
                                         {' '}
                                         <h3
                                             className="font-semibold text-gray-800"
-                                            data-oid="_ep9w7h"
+                                            data-oid="82znzgm"
                                         >
                                             {' '}
                                             {request.serviceName}{' '}
                                         </h3>{' '}
-                                        <p className="text-sm text-gray-600" data-oid="-r:g3h5">
+                                        <p className="text-sm text-gray-600" data-oid="uirpluv">
                                             {' '}
                                             طُلب في: {request.requestTime}{' '}
                                         </p>{' '}
                                     </div>{' '}
                                     <div
                                         className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
-                                        data-oid=".arnak:"
+                                        data-oid="dvrcge8"
                                     >
                                         {' '}
                                         {request.offersCount} عروض{' '}
                                     </div>{' '}
                                 </div>{' '}
                                 {/* Offers */}{' '}
-                                <div className="space-y-3" data-oid="3ebe2jz">
+                                <div className="space-y-3" data-oid="sulq3nj">
                                     {' '}
                                     {request.offers.map((offer) => (
                                         <div
                                             key={offer.id}
                                             className="bg-gray-50 rounded-xl p-3 border border-gray-100"
-                                            data-oid="qqkubmp"
+                                            data-oid=":wf7_:o"
                                         >
                                             {' '}
                                             {/* Provider Info */}{' '}
                                             <div
                                                 className="flex items-center space-x-3 space-x-reverse mb-3"
-                                                data-oid="54r2a1a"
+                                                data-oid="bv6iyxj"
                                             >
                                                 {' '}
-                                                <div className="text-2xl" data-oid="x4ba9zg">
+                                                <div className="text-2xl" data-oid="10--zxa">
                                                     {' '}
                                                     {offer.avatar}{' '}
                                                 </div>{' '}
-                                                <div className="flex-1" data-oid="_yog8c7">
+                                                <div className="flex-1" data-oid="0sjm:f.">
                                                     {' '}
                                                     <div
                                                         className="flex items-center space-x-2 space-x-reverse mb-1"
-                                                        data-oid=".n.wcss"
+                                                        data-oid="ons9u-o"
                                                     >
                                                         {' '}
                                                         <h4
                                                             className="font-semibold text-gray-800 text-sm"
-                                                            data-oid="5n.:juq"
+                                                            data-oid="np5.uz8"
                                                         >
                                                             {' '}
                                                             {offer.providerName}{' '}
@@ -196,7 +196,7 @@ export default function OffersPage() {
                                                         {offer.verified && (
                                                             <span
                                                                 className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full"
-                                                                data-oid="8-tobmr"
+                                                                data-oid="vs:0gow"
                                                             >
                                                                 {' '}
                                                                 موثق{' '}
@@ -205,27 +205,27 @@ export default function OffersPage() {
                                                     </div>{' '}
                                                     <div
                                                         className="flex items-center space-x-3 space-x-reverse text-xs text-gray-600"
-                                                        data-oid="gwl0rjb"
+                                                        data-oid="ov9gjvz"
                                                     >
                                                         {' '}
                                                         <div
                                                             className="flex items-center space-x-1 space-x-reverse"
-                                                            data-oid="bm9s.ap"
+                                                            data-oid="362s16y"
                                                         >
                                                             {' '}
                                                             <span
                                                                 className="text-yellow-500"
-                                                                data-oid="27-4gd."
+                                                                data-oid="3oyg-ya"
                                                             >
                                                                 {' '}
                                                                 ⭐{' '}
                                                             </span>{' '}
-                                                            <span data-oid="0mm2dut">
+                                                            <span data-oid="bfygc_a">
                                                                 {' '}
                                                                 {offer.rating}{' '}
                                                             </span>{' '}
                                                         </div>{' '}
-                                                        <span data-oid="7ly08l8">
+                                                        <span data-oid="k1yw9-o">
                                                             {' '}
                                                             ({offer.completedJobs} خدمة){' '}
                                                         </span>{' '}
@@ -235,55 +235,55 @@ export default function OffersPage() {
                                             {/* Offer Details */}{' '}
                                             <div
                                                 className="grid grid-cols-3 gap-2 text-center mb-3"
-                                                data-oid="qbyrq09"
+                                                data-oid="1r005cq"
                                             >
                                                 {' '}
-                                                <div data-oid="3ag6cq7">
+                                                <div data-oid="178w:hs">
                                                     {' '}
                                                     <p
                                                         className="text-sm font-bold text-blue-600"
-                                                        data-oid="dewg.md"
+                                                        data-oid="3lau7.m"
                                                     >
                                                         {' '}
                                                         {offer.price}{' '}
                                                     </p>{' '}
                                                     <p
                                                         className="text-xs text-gray-500"
-                                                        data-oid="n7_glgd"
+                                                        data-oid="t_btjnn"
                                                     >
                                                         {' '}
                                                         السعر{' '}
                                                     </p>{' '}
                                                 </div>{' '}
-                                                <div data-oid="haevot0">
+                                                <div data-oid="cux1f:y">
                                                     {' '}
                                                     <p
                                                         className="text-sm font-bold text-green-600"
-                                                        data-oid="4s2kj1x"
+                                                        data-oid="p:x.g_g"
                                                     >
                                                         {' '}
                                                         {offer.estimatedTime}{' '}
                                                     </p>{' '}
                                                     <p
                                                         className="text-xs text-gray-500"
-                                                        data-oid="w-rsccw"
+                                                        data-oid="sis.cgf"
                                                     >
                                                         {' '}
                                                         المدة{' '}
                                                     </p>{' '}
                                                 </div>{' '}
-                                                <div data-oid=".nvcb2e">
+                                                <div data-oid="f554wxq">
                                                     {' '}
                                                     <p
                                                         className="text-sm font-bold text-orange-600"
-                                                        data-oid="f.3731x"
+                                                        data-oid="ms6g8qi"
                                                     >
                                                         {' '}
                                                         {offer.responseTime}{' '}
                                                     </p>{' '}
                                                     <p
                                                         className="text-xs text-gray-500"
-                                                        data-oid="pvemiwl"
+                                                        data-oid="nezdvbt"
                                                     >
                                                         {' '}
                                                         الاستجابة{' '}
@@ -292,7 +292,7 @@ export default function OffersPage() {
                                             </div>{' '}
                                             <p
                                                 className="text-xs text-gray-700 mb-3"
-                                                data-oid="k9ojzk1"
+                                                data-oid="chy:_4d"
                                             >
                                                 {' '}
                                                 {offer.description}{' '}
@@ -300,7 +300,7 @@ export default function OffersPage() {
                                             {/* Action Buttons */}{' '}
                                             <div
                                                 className="flex space-x-2 space-x-reverse"
-                                                data-oid="r41__:8"
+                                                data-oid="6t..am0"
                                             >
                                                 {' '}
                                                 <button
@@ -308,7 +308,7 @@ export default function OffersPage() {
                                                         handleSelectOffer(request, offer)
                                                     }
                                                     className="flex-1 bg-blue-500 text-white py-2 rounded-lg text-sm font-semibold"
-                                                    data-oid="j49o313"
+                                                    data-oid="41_b-z4"
                                                 >
                                                     {' '}
                                                     قبول العرض{' '}
@@ -316,14 +316,14 @@ export default function OffersPage() {
                                                 <Link
                                                     href={`/chat/${offer.id}`}
                                                     className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm flex items-center justify-center"
-                                                    data-oid="m567qqo"
+                                                    data-oid=":ohu2:o"
                                                 >
                                                     {' '}
                                                     💬{' '}
                                                 </Link>{' '}
                                                 <button
                                                     className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm"
-                                                    data-oid="hvm4lg1"
+                                                    data-oid=":ig1tzd"
                                                 >
                                                     {' '}
                                                     ❌{' '}
@@ -336,7 +336,7 @@ export default function OffersPage() {
                                 {request.offersCount > request.offers.length && (
                                     <button
                                         className="w-full mt-3 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-semibold"
-                                        data-oid="u1w4ldd"
+                                        data-oid="5ley6o8"
                                     >
                                         {' '}
                                         عرض جميع العروض ({request.offersCount}){' '}
@@ -346,24 +346,24 @@ export default function OffersPage() {
                         ))}{' '}
                     </div>
                 ) : (
-                    <div className="text-center py-12" data-oid="x_nkmnz">
+                    <div className="text-center py-12" data-oid="5ik4tkk">
                         {' '}
-                        <div className="text-6xl mb-4" data-oid=":dgqmv.">
+                        <div className="text-6xl mb-4" data-oid="xd7-pqw">
                             {' '}
                             📋{' '}
                         </div>{' '}
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="uv3g93q">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="7u_nzeh">
                             {' '}
                             لا توجد عروض متاحة{' '}
                         </h3>{' '}
-                        <p className="text-gray-600 text-sm mb-6" data-oid="n2h1osi">
+                        <p className="text-gray-600 text-sm mb-6" data-oid="ser4hfj">
                             {' '}
                             اطلب خدمة جديدة لتلقي عروض من مقدمي الخدمات{' '}
                         </p>{' '}
                         <Link
                             href="/"
                             className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold inline-block"
-                            data-oid="llyvrrh"
+                            data-oid="q5yylie"
                         >
                             {' '}
                             طلب خدمة جديدة{' '}
@@ -374,24 +374,24 @@ export default function OffersPage() {
             {/* Bottom Navigation */}{' '}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="8nggehs"
+                data-oid="1b_lenf"
             >
                 {' '}
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="_s5kozk">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="09rka9g">
                     {' '}
-                    <div className="flex justify-around" data-oid="z5ukara">
+                    <div className="flex justify-around" data-oid="51cf3:x">
                         {' '}
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="06apona"
+                            data-oid="07a5dmz"
                         >
                             {' '}
-                            <span className="text-xl" data-oid="tk_coda">
+                            <span className="text-xl" data-oid="gxu7g-8">
                                 {' '}
                                 🏠{' '}
                             </span>{' '}
-                            <span className="text-xs" data-oid="h6trtbc">
+                            <span className="text-xs" data-oid="gow.g6m">
                                 {' '}
                                 الرئيسية{' '}
                             </span>{' '}
@@ -399,56 +399,56 @@ export default function OffersPage() {
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="50:u9:z"
+                            data-oid="l0swcpz"
                         >
                             {' '}
-                            <span className="text-xl" data-oid="iv2vov5">
+                            <span className="text-xl" data-oid="istiemd">
                                 {' '}
                                 📋{' '}
                             </span>{' '}
-                            <span className="text-xs" data-oid="m6pfcyt">
+                            <span className="text-xs" data-oid="k3waxba">
                                 {' '}
                                 طلباتي{' '}
                             </span>{' '}
                         </Link>{' '}
                         <button
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="4:9e7gp"
+                            data-oid="6:8otup"
                         >
                             {' '}
-                            <span className="text-xl" data-oid="usg1utk">
+                            <span className="text-xl" data-oid="4s6pdw-">
                                 {' '}
                                 💰{' '}
                             </span>{' '}
-                            <span className="text-xs font-semibold" data-oid="r43ccpv">
+                            <span className="text-xs font-semibold" data-oid="zio7usm">
                                 {' '}
                                 العروض{' '}
                             </span>{' '}
                         </button>{' '}
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="c6dgzm4"
+                            data-oid="bpwge.n"
                         >
                             {' '}
-                            <span className="text-xl" data-oid="3wqq.co">
+                            <span className="text-xl" data-oid="gm_w.p7">
                                 {' '}
                                 💬{' '}
                             </span>{' '}
-                            <span className="text-xs" data-oid="yjnn1_i">
+                            <span className="text-xs" data-oid="92_isp2">
                                 {' '}
                                 الرسائل{' '}
                             </span>{' '}
                         </button>{' '}
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="wijkk6r"
+                            data-oid="okdv-9s"
                         >
                             {' '}
-                            <span className="text-xl" data-oid="qwgalx1">
+                            <span className="text-xl" data-oid="qvpogma">
                                 {' '}
                                 👤{' '}
                             </span>{' '}
-                            <span className="text-xs" data-oid="v7o6.r:">
+                            <span className="text-xs" data-oid="95zib4d">
                                 {' '}
                                 الملف الشخصي{' '}
                             </span>{' '}
@@ -457,7 +457,7 @@ export default function OffersPage() {
                 </div>{' '}
             </div>{' '}
             {/* Padding for bottom navigation */}{' '}
-            <div className="h-20" data-oid="p-2f8xq"></div>{' '}
+            <div className="h-20" data-oid="ctpq47y"></div>{' '}
         </div>
     );
 }

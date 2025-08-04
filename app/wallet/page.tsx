@@ -165,57 +165,57 @@ export default function WalletPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="wu304l:">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="84d98.0">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid="2:fd9ob"
+                data-oid="s:h12q5"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="_91:0ep">
-                    <div className="flex items-center justify-between mb-6" data-oid="tznd3.5">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid=".ni158b">
+                    <div className="flex items-center justify-between mb-6" data-oid="n:24tx7">
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="81rguzx"
+                            data-oid="i89w27:"
                         >
-                            <span className="text-lg" data-oid="ozf-n70">
+                            <span className="text-lg" data-oid="l27ha22">
                                 ←
                             </span>
                         </Link>
-                        <div className="text-center" data-oid=":ofb2hk">
-                            <h1 className="text-lg font-bold" data-oid="s:tdqs5">
+                        <div className="text-center" data-oid="0iu0ul2">
+                            <h1 className="text-lg font-bold" data-oid="r47cssw">
                                 محفظتي
                             </h1>
-                            <p className="text-sm text-white/90" data-oid="fl6shsj">
+                            <p className="text-sm text-white/90" data-oid="37pq-wq">
                                 إدارة رصيدك
                             </p>
                         </div>
-                        <div className="w-10 h-10" data-oid="i1vsqgh"></div>
+                        <div className="w-10 h-10" data-oid="w1wkp90"></div>
                     </div>
 
                     {/* Balance Card */}
                     <div
                         className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center"
-                        data-oid="ftclwvd"
+                        data-oid="wez:haw"
                     >
-                        <p className="text-white/80 text-sm mb-2" data-oid="t7ybn.a">
+                        <p className="text-white/80 text-sm mb-2" data-oid="viu0tb3">
                             الرصيد الحالي
                         </p>
-                        <h2 className="text-3xl font-bold mb-4" data-oid="n8_.-l9">
+                        <h2 className="text-3xl font-bold mb-4" data-oid="l8h8:mt">
                             {currentBalance.toFixed(2)} ريال
                         </h2>
-                        <div className="flex space-x-3 space-x-reverse" data-oid="j4omo__">
+                        <div className="flex space-x-3 space-x-reverse" data-oid="9x_c5hz">
                             <button
                                 onClick={() => setShowTopUpModal(true)}
                                 className="flex-1 bg-white text-green-600 py-3 rounded-xl font-semibold"
-                                data-oid="sv1-y30"
+                                data-oid="x1jw.rc"
                             >
                                 شحن المحفظة
                             </button>
                             <Link
                                 href="/transfer"
                                 className="flex-1 bg-white/20 text-white py-3 rounded-xl font-semibold text-center"
-                                data-oid="voxvq4m"
+                                data-oid="uk0a_nw"
                             >
                                 تحويل رصيد
                             </Link>
@@ -225,30 +225,30 @@ export default function WalletPage() {
             </div>
 
             {/* Quick Stats */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="1_9w1:l">
-                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="y7dbgie">
-                    <div className="grid grid-cols-3 gap-4 text-center" data-oid="8yo-3ro">
-                        <div data-oid="9tgfp2k">
-                            <p className="text-2xl font-bold text-green-600" data-oid="8bfcy8x">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="wwewd:f">
+                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="wh0rxv1">
+                    <div className="grid grid-cols-3 gap-4 text-center" data-oid="sh.3k:1">
+                        <div data-oid="z.xbudv">
+                            <p className="text-2xl font-bold text-green-600" data-oid="p3jty2l">
                                 {transactions.filter((t) => t.type === 'credit').length}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="9tw.lbz">
+                            <p className="text-xs text-gray-500" data-oid="uf1hkfr">
                                 عمليات إيداع
                             </p>
                         </div>
-                        <div data-oid="2s3xt47">
-                            <p className="text-2xl font-bold text-red-600" data-oid="3mwwbwi">
+                        <div data-oid="xo_u.m9">
+                            <p className="text-2xl font-bold text-red-600" data-oid="7a1b7g.">
                                 {transactions.filter((t) => t.type === 'debit').length}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="x6fvsl6">
+                            <p className="text-xs text-gray-500" data-oid="1p4hwtr">
                                 عمليات سحب
                             </p>
                         </div>
-                        <div data-oid="l323yn_">
-                            <p className="text-2xl font-bold text-blue-600" data-oid="fer_8qm">
+                        <div data-oid="_na..mj">
+                            <p className="text-2xl font-bold text-blue-600" data-oid="1xlyebz">
                                 {transactions.filter((t) => t.status === 'pending').length}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="qf8msbi">
+                            <p className="text-xs text-gray-500" data-oid="b7nwt75">
                                 قيد المعالجة
                             </p>
                         </div>
@@ -257,13 +257,13 @@ export default function WalletPage() {
             </div>
 
             {/* Transaction History */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="h97i7cu">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="48o4p4d">
                 <div
                     className="bg-white rounded-2xl shadow-sm border border-gray-100"
-                    data-oid="eylrkuf"
+                    data-oid="0mnb210"
                 >
                     {/* Tabs */}
-                    <div className="flex border-b border-gray-100" data-oid="m72j62e">
+                    <div className="flex border-b border-gray-100" data-oid="wk.:-jt">
                         <button
                             onClick={() => setActiveTab('all')}
                             className={`flex-1 py-4 text-sm font-semibold ${
@@ -271,7 +271,7 @@ export default function WalletPage() {
                                     ? 'text-blue-600 border-b-2 border-blue-600'
                                     : 'text-gray-500'
                             }`}
-                            data-oid="pt54-kr"
+                            data-oid="1q7a9:w"
                         >
                             جميع العمليات
                         </button>
@@ -282,7 +282,7 @@ export default function WalletPage() {
                                     ? 'text-green-600 border-b-2 border-green-600'
                                     : 'text-gray-500'
                             }`}
-                            data-oid="s278qz."
+                            data-oid="3hzuv8k"
                         >
                             الإيداعات
                         </button>
@@ -293,58 +293,58 @@ export default function WalletPage() {
                                     ? 'text-red-600 border-b-2 border-red-600'
                                     : 'text-gray-500'
                             }`}
-                            data-oid="rtw9wf4"
+                            data-oid="5udi6uf"
                         >
                             المدفوعات
                         </button>
                     </div>
 
                     {/* Transaction List */}
-                    <div className="max-h-96 overflow-y-auto" data-oid="a7oten1">
+                    <div className="max-h-96 overflow-y-auto" data-oid="xlc1_ev">
                         {filteredTransactions.length > 0 ? (
-                            <div className="divide-y divide-gray-100" data-oid="g-oirs-">
+                            <div className="divide-y divide-gray-100" data-oid="j9jlz9b">
                                 {filteredTransactions.map((transaction) => (
-                                    <div key={transaction.id} className="p-4" data-oid="3ady0nc">
+                                    <div key={transaction.id} className="p-4" data-oid="eu4iyyr">
                                         <div
                                             className="flex items-center space-x-3 space-x-reverse"
-                                            data-oid="qx4h_s1"
+                                            data-oid="h644y:u"
                                         >
-                                            <div className="text-2xl" data-oid=".apttrv">
+                                            <div className="text-2xl" data-oid="-m.uhsm">
                                                 {getTransactionIcon(transaction)}
                                             </div>
-                                            <div className="flex-1" data-oid="ox1m25w">
+                                            <div className="flex-1" data-oid="unas9vy">
                                                 <h4
                                                     className="font-semibold text-gray-800 text-sm"
-                                                    data-oid="4i4lu1q"
+                                                    data-oid="-05prlp"
                                                 >
                                                     {transaction.description}
                                                 </h4>
                                                 <div
                                                     className="flex items-center space-x-2 space-x-reverse text-xs text-gray-500 mt-1"
-                                                    data-oid="j7e_nxo"
+                                                    data-oid="rhbk2ww"
                                                 >
-                                                    <span data-oid="o.6cftc">
+                                                    <span data-oid="b1j-vv9">
                                                         {transaction.date}
                                                     </span>
-                                                    <span data-oid="_2wt_7-">•</span>
+                                                    <span data-oid="65cwmp1">•</span>
                                                     <span
                                                         className={getStatusColor(
                                                             transaction.status,
                                                         )}
-                                                        data-oid="hhqqy2."
+                                                        data-oid="3dbeniu"
                                                     >
                                                         {getStatusText(transaction.status)}
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div className="text-right" data-oid="tzyb:nf">
+                                            <div className="text-right" data-oid="d-twgxc">
                                                 <p
                                                     className={`font-bold ${
                                                         transaction.type === 'credit'
                                                             ? 'text-green-600'
                                                             : 'text-red-600'
                                                     }`}
-                                                    data-oid="skw0h0v"
+                                                    data-oid="wyyliga"
                                                 >
                                                     {transaction.type === 'credit' ? '+' : '-'}
                                                     {transaction.amount} ريال
@@ -355,11 +355,11 @@ export default function WalletPage() {
                                 ))}
                             </div>
                         ) : (
-                            <div className="p-8 text-center" data-oid="_x152a0">
-                                <div className="text-4xl mb-4" data-oid="qbmoitb">
+                            <div className="p-8 text-center" data-oid="j2jfhon">
+                                <div className="text-4xl mb-4" data-oid="w9jqfun">
                                     📊
                                 </div>
-                                <p className="text-gray-500" data-oid="yuu07fe">
+                                <p className="text-gray-500" data-oid="ndghvi:">
                                     لا توجد عمليات في هذا القسم
                                 </p>
                             </div>
@@ -370,32 +370,32 @@ export default function WalletPage() {
 
             {/* Top Up Modal */}
             {showTopUpModal && (
-                <div className="fixed inset-0 bg-black/50 flex items-end z-50" data-oid="gzr:.dm">
+                <div className="fixed inset-0 bg-black/50 flex items-end z-50" data-oid="musrpl5">
                     <div
                         className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-hidden"
-                        data-oid="oe0_0ey"
+                        data-oid="8h7-39c"
                     >
                         {/* Header */}
-                        <div className="p-6 border-b border-gray-200" data-oid="isvr980">
+                        <div className="p-6 border-b border-gray-200" data-oid="-vztz0h">
                             <div
                                 className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-4"
-                                data-oid=".3wysbz"
+                                data-oid="4qpj3gx"
                             ></div>
-                            <div className="flex items-center justify-between" data-oid="93ok-wx">
-                                <h3 className="text-xl font-bold text-gray-800" data-oid=":kjzz5u">
+                            <div className="flex items-center justify-between" data-oid="zra-rvq">
+                                <h3 className="text-xl font-bold text-gray-800" data-oid="c37gm83">
                                     شحن المحفظة
                                 </h3>
                                 <button
                                     onClick={() => setShowTopUpModal(false)}
                                     className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center"
-                                    data-oid="mdhmr1q"
+                                    data-oid="snt_2-m"
                                 >
-                                    <span className="text-gray-600" data-oid=":t38wlz">
+                                    <span className="text-gray-600" data-oid="oikuvru">
                                         ✕
                                     </span>
                                 </button>
                             </div>
-                            <p className="text-gray-600 text-sm mt-2" data-oid="rvm_0mm">
+                            <p className="text-gray-600 text-sm mt-2" data-oid="1cy.h:o">
                                 اختر المبلغ المناسب لك
                             </p>
                         </div>
@@ -403,9 +403,9 @@ export default function WalletPage() {
                         {/* Top Up Options */}
                         <div
                             className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]"
-                            data-oid=".jxn0a-"
+                            data-oid="fjo9duy"
                         >
-                            <div className="space-y-3 mb-6" data-oid=".v61bf-">
+                            <div className="space-y-3 mb-6" data-oid="8b5aby:">
                                 {topUpOptions.map((option) => (
                                     <button
                                         key={option.id}
@@ -415,44 +415,44 @@ export default function WalletPage() {
                                                 ? 'border-blue-500 bg-blue-50'
                                                 : 'border-gray-200 bg-white'
                                         }`}
-                                        data-oid="m_i:af4"
+                                        data-oid="lhcev9y"
                                     >
                                         {option.popular && (
                                             <div
                                                 className="absolute -top-2 right-4 bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
-                                                data-oid="34zrurp"
+                                                data-oid="-kdm66z"
                                             >
                                                 الأكثر شعبية
                                             </div>
                                         )}
                                         <div
                                             className="flex items-center justify-between"
-                                            data-oid="qlv59at"
+                                            data-oid="2owltps"
                                         >
-                                            <div className="text-right" data-oid="hf6j3_8">
+                                            <div className="text-right" data-oid="g12okvf">
                                                 <p
                                                     className="text-lg font-bold text-gray-800"
-                                                    data-oid="h49so4m"
+                                                    data-oid="g.:t_x6"
                                                 >
                                                     {option.amount} ريال
                                                 </p>
                                                 {option.bonus && (
                                                     <p
                                                         className="text-sm text-green-600"
-                                                        data-oid="wt5ppz_"
+                                                        data-oid="0-:e67j"
                                                     >
                                                         + {option.bonus} ريال مكافأة
                                                     </p>
                                                 )}
                                             </div>
-                                            <div className="text-2xl" data-oid=".c3:zuy">
+                                            <div className="text-2xl" data-oid=".0q:az-">
                                                 💳
                                             </div>
                                         </div>
                                         {option.bonus && (
                                             <div
                                                 className="mt-2 text-xs text-gray-500"
-                                                data-oid="50d7d:s"
+                                                data-oid="k.6bb.8"
                                             >
                                                 المجموع: {option.amount + option.bonus} ريال
                                             </div>
@@ -462,41 +462,41 @@ export default function WalletPage() {
                             </div>
 
                             {/* Payment Methods */}
-                            <div className="mb-6" data-oid="c:r_:g0">
-                                <h4 className="font-semibold text-gray-800 mb-3" data-oid="9xm-:i2">
+                            <div className="mb-6" data-oid="1e__:iv">
+                                <h4 className="font-semibold text-gray-800 mb-3" data-oid=":41n.c4">
                                     طرق الدفع
                                 </h4>
-                                <div className="space-y-2" data-oid="rksta0v">
+                                <div className="space-y-2" data-oid="i:q:48m">
                                     <div
                                         className="flex items-center space-x-3 space-x-reverse p-3 bg-gray-50 rounded-xl"
-                                        data-oid="5tjumv5"
+                                        data-oid="ah.6xc3"
                                     >
-                                        <div className="text-xl" data-oid="chmvd.i">
+                                        <div className="text-xl" data-oid="b2zuc0k">
                                             💳
                                         </div>
-                                        <span className="text-sm text-gray-700" data-oid="qkvf.4:">
+                                        <span className="text-sm text-gray-700" data-oid="v_884j2">
                                             بطاقة ائتمانية
                                         </span>
                                     </div>
                                     <div
                                         className="flex items-center space-x-3 space-x-reverse p-3 bg-gray-50 rounded-xl"
-                                        data-oid="_ejpqd_"
+                                        data-oid=":00o4ek"
                                     >
-                                        <div className="text-xl" data-oid="mqpba:p">
+                                        <div className="text-xl" data-oid="ixsvsp1">
                                             📱
                                         </div>
-                                        <span className="text-sm text-gray-700" data-oid="4w5363v">
+                                        <span className="text-sm text-gray-700" data-oid=".2b76kr">
                                             محفظة رقمية
                                         </span>
                                     </div>
                                     <div
                                         className="flex items-center space-x-3 space-x-reverse p-3 bg-gray-50 rounded-xl"
-                                        data-oid="ofio0j0"
+                                        data-oid="ymo:of1"
                                     >
-                                        <div className="text-xl" data-oid="3.:.5vc">
+                                        <div className="text-xl" data-oid="a3stvh.">
                                             🏦
                                         </div>
-                                        <span className="text-sm text-gray-700" data-oid=":m8vins">
+                                        <span className="text-sm text-gray-700" data-oid="9hom75n">
                                             تحويل بنكي
                                         </span>
                                     </div>
@@ -514,7 +514,7 @@ export default function WalletPage() {
                                         ? 'bg-green-500 text-white'
                                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                 }`}
-                                data-oid="ic13pwa"
+                                data-oid="tq:j80b"
                             >
                                 {selectedTopUpAmount
                                     ? `شحن ${selectedTopUpAmount} ريال`
@@ -529,20 +529,20 @@ export default function WalletPage() {
             {isProcessingPayment && (
                 <div
                     className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-                    data-oid="gsr4fvn"
+                    data-oid="rbf4gdf"
                 >
                     <div
                         className="bg-white w-full max-w-sm mx-4 rounded-3xl p-8 text-center"
-                        data-oid="rkcjill"
+                        data-oid="y::6csh"
                     >
                         <div
                             className="animate-spin w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full mx-auto mb-6"
-                            data-oid="3w-3qng"
+                            data-oid="_.wxqwj"
                         ></div>
-                        <h3 className="text-xl font-bold text-gray-800 mb-2" data-oid="mud.5c7">
+                        <h3 className="text-xl font-bold text-gray-800 mb-2" data-oid="d9:.hrl">
                             جاري معالجة الدفع
                         </h3>
-                        <p className="text-gray-600 text-sm" data-oid="9hbij:o">
+                        <p className="text-gray-600 text-sm" data-oid="364rjn9">
                             يرجى الانتظار بينما نعالج عملية الدفع...
                         </p>
                     </div>
@@ -550,7 +550,7 @@ export default function WalletPage() {
             )}
 
             {/* Bottom Navigation Space */}
-            <div className="h-20" data-oid="s5s9_5k"></div>
+            <div className="h-20" data-oid="52:dz4o"></div>
         </div>
     );
 }

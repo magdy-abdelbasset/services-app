@@ -142,35 +142,35 @@ export default function ProviderRequests() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="j59tubx">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="wiefa41">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid="vzx9:90"
+                data-oid="_myqlzo"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="3ab.iii">
-                    <div className="flex items-center justify-between mb-4" data-oid="6b1r1e1">
-                        <Link href="/provider" className="text-white" data-oid="qx84np9">
-                            <span className="text-2xl" data-oid="exv1pnq">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="rb6lj-l">
+                    <div className="flex items-center justify-between mb-4" data-oid="p4705kd">
+                        <Link href="/provider" className="text-white" data-oid="c83xm6e">
+                            <span className="text-2xl" data-oid="19z-ryz">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="ky7ptty">
+                        <h1 className="text-xl font-bold" data-oid="q70ezf0">
                             الطلبات الواردة
                         </h1>
-                        <div className="w-8" data-oid="2279ksd"></div>
+                        <div className="w-8" data-oid="lfksr62"></div>
                     </div>
 
-                    <p className="text-white/90 text-sm" data-oid="hs6id2b">
+                    <p className="text-white/90 text-sm" data-oid="d00ccyx">
                         إدارة جميع الطلبات الواردة إليك
                     </p>
                 </div>
             </div>
 
             {/* Filter Tabs */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="tx5k4gv">
-                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="t.:4yud">
-                    <div className="flex space-x-2 space-x-reverse" data-oid="t4wg0ll">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="mqj75:0">
+                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="whb9_fu">
+                    <div className="flex space-x-2 space-x-reverse" data-oid="f2rgd:p">
                         <button
                             onClick={() => setActiveFilter('all')}
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
@@ -178,7 +178,7 @@ export default function ProviderRequests() {
                                     ? 'bg-blue-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="-:c2_gv"
+                            data-oid="7t.rvjw"
                         >
                             الكل ({requests.length})
                         </button>
@@ -189,7 +189,7 @@ export default function ProviderRequests() {
                                     ? 'bg-yellow-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="uy4kexw"
+                            data-oid="aek6r2k"
                         >
                             جديد ({requests.filter((r) => r.status === 'pending').length})
                         </button>
@@ -200,7 +200,7 @@ export default function ProviderRequests() {
                                     ? 'bg-blue-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="h66fe6:"
+                            data-oid="p7lt-n7"
                         >
                             عروض ({requests.filter((r) => r.status === 'quoted').length})
                         </button>
@@ -211,7 +211,7 @@ export default function ProviderRequests() {
                                     ? 'bg-green-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="smuytej"
+                            data-oid="b0gw:de"
                         >
                             مقبول ({requests.filter((r) => r.status === 'accepted').length})
                         </button>
@@ -220,113 +220,113 @@ export default function ProviderRequests() {
             </div>
 
             {/* Requests List */}
-            <div className="max-w-sm mx-auto px-4" data-oid=".bnom7w">
-                <div className="space-y-4 mb-20" data-oid="nnqfysv">
+            <div className="max-w-sm mx-auto px-4" data-oid="2ghi4b6">
+                <div className="space-y-4 mb-20" data-oid="dziiz.x">
                     {filteredRequests.map((request) => (
                         <div
                             key={request.id}
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="h3_-yg:"
+                            data-oid="cv2but6"
                         >
                             {/* Request Header */}
                             <div
                                 className="flex items-start justify-between mb-3"
-                                data-oid="pw3uoaf"
+                                data-oid="ck3vv32"
                             >
-                                <div className="flex-1" data-oid="ykta10x">
+                                <div className="flex-1" data-oid="dupxpfe">
                                     <div
                                         className="flex items-center space-x-2 space-x-reverse mb-1"
-                                        data-oid=":svxxfi"
+                                        data-oid="ay:_nns"
                                     >
                                         <h3
                                             className="font-semibold text-gray-800"
-                                            data-oid="jagfwl2"
+                                            data-oid="3rz_r93"
                                         >
                                             {request.service}
                                         </h3>
                                         {request.urgent && (
                                             <span
                                                 className="bg-red-500 text-white text-xs px-2 py-1 rounded-full"
-                                                data-oid="g0nl-9-"
+                                                data-oid="-wvf5st"
                                             >
                                                 عاجل
                                             </span>
                                         )}
                                         <span
                                             className={`text-xs px-2 py-1 rounded-full ${getStatusColor(request.status)}`}
-                                            data-oid="34l-kub"
+                                            data-oid="b8707db"
                                         >
                                             {getStatusText(request.status)}
                                         </span>
                                     </div>
-                                    <p className="text-sm text-gray-600 mb-1" data-oid="-k1w.7d">
+                                    <p className="text-sm text-gray-600 mb-1" data-oid="--bdsgw">
                                         العميل: {request.customer}
                                     </p>
                                     <div
                                         className="flex items-center space-x-4 space-x-reverse text-sm text-gray-500"
-                                        data-oid=".hfpdxg"
+                                        data-oid=".1mv6tt"
                                     >
-                                        <span data-oid="d694ovl">📍 {request.location}</span>
-                                        <span data-oid="-cy3oj2">📏 {request.distance}</span>
+                                        <span data-oid="ah5twgf">📍 {request.location}</span>
+                                        <span data-oid="7byt6gq">📏 {request.distance}</span>
                                     </div>
                                 </div>
-                                <div className="text-left" data-oid="cahhj4o">
+                                <div className="text-left" data-oid="3j9d7a2">
                                     <p
                                         className="text-lg font-bold text-green-600"
-                                        data-oid="_hpg3pg"
+                                        data-oid="-njidy3"
                                     >
                                         {request.price}
                                     </p>
-                                    <p className="text-xs text-gray-500" data-oid="yprvr96">
+                                    <p className="text-xs text-gray-500" data-oid="ki82rfk">
                                         {request.time}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Request Description */}
-                            <div className="bg-gray-50 rounded-xl p-3 mb-3" data-oid="spjpq6g">
-                                <p className="text-sm text-gray-700" data-oid="uujdds:">
+                            <div className="bg-gray-50 rounded-xl p-3 mb-3" data-oid="n-unqen">
+                                <p className="text-sm text-gray-700" data-oid="ifalnyh">
                                     {request.description}
                                 </p>
                             </div>
 
                             {/* Action Buttons */}
                             {request.status === 'pending' && (
-                                <div className="space-y-2" data-oid="sta0029">
+                                <div className="space-y-2" data-oid="8achdlq">
                                     <div
                                         className="flex space-x-2 space-x-reverse"
-                                        data-oid="stf1xm7"
+                                        data-oid="ofhn3_-"
                                     >
                                         <button
                                             onClick={() => handleSubmitQuote(request.id)}
                                             className="flex-1 bg-blue-500 text-white py-2 rounded-xl font-semibold"
-                                            data-oid="qh1ljtc"
+                                            data-oid="ftl_y6h"
                                         >
                                             تقديم عرض سعر
                                         </button>
                                         <Link
                                             href={`/provider/chat/${request.id}`}
                                             className="px-4 py-2 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center"
-                                            data-oid="b7yaj_l"
+                                            data-oid="38twnlr"
                                         >
                                             💬
                                         </Link>
                                     </div>
                                     <div
                                         className="flex space-x-2 space-x-reverse"
-                                        data-oid="f09eo70"
+                                        data-oid="fk47f1x"
                                     >
                                         <button
                                             onClick={() => handleAcceptRequest(request.id)}
                                             className="flex-1 bg-green-500 text-white py-2 rounded-xl font-semibold"
-                                            data-oid="l38ck.6"
+                                            data-oid="oa43vb6"
                                         >
                                             قبول مباشر
                                         </button>
                                         <button
                                             onClick={() => handleRejectRequest(request.id)}
                                             className="flex-1 bg-gray-200 text-gray-700 py-2 rounded-xl font-semibold"
-                                            data-oid="x8:kn-i"
+                                            data-oid="9ynuz:s"
                                         >
                                             رفض
                                         </button>
@@ -335,24 +335,24 @@ export default function ProviderRequests() {
                             )}
 
                             {request.status === 'accepted' && (
-                                <div className="flex space-x-3 space-x-reverse" data-oid="oegxfkk">
+                                <div className="flex space-x-3 space-x-reverse" data-oid="bzkq8_m">
                                     <Link
                                         href={`/provider/order-details/${request.id}`}
                                         className="flex-1 bg-blue-500 text-white py-2 rounded-xl font-semibold text-center"
-                                        data-oid="u3qinva"
+                                        data-oid="jqkteko"
                                     >
                                         تفاصيل الطلب
                                     </Link>
                                     <Link
                                         href={`/provider/chat/${request.id}`}
                                         className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
-                                        data-oid="pu7d4mx"
+                                        data-oid="qae.q3-"
                                     >
                                         💬
                                     </Link>
                                     <button
                                         className="px-4 py-2 bg-green-100 text-green-600 rounded-xl"
-                                        data-oid="psqtmjv"
+                                        data-oid="3h9cde."
                                     >
                                         📞
                                     </button>
@@ -360,39 +360,39 @@ export default function ProviderRequests() {
                             )}
 
                             {request.status === 'quoted' && (
-                                <div className="space-y-2" data-oid="p.97hgq">
+                                <div className="space-y-2" data-oid="hk_kebt">
                                     <div
                                         className="bg-blue-50 rounded-xl p-3 text-center"
-                                        data-oid="dkzeq80"
+                                        data-oid="ftfs::5"
                                     >
                                         <p
                                             className="text-sm text-blue-700 font-semibold"
-                                            data-oid="dxzx17g"
+                                            data-oid="ho4hsi_"
                                         >
                                             ✅ تم إرسال عرض السعر
                                         </p>
                                         <p
                                             className="text-xs text-blue-600 mt-1"
-                                            data-oid="vv4wavq"
+                                            data-oid="3g:yu:-"
                                         >
                                             في انتظار رد العميل
                                         </p>
                                     </div>
                                     <div
                                         className="flex space-x-2 space-x-reverse"
-                                        data-oid="ofhj407"
+                                        data-oid="5tcj2cd"
                                     >
                                         <Link
                                             href={`/provider/chat/${request.id}`}
                                             className="flex-1 bg-blue-100 text-blue-700 py-2 rounded-xl font-semibold text-center"
-                                            data-oid="bhpqgwk"
+                                            data-oid="v_rcctc"
                                         >
                                             💬 تواصل مع العميل
                                         </Link>
                                         <button
                                             onClick={() => handleSubmitQuote(request.id)}
                                             className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl"
-                                            data-oid="fcnyy94"
+                                            data-oid=".tsq33f"
                                         >
                                             ✏️
                                         </button>
@@ -401,8 +401,8 @@ export default function ProviderRequests() {
                             )}
 
                             {request.status === 'rejected' && (
-                                <div className="text-center py-2" data-oid=":tc2.-r">
-                                    <p className="text-sm text-gray-500" data-oid="p3qg966">
+                                <div className="text-center py-2" data-oid="qp4x::w">
+                                    <p className="text-sm text-gray-500" data-oid="q-fbgm:">
                                         تم رفض هذا الطلب
                                     </p>
                                 </div>
@@ -411,17 +411,17 @@ export default function ProviderRequests() {
                     ))}
 
                     {filteredRequests.length === 0 && (
-                        <div className="text-center py-12" data-oid="eg7euse">
-                            <div className="text-6xl mb-4" data-oid="gkslxp4">
+                        <div className="text-center py-12" data-oid="vmo63.a">
+                            <div className="text-6xl mb-4" data-oid="gge8jbg">
                                 📋
                             </div>
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-2"
-                                data-oid=":w4evi-"
+                                data-oid="mjie.:h"
                             >
                                 لا توجد طلبات
                             </h3>
-                            <p className="text-gray-600 text-sm" data-oid="lomc58q">
+                            <p className="text-gray-600 text-sm" data-oid="m:ho4wi">
                                 {activeFilter === 'all'
                                     ? 'لم تستلم أي طلبات بعد'
                                     : `لا توجد طلبات ${getStatusText(activeFilter)}`}
@@ -434,66 +434,66 @@ export default function ProviderRequests() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="fxogx71"
+                data-oid="x0rih:l"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="q..w_do">
-                    <div className="flex justify-around" data-oid="wyy4162">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="6qu58bi">
+                    <div className="flex justify-around" data-oid="z8iwl0c">
                         <Link
                             href="/provider"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="l1pbegs"
+                            data-oid="ur4ji2x"
                         >
-                            <span className="text-xl" data-oid="cjzp0l8">
+                            <span className="text-xl" data-oid="jfufkik">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="9kj673r">
+                            <span className="text-xs" data-oid="h:syc8o">
                                 الرئيسية
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-green-600"
-                            data-oid="dczx0f:"
+                            data-oid="wdgi::g"
                         >
-                            <span className="text-xl" data-oid="u:p6814">
+                            <span className="text-xl" data-oid="98vz21p">
                                 📋
                             </span>
-                            <span className="text-xs font-semibold" data-oid=".rp2pj_">
+                            <span className="text-xs font-semibold" data-oid="z8sth4m">
                                 الطلبات
                             </span>
                         </button>
                         <Link
                             href="/provider/earnings"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid=":i.53mb"
+                            data-oid="9ck_ezy"
                         >
-                            <span className="text-xl" data-oid="vpqaawu">
+                            <span className="text-xl" data-oid="z-l9-:4">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="5s37oxx">
+                            <span className="text-xs" data-oid="-byndp.">
                                 الأرباح
                             </span>
                         </Link>
                         <Link
                             href="/provider/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="r3wqg2_"
+                            data-oid="g:9dlpc"
                         >
-                            <span className="text-xl" data-oid="-72p33t">
+                            <span className="text-xl" data-oid=".ta9w2t">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="zy7e8va">
+                            <span className="text-xs" data-oid="riqqrtx">
                                 الرسائل
                             </span>
                         </Link>
                         <Link
                             href="/provider/profile"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="i1oy1hm"
+                            data-oid="ew:i8gv"
                         >
-                            <span className="text-xl" data-oid="j5r-z6d">
+                            <span className="text-xl" data-oid="q:xb-3q">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid="vuqs9.s">
+                            <span className="text-xs" data-oid="yfyik3:">
                                 الملف الشخصي
                             </span>
                         </Link>
@@ -511,7 +511,7 @@ export default function ProviderRequests() {
                     }}
                     onSubmit={handleQuoteSubmit}
                     request={selectedRequest}
-                    data-oid="g00ldv3"
+                    data-oid="hngbwm8"
                 />
             )}
         </div>

@@ -73,35 +73,35 @@ export default function OrdersPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="qi6y6s5">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="p8.hmm9">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="9g6hd5-"
+                data-oid="rm5tnjp"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="mg0oawa">
-                    <div className="flex items-center justify-between mb-4" data-oid="btwp49u">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="nt8.sro">
+                    <div className="flex items-center justify-between mb-4" data-oid="tkh001v">
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="ysa7r8s"
+                            data-oid="m2-kz6t"
                         >
-                            <span className="text-lg" data-oid="n9r8_0k">
+                            <span className="text-lg" data-oid="htp0glm">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="2i4:j0y">
+                        <h1 className="text-xl font-bold" data-oid="ee7dsqj">
                             طلباتي
                         </h1>
-                        <div className="w-10 h-10" data-oid="h-d8ryx"></div>
+                        <div className="w-10 h-10" data-oid="b-7tbwx"></div>
                     </div>
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="5.kj5sh">
-                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="dll1p21">
-                    <div className="flex" data-oid="_cqgwtk">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="x1dha49">
+                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="k97:3df">
+                    <div className="flex" data-oid="ncv6a3.">
                         <button
                             onClick={() => setActiveTab('current')}
                             className={`flex-1 py-3 px-4 rounded-xl font-semibold text-sm transition-colors ${
@@ -109,7 +109,7 @@ export default function OrdersPage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="5nmu4ux"
+                            data-oid="_.ln5e_"
                         >
                             الطلبات الحالية ({currentOrders.length})
                         </button>
@@ -120,7 +120,7 @@ export default function OrdersPage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="wc-q7gw"
+                            data-oid="ijvb:ub"
                         >
                             الطلبات المكتملة ({completedOrders.length})
                         </button>
@@ -129,66 +129,66 @@ export default function OrdersPage() {
             </div>
 
             {/* Orders List */}
-            <div className="max-w-sm mx-auto px-4" data-oid="22i5zj0">
+            <div className="max-w-sm mx-auto px-4" data-oid="h4tlxt_">
                 {activeTab === 'current' && (
-                    <div className="space-y-4" data-oid="iu5w4dv">
+                    <div className="space-y-4" data-oid="kbk:8dm">
                         {currentOrders.length > 0 ? (
                             currentOrders.map((order) => (
                                 <div
                                     key={order.id}
                                     className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    data-oid="fj4qp5g"
+                                    data-oid="vwbvzav"
                                 >
                                     <div
                                         className="flex items-start space-x-4 space-x-reverse"
-                                        data-oid="gp.4:aa"
+                                        data-oid="xfc7_im"
                                     >
-                                        <div className="text-3xl" data-oid="okjj6y0">
+                                        <div className="text-3xl" data-oid="9ep3jet">
                                             {order.icon}
                                         </div>
-                                        <div className="flex-1" data-oid="y15cn5h">
+                                        <div className="flex-1" data-oid="3iexk2c">
                                             <div
                                                 className="flex items-center justify-between mb-2"
-                                                data-oid="mgjvevb"
+                                                data-oid="2ok6ni1"
                                             >
                                                 <h3
                                                     className="font-semibold text-gray-800"
-                                                    data-oid="4pa0wj8"
+                                                    data-oid="klzvsls"
                                                 >
                                                     {order.service}
                                                 </h3>
                                                 <span
                                                     className={`${order.statusColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}
-                                                    data-oid="yeqft3o"
+                                                    data-oid="i7b5p7x"
                                                 >
                                                     {order.status}
                                                 </span>
                                             </div>
                                             <p
                                                 className="text-gray-600 text-sm mb-1"
-                                                data-oid="4mtdagt"
+                                                data-oid="u20r3ez"
                                             >
                                                 مقدم الخدمة: {order.provider}
                                             </p>
-                                            <p className="text-gray-500 text-xs" data-oid="g1er07u">
+                                            <p className="text-gray-500 text-xs" data-oid="y51ipzj">
                                                 {order.date} - {order.time}
                                             </p>
                                         </div>
                                     </div>
                                     <div
                                         className="flex space-x-3 space-x-reverse mt-4"
-                                        data-oid="a8-5i:q"
+                                        data-oid="fis2s6w"
                                     >
                                         <button
                                             className="flex-1 bg-blue-500 text-white py-2 rounded-lg text-sm font-semibold"
-                                            data-oid="9qb8fob"
+                                            data-oid="36c3kaw"
                                         >
                                             تتبع الطلب
                                         </button>
                                         <Link
                                             href={`/chat/${order.id}`}
                                             className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-lg text-sm font-semibold text-center"
-                                            data-oid=".ex0nye"
+                                            data-oid="jgdb:fs"
                                         >
                                             تواصل
                                         </Link>
@@ -196,17 +196,17 @@ export default function OrdersPage() {
                                 </div>
                             ))
                         ) : (
-                            <div className="text-center py-12" data-oid="cq:k_:i">
-                                <div className="text-6xl mb-4" data-oid="dsbrzt6">
+                            <div className="text-center py-12" data-oid="k799ay6">
+                                <div className="text-6xl mb-4" data-oid="mgfijnp">
                                     📋
                                 </div>
                                 <h3
                                     className="text-lg font-semibold text-gray-800 mb-2"
-                                    data-oid="hm-_o06"
+                                    data-oid="4biat_e"
                                 >
                                     لا توجد طلبات حالية
                                 </h3>
-                                <p className="text-gray-600 text-sm" data-oid="nimo8oh">
+                                <p className="text-gray-600 text-sm" data-oid="y4nc4nx">
                                     اطلب خدمة جديدة لتظهر هنا
                                 </p>
                             </div>
@@ -215,62 +215,62 @@ export default function OrdersPage() {
                 )}
 
                 {activeTab === 'completed' && (
-                    <div className="space-y-4" data-oid="o6ou4s8">
+                    <div className="space-y-4" data-oid="yd8nmpk">
                         {completedOrders.map((order) => (
                             <div
                                 key={order.id}
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="sr5s:gs"
+                                data-oid="6yvlb8z"
                             >
                                 <div
                                     className="flex items-start space-x-4 space-x-reverse"
-                                    data-oid="8y0pz-w"
+                                    data-oid="y0-36nn"
                                 >
-                                    <div className="text-3xl" data-oid="22a525o">
+                                    <div className="text-3xl" data-oid="u_mxs3w">
                                         {order.icon}
                                     </div>
-                                    <div className="flex-1" data-oid="vt:e.-6">
+                                    <div className="flex-1" data-oid="4e7a1hw">
                                         <div
                                             className="flex items-center justify-between mb-2"
-                                            data-oid="0ppq2j2"
+                                            data-oid="4p3a.mq"
                                         >
                                             <h3
                                                 className="font-semibold text-gray-800"
-                                                data-oid="ivk94l2"
+                                                data-oid="g72p0ni"
                                             >
                                                 {order.service}
                                             </h3>
                                             <span
                                                 className={`${order.statusColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}
-                                                data-oid="0r9s_tc"
+                                                data-oid="8r62obe"
                                             >
                                                 {order.status}
                                             </span>
                                         </div>
                                         <p
                                             className="text-gray-600 text-sm mb-1"
-                                            data-oid="6e:tgf4"
+                                            data-oid="vp5.2e9"
                                         >
                                             مقدم الخدمة: {order.provider}
                                         </p>
-                                        <p className="text-gray-500 text-xs" data-oid="lwo_rkf">
+                                        <p className="text-gray-500 text-xs" data-oid="ux0g5gd">
                                             {order.date} - {order.time}
                                         </p>
                                     </div>
                                 </div>
                                 <div
                                     className="flex space-x-3 space-x-reverse mt-4"
-                                    data-oid="57zm1b-"
+                                    data-oid="qpb5nh3"
                                 >
                                     <button
                                         className="flex-1 bg-yellow-500 text-white py-2 rounded-lg text-sm font-semibold"
-                                        data-oid="84e90k6"
+                                        data-oid="-04vgev"
                                     >
                                         تقييم الخدمة
                                     </button>
                                     <button
                                         className="flex-1 bg-blue-500 text-white py-2 rounded-lg text-sm font-semibold"
-                                        data-oid="n7zjqky"
+                                        data-oid="v5zev05"
                                     >
                                         إعادة الطلب
                                     </button>
@@ -284,53 +284,53 @@ export default function OrdersPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="y66:x3."
+                data-oid="n10rg4n"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="fu096l8">
-                    <div className="flex justify-around" data-oid="p_cr0o3">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="h4uxaw.">
+                    <div className="flex justify-around" data-oid="01u0zgo">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="78o4mau"
+                            data-oid="w-ivshf"
                         >
-                            <span className="text-xl" data-oid="lxjf0.w">
+                            <span className="text-xl" data-oid="9cm37s:">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="-.ae5x5">
+                            <span className="text-xs" data-oid="6o::lg_">
                                 الرئيسية
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="lx9n3::"
+                            data-oid="d_.4j4h"
                         >
-                            <span className="text-xl" data-oid="18rf_5.">
+                            <span className="text-xl" data-oid="e1ddbrx">
                                 📋
                             </span>
-                            <span className="text-xs font-semibold" data-oid="1ekjvb4">
+                            <span className="text-xs font-semibold" data-oid="vdfr50w">
                                 طلباتي
                             </span>
                         </button>
                         <Link
                             href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="9myp4-q"
+                            data-oid="yqi58n2"
                         >
-                            <span className="text-xl" data-oid="yopp18-">
+                            <span className="text-xl" data-oid="j_5l1:4">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="l3ufl_n">
+                            <span className="text-xs" data-oid="8-pr9hw">
                                 الرسائل
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="t_bjqsi"
+                            data-oid="458e_7j"
                         >
-                            <span className="text-xl" data-oid="netpvwq">
+                            <span className="text-xl" data-oid="1bxrjyw">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid="r9.esa0">
+                            <span className="text-xs" data-oid="rj97qaj">
                                 الملف الشخصي
                             </span>
                         </button>
@@ -339,7 +339,7 @@ export default function OrdersPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="3u:g0g4"></div>
+            <div className="h-20" data-oid="3:5wsyo"></div>
         </div>
     );
 }

@@ -230,17 +230,17 @@ export default function SettingsPage() {
 
         if (item.type === 'toggle') {
             return (
-                <div key={item.id} className={baseClasses} data-oid="7ea5dy9">
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="t8_90ki">
-                        <div className="text-2xl" data-oid="4zvl_jv">
+                <div key={item.id} className={baseClasses} data-oid="nzhsnyp">
+                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="e1-4csj">
+                        <div className="text-2xl" data-oid="ou4e8re">
                             {item.icon}
                         </div>
-                        <div data-oid="3vdf1al">
-                            <h3 className={`font-semibold ${textColor}`} data-oid="hn8abbt">
+                        <div data-oid="3w5f9:q">
+                            <h3 className={`font-semibold ${textColor}`} data-oid="7igpfh.">
                                 {item.title}
                             </h3>
                             {item.description && (
-                                <p className="text-sm text-gray-600" data-oid="h8yapbv">
+                                <p className="text-sm text-gray-600" data-oid="apap27o">
                                     {item.description}
                                 </p>
                             )}
@@ -251,13 +251,13 @@ export default function SettingsPage() {
                         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                             item.value ? 'bg-blue-500' : 'bg-gray-300'
                         }`}
-                        data-oid="oa_jog0"
+                        data-oid="9lm-23u"
                     >
                         <span
                             className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                                 item.value ? 'translate-x-6' : 'translate-x-1'
                             }`}
-                            data-oid="gj:0r._"
+                            data-oid="jpzh133"
                         />
                     </button>
                 </div>
@@ -270,24 +270,24 @@ export default function SettingsPage() {
                     key={item.id}
                     href={item.href || '#'}
                     className={`${baseClasses} cursor-pointer hover:shadow-md transition-shadow`}
-                    data-oid="z2gmhd7"
+                    data-oid="ufhxmup"
                 >
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="6e4evzd">
-                        <div className="text-2xl" data-oid="ldpaf8e">
+                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="mkw7e91">
+                        <div className="text-2xl" data-oid="733.gc.">
                             {item.icon}
                         </div>
-                        <div data-oid="dmmr5ye">
-                            <h3 className={`font-semibold ${textColor}`} data-oid="g6_r0g6">
+                        <div data-oid="9-0vg.o">
+                            <h3 className={`font-semibold ${textColor}`} data-oid="ch47:q7">
                                 {item.title}
                             </h3>
                             {item.description && (
-                                <p className="text-sm text-gray-600" data-oid="fvsih_8">
+                                <p className="text-sm text-gray-600" data-oid="w97zywg">
                                     {item.description}
                                 </p>
                             )}
                         </div>
                     </div>
-                    <span className="text-gray-400" data-oid="y-cw56v">
+                    <span className="text-gray-400" data-oid="6c:-0cz">
                         ←
                     </span>
                 </Link>
@@ -300,24 +300,24 @@ export default function SettingsPage() {
                     key={item.id}
                     onClick={item.action}
                     className={`${baseClasses} cursor-pointer hover:shadow-md transition-shadow`}
-                    data-oid="ow7.gpb"
+                    data-oid="5_cqpl:"
                 >
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="_wadlsg">
-                        <div className="text-2xl" data-oid="onyhs2a">
+                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="elg66i7">
+                        <div className="text-2xl" data-oid="_4umuiw">
                             {item.icon}
                         </div>
-                        <div data-oid="z1dobne">
-                            <h3 className={`font-semibold ${textColor}`} data-oid="10bt8li">
+                        <div data-oid="-ydoguk">
+                            <h3 className={`font-semibold ${textColor}`} data-oid="wqn1ydc">
                                 {item.title}
                             </h3>
                             {item.description && (
-                                <p className="text-sm text-gray-600" data-oid="d6a0ntj">
+                                <p className="text-sm text-gray-600" data-oid="u6rvz.h">
                                     {item.description}
                                 </p>
                             )}
                         </div>
                     </div>
-                    <span className="text-gray-400" data-oid="3h-nz2q">
+                    <span className="text-gray-400" data-oid="1p9.r9w">
                         ←
                     </span>
                 </button>
@@ -328,75 +328,75 @@ export default function SettingsPage() {
     };
 
     const renderSection = (title: string, items: SettingItem[]) => (
-        <div className="mb-6" data-oid="bhx--yj">
-            <h2 className="text-lg font-semibold text-gray-800 mb-3 px-1" data-oid="-b5i3q-">
+        <div className="mb-6" data-oid=":-3hivo">
+            <h2 className="text-lg font-semibold text-gray-800 mb-3 px-1" data-oid="j3bketn">
                 {title}
             </h2>
-            <div className="space-y-3" data-oid="uf41r0n">
+            <div className="space-y-3" data-oid="wuwc53f">
                 {items.map(renderSettingItem)}
             </div>
         </div>
     );
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="7zu--tt">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="n0tt_fp">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="4yl9dll"
+                data-oid="e5bf5_r"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="-sd5f-k">
-                    <div className="flex items-center justify-between mb-4" data-oid="2lqyxdo">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="lat8gi:">
+                    <div className="flex items-center justify-between mb-4" data-oid="_4fr3mo">
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="r0bny9:"
+                            data-oid="dmip-kv"
                         >
-                            <span className="text-lg" data-oid="v.2jzy:">
+                            <span className="text-lg" data-oid="1-b2imo">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="iqt8u13">
+                        <h1 className="text-xl font-bold" data-oid="vik24x9">
                             الإعدادات
                         </h1>
-                        <div className="w-10" data-oid="9s4c_c3"></div>
+                        <div className="w-10" data-oid="3cnpbhf"></div>
                     </div>
-                    <p className="text-white/90 text-sm text-center" data-oid="_eaphst">
+                    <p className="text-white/90 text-sm text-center" data-oid="8r:wto_">
                         إدارة حسابك وتخصيص التطبيق
                     </p>
                 </div>
             </div>
 
             {/* User Profile Card */}
-            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10 mb-6" data-oid="_2uz:78">
-                <div className="bg-white rounded-2xl shadow-lg p-4" data-oid="oncbe5n">
-                    <div className="flex items-center space-x-4 space-x-reverse" data-oid="weni03e">
+            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10 mb-6" data-oid="ocshhv-">
+                <div className="bg-white rounded-2xl shadow-lg p-4" data-oid="d0c439y">
+                    <div className="flex items-center space-x-4 space-x-reverse" data-oid="18j3qhh">
                         <div
                             className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
-                            data-oid="1feel7s"
+                            data-oid="ibg8sza"
                         >
-                            <span className="text-2xl text-white" data-oid="_.kzu5n">
+                            <span className="text-2xl text-white" data-oid="731ez:6">
                                 👤
                             </span>
                         </div>
-                        <div className="flex-1" data-oid="s4_j.au">
-                            <h3 className="font-bold text-gray-800" data-oid="afk6x0t">
+                        <div className="flex-1" data-oid="85cvuwv">
+                            <h3 className="font-bold text-gray-800" data-oid="9nqdv4i">
                                 أحمد محمد
                             </h3>
-                            <p className="text-sm text-gray-600" data-oid="5uam2cw">
+                            <p className="text-sm text-gray-600" data-oid="e6.cle4">
                                 ahmed.mohamed@example.com
                             </p>
                             <div
                                 className="flex items-center space-x-2 space-x-reverse mt-1"
-                                data-oid="8cmx1pe"
+                                data-oid="zfzf8gk"
                             >
                                 <span
                                     className="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full"
-                                    data-oid="tq6fc2q"
+                                    data-oid="i.bz38d"
                                 >
                                     عضو مميز
                                 </span>
-                                <span className="text-xs text-gray-500" data-oid=".syg:st">
+                                <span className="text-xs text-gray-500" data-oid="40xnq-w">
                                     ⭐ 4.9
                                 </span>
                             </div>
@@ -404,7 +404,7 @@ export default function SettingsPage() {
                         <Link
                             href="/profile/edit"
                             className="text-blue-600 text-sm font-semibold"
-                            data-oid="hkyk617"
+                            data-oid="m3h_m.q"
                         >
                             تعديل
                         </Link>
@@ -413,7 +413,7 @@ export default function SettingsPage() {
             </div>
 
             {/* Settings Sections */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="1lq5yoo">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="f712807">
                 {renderSection('الحساب الشخصي', profileSettings)}
                 {renderSection('الإشعارات', notificationSettings)}
                 {renderSection('إعدادات التطبيق', appSettings)}
@@ -426,66 +426,66 @@ export default function SettingsPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="peo4n9g"
+                data-oid="8mk3pp8"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="poupq-r">
-                    <div className="flex justify-around" data-oid="f2y8s9w">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="qsa59v:">
+                    <div className="flex justify-around" data-oid="nd4-8q.">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="vs.q-by"
+                            data-oid="g_zpr_x"
                         >
-                            <span className="text-xl" data-oid="77wt1l3">
+                            <span className="text-xl" data-oid="orq:ctr">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="w08gghj">
+                            <span className="text-xs" data-oid="79gbyao">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/categories"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="da:a12p"
+                            data-oid="-mh-tqp"
                         >
-                            <span className="text-xl" data-oid="vxc0k3m">
+                            <span className="text-xl" data-oid="_xasn_i">
                                 📂
                             </span>
-                            <span className="text-xs" data-oid="4yn1kvk">
+                            <span className="text-xs" data-oid="o9w1zzk">
                                 التصنيفات
                             </span>
                         </Link>
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="8-ixykj"
+                            data-oid="27oh1cf"
                         >
-                            <span className="text-xl" data-oid="6c037dt">
+                            <span className="text-xl" data-oid="4rhyg_7">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="tjq8xsb">
+                            <span className="text-xs" data-oid="-4g-c1b">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/wallet"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="9_ovq:j"
+                            data-oid="iup__oq"
                         >
-                            <span className="text-xl" data-oid="o0e5_4-">
+                            <span className="text-xl" data-oid="c:3iy7.">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="hta9m8u">
+                            <span className="text-xs" data-oid="qvdlswp">
                                 المحفظة
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="cu1i39w"
+                            data-oid="el0keao"
                         >
-                            <span className="text-xl" data-oid="9o.h.az">
+                            <span className="text-xl" data-oid="_indn_d">
                                 ⚙️
                             </span>
-                            <span className="text-xs font-semibold" data-oid="m2rtj75">
+                            <span className="text-xs font-semibold" data-oid="rr9cmt3">
                                 الإعدادات
                             </span>
                         </button>
@@ -494,7 +494,7 @@ export default function SettingsPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="t1fev9n"></div>
+            <div className="h-20" data-oid="wfx2:lx"></div>
         </div>
     );
 }

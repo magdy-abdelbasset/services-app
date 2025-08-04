@@ -320,37 +320,37 @@ export default function ProviderServicesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="fxfq2g.">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="q:8d8na">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid="0ngq:cw"
+                data-oid="el-zc82"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="0-8ldr3">
-                    <div className="flex items-center justify-between mb-4" data-oid="tislu41">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="2otrk6w">
+                    <div className="flex items-center justify-between mb-4" data-oid="t1ekoa3">
                         <Link
                             href="/provider"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="tt-_qjg"
+                            data-oid="il3pypi"
                         >
-                            <span className="text-lg" data-oid="jdeptix">
+                            <span className="text-lg" data-oid="zmpsyme">
                                 ←
                             </span>
                         </Link>
-                        <div className="text-center" data-oid="p82npe9">
-                            <h1 className="text-lg font-bold" data-oid="zs6r1ud">
+                        <div className="text-center" data-oid="6_h:q35">
+                            <h1 className="text-lg font-bold" data-oid="r4djhv.">
                                 إدارة خدماتي
                             </h1>
-                            <p className="text-sm text-white/90" data-oid="1cb87zp">
+                            <p className="text-sm text-white/90" data-oid="r4jjvyq">
                                 {services.length} خدمة • {activeServices.length} نشطة
                             </p>
                         </div>
                         <button
                             onClick={() => setShowAddModal(true)}
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="1w6i82l"
+                            data-oid="e0uwgt."
                         >
-                            <span className="text-lg" data-oid="i81j3jb">
+                            <span className="text-lg" data-oid="_602qm0">
                                 +
                             </span>
                         </button>
@@ -359,41 +359,41 @@ export default function ProviderServicesPage() {
             </div>
 
             {/* Stats Cards */}
-            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10" data-oid="_8nryl6">
-                <div className="grid grid-cols-3 gap-3 mb-6" data-oid="3wemfgd">
+            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10" data-oid="babk1j:">
+                <div className="grid grid-cols-3 gap-3 mb-6" data-oid="4kmi.-.">
                     <div
                         className="bg-white rounded-2xl p-3 shadow-lg text-center"
-                        data-oid="tiol-6g"
+                        data-oid="k-ybb36"
                     >
-                        <p className="text-xl font-bold text-green-600" data-oid="-klhb6x">
+                        <p className="text-xl font-bold text-green-600" data-oid="bo4749p">
                             {activeServices.length}
                         </p>
-                        <p className="text-xs text-gray-600" data-oid="qnmou65">
+                        <p className="text-xs text-gray-600" data-oid="zgapo6b">
                             خدمة نشطة
                         </p>
                     </div>
                     <div
                         className="bg-white rounded-2xl p-3 shadow-lg text-center"
-                        data-oid="k_lpb71"
+                        data-oid="i599_9o"
                     >
-                        <p className="text-xl font-bold text-blue-600" data-oid="17seiq.">
+                        <p className="text-xl font-bold text-blue-600" data-oid="maiuq0y">
                             {services.reduce((sum, service) => sum + service.completedJobs, 0)}
                         </p>
-                        <p className="text-xs text-gray-600" data-oid="g:xo01v">
+                        <p className="text-xs text-gray-600" data-oid="4ez-w_-">
                             إجمالي الطلبات
                         </p>
                     </div>
                     <div
                         className="bg-white rounded-2xl p-3 shadow-lg text-center"
-                        data-oid="la4y2gn"
+                        data-oid="o2oayu_"
                     >
-                        <p className="text-xl font-bold text-orange-600" data-oid="jxjetee">
+                        <p className="text-xl font-bold text-orange-600" data-oid="3bsyxlc">
                             {(
                                 services.reduce((sum, service) => sum + service.rating, 0) /
                                 services.length
                             ).toFixed(1)}
                         </p>
-                        <p className="text-xs text-gray-600" data-oid="debnsio">
+                        <p className="text-xs text-gray-600" data-oid="bk7i1wm">
                             متوسط التقييم
                         </p>
                     </div>
@@ -401,15 +401,15 @@ export default function ProviderServicesPage() {
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 mb-4" data-oid="orqn69w">
-                <div className="bg-white rounded-2xl p-1 shadow-sm" data-oid="y1pw9i.">
-                    <div className="flex" data-oid="o83hsau">
+            <div className="max-w-sm mx-auto px-4 mb-4" data-oid="9p_0bet">
+                <div className="bg-white rounded-2xl p-1 shadow-sm" data-oid="mwot7-p">
+                    <div className="flex" data-oid="imob2j1">
                         <button
                             onClick={() => setActiveTab('active')}
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
                                 activeTab === 'active' ? 'bg-green-500 text-white' : 'text-gray-600'
                             }`}
-                            data-oid="tx:zcbr"
+                            data-oid="3n_m:1g"
                         >
                             نشطة ({activeServices.length})
                         </button>
@@ -420,7 +420,7 @@ export default function ProviderServicesPage() {
                                     ? 'bg-gray-500 text-white'
                                     : 'text-gray-600'
                             }`}
-                            data-oid="ooi-3s0"
+                            data-oid="zcd82mn"
                         >
                             غير نشطة ({inactiveServices.length})
                         </button>
@@ -429,27 +429,27 @@ export default function ProviderServicesPage() {
             </div>
 
             {/* Services List */}
-            <div className="max-w-sm mx-auto px-4 pb-24" data-oid="qx4le1j">
-                <div className="space-y-4" data-oid="jwrnlyr">
+            <div className="max-w-sm mx-auto px-4 pb-24" data-oid="yds4:xf">
+                <div className="space-y-4" data-oid="wl8ldua">
                     {(activeTab === 'active' ? activeServices : inactiveServices).map((service) => (
                         <div
                             key={service.id}
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="a_v-wox"
+                            data-oid="2n61ucm"
                         >
                             {/* Service Header */}
                             <div
                                 className="flex items-start justify-between mb-3"
-                                data-oid="szlat71"
+                                data-oid="j55x:8-"
                             >
-                                <div className="flex-1" data-oid="ygko02g">
+                                <div className="flex-1" data-oid="lz-k7al">
                                     <div
                                         className="flex items-center space-x-2 space-x-reverse mb-1"
-                                        data-oid="1.81d3a"
+                                        data-oid="hgl5a.5"
                                     >
                                         <h3
                                             className="font-semibold text-gray-800"
-                                            data-oid="zjduxk8"
+                                            data-oid="11u0d9j"
                                         >
                                             {service.name}
                                         </h3>
@@ -459,89 +459,89 @@ export default function ProviderServicesPage() {
                                                     ? 'bg-green-100 text-green-600'
                                                     : 'bg-gray-100 text-gray-600'
                                             }`}
-                                            data-oid="b-47a22"
+                                            data-oid="g-y8j_x"
                                         >
                                             {service.isActive ? 'نشطة' : 'غير نشطة'}
                                         </span>
                                     </div>
                                     <div
                                         className="flex items-center space-x-2 space-x-reverse mb-1"
-                                        data-oid="category-info"
+                                        data-oid="2fqcr47"
                                     >
-                                        <p className="text-sm text-gray-600" data-oid="n12kzy:">
+                                        <p className="text-sm text-gray-600" data-oid="0i1dbhk">
                                             {service.category}
                                         </p>
-                                        <span className="text-gray-400" data-oid="separator">
+                                        <span className="text-gray-400" data-oid="th1_17u">
                                             •
                                         </span>
                                         <p
                                             className="text-sm text-blue-600 font-medium"
-                                            data-oid="sub-category"
+                                            data-oid="zqh26y_"
                                         >
                                             {service.subCategory}
                                         </p>
                                     </div>
-                                    <p className="text-sm text-gray-500" data-oid="ma3r4:l">
+                                    <p className="text-sm text-gray-500" data-oid=":zrefmz">
                                         {service.description}
                                     </p>
                                 </div>
-                                <div className="text-left" data-oid="m4f6cym">
+                                <div className="text-left" data-oid="th0kd35">
                                     <p
                                         className="text-lg font-bold text-green-600"
-                                        data-oid="lq8zlez"
+                                        data-oid="jzjiqj7"
                                     >
                                         {service.price} ريال
                                     </p>
-                                    <p className="text-xs text-gray-500" data-oid=":f4ck:6">
+                                    <p className="text-xs text-gray-500" data-oid=".8qhk.p">
                                         {service.duration}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Service Stats */}
-                            <div className="bg-gray-50 rounded-xl p-3 mb-3" data-oid="e38kroe">
+                            <div className="bg-gray-50 rounded-xl p-3 mb-3" data-oid="cr-6m3w">
                                 <div
                                     className="grid grid-cols-3 gap-4 text-center"
-                                    data-oid="12kfpoa"
+                                    data-oid=":nh1na8"
                                 >
-                                    <div data-oid="m5p5h49">
+                                    <div data-oid="wdhb-0s">
                                         <div
                                             className="flex items-center justify-center space-x-1 space-x-reverse"
-                                            data-oid="x419rfm"
+                                            data-oid="c5cqgrh"
                                         >
-                                            <span className="text-yellow-500" data-oid="f.72007">
+                                            <span className="text-yellow-500" data-oid="9aawe3y">
                                                 ⭐
                                             </span>
                                             <p
                                                 className="text-sm font-bold text-orange-600"
-                                                data-oid="-j8vklz"
+                                                data-oid=":9zuvgg"
                                             >
                                                 {service.rating}
                                             </p>
                                         </div>
-                                        <p className="text-xs text-gray-500" data-oid="yrt:-1o">
+                                        <p className="text-xs text-gray-500" data-oid="qvb5dy4">
                                             التقييم
                                         </p>
                                     </div>
-                                    <div data-oid="uff.e43">
+                                    <div data-oid="gwix.v_">
                                         <p
                                             className="text-sm font-bold text-blue-600"
-                                            data-oid="y2qllhf"
+                                            data-oid="q1384j:"
                                         >
                                             {service.completedJobs}
                                         </p>
-                                        <p className="text-xs text-gray-500" data-oid="e8v9lgr">
+                                        <p className="text-xs text-gray-500" data-oid="dptsjik">
                                             طلب مكتمل
                                         </p>
                                     </div>
-                                    <div data-oid="3mtlfbo">
+                                    <div data-oid="v1y1e7g">
                                         <p
                                             className="text-sm font-bold text-purple-600"
-                                            data-oid="ztk:54e"
+                                            data-oid="ojr__9m"
                                         >
                                             {service.availability.days.length} أيام
                                         </p>
-                                        <p className="text-xs text-gray-500" data-oid="uj35rf2">
+                                        <p className="text-xs text-gray-500" data-oid="5.uxm51">
                                             متاح
                                         </p>
                                     </div>
@@ -549,29 +549,29 @@ export default function ProviderServicesPage() {
                             </div>
 
                             {/* Availability */}
-                            <div className="mb-3" data-oid="4szgrte">
-                                <p className="text-sm text-gray-600 mb-2" data-oid="i8a6_6k">
+                            <div className="mb-3" data-oid="s4ic0tp">
+                                <p className="text-sm text-gray-600 mb-2" data-oid="x.2b:sf">
                                     أوقات العمل:
                                 </p>
-                                <div className="flex flex-wrap gap-1 mb-2" data-oid="..1xq-m">
+                                <div className="flex flex-wrap gap-1 mb-2" data-oid="kubff--">
                                     {service.availability.days.map((day) => (
                                         <span
                                             key={day}
                                             className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
-                                            data-oid="vpzxg7h"
+                                            data-oid="i8-lbzb"
                                         >
                                             {day}
                                         </span>
                                     ))}
                                 </div>
-                                <p className="text-xs text-gray-500" data-oid="0lc30db">
+                                <p className="text-xs text-gray-500" data-oid="h7:9ctq">
                                     من {service.availability.startTime} إلى{' '}
                                     {service.availability.endTime}
                                 </p>
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="flex space-x-2 space-x-reverse" data-oid="_wqw2ap">
+                            <div className="flex space-x-2 space-x-reverse" data-oid=":g_7zrp">
                                 <button
                                     onClick={() => toggleServiceStatus(service.id)}
                                     className={`flex-1 py-2 rounded-xl font-semibold text-sm ${
@@ -579,21 +579,21 @@ export default function ProviderServicesPage() {
                                             ? 'bg-gray-200 text-gray-700'
                                             : 'bg-green-500 text-white'
                                     }`}
-                                    data-oid="zddpii6"
+                                    data-oid="a0oyd2s"
                                 >
                                     {service.isActive ? 'إيقاف' : 'تفعيل'}
                                 </button>
                                 <button
                                     onClick={() => handleEditService(service)}
                                     className="flex-1 bg-blue-500 text-white py-2 rounded-xl font-semibold text-sm"
-                                    data-oid="pd7_x0q"
+                                    data-oid="v3japoy"
                                 >
                                     تعديل
                                 </button>
                                 <button
                                     onClick={() => deleteService(service.id)}
                                     className="px-4 py-2 bg-red-100 text-red-600 rounded-xl"
-                                    data-oid=":jrjsn5"
+                                    data-oid="he7x29c"
                                 >
                                     🗑️
                                 </button>
@@ -602,19 +602,19 @@ export default function ProviderServicesPage() {
                     ))}
 
                     {(activeTab === 'active' ? activeServices : inactiveServices).length === 0 && (
-                        <div className="text-center py-12" data-oid="swsej4t">
-                            <div className="text-6xl mb-4" data-oid="1w1ws39">
+                        <div className="text-center py-12" data-oid="f3qllso">
+                            <div className="text-6xl mb-4" data-oid="igrif_a">
                                 {activeTab === 'active' ? '📋' : '😴'}
                             </div>
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-2"
-                                data-oid="0nlouz5"
+                                data-oid="rwwt:6h"
                             >
                                 {activeTab === 'active'
                                     ? 'لا توجد خدمات نشطة'
                                     : 'لا توجد خدمات غير نشطة'}
                             </h3>
-                            <p className="text-gray-600 text-sm mb-6" data-oid="x_t-emc">
+                            <p className="text-gray-600 text-sm mb-6" data-oid="2u77yj5">
                                 {activeTab === 'active'
                                     ? 'قم بإضافة خدمة جديدة أو تفعيل خدمة موجودة'
                                     : 'جميع خدماتك نشطة حالياً'}
@@ -623,7 +623,7 @@ export default function ProviderServicesPage() {
                                 <button
                                     onClick={() => setShowAddModal(true)}
                                     className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold"
-                                    data-oid="42_:1ej"
+                                    data-oid="7i5h-:g"
                                 >
                                     إضافة خدمة جديدة
                                 </button>
@@ -635,30 +635,30 @@ export default function ProviderServicesPage() {
 
             {/* Add/Edit Service Modal */}
             {showAddModal && (
-                <div className="fixed inset-0 bg-black/50 flex items-end z-50" data-oid="8fn897b">
+                <div className="fixed inset-0 bg-black/50 flex items-end z-50" data-oid="---k.6x">
                     <div
                         className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-y-auto"
-                        data-oid="pz5v-56"
+                        data-oid="al2ruc2"
                     >
-                        <div className="p-6" data-oid="1b.e3:y">
+                        <div className="p-6" data-oid="pp5b-1y">
                             <div
                                 className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-6"
-                                data-oid="jm:w8df"
+                                data-oid="4cm3anq"
                             ></div>
 
                             <h2
                                 className="text-xl font-bold text-gray-800 mb-6 text-center"
-                                data-oid="-8gb1v2"
+                                data-oid="w8s.ude"
                             >
                                 {editingService ? 'تعديل الخدمة' : 'إضافة خدمة جديدة'}
                             </h2>
 
-                            <div className="space-y-4" data-oid="6.h-oho">
+                            <div className="space-y-4" data-oid="mj72mit">
                                 {/* Service Name */}
-                                <div data-oid="eyku1l9">
+                                <div data-oid="q:la2fv">
                                     <label
                                         className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="1d9stsr"
+                                        data-oid="k0_10ej"
                                     >
                                         اسم الخدمة *
                                     </label>
@@ -670,15 +670,15 @@ export default function ProviderServicesPage() {
                                         }
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                         placeholder="مثال: تنظيف المنزل العام"
-                                        data-oid="i.bn-y4"
+                                        data-oid="_3nxh-t"
                                     />
                                 </div>
 
                                 {/* Category */}
-                                <div data-oid="gp9c_74">
+                                <div data-oid="gcbhtmq">
                                     <label
                                         className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="y-n8fvw"
+                                        data-oid="a216ecl"
                                     >
                                         التصنيف الرئيسي *
                                     </label>
@@ -697,16 +697,16 @@ export default function ProviderServicesPage() {
                                             });
                                         }}
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                        data-oid="h415e.s"
+                                        data-oid="086_:4s"
                                     >
-                                        <option value="" data-oid="6s_gkpl">
+                                        <option value="" data-oid="vav_.bo">
                                             اختر التصنيف الرئيسي
                                         </option>
                                         {serviceCategories.map((category) => (
                                             <option
                                                 key={category.id}
                                                 value={category.name}
-                                                data-oid="p6z.pd7"
+                                                data-oid="id3f47x"
                                             >
                                                 {category.icon} {category.name}
                                             </option>
@@ -716,10 +716,10 @@ export default function ProviderServicesPage() {
 
                                 {/* Sub Category */}
                                 {selectedCategory && (
-                                    <div data-oid="sub-category-section">
+                                    <div data-oid="rfsmzjp">
                                         <label
                                             className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="sub-category-label"
+                                            data-oid="71zs7_m"
                                         >
                                             التصنيف الفرعي *
                                         </label>
@@ -732,9 +732,9 @@ export default function ProviderServicesPage() {
                                                 })
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                            data-oid="sub-category-select"
+                                            data-oid=":ry5ryf"
                                         >
-                                            <option value="" data-oid="sub-category-placeholder">
+                                            <option value="" data-oid="o-w:fx1">
                                                 اختر التصنيف الفرعي
                                             </option>
                                             {selectedCategory.subCategories.map(
@@ -742,7 +742,7 @@ export default function ProviderServicesPage() {
                                                     <option
                                                         key={index}
                                                         value={subCategory}
-                                                        data-oid="sub-category-option"
+                                                        data-oid="t7t-x19"
                                                     >
                                                         {subCategory}
                                                     </option>
@@ -753,10 +753,10 @@ export default function ProviderServicesPage() {
                                 )}
 
                                 {/* Description */}
-                                <div data-oid="fovyuq4">
+                                <div data-oid="1tb.oqq">
                                     <label
                                         className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="k6-9l6-"
+                                        data-oid=".:q8m3m"
                                     >
                                         وصف الخدمة
                                     </label>
@@ -770,16 +770,16 @@ export default function ProviderServicesPage() {
                                         }
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500 h-20 resize-none"
                                         placeholder="وصف مختصر للخدمة..."
-                                        data-oid="3-7cfcg"
+                                        data-oid="z.vsji3"
                                     />
                                 </div>
 
                                 {/* Price and Duration */}
-                                <div className="grid grid-cols-2 gap-4" data-oid="tx2rp7_">
-                                    <div data-oid="hm0t4_f">
+                                <div className="grid grid-cols-2 gap-4" data-oid="nlgoluj">
+                                    <div data-oid="hlshn8e">
                                         <label
                                             className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="kddi3.j"
+                                            data-oid="1-3js8-"
                                         >
                                             السعر (ريال) *
                                         </label>
@@ -794,13 +794,13 @@ export default function ProviderServicesPage() {
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                             placeholder="45"
-                                            data-oid="gn9m2gs"
+                                            data-oid="zuaa65z"
                                         />
                                     </div>
-                                    <div data-oid="qg2w0pi">
+                                    <div data-oid="6uq4s5-">
                                         <label
                                             className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="nil0::o"
+                                            data-oid="mn6hw6m"
                                         >
                                             المدة المتوقعة
                                         </label>
@@ -815,20 +815,20 @@ export default function ProviderServicesPage() {
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                             placeholder="2-3 ساعات"
-                                            data-oid="6-2axv-"
+                                            data-oid=":h34icb"
                                         />
                                     </div>
                                 </div>
 
                                 {/* Working Days */}
-                                <div data-oid="eq2rzsv">
+                                <div data-oid="a8s_lgi">
                                     <label
                                         className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="zrfdn9b"
+                                        data-oid="1gers8b"
                                     >
                                         أيام العمل
                                     </label>
-                                    <div className="grid grid-cols-4 gap-2" data-oid="taxekb7">
+                                    <div className="grid grid-cols-4 gap-2" data-oid="9saegzo">
                                         {weekDays.map((day) => (
                                             <button
                                                 key={day}
@@ -839,7 +839,7 @@ export default function ProviderServicesPage() {
                                                         ? 'bg-blue-500 text-white'
                                                         : 'bg-gray-100 text-gray-700'
                                                 }`}
-                                                data-oid="opw9pc4"
+                                                data-oid="m:3ewv1"
                                             >
                                                 {day}
                                             </button>
@@ -848,11 +848,11 @@ export default function ProviderServicesPage() {
                                 </div>
 
                                 {/* Working Hours */}
-                                <div className="grid grid-cols-2 gap-4" data-oid="qbdr1oh">
-                                    <div data-oid="76udjf:">
+                                <div className="grid grid-cols-2 gap-4" data-oid="ux-d5m2">
+                                    <div data-oid="cs4dfbe">
                                         <label
                                             className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="m:bymtl"
+                                            data-oid="aj772u0"
                                         >
                                             من الساعة
                                         </label>
@@ -869,13 +869,13 @@ export default function ProviderServicesPage() {
                                                 })
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                            data-oid="yku.05h"
+                                            data-oid="d7j0xsk"
                                         />
                                     </div>
-                                    <div data-oid="hhai1ib">
+                                    <div data-oid="wvs15m3">
                                         <label
                                             className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="pen5etp"
+                                            data-oid="nrqv9dr"
                                         >
                                             إلى الساعة
                                         </label>
@@ -892,7 +892,7 @@ export default function ProviderServicesPage() {
                                                 })
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                            data-oid="8o1wxx-"
+                                            data-oid="tg94imo"
                                         />
                                     </div>
                                 </div>
@@ -900,16 +900,16 @@ export default function ProviderServicesPage() {
                                 {/* Active Status */}
                                 <div
                                     className="flex items-center justify-between p-3 bg-gray-50 rounded-xl"
-                                    data-oid="t3q7-9r"
+                                    data-oid="14qmqye"
                                 >
-                                    <div data-oid="gx2on-p">
+                                    <div data-oid="8pgoh:a">
                                         <h4
                                             className="font-semibold text-gray-800"
-                                            data-oid="4.4kt10"
+                                            data-oid="bhirydy"
                                         >
                                             تفعيل الخدمة
                                         </h4>
-                                        <p className="text-sm text-gray-600" data-oid="ibe9www">
+                                        <p className="text-sm text-gray-600" data-oid="ejjxc22">
                                             {newService.isActive
                                                 ? 'الخدمة متاحة للعملاء'
                                                 : 'الخدمة غير متاحة'}
@@ -926,7 +926,7 @@ export default function ProviderServicesPage() {
                                         className={`w-14 h-8 rounded-full transition-colors ${
                                             newService.isActive ? 'bg-green-500' : 'bg-gray-400'
                                         } relative`}
-                                        data-oid="63iq8sz"
+                                        data-oid="j.6ks-v"
                                     >
                                         <div
                                             className={`w-6 h-6 bg-white rounded-full absolute top-1 transition-transform ${
@@ -934,14 +934,14 @@ export default function ProviderServicesPage() {
                                                     ? 'translate-x-6'
                                                     : 'translate-x-1'
                                             }`}
-                                            data-oid="7qx.my8"
+                                            data-oid="6kbfu_b"
                                         ></div>
                                     </button>
                                 </div>
                             </div>
 
                             {/* Modal Actions */}
-                            <div className="flex space-x-3 space-x-reverse mt-6" data-oid="glqtqi:">
+                            <div className="flex space-x-3 space-x-reverse mt-6" data-oid="584oj8-">
                                 <button
                                     onClick={() => {
                                         setShowAddModal(false);
@@ -963,7 +963,7 @@ export default function ProviderServicesPage() {
                                         setSelectedCategory(null);
                                     }}
                                     className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold"
-                                    data-oid="-nwko6."
+                                    data-oid="fyvj8-4"
                                 >
                                     إلغاء
                                 </button>
@@ -972,7 +972,7 @@ export default function ProviderServicesPage() {
                                         editingService ? handleUpdateService : handleAddService
                                     }
                                     className="flex-1 bg-blue-500 text-white py-3 rounded-xl font-semibold"
-                                    data-oid="jjwjfkh"
+                                    data-oid="e:m4d5p"
                                 >
                                     {editingService ? 'حفظ التعديلات' : 'إضافة الخدمة'}
                                 </button>
@@ -985,67 +985,67 @@ export default function ProviderServicesPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="_n7p2-a"
+                data-oid="87-kgj0"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="xm51t-g">
-                    <div className="flex justify-around" data-oid="l_-3x6k">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="-yq9bgu">
+                    <div className="flex justify-around" data-oid="3e.fd3e">
                         <Link
                             href="/provider"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="cu:8jk2"
+                            data-oid="szcdq_3"
                         >
-                            <span className="text-xl" data-oid=":1jhs0x">
+                            <span className="text-xl" data-oid="3gq-_.a">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="rww8d53">
+                            <span className="text-xs" data-oid="xj8p1wx">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/provider/requests"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="ivmylwg"
+                            data-oid="k:2z987"
                         >
-                            <span className="text-xl" data-oid="_4ugws9">
+                            <span className="text-xl" data-oid="66f8:hg">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="d.slpj6">
+                            <span className="text-xs" data-oid="50:e2lc">
                                 الطلبات
                             </span>
                         </Link>
                         <Link
                             href="/provider/services"
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="d_tbmfo"
+                            data-oid="9f4mgqw"
                         >
-                            <span className="text-xl" data-oid="08jua4q">
+                            <span className="text-xl" data-oid="07e1gqc">
                                 🛠️
                             </span>
-                            <span className="text-xs font-semibold" data-oid="qihm-5u">
+                            <span className="text-xs font-semibold" data-oid="4k9.m8w">
                                 خدماتي
                             </span>
                         </Link>
                         <Link
                             href="/provider/earnings"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="g8ne-5g"
+                            data-oid="0icm1d1"
                         >
-                            <span className="text-xl" data-oid="c2tf58g">
+                            <span className="text-xl" data-oid="-6t3kt0">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="2.komdy">
+                            <span className="text-xs" data-oid=".j4cf0d">
                                 الأرباح
                             </span>
                         </Link>
                         <Link
                             href="/provider/profile"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="u73q-i5"
+                            data-oid="ihuo.5m"
                         >
-                            <span className="text-xl" data-oid="n-4095v">
+                            <span className="text-xl" data-oid=".11sjsx">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid="hjgrnyc">
+                            <span className="text-xs" data-oid="_cgspj7">
                                 الملف الشخصي
                             </span>
                         </Link>

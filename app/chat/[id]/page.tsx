@@ -163,14 +163,14 @@ export default function ChatPage() {
         return (
             <div
                 className="min-h-screen bg-gray-50 flex items-center justify-center"
-                data-oid="om3:m0n"
+                data-oid="999os05"
             >
-                <div className="text-center" data-oid="cnj86fj">
+                <div className="text-center" data-oid="fjrp4cf">
                     <div
                         className="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
-                        data-oid="eac30w9"
+                        data-oid="-ksp9ev"
                     ></div>
-                    <p className="text-gray-600" data-oid="1r3m5d3">
+                    <p className="text-gray-600" data-oid="zcf8o8b">
                         جاري تحميل المحادثة...
                     </p>
                 </div>
@@ -179,50 +179,50 @@ export default function ChatPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col" dir="rtl" data-oid="pcuwu_l">
+        <div className="min-h-screen bg-gray-50 flex flex-col" dir="rtl" data-oid="gays-v_">
             {/* Header */}
-            <div className="bg-white border-b border-gray-200 px-4 py-3" data-oid="49guwp3">
+            <div className="bg-white border-b border-gray-200 px-4 py-3" data-oid="n9y3a:p">
                 <div
                     className="max-w-sm mx-auto flex items-center justify-between"
-                    data-oid="pxlk47x"
+                    data-oid="fhi2iy4"
                 >
                     <Link
                         href="/messages"
                         className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
-                        data-oid="4ljwl9_"
+                        data-oid="u9.tu.a"
                     >
-                        <span className="text-lg" data-oid="j0:51wd">
+                        <span className="text-lg" data-oid="fxqfhy8">
                             ←
                         </span>
                     </Link>
 
                     <div
                         className="flex items-center space-x-3 space-x-reverse flex-1 mx-4"
-                        data-oid="_g-i0u7"
+                        data-oid="gj-ipdc"
                     >
-                        <div className="relative" data-oid="lm-3g6o">
-                            <div className="text-2xl" data-oid="n70wqm0">
+                        <div className="relative" data-oid="a8_c3vk">
+                            <div className="text-2xl" data-oid="w3j:8wn">
                                 {otherUser.avatar}
                             </div>
                             {otherUser.isOnline && (
                                 <div
                                     className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"
-                                    data-oid="xe9l1:4"
+                                    data-oid="p5hwvte"
                                 ></div>
                             )}
                         </div>
-                        <div className="flex-1" data-oid="yfhm.7k">
+                        <div className="flex-1" data-oid="jeowrg7">
                             <div
                                 className="flex items-center space-x-2 space-x-reverse"
-                                data-oid="3py:q9k"
+                                data-oid="-d6ffh8"
                             >
-                                <h3 className="font-semibold text-gray-800" data-oid="6b8:-e4">
+                                <h3 className="font-semibold text-gray-800" data-oid=".2d2it5">
                                     {otherUser.name}
                                 </h3>
                                 {otherUser.isServiceProvider && (
                                     <span
                                         className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full"
-                                        data-oid="6o2yya1"
+                                        data-oid="8g07.rm"
                                     >
                                         مقدم خدمة
                                     </span>
@@ -230,26 +230,26 @@ export default function ChatPage() {
                             </div>
                             <div
                                 className="flex items-center space-x-2 space-x-reverse text-sm text-gray-600"
-                                data-oid="8ay5qpa"
+                                data-oid="cje4_6c"
                             >
                                 {otherUser.isOnline ? (
-                                    <span className="text-green-600" data-oid="87jxcwi">
+                                    <span className="text-green-600" data-oid="3jck.:q">
                                         متصل الآن
                                     </span>
                                 ) : (
-                                    <span data-oid="x0mtm.l">آخر ظهور: {otherUser.lastSeen}</span>
+                                    <span data-oid="ua_i4pu">آخر ظهور: {otherUser.lastSeen}</span>
                                 )}
                                 {otherUser.rating && (
                                     <>
-                                        <span data-oid=".5ybdpx">•</span>
+                                        <span data-oid="7o1b2:c">•</span>
                                         <div
                                             className="flex items-center space-x-1 space-x-reverse"
-                                            data-oid="u:v_91y"
+                                            data-oid="-wqnhpk"
                                         >
-                                            <span className="text-yellow-500" data-oid="phqryb2">
+                                            <span className="text-yellow-500" data-oid="ttqiost">
                                                 ⭐
                                             </span>
-                                            <span data-oid="peepcp0">{otherUser.rating}</span>
+                                            <span data-oid="1mvvk_e">{otherUser.rating}</span>
                                         </div>
                                     </>
                                 )}
@@ -259,9 +259,9 @@ export default function ChatPage() {
 
                     <button
                         className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
-                        data-oid="xjp9nw9"
+                        data-oid="2huxrez"
                     >
-                        <span className="text-lg" data-oid="chu22b7">
+                        <span className="text-lg" data-oid="w:0nv3c">
                             📞
                         </span>
                     </button>
@@ -269,15 +269,15 @@ export default function ChatPage() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4" data-oid="5g-6nki">
-                <div className="max-w-sm mx-auto space-y-4" data-oid="n62s_jx">
+            <div className="flex-1 overflow-y-auto p-4" data-oid="wn8tlt2">
+                <div className="max-w-sm mx-auto space-y-4" data-oid=".zfqyya">
                     {messages.map((msg) => (
                         <div
                             key={msg.id}
                             className={`flex ${
                                 msg.senderId === currentUser.id ? 'justify-end' : 'justify-start'
                             }`}
-                            data-oid="rwu20nu"
+                            data-oid="ss6-u8."
                         >
                             <div
                                 className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
@@ -285,9 +285,9 @@ export default function ChatPage() {
                                         ? 'bg-blue-500 text-white'
                                         : 'bg-white text-gray-800 border border-gray-200'
                                 }`}
-                                data-oid="i60oby3"
+                                data-oid="f2xy2m9"
                             >
-                                <p className="text-sm" data-oid="aq8j0xc">
+                                <p className="text-sm" data-oid="la8aqth">
                                     {msg.content}
                                 </p>
                                 <div
@@ -296,11 +296,11 @@ export default function ChatPage() {
                                             ? 'text-blue-100'
                                             : 'text-gray-500'
                                     }`}
-                                    data-oid="4thrd1:"
+                                    data-oid="som2l4c"
                                 >
                                     {msg.timestamp}
                                     {msg.senderId === currentUser.id && (
-                                        <span className="mr-1" data-oid="krqfimi">
+                                        <span className="mr-1" data-oid="hj1v1ct">
                                             {msg.isRead ? '✓✓' : '✓'}
                                         </span>
                                     )}
@@ -311,51 +311,51 @@ export default function ChatPage() {
 
                     {/* Typing Indicator */}
                     {isTyping && (
-                        <div className="flex justify-start" data-oid="sysic:c">
+                        <div className="flex justify-start" data-oid="1.hjf.-">
                             <div
                                 className="bg-white text-gray-800 border border-gray-200 px-4 py-2 rounded-2xl"
-                                data-oid="bq0zjh_"
+                                data-oid="jlc8077"
                             >
-                                <div className="flex space-x-1" data-oid="rt0io_.">
+                                <div className="flex space-x-1" data-oid="m77tk4d">
                                     <div
                                         className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                                        data-oid="kou1i8q"
+                                        data-oid="j9ka3p3"
                                     ></div>
                                     <div
                                         className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
                                         style={{ animationDelay: '0.1s' }}
-                                        data-oid="nhsfi2i"
+                                        data-oid="oeo1bvn"
                                     ></div>
                                     <div
                                         className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
                                         style={{ animationDelay: '0.2s' }}
-                                        data-oid="mg-icbh"
+                                        data-oid="e-5q-a9"
                                     ></div>
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    <div ref={messagesEndRef} data-oid="kji776q" />
+                    <div ref={messagesEndRef} data-oid="h2wh35d" />
                 </div>
             </div>
 
             {/* Message Input */}
-            <div className="bg-white border-t border-gray-200 p-4" data-oid="nb:9bwg">
-                <div className="max-w-sm mx-auto" data-oid="ht22t5d">
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="hqlc7lb">
+            <div className="bg-white border-t border-gray-200 p-4" data-oid="0lhjte.">
+                <div className="max-w-sm mx-auto" data-oid="8sss4aq">
+                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="9ozx9-4">
                         <button
                             className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
-                            data-oid="r_67867"
+                            data-oid="c6ypaqx"
                         >
-                            <span className="text-lg" data-oid="h-3ov8-">
+                            <span className="text-lg" data-oid="c87d1kd">
                                 📎
                             </span>
                         </button>
 
                         <div
                             className="flex-1 bg-gray-100 rounded-2xl px-4 py-2"
-                            data-oid="v7wcolo"
+                            data-oid="p2o9dbg"
                         >
                             <input
                                 type="text"
@@ -364,15 +364,15 @@ export default function ChatPage() {
                                 onKeyPress={handleKeyPress}
                                 placeholder="اكتب رسالتك..."
                                 className="w-full bg-transparent outline-none text-gray-800"
-                                data-oid="wl62d3p"
+                                data-oid="c.vk6.v"
                             />
                         </div>
 
                         <button
                             className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
-                            data-oid="ob.ghl0"
+                            data-oid="dpq00q."
                         >
-                            <span className="text-lg" data-oid="7ez4b0e">
+                            <span className="text-lg" data-oid="rsro4y-">
                                 😊
                             </span>
                         </button>
@@ -385,9 +385,9 @@ export default function ChatPage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-gray-100 text-gray-400'
                             }`}
-                            data-oid="eui3vak"
+                            data-oid="iaqk4b4"
                         >
-                            <span className="text-lg" data-oid="clj6_:r">
+                            <span className="text-lg" data-oid="55o_1g9">
                                 📤
                             </span>
                         </button>
