@@ -175,12 +175,13 @@ export default function OrdersPage() {
                                         >
                                             تتبع الطلب
                                         </button>
-                                        <button
-                                            className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-lg text-sm font-semibold"
+                                        <Link
+                                            href={`/chat/${order.id}`}
+                                            className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-lg text-sm font-semibold text-center"
                                             data-oid="0jy8zjf"
                                         >
                                             تواصل
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             ))
@@ -300,7 +301,8 @@ export default function OrdersPage() {
                                 طلباتي
                             </span>
                         </button>
-                        <button
+                        <Link
+                            href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="oyc9ghu"
                         >
@@ -310,7 +312,7 @@ export default function OrdersPage() {
                             <span className="text-xs" data-oid="3kczg7d">
                                 الرسائل
                             </span>
-                        </button>
+                        </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="owy7.0l"

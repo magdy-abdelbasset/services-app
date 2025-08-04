@@ -270,17 +270,18 @@ export default function Page() {
                                 العروض
                             </span>
                         </Link>
-                        <button
+                        <Link
+                            href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
                             data-oid="z8z-zqn"
                         >
                             <span className="text-xl" data-oid="7w-l7oj">
-                                👤
+                                💬
                             </span>
                             <span className="text-xs" data-oid="h-8dt2y">
-                                الملف الشخصي
+                                الرسائل
                             </span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -544,12 +545,13 @@ export default function Page() {
                                             >
                                                 اختيار هذا العرض
                                             </button>
-                                            <button
-                                                className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl"
+                                            <Link
+                                                href={`/chat/${offer.id}`}
+                                                className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
                                                 data-oid="xvzbfz2"
                                             >
                                                 💬
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 ))}
