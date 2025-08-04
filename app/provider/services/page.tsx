@@ -7,6 +7,7 @@ interface Service {
     id: number;
     name: string;
     category: string;
+    subCategory: string;
     description: string;
     price: string;
     duration: string;
@@ -24,6 +25,7 @@ interface ServiceCategory {
     id: number;
     name: string;
     icon: string;
+    subCategories: string[];
 }
 
 export default function ProviderServicesPage() {
@@ -37,6 +39,7 @@ export default function ProviderServicesPage() {
             id: 1,
             name: 'تنظيف المنزل العام',
             category: 'خدمات المنزل',
+            subCategory: 'تنظيف عام',
             description: 'تنظيف شامل للمنزل يشمل جميع الغرف والحمامات والمطبخ',
             price: '45',
             duration: '2-3 ساعات',
@@ -53,6 +56,7 @@ export default function ProviderServicesPage() {
             id: 2,
             name: 'تنظيف السجاد والموكيت',
             category: 'خدمات المنزل',
+            subCategory: 'تنظيف متخصص',
             description: 'تنظيف عميق للسجاد والموكيت باستخدام أحدث المعدات',
             price: '25',
             duration: '1-2 ساعة',
@@ -69,6 +73,7 @@ export default function ProviderServicesPage() {
             id: 3,
             name: 'صيانة الأجهزة المنزلية',
             category: 'الصيانة والإصلاح',
+            subCategory: 'صيانة الأجهزة',
             description: 'إصلاح وصيانة الأجهزة المنزلية المختلفة',
             price: '80',
             duration: '1-4 ساعات',
@@ -84,19 +89,109 @@ export default function ProviderServicesPage() {
     ]);
 
     const serviceCategories: ServiceCategory[] = [
-        { id: 1, name: 'خدمات المنزل', icon: '🏠' },
-        { id: 2, name: 'الصيانة والإصلاح', icon: '🔧' },
-        { id: 3, name: 'التوصيل والنقل', icon: '🚚' },
-        { id: 4, name: 'الجمال والعناية', icon: '💄' },
-        { id: 5, name: 'البستنة والحدائق', icon: '🌱' },
-        { id: 6, name: 'التعليم والتدريب', icon: '📚' },
-        { id: 7, name: 'الرياضة واللياقة', icon: '💪' },
-        { id: 8, name: 'التكنولوجيا والدعم الفني', icon: '💻' },
+        {
+            id: 1,
+            name: 'خدمات المنزل',
+            icon: '🏠',
+            subCategories: [
+                'تنظيف عام',
+                'تنظيف متخصص',
+                'تنظيف النوافذ',
+                'تنظيف المطابخ',
+                'تنظيف الحمامات',
+                'تنظيف الأثاث',
+            ],
+        },
+        {
+            id: 2,
+            name: 'الصيانة والإصلاح',
+            icon: '🔧',
+            subCategories: [
+                'صيانة الأجهزة',
+                'إصلاح السباكة',
+                'إصلاح الكهرباء',
+                'إصلاح التكييف',
+                'صيانة الأثاث',
+                'إصلاح الأقفال',
+            ],
+        },
+        {
+            id: 3,
+            name: 'التوصيل والنقل',
+            icon: '🚚',
+            subCategories: [
+                'توصيل الطعام',
+                'توصيل البقالة',
+                'نقل الأثاث',
+                'نقل الأشخاص',
+                'توصيل الوثائق',
+                'خدمات البريد',
+            ],
+        },
+        {
+            id: 4,
+            name: 'الجمال والعناية',
+            icon: '💄',
+            subCategories: [
+                'قص الشعر',
+                'العناية بالبشرة',
+                'المكياج',
+                'العناية بالأظافر',
+                'التدليك',
+                'إزالة الشعر',
+            ],
+        },
+        {
+            id: 5,
+            name: 'البستنة والحدائق',
+            icon: '🌱',
+            subCategories: [
+                'تنسيق الحدائق',
+                'قص الأشجار',
+                'زراعة النباتات',
+                'ري الحدائق',
+                'تنظيف الحدائق',
+                'صيانة المسابح',
+            ],
+        },
+        {
+            id: 6,
+            name: 'التعليم والتدريب',
+            icon: '📚',
+            subCategories: [
+                'دروس خصوصية',
+                'تعليم اللغات',
+                'تعليم الموسيقى',
+                'تعليم الرياضة',
+                'تدريب مهني',
+                'تعليم الحاسوب',
+            ],
+        },
+        {
+            id: 7,
+            name: 'الرياضة واللياقة',
+            icon: '💪',
+            subCategories: ['تدريب شخصي', 'يوغا', 'بيلاتس', 'كارديو', 'رفع الأثقال', 'تدريب جماعي'],
+        },
+        {
+            id: 8,
+            name: 'التكنولوجيا والدعم الفني',
+            icon: '💻',
+            subCategories: [
+                'إصلاح الحاسوب',
+                'تطوير المواقع',
+                'دعم تقني',
+                'تصميم جرافيك',
+                'إدارة الشبكات',
+                'استشارات تقنية',
+            ],
+        },
     ];
 
     const [newService, setNewService] = useState<Partial<Service>>({
         name: '',
         category: '',
+        subCategory: '',
         description: '',
         price: '',
         duration: '',
@@ -107,6 +202,8 @@ export default function ProviderServicesPage() {
             endTime: '18:00',
         },
     });
+
+    const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | null>(null);
 
     const weekDays = ['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'];
 
@@ -125,7 +222,12 @@ export default function ProviderServicesPage() {
     };
 
     const handleAddService = () => {
-        if (!newService.name || !newService.category || !newService.price) {
+        if (
+            !newService.name ||
+            !newService.category ||
+            !newService.subCategory ||
+            !newService.price
+        ) {
             alert('يرجى ملء جميع الحقول المطلوبة');
             return;
         }
@@ -134,6 +236,7 @@ export default function ProviderServicesPage() {
             id: Date.now(),
             name: newService.name!,
             category: newService.category!,
+            subCategory: newService.subCategory!,
             description: newService.description || '',
             price: newService.price!,
             duration: newService.duration || '1 ساعة',
@@ -147,6 +250,7 @@ export default function ProviderServicesPage() {
         setNewService({
             name: '',
             category: '',
+            subCategory: '',
             description: '',
             price: '',
             duration: '',
@@ -157,12 +261,16 @@ export default function ProviderServicesPage() {
                 endTime: '18:00',
             },
         });
+        setSelectedCategory(null);
         setShowAddModal(false);
     };
 
     const handleEditService = (service: Service) => {
         setEditingService(service);
         setNewService(service);
+        // Set the selected category for editing
+        const category = serviceCategories.find((cat) => cat.name === service.category);
+        setSelectedCategory(category || null);
         setShowAddModal(true);
     };
 
@@ -179,6 +287,7 @@ export default function ProviderServicesPage() {
         setNewService({
             name: '',
             category: '',
+            subCategory: '',
             description: '',
             price: '',
             duration: '',
@@ -189,6 +298,7 @@ export default function ProviderServicesPage() {
                 endTime: '18:00',
             },
         });
+        setSelectedCategory(null);
     };
 
     const activeServices = services.filter((service) => service.isActive);
@@ -354,9 +464,23 @@ export default function ProviderServicesPage() {
                                             {service.isActive ? 'نشطة' : 'غير نشطة'}
                                         </span>
                                     </div>
-                                    <p className="text-sm text-gray-600 mb-1" data-oid="n12kzy:">
-                                        {service.category}
-                                    </p>
+                                    <div
+                                        className="flex items-center space-x-2 space-x-reverse mb-1"
+                                        data-oid="category-info"
+                                    >
+                                        <p className="text-sm text-gray-600" data-oid="n12kzy:">
+                                            {service.category}
+                                        </p>
+                                        <span className="text-gray-400" data-oid="separator">
+                                            •
+                                        </span>
+                                        <p
+                                            className="text-sm text-blue-600 font-medium"
+                                            data-oid="sub-category"
+                                        >
+                                            {service.subCategory}
+                                        </p>
+                                    </div>
                                     <p className="text-sm text-gray-500" data-oid="ma3r4:l">
                                         {service.description}
                                     </p>
@@ -556,21 +680,27 @@ export default function ProviderServicesPage() {
                                         className="block text-sm font-semibold text-gray-700 mb-2"
                                         data-oid="y-n8fvw"
                                     >
-                                        التصنيف *
+                                        التصنيف الرئيسي *
                                     </label>
                                     <select
                                         value={newService.category || ''}
-                                        onChange={(e) =>
+                                        onChange={(e) => {
+                                            const categoryName = e.target.value;
+                                            const category = serviceCategories.find(
+                                                (cat) => cat.name === categoryName,
+                                            );
+                                            setSelectedCategory(category || null);
                                             setNewService({
                                                 ...newService,
-                                                category: e.target.value,
-                                            })
-                                        }
+                                                category: categoryName,
+                                                subCategory: '', // Reset subcategory when main category changes
+                                            });
+                                        }}
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                         data-oid="h415e.s"
                                     >
                                         <option value="" data-oid="6s_gkpl">
-                                            اختر التصنيف
+                                            اختر التصنيف الرئيسي
                                         </option>
                                         {serviceCategories.map((category) => (
                                             <option
@@ -583,6 +713,44 @@ export default function ProviderServicesPage() {
                                         ))}
                                     </select>
                                 </div>
+
+                                {/* Sub Category */}
+                                {selectedCategory && (
+                                    <div data-oid="sub-category-section">
+                                        <label
+                                            className="block text-sm font-semibold text-gray-700 mb-2"
+                                            data-oid="sub-category-label"
+                                        >
+                                            التصنيف الفرعي *
+                                        </label>
+                                        <select
+                                            value={newService.subCategory || ''}
+                                            onChange={(e) =>
+                                                setNewService({
+                                                    ...newService,
+                                                    subCategory: e.target.value,
+                                                })
+                                            }
+                                            className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
+                                            data-oid="sub-category-select"
+                                        >
+                                            <option value="" data-oid="sub-category-placeholder">
+                                                اختر التصنيف الفرعي
+                                            </option>
+                                            {selectedCategory.subCategories.map(
+                                                (subCategory, index) => (
+                                                    <option
+                                                        key={index}
+                                                        value={subCategory}
+                                                        data-oid="sub-category-option"
+                                                    >
+                                                        {subCategory}
+                                                    </option>
+                                                ),
+                                            )}
+                                        </select>
+                                    </div>
+                                )}
 
                                 {/* Description */}
                                 <div data-oid="fovyuq4">
@@ -781,6 +949,7 @@ export default function ProviderServicesPage() {
                                         setNewService({
                                             name: '',
                                             category: '',
+                                            subCategory: '',
                                             description: '',
                                             price: '',
                                             duration: '',
@@ -791,6 +960,7 @@ export default function ProviderServicesPage() {
                                                 endTime: '18:00',
                                             },
                                         });
+                                        setSelectedCategory(null);
                                     }}
                                     className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold"
                                     data-oid="-nwko6."
