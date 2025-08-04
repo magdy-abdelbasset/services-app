@@ -191,38 +191,38 @@ export default function ServicesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="wotcqw9">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="adxy25q">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="s9u55d_"
+                data-oid="-uujl-x"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="n9zzbae">
-                    <div className="flex items-center justify-between mb-4" data-oid="bx9m018">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="_boeoe_">
+                    <div className="flex items-center justify-between mb-4" data-oid="_b6qpkx">
                         <Link
                             href="/categories"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="xnvu6ev"
+                            data-oid="879ep-u"
                         >
-                            <span className="text-lg" data-oid="qg85l0r">
+                            <span className="text-lg" data-oid="8kt3s4_">
                                 ←
                             </span>
                         </Link>
-                        <div className="text-center" data-oid="2cgc9jp">
-                            <h1 className="text-lg font-bold" data-oid="pkddxa1">
+                        <div className="text-center" data-oid="3los0ok">
+                            <h1 className="text-lg font-bold" data-oid="geb5y6s">
                                 {getCategoryName()}
                             </h1>
                             {getSubCategoryName() && (
-                                <p className="text-sm text-white/90" data-oid="_0do90:">
+                                <p className="text-sm text-white/90" data-oid="96.7r.m">
                                     {getSubCategoryName()}
                                 </p>
                             )}
                         </div>
                         <button
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="mzb9usc"
+                            data-oid="9_pgddc"
                         >
-                            <span className="text-lg" data-oid="9ae9z1d">
+                            <span className="text-lg" data-oid="q0g45t1">
                                 🔍
                             </span>
                         </button>
@@ -231,34 +231,34 @@ export default function ServicesPage() {
             </div>
 
             {/* Filters and Sort */}
-            <div className="max-w-sm mx-auto px-4 py-4" data-oid="f83y0hu">
+            <div className="max-w-sm mx-auto px-4 py-4" data-oid="j5ft2cs">
                 <div
                     className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4"
-                    data-oid="j.68_r_"
+                    data-oid="aa66txi"
                 >
-                    <div className="flex items-center justify-between mb-3" data-oid="l_v4wy4">
-                        <h3 className="font-semibold text-gray-800" data-oid=":ymctw1">
+                    <div className="flex items-center justify-between mb-3" data-oid="3vt.-em">
+                        <h3 className="font-semibold text-gray-800" data-oid="vuhs:3v">
                             ترتيب حسب:
                         </h3>
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as any)}
                             className="bg-gray-100 rounded-lg px-3 py-1 text-sm outline-none"
-                            data-oid="hh489l_"
+                            data-oid="usvm7gj"
                         >
-                            <option value="rating" data-oid="si2epm1">
+                            <option value="rating" data-oid="35-baut">
                                 التقييم
                             </option>
-                            <option value="price" data-oid="y7n43g-">
+                            <option value="price" data-oid=":w7e3_h">
                                 السعر
                             </option>
-                            <option value="distance" data-oid="68cvmkr">
+                            <option value="distance" data-oid="7j7brft">
                                 المسافة
                             </option>
                         </select>
                     </div>
 
-                    <div className="flex space-x-2 space-x-reverse" data-oid="iuv:vd1">
+                    <div className="flex space-x-2 space-x-reverse" data-oid="jrpffa1">
                         <button
                             onClick={() => setFilterBy('all')}
                             className={`px-3 py-1 rounded-lg text-sm font-semibold ${
@@ -266,7 +266,7 @@ export default function ServicesPage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-gray-100 text-gray-700'
                             }`}
-                            data-oid="zr1-d-q"
+                            data-oid="sea67m."
                         >
                             الكل ({services.flatMap((s) => s.providers).length})
                         </button>
@@ -277,7 +277,7 @@ export default function ServicesPage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-gray-100 text-gray-700'
                             }`}
-                            data-oid="66f8pt0"
+                            data-oid="496u84d"
                         >
                             موثق (
                             {services.flatMap((s) => s.providers).filter((p) => p.verified).length})
@@ -289,7 +289,7 @@ export default function ServicesPage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-gray-100 text-gray-700'
                             }`}
-                            data-oid="abl7x2m"
+                            data-oid="p_g5wok"
                         >
                             متصل (
                             {services.flatMap((s) => s.providers).filter((p) => p.isOnline).length})
@@ -299,46 +299,46 @@ export default function ServicesPage() {
             </div>
 
             {/* Service Providers List */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="5yxv-n_">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="yqw2hp7">
                 {filteredProviders.length > 0 ? (
-                    <div className="space-y-4" data-oid="_.7z780">
+                    <div className="space-y-4" data-oid="0p-62ii">
                         {filteredProviders.map((provider) => (
                             <div
                                 key={provider.id}
                                 className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="pb4u30a"
+                                data-oid="s26lf.a"
                             >
                                 {/* Provider Info */}
                                 <div
                                     className="flex items-start space-x-3 space-x-reverse mb-4"
-                                    data-oid="i1fx_.i"
+                                    data-oid="w486ezv"
                                 >
-                                    <div className="relative" data-oid="3p:v.kh">
-                                        <div className="text-3xl" data-oid="rbo.0.g">
+                                    <div className="relative" data-oid="6xk2ymt">
+                                        <div className="text-3xl" data-oid="gh0w8uv">
                                             {provider.avatar}
                                         </div>
                                         {provider.isOnline && (
                                             <div
                                                 className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"
-                                                data-oid="14pcyl3"
+                                                data-oid="lqvlfwt"
                                             ></div>
                                         )}
                                     </div>
-                                    <div className="flex-1" data-oid="7ubveyp">
+                                    <div className="flex-1" data-oid="1jg98er">
                                         <div
                                             className="flex items-center space-x-2 space-x-reverse mb-1"
-                                            data-oid=".s51u0n"
+                                            data-oid="t.ul7o9"
                                         >
                                             <h4
                                                 className="font-semibold text-gray-800"
-                                                data-oid=".5o19tb"
+                                                data-oid="kzf99ev"
                                             >
                                                 {provider.name}
                                             </h4>
                                             {provider.verified && (
                                                 <span
                                                     className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full"
-                                                    data-oid="ehfm:in"
+                                                    data-oid="i_p2mng"
                                                 >
                                                     موثق
                                                 </span>
@@ -346,28 +346,28 @@ export default function ServicesPage() {
                                         </div>
                                         <div
                                             className="flex items-center space-x-4 space-x-reverse text-sm text-gray-600 mb-2"
-                                            data-oid="zjsrrvi"
+                                            data-oid="ujz4:_g"
                                         >
                                             <div
                                                 className="flex items-center space-x-1 space-x-reverse"
-                                                data-oid=":o3bi6t"
+                                                data-oid="u:b.y12"
                                             >
                                                 <span
                                                     className="text-yellow-500"
-                                                    data-oid="p4i6tlp"
+                                                    data-oid="urfbe67"
                                                 >
                                                     ⭐
                                                 </span>
-                                                <span data-oid="wpl9q0m">{provider.rating}</span>
+                                                <span data-oid="-mg6kyb">{provider.rating}</span>
                                             </div>
-                                            <span data-oid="o.xdtqg">
+                                            <span data-oid="z.d6nmc">
                                                 ({provider.completedJobs} خدمة مكتملة)
                                             </span>
-                                            <span data-oid="j2ecm1k">📍 {provider.distance}</span>
+                                            <span data-oid="gmbxlyu">📍 {provider.distance}</span>
                                         </div>
                                         <p
                                             className="text-sm text-gray-700 mb-3"
-                                            data-oid="114li93"
+                                            data-oid="klzr89x"
                                         >
                                             {provider.description}
                                         </p>
@@ -375,41 +375,41 @@ export default function ServicesPage() {
                                 </div>
 
                                 {/* Service Details */}
-                                <div className="bg-gray-50 rounded-xl p-3 mb-4" data-oid="rpx4vte">
+                                <div className="bg-gray-50 rounded-xl p-3 mb-4" data-oid="dj7ybh3">
                                     <div
                                         className="grid grid-cols-3 gap-4 text-center"
-                                        data-oid="wo30eao"
+                                        data-oid="g-8._1g"
                                     >
-                                        <div data-oid="o3:11w_">
+                                        <div data-oid="5.p3ldw">
                                             <p
                                                 className="text-lg font-bold text-blue-600"
-                                                data-oid="fq4_edl"
+                                                data-oid="m:u13k-"
                                             >
                                                 {provider.price}
                                             </p>
-                                            <p className="text-xs text-gray-500" data-oid="8:8bi30">
+                                            <p className="text-xs text-gray-500" data-oid=":2lurds">
                                                 السعر
                                             </p>
                                         </div>
-                                        <div data-oid="ib.6wqx">
+                                        <div data-oid="iuwuny:">
                                             <p
                                                 className="text-lg font-bold text-green-600"
-                                                data-oid="m883:p3"
+                                                data-oid="xo_cwzm"
                                             >
                                                 {provider.estimatedTime}
                                             </p>
-                                            <p className="text-xs text-gray-500" data-oid="3vvy0xm">
+                                            <p className="text-xs text-gray-500" data-oid="bv0.-bx">
                                                 المدة المتوقعة
                                             </p>
                                         </div>
-                                        <div data-oid="zs.vhvv">
+                                        <div data-oid="zo61gx8">
                                             <p
                                                 className="text-lg font-bold text-orange-600"
-                                                data-oid="jowjhvp"
+                                                data-oid="ssxlupd"
                                             >
                                                 {provider.responseTime}
                                             </p>
-                                            <p className="text-xs text-gray-500" data-oid="mv7_ed9">
+                                            <p className="text-xs text-gray-500" data-oid="cnovob3">
                                                 وقت الاستجابة
                                             </p>
                                         </div>
@@ -417,25 +417,25 @@ export default function ServicesPage() {
                                 </div>
 
                                 {/* Action Buttons */}
-                                <div className="flex space-x-3 space-x-reverse" data-oid="bv10oxk">
+                                <div className="flex space-x-3 space-x-reverse" data-oid=".f72cle">
                                     <button
                                         onClick={() => handleRequestService(provider)}
                                         className="flex-1 bg-blue-500 text-white py-3 rounded-xl font-semibold"
-                                        data-oid=":v9u71t"
+                                        data-oid="7la1uir"
                                     >
                                         طلب الخدمة
                                     </button>
                                     <Link
                                         href={`/chat/${provider.id}`}
                                         className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
-                                        data-oid="vlm:4c1"
+                                        data-oid="hjug9bm"
                                     >
                                         💬
                                     </Link>
                                     <Link
                                         href={`/provider-profile/${provider.id}`}
                                         className="px-4 py-3 bg-gray-100 text-gray-700 rounded-xl flex items-center justify-center"
-                                        data-oid="qn5pd4k"
+                                        data-oid="bk2t7:8"
                                     >
                                         👁️
                                     </Link>
@@ -444,20 +444,20 @@ export default function ServicesPage() {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center py-12" data-oid="_l0z0c7">
-                        <div className="text-6xl mb-4" data-oid="qlnus54">
+                    <div className="text-center py-12" data-oid="8xeuz38">
+                        <div className="text-6xl mb-4" data-oid="943dezn">
                             🔍
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="_fxywuh">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="u7inlp3">
                             لا توجد خدمات متاحة
                         </h3>
-                        <p className="text-gray-600 text-sm mb-6" data-oid="0mbdzx3">
+                        <p className="text-gray-600 text-sm mb-6" data-oid="wrc8:_3">
                             جرب تغيير المرشحات أو البحث في تصنيف آخر
                         </p>
                         <Link
                             href="/categories"
                             className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold inline-block"
-                            data-oid="k6hd9ek"
+                            data-oid="a-hjsww"
                         >
                             تصفح التصنيفات
                         </Link>
@@ -470,65 +470,65 @@ export default function ServicesPage() {
                 <div
                     className="fixed inset-0 bg-black/50 flex items-end z-50"
                     onClick={() => setSelectedProvider(null)}
-                    data-oid="l_hf:7a"
+                    data-oid="kc-3p8z"
                 >
                     <div
                         className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
-                        data-oid="b_l81ec"
+                        data-oid="u43vyj7"
                     >
-                        <div className="p-6" data-oid="a7amr0v">
+                        <div className="p-6" data-oid="q-71xjl">
                             <div
                                 className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-6"
-                                data-oid="6x690q-"
+                                data-oid="9pws.:q"
                             ></div>
 
-                            <div className="text-center mb-6" data-oid="_565.kz">
-                                <div className="text-4xl mb-3" data-oid="ar6gsm7">
+                            <div className="text-center mb-6" data-oid="hjtz315">
+                                <div className="text-4xl mb-3" data-oid="-7o3y7v">
                                     {selectedProvider.avatar}
                                 </div>
                                 <h3
                                     className="text-xl font-bold text-gray-800 mb-2"
-                                    data-oid="aywguck"
+                                    data-oid="0446us8"
                                 >
                                     {selectedProvider.name}
                                 </h3>
                                 <div
                                     className="flex items-center justify-center space-x-2 space-x-reverse mb-4"
-                                    data-oid="85q5h0s"
+                                    data-oid="83lkem_"
                                 >
                                     <div
                                         className="flex items-center space-x-1 space-x-reverse"
-                                        data-oid="9_oqibe"
+                                        data-oid="fdfjqqa"
                                     >
-                                        <span className="text-yellow-500" data-oid="xmqf27m">
+                                        <span className="text-yellow-500" data-oid="vagsont">
                                             ⭐
                                         </span>
-                                        <span className="font-semibold" data-oid="aa725ag">
+                                        <span className="font-semibold" data-oid="-pdo4ux">
                                             {selectedProvider.rating}
                                         </span>
                                     </div>
-                                    <span className="text-gray-600" data-oid="4gi7i1n">
+                                    <span className="text-gray-600" data-oid="c5kuh6m">
                                         ({selectedProvider.completedJobs} خدمة مكتملة)
                                     </span>
                                 </div>
-                                <p className="text-gray-600 text-sm" data-oid="bb-ic_q">
+                                <p className="text-gray-600 text-sm" data-oid="50o8:na">
                                     {selectedProvider.description}
                                 </p>
                             </div>
 
-                            <div className="space-y-3" data-oid="s6r.54b">
+                            <div className="space-y-3" data-oid="5xkdp4a">
                                 <button
                                     onClick={() => handleRequestService(selectedProvider)}
                                     className="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg"
-                                    data-oid="c2_pvo0"
+                                    data-oid="f488d:i"
                                 >
                                     طلب الخدمة - {selectedProvider.price}
                                 </button>
                                 <button
                                     onClick={() => setSelectedProvider(null)}
                                     className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold"
-                                    data-oid="kstt-kh"
+                                    data-oid="a0y-8jp"
                                 >
                                     إغلاق
                                 </button>
@@ -541,67 +541,67 @@ export default function ServicesPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="nxcc4zx"
+                data-oid="4np:ylv"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="3-21rik">
-                    <div className="flex justify-around" data-oid="i3h9-ha">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid=":._iwhg">
+                    <div className="flex justify-around" data-oid="x_cipqp">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="8q-ps_p"
+                            data-oid="zra-wjz"
                         >
-                            <span className="text-xl" data-oid="0h.fnow">
+                            <span className="text-xl" data-oid="-o3c8k9">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="ra912bh">
+                            <span className="text-xs" data-oid="y4kdcxw">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/categories"
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="d.dd14p"
+                            data-oid="3ezez4s"
                         >
-                            <span className="text-xl" data-oid="j1bsf75">
+                            <span className="text-xl" data-oid="vf01kra">
                                 📂
                             </span>
-                            <span className="text-xs font-semibold" data-oid="4:s3ide">
+                            <span className="text-xs font-semibold" data-oid="vhcaj9i">
                                 التصنيفات
                             </span>
                         </Link>
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="ra1qht4"
+                            data-oid="ul0ni.i"
                         >
-                            <span className="text-xl" data-oid="y:45lsz">
+                            <span className="text-xl" data-oid="2sn5tr5">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="_gf5v78">
+                            <span className="text-xs" data-oid="aqxh-ri">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/offers"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid=":47:sys"
+                            data-oid="4zd__v4"
                         >
-                            <span className="text-xl" data-oid="d.oq44w">
+                            <span className="text-xl" data-oid="xfklj-l">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="n0jifch">
+                            <span className="text-xs" data-oid="avk6ran">
                                 العروض
                             </span>
                         </Link>
                         <Link
                             href="/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="aa0icln"
+                            data-oid=":qya7ot"
                         >
-                            <span className="text-xl" data-oid="xmia18x">
+                            <span className="text-xl" data-oid="kec2yn.">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="om-i7a5">
+                            <span className="text-xs" data-oid="zs620-s">
                                 الرسائل
                             </span>
                         </Link>
@@ -610,7 +610,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="sul1rjb"></div>
+            <div className="h-20" data-oid="r2c88g5"></div>
         </div>
     );
 }
