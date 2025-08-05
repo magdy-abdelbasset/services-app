@@ -1,10 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+
+interface User {
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    status: string;
+    joinDate: string;
+    orders: number;
+    address?: string;
+    lastLogin?: string;
+}
 
 export default function UsersManagement() {
-    const [users] = useState([
+    const [users, setUsers] = useState<User[]>([
         {
             id: 1,
             name: 'أحمد محمد',
@@ -13,6 +24,8 @@ export default function UsersManagement() {
             status: 'نشط',
             joinDate: '2024-01-15',
             orders: 12,
+            address: 'الرياض، حي النخيل، شارع الملك فهد',
+            lastLogin: '2024-02-20 14:30',
         },
         {
             id: 2,
@@ -22,6 +35,8 @@ export default function UsersManagement() {
             status: 'نشط',
             joinDate: '2024-01-20',
             orders: 8,
+            address: 'جدة، حي الصفا، شارع التحلية',
+            lastLogin: '2024-02-21 09:15',
         },
         {
             id: 3,
@@ -31,6 +46,8 @@ export default function UsersManagement() {
             status: 'معلق',
             joinDate: '2024-02-01',
             orders: 3,
+            address: 'الدمام، حي الشاطئ، شارع الخليج',
+            lastLogin: '2024-02-18 16:45',
         },
         {
             id: 4,
@@ -40,6 +57,8 @@ export default function UsersManagement() {
             status: 'نشط',
             joinDate: '2024-02-10',
             orders: 15,
+            address: 'الرياض، حي العليا، شارع العروبة',
+            lastLogin: '2024-02-21 11:20',
         },
         {
             id: 5,
@@ -49,11 +68,28 @@ export default function UsersManagement() {
             status: 'محظور',
             joinDate: '2024-01-05',
             orders: 2,
+            address: 'مكة، حي العزيزية، شارع الحرم',
+            lastLogin: '2024-02-15 13:10',
         },
     ]);
 
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState('الكل');
+    const [showViewModal, setShowViewModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [selectedUser, setSelectedUser] = useState<User | null>(null);
+    const [editForm, setEditForm] = useState<User>({
+        id: 0,
+        name: '',
+        email: '',
+        phone: '',
+        status: 'نشط',
+        joinDate: '',
+        orders: 0,
+        address: '',
+        lastLogin: '',
+    });
 
     const filteredUsers = users.filter((user) => {
         const matchesSearch =
@@ -75,6 +111,41 @@ export default function UsersManagement() {
             default:
                 return 'bg-gray-100 text-gray-800';
         }
+    };
+
+    const handleViewUser = (user: User) => {
+        setSelectedUser(user);
+        setShowViewModal(true);
+    };
+
+    const handleEditUser = (user: User) => {
+        setEditForm({ ...user });
+        setShowEditModal(true);
+    };
+
+    const handleDeleteUser = (user: User) => {
+        setSelectedUser(user);
+        setShowDeleteModal(true);
+    };
+
+    const handleSaveEdit = () => {
+        setUsers(users.map((user) => (user.id === editForm.id ? editForm : user)));
+        setShowEditModal(false);
+        alert('تم تحديث بيانات المستخدم بنجاح');
+    };
+
+    const handleConfirmDelete = () => {
+        if (selectedUser) {
+            setUsers(users.filter((user) => user.id !== selectedUser.id));
+            setShowDeleteModal(false);
+            setSelectedUser(null);
+            alert('تم حذف المستخدم بنجاح');
+        }
+    };
+
+    const handleStatusChange = (userId: number, newStatus: string) => {
+        setUsers(users.map((user) => (user.id === userId ? { ...user, status: newStatus } : user)));
+        alert(`تم تغيير حالة المستخدم إلى: ${newStatus}`);
     };
 
     return (
@@ -347,23 +418,57 @@ export default function UsersManagement() {
                                             data-oid="3na2k7j"
                                         >
                                             <button
+                                                onClick={() => handleViewUser(user)}
                                                 className="text-blue-600 hover:text-blue-900"
                                                 data-oid="f35s8.g"
                                             >
                                                 عرض
                                             </button>
                                             <button
+                                                onClick={() => handleEditUser(user)}
                                                 className="text-green-600 hover:text-green-900"
                                                 data-oid="3s425.r"
                                             >
                                                 تعديل
                                             </button>
                                             <button
+                                                onClick={() => handleDeleteUser(user)}
                                                 className="text-red-600 hover:text-red-900"
                                                 data-oid="7bgeuok"
                                             >
-                                                حظر
+                                                حذف
                                             </button>
+                                            {user.status === 'نشط' ? (
+                                                <button
+                                                    onClick={() =>
+                                                        handleStatusChange(user.id, 'معلق')
+                                                    }
+                                                    className="text-yellow-600 hover:text-yellow-900"
+                                                    data-oid="1:kl_50"
+                                                >
+                                                    تعليق
+                                                </button>
+                                            ) : user.status === 'معلق' ? (
+                                                <button
+                                                    onClick={() =>
+                                                        handleStatusChange(user.id, 'نشط')
+                                                    }
+                                                    className="text-green-600 hover:text-green-900"
+                                                    data-oid="7-.z58l"
+                                                >
+                                                    تفعيل
+                                                </button>
+                                            ) : (
+                                                <button
+                                                    onClick={() =>
+                                                        handleStatusChange(user.id, 'نشط')
+                                                    }
+                                                    className="text-green-600 hover:text-green-900"
+                                                    data-oid="h6x:px:"
+                                                >
+                                                    إلغاء الحظر
+                                                </button>
+                                            )}
                                         </div>
                                     </td>
                                 </tr>
@@ -372,6 +477,373 @@ export default function UsersManagement() {
                     </table>
                 </div>
             </div>
+
+            {/* View User Modal */}
+            {showViewModal && selectedUser && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    data-oid="flkjsxe"
+                >
+                    <div
+                        className="bg-white rounded-lg p-6 w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto"
+                        data-oid="ip23t0y"
+                    >
+                        <div className="flex justify-between items-center mb-6" data-oid="qm3dmm2">
+                            <h3 className="text-xl font-bold text-gray-900" data-oid="k3c3:cb">
+                                تفاصيل المستخدم
+                            </h3>
+                            <button
+                                onClick={() => setShowViewModal(false)}
+                                className="text-gray-400 hover:text-gray-600"
+                                data-oid="t:::2bb"
+                            >
+                                <span className="text-2xl" data-oid="spx06mh">
+                                    ×
+                                </span>
+                            </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="o9csfbm">
+                            <div
+                                className="md:col-span-2 flex items-center mb-6"
+                                data-oid="unoqxxz"
+                            >
+                                <div
+                                    className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center ml-4"
+                                    data-oid="fbr0foa"
+                                >
+                                    <span
+                                        className="text-white text-2xl font-bold"
+                                        data-oid="3_5xl85"
+                                    >
+                                        {selectedUser.name.charAt(0)}
+                                    </span>
+                                </div>
+                                <div data-oid="pkkf-12">
+                                    <h4
+                                        className="text-xl font-semibold text-gray-900"
+                                        data-oid="3wq_wkz"
+                                    >
+                                        {selectedUser.name}
+                                    </h4>
+                                    <span
+                                        className={`inline-flex px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(selectedUser.status)}`}
+                                        data-oid="4.x8l:l"
+                                    >
+                                        {selectedUser.status}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div data-oid="iarfga1">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid="tnwlcp7"
+                                >
+                                    رقم المستخدم
+                                </label>
+                                <p className="text-gray-900" data-oid="_o0li86">
+                                    #{selectedUser.id}
+                                </p>
+                            </div>
+
+                            <div data-oid="45_9j3s">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid="-qo5kg-"
+                                >
+                                    البريد الإلكتروني
+                                </label>
+                                <p className="text-gray-900" data-oid="qzdhaf6">
+                                    {selectedUser.email}
+                                </p>
+                            </div>
+
+                            <div data-oid="0z7ttc6">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid="m1525q."
+                                >
+                                    رقم الهاتف
+                                </label>
+                                <p className="text-gray-900" data-oid="mf5:5ej">
+                                    {selectedUser.phone}
+                                </p>
+                            </div>
+
+                            <div data-oid="84sype7">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid="os1p5l2"
+                                >
+                                    تاريخ التسجيل
+                                </label>
+                                <p className="text-gray-900" data-oid="eipkfr9">
+                                    {selectedUser.joinDate}
+                                </p>
+                            </div>
+
+                            <div data-oid="4a78lny">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid="y8z09q9"
+                                >
+                                    عدد الطلبات
+                                </label>
+                                <p className="text-gray-900" data-oid="ys2:64h">
+                                    {selectedUser.orders} طلب
+                                </p>
+                            </div>
+
+                            <div data-oid="wcj89fm">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid="bqi_pc8"
+                                >
+                                    آخر تسجيل دخول
+                                </label>
+                                <p className="text-gray-900" data-oid="sr7yd_8">
+                                    {selectedUser.lastLogin || 'غير متاح'}
+                                </p>
+                            </div>
+
+                            <div className="md:col-span-2" data-oid="::syen1">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                    data-oid=":feneq5"
+                                >
+                                    العنوان
+                                </label>
+                                <p className="text-gray-900" data-oid=":lfkogo">
+                                    {selectedUser.address || 'غير محدد'}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-end mt-6" data-oid="mm:732m">
+                            <button
+                                onClick={() => setShowViewModal(false)}
+                                className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition-colors"
+                                data-oid="q4jxeub"
+                            >
+                                إغلاق
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Edit User Modal */}
+            {showEditModal && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    data-oid="6u7eu.m"
+                >
+                    <div
+                        className="bg-white rounded-lg p-6 w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto"
+                        data-oid="rpgsabb"
+                    >
+                        <div className="flex justify-between items-center mb-6" data-oid="c2qswvw">
+                            <h3 className="text-xl font-bold text-gray-900" data-oid="_682kwj">
+                                تعديل بيانات المستخدم
+                            </h3>
+                            <button
+                                onClick={() => setShowEditModal(false)}
+                                className="text-gray-400 hover:text-gray-600"
+                                data-oid="tu6sse-"
+                            >
+                                <span className="text-2xl" data-oid="g-x3gnv">
+                                    ×
+                                </span>
+                            </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="44s1q6-">
+                            <div data-oid="50nbv91">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    data-oid=":k4rn2v"
+                                >
+                                    الاسم الكامل
+                                </label>
+                                <input
+                                    type="text"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    value={editForm.name}
+                                    onChange={(e) =>
+                                        setEditForm({ ...editForm, name: e.target.value })
+                                    }
+                                    data-oid="vszxtd_"
+                                />
+                            </div>
+
+                            <div data-oid="mscyrnd">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    data-oid="hjum-1v"
+                                >
+                                    البريد الإلكتروني
+                                </label>
+                                <input
+                                    type="email"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    value={editForm.email}
+                                    onChange={(e) =>
+                                        setEditForm({ ...editForm, email: e.target.value })
+                                    }
+                                    data-oid="h0-xmmq"
+                                />
+                            </div>
+
+                            <div data-oid=":m7h.eb">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    data-oid="e-r90-b"
+                                >
+                                    رقم الهاتف
+                                </label>
+                                <input
+                                    type="tel"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    value={editForm.phone}
+                                    onChange={(e) =>
+                                        setEditForm({ ...editForm, phone: e.target.value })
+                                    }
+                                    data-oid="msp8hfy"
+                                />
+                            </div>
+
+                            <div data-oid="kdaum7c">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    data-oid="omff6_6"
+                                >
+                                    الحالة
+                                </label>
+                                <select
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    value={editForm.status}
+                                    onChange={(e) =>
+                                        setEditForm({ ...editForm, status: e.target.value })
+                                    }
+                                    data-oid="lj:pt-u"
+                                >
+                                    <option value="نشط" data-oid="7_1ru1_">
+                                        نشط
+                                    </option>
+                                    <option value="معلق" data-oid="qxmrfr.">
+                                        معلق
+                                    </option>
+                                    <option value="محظور" data-oid="11k-c1h">
+                                        محظور
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div className="md:col-span-2" data-oid="nl6okn:">
+                                <label
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    data-oid="gr.p2g8"
+                                >
+                                    العنوان
+                                </label>
+                                <textarea
+                                    rows={3}
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    value={editForm.address || ''}
+                                    onChange={(e) =>
+                                        setEditForm({ ...editForm, address: e.target.value })
+                                    }
+                                    placeholder="أدخل العنوان الكامل..."
+                                    data-oid="n2ku9xj"
+                                />
+                            </div>
+                        </div>
+
+                        <div
+                            className="flex justify-end space-x-3 space-x-reverse mt-6"
+                            data-oid="2z..g4u"
+                        >
+                            <button
+                                onClick={handleSaveEdit}
+                                className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                                data-oid="-1594i7"
+                            >
+                                حفظ التغييرات
+                            </button>
+                            <button
+                                onClick={() => setShowEditModal(false)}
+                                className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition-colors"
+                                data-oid=".q1vkww"
+                            >
+                                إلغاء
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Delete Confirmation Modal */}
+            {showDeleteModal && selectedUser && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    data-oid="573kyq."
+                >
+                    <div
+                        className="bg-white rounded-lg p-6 w-full max-w-md mx-4"
+                        data-oid="d4fwki8"
+                    >
+                        <div className="flex items-center mb-4" data-oid="51mri9m">
+                            <div
+                                className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center ml-4"
+                                data-oid="9vi:wrh"
+                            >
+                                <span className="text-red-600 text-2xl" data-oid="mv8gz79">
+                                    ⚠️
+                                </span>
+                            </div>
+                            <div data-oid="rst_ay.">
+                                <h3 className="text-lg font-bold text-gray-900" data-oid="6-ledpr">
+                                    تأكيد الحذف
+                                </h3>
+                                <p className="text-sm text-gray-600" data-oid="wx.--of">
+                                    هذا الإجراء لا يمكن التراجع عنه
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="mb-6" data-oid="cj4jd4b">
+                            <p className="text-gray-700" data-oid=".:u9:6o">
+                                هل أنت متأكد من حذف المستخدم{' '}
+                                <strong data-oid="_oos9.n">{selectedUser.name}</strong>؟
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2" data-oid="_:.zu4s">
+                                سيتم حذف جميع بيانات المستخدم وطلباته نهائياً.
+                            </p>
+                        </div>
+
+                        <div
+                            className="flex justify-end space-x-3 space-x-reverse"
+                            data-oid="cc8vak9"
+                        >
+                            <button
+                                onClick={handleConfirmDelete}
+                                className="bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600 transition-colors"
+                                data-oid="e4grtup"
+                            >
+                                حذف نهائي
+                            </button>
+                            <button
+                                onClick={() => setShowDeleteModal(false)}
+                                className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition-colors"
+                                data-oid="46hh7bl"
+                            >
+                                إلغاء
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
