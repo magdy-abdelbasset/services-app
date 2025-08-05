@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface Provider {
     id: number;
@@ -682,12 +683,13 @@ export default function ProvidersManagement() {
                                                     >
                                                         عرض
                                                     </button>
-                                                    <button
+                                                    <Link
+                                                        href={`/admin/providers/edit/${provider.id}`}
                                                         className="text-green-600 hover:text-green-900"
                                                         data-oid=":xbmi:q"
                                                     >
                                                         تعديل
-                                                    </button>
+                                                    </Link>
                                                     <button
                                                         className="text-red-600 hover:text-red-900"
                                                         data-oid="813::v."
