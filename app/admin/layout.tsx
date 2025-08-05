@@ -14,6 +14,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         { name: 'مقدمي الخدمات', href: '/admin/providers', icon: '🔧' },
         { name: 'إدارة الخدمات', href: '/admin/services', icon: '⚙️' },
         { name: 'إدارة الطلبات', href: '/admin/orders', icon: '📋' },
+        { name: 'سجل معاملات المحفظة', href: '/admin/wallet-transactions', icon: '💰' },
         { name: 'التقارير والإحصائيات', href: '/admin/analytics', icon: '📈' },
         { name: 'الإعدادات', href: '/admin/settings', icon: '⚙️' },
     ];
