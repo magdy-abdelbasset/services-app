@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function OrdersManagement() {
     const [orders] = useState([
@@ -459,12 +460,13 @@ export default function OrdersManagement() {
                                             className="flex space-x-2 space-x-reverse"
                                             data-oid="5105j78"
                                         >
-                                            <button
+                                            <Link
+                                                href={`/admin/orders/${order.id}`}
                                                 className="text-blue-600 hover:text-blue-900"
                                                 data-oid="jb5zrt8"
                                             >
                                                 عرض
-                                            </button>
+                                            </Link>
                                             <button
                                                 className="text-green-600 hover:text-green-900"
                                                 data-oid="h5upthq"
