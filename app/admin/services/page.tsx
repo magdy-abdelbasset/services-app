@@ -10,6 +10,7 @@ export default function ServicesManagement() {
             icon: '🏠',
             color: 'bg-blue-500',
             servicesCount: 8,
+            subcategoriesCount: 3,
             active: true,
         },
         {
@@ -18,6 +19,7 @@ export default function ServicesManagement() {
             icon: '🔧',
             color: 'bg-orange-500',
             servicesCount: 12,
+            subcategoriesCount: 4,
             active: true,
         },
         {
@@ -26,6 +28,7 @@ export default function ServicesManagement() {
             icon: '🚚',
             color: 'bg-green-500',
             servicesCount: 6,
+            subcategoriesCount: 2,
             active: true,
         },
         {
@@ -34,6 +37,7 @@ export default function ServicesManagement() {
             icon: '💄',
             color: 'bg-pink-500',
             servicesCount: 5,
+            subcategoriesCount: 3,
             active: true,
         },
         {
@@ -42,6 +46,7 @@ export default function ServicesManagement() {
             icon: '🌱',
             color: 'bg-emerald-500',
             servicesCount: 4,
+            subcategoriesCount: 2,
             active: false,
         },
         {
@@ -50,6 +55,118 @@ export default function ServicesManagement() {
             icon: '📚',
             color: 'bg-purple-500',
             servicesCount: 7,
+            subcategoriesCount: 3,
+            active: true,
+        },
+    ]);
+
+    const [subcategories] = useState([
+        {
+            id: 1,
+            name: 'تنظيف عام',
+            categoryId: 1,
+            categoryName: 'خدمات المنزل',
+            icon: '🧹',
+            servicesCount: 3,
+            active: true,
+        },
+        {
+            id: 2,
+            name: 'تنظيف متخصص',
+            categoryId: 1,
+            categoryName: 'خدمات المنزل',
+            icon: '🧽',
+            servicesCount: 2,
+            active: true,
+        },
+        {
+            id: 3,
+            name: 'خدمات الطبخ',
+            categoryId: 1,
+            categoryName: 'خدمات المنزل',
+            icon: '👨‍🍳',
+            servicesCount: 3,
+            active: true,
+        },
+        {
+            id: 4,
+            name: 'صيانة السباكة',
+            categoryId: 2,
+            categoryName: 'الصيانة والإصلاح',
+            icon: '🚰',
+            servicesCount: 4,
+            active: true,
+        },
+        {
+            id: 5,
+            name: 'صيانة الكهرباء',
+            categoryId: 2,
+            categoryName: 'الصيانة والإصلاح',
+            icon: '⚡',
+            servicesCount: 3,
+            active: true,
+        },
+        {
+            id: 6,
+            name: 'صيانة الأجهزة',
+            categoryId: 2,
+            categoryName: 'الصيانة والإصلاح',
+            icon: '🔧',
+            servicesCount: 3,
+            active: true,
+        },
+        {
+            id: 7,
+            name: 'صيانة السيارات',
+            categoryId: 2,
+            categoryName: 'الصيانة والإصلاح',
+            icon: '🚗',
+            servicesCount: 2,
+            active: false,
+        },
+        {
+            id: 8,
+            name: 'توصيل الطعام',
+            categoryId: 3,
+            categoryName: 'التوصيل والنقل',
+            icon: '🍕',
+            servicesCount: 3,
+            active: true,
+        },
+        {
+            id: 9,
+            name: 'نقل البضائع',
+            categoryId: 3,
+            categoryName: 'التوصيل والنقل',
+            icon: '📦',
+            servicesCount: 3,
+            active: true,
+        },
+        {
+            id: 10,
+            name: 'العناية بالشعر',
+            categoryId: 4,
+            categoryName: 'الجمال والعناية',
+            icon: '💇‍♀️',
+            servicesCount: 2,
+            active: true,
+        },
+        {
+            id: 11,
+            name: 'العناية بالبشرة',
+            categoryId: 4,
+            categoryName: 'الجمال والعناية',
+            icon: '🧴',
+            servicesCount: 2,
+            active: true,
+        },
+        {
+            id: 12,
+            name: 'المكياج',
+            categoryId: 4,
+            categoryName: 'الجمال والعناية',
+            icon: '💄',
+            servicesCount: 1,
             active: true,
         },
     ]);
@@ -59,6 +176,7 @@ export default function ServicesManagement() {
             id: 1,
             name: 'تنظيف المنزل',
             category: 'خدمات المنزل',
+            subcategory: 'تنظيف عام',
             icon: '🏠',
             providers: 45,
             avgPrice: 50,
@@ -68,6 +186,7 @@ export default function ServicesManagement() {
             id: 2,
             name: 'صيانة السباكة',
             category: 'الصيانة والإصلاح',
+            subcategory: 'صيانة السباكة',
             icon: '🔧',
             providers: 23,
             avgPrice: 80,
@@ -77,6 +196,7 @@ export default function ServicesManagement() {
             id: 3,
             name: 'توصيل الطعام',
             category: 'التوصيل والنقل',
+            subcategory: 'توصيل الطعام',
             icon: '🍕',
             providers: 67,
             avgPrice: 25,
@@ -86,6 +206,7 @@ export default function ServicesManagement() {
             id: 4,
             name: 'خدمات التجميل',
             category: 'الجمال والعناية',
+            subcategory: 'المكياج',
             icon: '💄',
             providers: 34,
             avgPrice: 120,
@@ -95,6 +216,7 @@ export default function ServicesManagement() {
             id: 5,
             name: 'تصليح الأجهزة',
             category: 'الصيانة والإصلاح',
+            subcategory: 'صيانة الأجهزة',
             icon: '📱',
             providers: 18,
             avgPrice: 60,
@@ -104,6 +226,7 @@ export default function ServicesManagement() {
             id: 6,
             name: 'خدمات البستنة',
             category: 'البستنة والحدائق',
+            subcategory: 'العناية بالحدائق',
             icon: '🌱',
             providers: 12,
             avgPrice: 40,
@@ -113,6 +236,7 @@ export default function ServicesManagement() {
             id: 7,
             name: 'تنظيف السجاد',
             category: 'خدمات المنزل',
+            subcategory: 'تنظيف متخصص',
             icon: '🧽',
             providers: 28,
             avgPrice: 35,
@@ -122,6 +246,7 @@ export default function ServicesManagement() {
             id: 8,
             name: 'صيانة الكهرباء',
             category: 'الصيانة والإصلاح',
+            subcategory: 'صيانة الكهرباء',
             icon: '⚡',
             providers: 15,
             avgPrice: 90,
@@ -132,7 +257,14 @@ export default function ServicesManagement() {
     const [activeTab, setActiveTab] = useState('categories');
     const [showAddModal, setShowAddModal] = useState(false);
     const [newCategory, setNewCategory] = useState({ name: '', icon: '', color: 'bg-blue-500' });
-    const [newService, setNewService] = useState({ name: '', category: '', icon: '', avgPrice: 0 });
+    const [newSubcategory, setNewSubcategory] = useState({ name: '', categoryId: '', icon: '' });
+    const [newService, setNewService] = useState({
+        name: '',
+        category: '',
+        subcategory: '',
+        icon: '',
+        avgPrice: 0,
+    });
 
     const handleAddCategory = () => {
         if (newCategory.name && newCategory.icon) {
@@ -142,10 +274,18 @@ export default function ServicesManagement() {
         }
     };
 
+    const handleAddSubcategory = () => {
+        if (newSubcategory.name && newSubcategory.categoryId && newSubcategory.icon) {
+            alert(`تم إضافة التصنيف الفرعي: ${newSubcategory.name}`);
+            setNewSubcategory({ name: '', categoryId: '', icon: '' });
+            setShowAddModal(false);
+        }
+    };
+
     const handleAddService = () => {
-        if (newService.name && newService.category && newService.icon) {
+        if (newService.name && newService.category && newService.subcategory && newService.icon) {
             alert(`تم إضافة الخدمة: ${newService.name}`);
-            setNewService({ name: '', category: '', icon: '', avgPrice: 0 });
+            setNewService({ name: '', category: '', subcategory: '', icon: '', avgPrice: 0 });
             setShowAddModal(false);
         }
     };
@@ -174,7 +314,18 @@ export default function ServicesManagement() {
                             }`}
                             data-oid="pdux.xu"
                         >
-                            التصنيفات
+                            التصنيفات الرئيسية
+                        </button>
+                        <button
+                            onClick={() => setActiveTab('subcategories')}
+                            className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                                activeTab === 'subcategories'
+                                    ? 'border-blue-500 text-blue-600'
+                                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                            }`}
+                            data-oid="subcategories-tab"
+                        >
+                            التصنيفات الفرعية
                         </button>
                         <button
                             onClick={() => setActiveTab('services')}
@@ -248,9 +399,12 @@ export default function ServicesManagement() {
                                 >
                                     {category.name}
                                 </h3>
-                                <p className="text-sm text-gray-600 mb-4" data-oid="p25u.wm">
-                                    {category.servicesCount} خدمة متاحة
-                                </p>
+                                <div className="text-sm text-gray-600 mb-4" data-oid="p25u.wm">
+                                    <p data-oid="2809fw:">{category.servicesCount} خدمة متاحة</p>
+                                    <p data-oid=".7-:li_">
+                                        {category.subcategoriesCount} تصنيف فرعي
+                                    </p>
+                                </div>
                                 <div className="flex space-x-2 space-x-reverse" data-oid="rfktp6h">
                                     <button
                                         className="flex-1 bg-blue-500 text-white py-2 px-3 rounded-md text-sm hover:bg-blue-600 transition-colors"
@@ -271,6 +425,175 @@ export default function ServicesManagement() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Subcategories Tab */}
+            {activeTab === 'subcategories' && (
+                <div data-oid="subcategories-content">
+                    <div
+                        className="flex justify-between items-center mb-6"
+                        data-oid="subcategories-header"
+                    >
+                        <h2
+                            className="text-xl font-semibold text-gray-900"
+                            data-oid="subcategories-title"
+                        >
+                            التصنيفات الفرعية
+                        </h2>
+                        <button
+                            onClick={() => setShowAddModal(true)}
+                            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                            data-oid="add-subcategory-btn"
+                        >
+                            إضافة تصنيف فرعي جديد
+                        </button>
+                    </div>
+
+                    <div
+                        className="bg-white rounded-lg shadow overflow-hidden"
+                        data-oid="subcategories-table-container"
+                    >
+                        <div className="overflow-x-auto" data-oid="subcategories-table-scroll">
+                            <table
+                                className="min-w-full divide-y divide-gray-200"
+                                data-oid="subcategories-table"
+                            >
+                                <thead className="bg-gray-50" data-oid="subcategories-table-head">
+                                    <tr data-oid="subcategories-table-head-row">
+                                        <th
+                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            data-oid="subcategory-name-header"
+                                        >
+                                            التصنيف الفرعي
+                                        </th>
+                                        <th
+                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            data-oid="parent-category-header"
+                                        >
+                                            التصنيف الرئيسي
+                                        </th>
+                                        <th
+                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            data-oid="subcategory-services-header"
+                                        >
+                                            عدد الخدمات
+                                        </th>
+                                        <th
+                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            data-oid="subcategory-status-header"
+                                        >
+                                            الحالة
+                                        </th>
+                                        <th
+                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            data-oid="subcategory-actions-header"
+                                        >
+                                            الإجراءات
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody
+                                    className="bg-white divide-y divide-gray-200"
+                                    data-oid="subcategories-table-body"
+                                >
+                                    {subcategories.map((subcategory) => (
+                                        <tr
+                                            key={subcategory.id}
+                                            className="hover:bg-gray-50"
+                                            data-oid="subcategory-row"
+                                        >
+                                            <td
+                                                className="px-6 py-4 whitespace-nowrap"
+                                                data-oid="subcategory-name-cell"
+                                            >
+                                                <div
+                                                    className="flex items-center"
+                                                    data-oid="subcategory-name-content"
+                                                >
+                                                    <div
+                                                        className="text-2xl ml-3"
+                                                        data-oid="subcategory-icon"
+                                                    >
+                                                        {subcategory.icon}
+                                                    </div>
+                                                    <div data-oid="subcategory-info">
+                                                        <div
+                                                            className="text-sm font-medium text-gray-900"
+                                                            data-oid="subcategory-name"
+                                                        >
+                                                            {subcategory.name}
+                                                        </div>
+                                                        <div
+                                                            className="text-sm text-gray-500"
+                                                            data-oid="subcategory-id"
+                                                        >
+                                                            ID: {subcategory.id}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td
+                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                                data-oid="parent-category-cell"
+                                            >
+                                                {subcategory.categoryName}
+                                            </td>
+                                            <td
+                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
+                                                data-oid="subcategory-services-cell"
+                                            >
+                                                {subcategory.servicesCount}
+                                            </td>
+                                            <td
+                                                className="px-6 py-4 whitespace-nowrap"
+                                                data-oid="subcategory-status-cell"
+                                            >
+                                                <span
+                                                    className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                                                        subcategory.active
+                                                            ? 'bg-green-100 text-green-800'
+                                                            : 'bg-red-100 text-red-800'
+                                                    }`}
+                                                    data-oid="subcategory-status-badge"
+                                                >
+                                                    {subcategory.active ? 'نشط' : 'غير نشط'}
+                                                </span>
+                                            </td>
+                                            <td
+                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
+                                                data-oid="subcategory-actions-cell"
+                                            >
+                                                <div
+                                                    className="flex space-x-2 space-x-reverse"
+                                                    data-oid="subcategory-actions"
+                                                >
+                                                    <button
+                                                        className="text-blue-600 hover:text-blue-900"
+                                                        data-oid="edit-subcategory-btn"
+                                                    >
+                                                        تعديل
+                                                    </button>
+                                                    <button
+                                                        className={
+                                                            subcategory.active
+                                                                ? 'text-red-600 hover:text-red-900'
+                                                                : 'text-green-600 hover:text-green-900'
+                                                        }
+                                                        data-oid="toggle-subcategory-btn"
+                                                    >
+                                                        {subcategory.active
+                                                            ? 'إلغاء تفعيل'
+                                                            : 'تفعيل'}
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             )}
@@ -310,6 +633,12 @@ export default function ServicesManagement() {
                                             data-oid="cd.f-p2"
                                         >
                                             التصنيف
+                                        </th>
+                                        <th
+                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                            data-oid="subcategory-header"
+                                        >
+                                            التصنيف الفرعي
                                         </th>
                                         <th
                                             className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -384,6 +713,12 @@ export default function ServicesManagement() {
                                                 {service.category}
                                             </td>
                                             <td
+                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                                data-oid="service-subcategory-cell"
+                                            >
+                                                {service.subcategory}
+                                            </td>
+                                            <td
                                                 className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
                                                 data-oid="44zotk6"
                                             >
@@ -456,7 +791,11 @@ export default function ServicesManagement() {
                         data-oid="n.w0lzm"
                     >
                         <h3 className="text-lg font-medium text-gray-900 mb-4" data-oid="1mcryz6">
-                            {activeTab === 'categories' ? 'إضافة تصنيف جديد' : 'إضافة خدمة جديدة'}
+                            {activeTab === 'categories'
+                                ? 'إضافة تصنيف جديد'
+                                : activeTab === 'subcategories'
+                                  ? 'إضافة تصنيف فرعي جديد'
+                                  : 'إضافة خدمة جديدة'}
                         </h3>
 
                         {activeTab === 'categories' ? (
@@ -536,6 +875,83 @@ export default function ServicesManagement() {
                                     </select>
                                 </div>
                             </div>
+                        ) : activeTab === 'subcategories' ? (
+                            <div className="space-y-4" data-oid="subcategory-form">
+                                <div data-oid="subcategory-name-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="subcategory-name-label"
+                                    >
+                                        اسم التصنيف الفرعي
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={newSubcategory.name}
+                                        onChange={(e) =>
+                                            setNewSubcategory({
+                                                ...newSubcategory,
+                                                name: e.target.value,
+                                            })
+                                        }
+                                        placeholder="مثال: تنظيف عام"
+                                        data-oid="subcategory-name-input"
+                                    />
+                                </div>
+                                <div data-oid="subcategory-parent-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="subcategory-parent-label"
+                                    >
+                                        التصنيف الرئيسي
+                                    </label>
+                                    <select
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={newSubcategory.categoryId}
+                                        onChange={(e) =>
+                                            setNewSubcategory({
+                                                ...newSubcategory,
+                                                categoryId: e.target.value,
+                                            })
+                                        }
+                                        data-oid="subcategory-parent-select"
+                                    >
+                                        <option value="" data-oid="subcategory-parent-default">
+                                            اختر التصنيف الرئيسي
+                                        </option>
+                                        {categories.map((cat) => (
+                                            <option
+                                                key={cat.id}
+                                                value={cat.id.toString()}
+                                                data-oid="subcategory-parent-option"
+                                            >
+                                                {cat.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div data-oid="subcategory-icon-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="subcategory-icon-label"
+                                    >
+                                        الأيقونة
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={newSubcategory.icon}
+                                        onChange={(e) =>
+                                            setNewSubcategory({
+                                                ...newSubcategory,
+                                                icon: e.target.value,
+                                            })
+                                        }
+                                        placeholder="🧹"
+                                        data-oid="subcategory-icon-input"
+                                    />
+                                </div>
+                            </div>
                         ) : (
                             <div className="space-y-4" data-oid="sqyo:wg">
                                 <div data-oid="noy:rua">
@@ -561,7 +977,7 @@ export default function ServicesManagement() {
                                         className="block text-sm font-medium text-gray-700 mb-2"
                                         data-oid="4_0rpxf"
                                     >
-                                        التصنيف
+                                        التصنيف الرئيسي
                                     </label>
                                     <select
                                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -570,12 +986,13 @@ export default function ServicesManagement() {
                                             setNewService({
                                                 ...newService,
                                                 category: e.target.value,
+                                                subcategory: '', // Reset subcategory when category changes
                                             })
                                         }
                                         data-oid="c.-8bs7"
                                     >
                                         <option value="" data-oid="3r-gg21">
-                                            اختر التصنيف
+                                            اختر التصنيف الرئيسي
                                         </option>
                                         {categories.map((cat) => (
                                             <option
@@ -586,6 +1003,43 @@ export default function ServicesManagement() {
                                                 {cat.name}
                                             </option>
                                         ))}
+                                    </select>
+                                </div>
+                                <div data-oid="service-subcategory-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="service-subcategory-label"
+                                    >
+                                        التصنيف الفرعي
+                                    </label>
+                                    <select
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={newService.subcategory}
+                                        onChange={(e) =>
+                                            setNewService({
+                                                ...newService,
+                                                subcategory: e.target.value,
+                                            })
+                                        }
+                                        disabled={!newService.category}
+                                        data-oid="service-subcategory-select"
+                                    >
+                                        <option value="" data-oid="service-subcategory-default">
+                                            اختر التصنيف الفرعي
+                                        </option>
+                                        {subcategories
+                                            .filter(
+                                                (sub) => sub.categoryName === newService.category,
+                                            )
+                                            .map((sub) => (
+                                                <option
+                                                    key={sub.id}
+                                                    value={sub.name}
+                                                    data-oid="service-subcategory-option"
+                                                >
+                                                    {sub.name}
+                                                </option>
+                                            ))}
                                     </select>
                                 </div>
                                 <div data-oid="u5c:0a2">
@@ -635,7 +1089,9 @@ export default function ServicesManagement() {
                                 onClick={
                                     activeTab === 'categories'
                                         ? handleAddCategory
-                                        : handleAddService
+                                        : activeTab === 'subcategories'
+                                          ? handleAddSubcategory
+                                          : handleAddService
                                 }
                                 className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
                                 data-oid="j14ghoo"
