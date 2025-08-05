@@ -685,12 +685,13 @@ export default function OrderDetailPage() {
                             الإجراءات
                         </h3>
                         <div className="space-y-3" data-oid="f8jmnz1">
-                            <button
-                                className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+                            <Link
+                                href={`/admin/orders/${order.id}/edit`}
+                                className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors text-center block"
                                 data-oid="98tp4vf"
                             >
                                 تعديل الطلب
-                            </button>
+                            </Link>
                             <button
                                 className="w-full bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
                                 data-oid="uwy:hye"
