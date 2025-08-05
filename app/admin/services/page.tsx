@@ -258,6 +258,20 @@ export default function ServicesManagement() {
     const [showAddModal, setShowAddModal] = useState(false);
     const [newCategory, setNewCategory] = useState({ name: '', icon: '', color: 'bg-blue-500' });
     const [newSubcategory, setNewSubcategory] = useState({ name: '', categoryId: '', icon: '' });
+    const [showEditModal, setShowEditModal] = useState(false);
+    const [editingItem, setEditingItem] = useState<string | null>(null);
+    const [editCategory, setEditCategory] = useState({
+        id: '',
+        name: '',
+        icon: '',
+        color: 'bg-blue-500',
+    });
+    const [editSubcategory, setEditSubcategory] = useState({
+        id: '',
+        name: '',
+        categoryId: '',
+        icon: '',
+    });
     const [newService, setNewService] = useState({
         name: '',
         category: '',
@@ -288,6 +302,53 @@ export default function ServicesManagement() {
             setNewService({ name: '', category: '', subcategory: '', icon: '', avgPrice: 0 });
             setShowAddModal(false);
         }
+    };
+
+    const handleEditCategory = (category) => {
+        setEditingItem('category');
+        setEditCategory({
+            id: category.id,
+            name: category.name,
+            icon: category.icon,
+            color: category.color,
+        });
+        setShowEditModal(true);
+    };
+
+    const handleEditSubcategory = (subcategory) => {
+        setEditingItem('subcategory');
+        setEditSubcategory({
+            id: subcategory.id,
+            name: subcategory.name,
+            categoryId: subcategory.categoryId.toString(),
+            icon: subcategory.icon,
+        });
+        setShowEditModal(true);
+    };
+
+    const handleUpdateCategory = () => {
+        if (editCategory.name && editCategory.icon) {
+            alert(`تم تحديث التصنيف: ${editCategory.name}`);
+            setEditCategory({ id: '', name: '', icon: '', color: 'bg-blue-500' });
+            setShowEditModal(false);
+            setEditingItem(null);
+        }
+    };
+
+    const handleUpdateSubcategory = () => {
+        if (editSubcategory.name && editSubcategory.categoryId && editSubcategory.icon) {
+            alert(`تم تحديث التصنيف الفرعي: ${editSubcategory.name}`);
+            setEditSubcategory({ id: '', name: '', categoryId: '', icon: '' });
+            setShowEditModal(false);
+            setEditingItem(null);
+        }
+    };
+
+    const closeEditModal = () => {
+        setShowEditModal(false);
+        setEditingItem(null);
+        setEditCategory({ id: '', name: '', icon: '', color: 'bg-blue-500' });
+        setEditSubcategory({ id: '', name: '', categoryId: '', icon: '' });
     };
 
     return (
@@ -407,6 +468,7 @@ export default function ServicesManagement() {
                                 </div>
                                 <div className="flex space-x-2 space-x-reverse" data-oid="rfktp6h">
                                     <button
+                                        onClick={() => handleEditCategory(category)}
                                         className="flex-1 bg-blue-500 text-white py-2 px-3 rounded-md text-sm hover:bg-blue-600 transition-colors"
                                         data-oid="-hscj-y"
                                     >
@@ -570,6 +632,9 @@ export default function ServicesManagement() {
                                                     data-oid="subcategory-actions"
                                                 >
                                                     <button
+                                                        onClick={() =>
+                                                            handleEditSubcategory(subcategory)
+                                                        }
                                                         className="text-blue-600 hover:text-blue-900"
                                                         data-oid="edit-subcategory-btn"
                                                     >
@@ -1102,6 +1167,218 @@ export default function ServicesManagement() {
                                 onClick={() => setShowAddModal(false)}
                                 className="flex-1 bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 transition-colors"
                                 data-oid="en:ohwo"
+                            >
+                                إلغاء
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Edit Modal */}
+            {showEditModal && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    data-oid="edit-modal-overlay"
+                >
+                    <div
+                        className="bg-white rounded-lg p-6 w-full max-w-md mx-4"
+                        data-oid="edit-modal-content"
+                    >
+                        <h3
+                            className="text-lg font-medium text-gray-900 mb-4"
+                            data-oid="edit-modal-title"
+                        >
+                            {editingItem === 'category' ? 'تعديل التصنيف' : 'تعديل التصنيف الفرعي'}
+                        </h3>
+
+                        {editingItem === 'category' ? (
+                            <div className="space-y-4" data-oid="edit-category-form">
+                                <div data-oid="edit-category-name-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="edit-category-name-label"
+                                    >
+                                        اسم التصنيف
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={editCategory.name}
+                                        onChange={(e) =>
+                                            setEditCategory({
+                                                ...editCategory,
+                                                name: e.target.value,
+                                            })
+                                        }
+                                        placeholder="مثال: خدمات المنزل"
+                                        data-oid="edit-category-name-input"
+                                    />
+                                </div>
+                                <div data-oid="edit-category-icon-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="edit-category-icon-label"
+                                    >
+                                        الأيقونة
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={editCategory.icon}
+                                        onChange={(e) =>
+                                            setEditCategory({
+                                                ...editCategory,
+                                                icon: e.target.value,
+                                            })
+                                        }
+                                        placeholder="🏠"
+                                        data-oid="edit-category-icon-input"
+                                    />
+                                </div>
+                                <div data-oid="edit-category-color-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="edit-category-color-label"
+                                    >
+                                        اللون
+                                    </label>
+                                    <select
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={editCategory.color}
+                                        onChange={(e) =>
+                                            setEditCategory({
+                                                ...editCategory,
+                                                color: e.target.value,
+                                            })
+                                        }
+                                        data-oid="edit-category-color-select"
+                                    >
+                                        <option value="bg-blue-500" data-oid="edit-color-blue">
+                                            أزرق
+                                        </option>
+                                        <option value="bg-green-500" data-oid="edit-color-green">
+                                            أخضر
+                                        </option>
+                                        <option value="bg-orange-500" data-oid="edit-color-orange">
+                                            برتقالي
+                                        </option>
+                                        <option value="bg-purple-500" data-oid="edit-color-purple">
+                                            بنفسجي
+                                        </option>
+                                        <option value="bg-pink-500" data-oid="edit-color-pink">
+                                            وردي
+                                        </option>
+                                        <option value="bg-red-500" data-oid="edit-color-red">
+                                            أحمر
+                                        </option>
+                                        <option
+                                            value="bg-emerald-500"
+                                            data-oid="edit-color-emerald"
+                                        >
+                                            أخضر زمردي
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="space-y-4" data-oid="edit-subcategory-form">
+                                <div data-oid="edit-subcategory-name-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="edit-subcategory-name-label"
+                                    >
+                                        اسم التصنيف الفرعي
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={editSubcategory.name}
+                                        onChange={(e) =>
+                                            setEditSubcategory({
+                                                ...editSubcategory,
+                                                name: e.target.value,
+                                            })
+                                        }
+                                        placeholder="مثال: تنظيف عام"
+                                        data-oid="edit-subcategory-name-input"
+                                    />
+                                </div>
+                                <div data-oid="edit-subcategory-parent-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="edit-subcategory-parent-label"
+                                    >
+                                        التصنيف الرئيسي
+                                    </label>
+                                    <select
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={editSubcategory.categoryId}
+                                        onChange={(e) =>
+                                            setEditSubcategory({
+                                                ...editSubcategory,
+                                                categoryId: e.target.value,
+                                            })
+                                        }
+                                        data-oid="edit-subcategory-parent-select"
+                                    >
+                                        <option value="" data-oid="edit-subcategory-parent-default">
+                                            اختر التصنيف الرئيسي
+                                        </option>
+                                        {categories.map((cat) => (
+                                            <option
+                                                key={cat.id}
+                                                value={cat.id.toString()}
+                                                data-oid="edit-subcategory-parent-option"
+                                            >
+                                                {cat.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div data-oid="edit-subcategory-icon-field">
+                                    <label
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                        data-oid="edit-subcategory-icon-label"
+                                    >
+                                        الأيقونة
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={editSubcategory.icon}
+                                        onChange={(e) =>
+                                            setEditSubcategory({
+                                                ...editSubcategory,
+                                                icon: e.target.value,
+                                            })
+                                        }
+                                        placeholder="🧹"
+                                        data-oid="edit-subcategory-icon-input"
+                                    />
+                                </div>
+                            </div>
+                        )}
+
+                        <div
+                            className="flex space-x-3 space-x-reverse mt-6"
+                            data-oid="edit-modal-buttons"
+                        >
+                            <button
+                                onClick={
+                                    editingItem === 'category'
+                                        ? handleUpdateCategory
+                                        : handleUpdateSubcategory
+                                }
+                                className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+                                data-oid="edit-modal-save-btn"
+                            >
+                                حفظ التغييرات
+                            </button>
+                            <button
+                                onClick={closeEditModal}
+                                className="flex-1 bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 transition-colors"
+                                data-oid="edit-modal-cancel-btn"
                             >
                                 إلغاء
                             </button>
