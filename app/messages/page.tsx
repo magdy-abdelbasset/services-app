@@ -123,54 +123,54 @@ export default function MessagesPage() {
     const totalUnreadCount = conversations.reduce((sum, conv) => sum + conv.unreadCount, 0);
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="exuorgx">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="2wb3f7s">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="8a8og:l"
+                data-oid="9g2f3af"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="0t3-iv8">
-                    <div className="flex items-center justify-between mb-4" data-oid="wzs_k2b">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid=":1n9uq.">
+                    <div className="flex items-center justify-between mb-4" data-oid="49pxjjs">
                         <Link
                             href="/"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid=".ix0er8"
+                            data-oid="mzqcae8"
                         >
-                            <span className="text-lg" data-oid="u6ffbox">
+                            <span className="text-lg" data-oid="1s1q:op">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="0g6-d2w">
+                        <h1 className="text-xl font-bold" data-oid="6n5nn8s">
                             الرسائل
                         </h1>
                         <button
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="_9mjvd-"
+                            data-oid="6-02nc3"
                         >
-                            <span className="text-lg" data-oid="325.38n">
+                            <span className="text-lg" data-oid="v8bnnwz">
                                 ✏️
                             </span>
                         </button>
                     </div>
-                    <p className="text-white/90 text-sm text-center" data-oid="sjtff2x">
+                    <p className="text-white/90 text-sm text-center" data-oid="9e5bwjg">
                         تواصل مع مقدمي الخدمات
                     </p>
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 py-4" data-oid="89n6ncm">
+            <div className="max-w-sm mx-auto px-4 py-4" data-oid=":.aqj8j">
                 <div
                     className="bg-white rounded-2xl p-1 shadow-sm border border-gray-100"
-                    data-oid="4w2r0su"
+                    data-oid="7ekfde-"
                 >
-                    <div className="flex" data-oid="wp9-zh4">
+                    <div className="flex" data-oid="y2qed_w">
                         <button
                             onClick={() => setActiveTab('all')}
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
                                 activeTab === 'all' ? 'bg-blue-500 text-white' : 'text-gray-600'
                             }`}
-                            data-oid="-te8j39"
+                            data-oid="ufcvggg"
                         >
                             جميع المحادثات
                         </button>
@@ -179,13 +179,13 @@ export default function MessagesPage() {
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors relative ${
                                 activeTab === 'unread' ? 'bg-blue-500 text-white' : 'text-gray-600'
                             }`}
-                            data-oid="vm819fc"
+                            data-oid="20e6u0_"
                         >
                             غير المقروءة
                             {totalUnreadCount > 0 && (
                                 <span
                                     className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                                    data-oid="txqilph"
+                                    data-oid=":19qxd6"
                                 >
                                     {totalUnreadCount}
                                 </span>
@@ -196,53 +196,53 @@ export default function MessagesPage() {
             </div>
 
             {/* Conversations List */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="af7nbve">
+            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="wu1jzin">
                 {filteredConversations.length > 0 ? (
-                    <div className="space-y-3" data-oid="s23sgib">
+                    <div className="space-y-3" data-oid="xiwa6bs">
                         {filteredConversations.map((conversation) => (
                             <Link
                                 key={conversation.id}
                                 href={`/chat/${conversation.id}`}
                                 className="block bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-                                data-oid="y73s1o0"
+                                data-oid="h-42o3i"
                             >
                                 <div
                                     className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="9xqi1_1"
+                                    data-oid="5._5fij"
                                 >
                                     {/* Avatar with online status */}
-                                    <div className="relative" data-oid="h2.02mv">
-                                        <div className="text-3xl" data-oid="mw-8coq">
+                                    <div className="relative" data-oid="4y1yewi">
+                                        <div className="text-3xl" data-oid="..7vwua">
                                             {conversation.otherUser.avatar}
                                         </div>
                                         {conversation.otherUser.isOnline && (
                                             <div
                                                 className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"
-                                                data-oid="an8byy6"
+                                                data-oid="32pb:j."
                                             ></div>
                                         )}
                                     </div>
 
                                     {/* Conversation Info */}
-                                    <div className="flex-1 min-w-0" data-oid="kzvji4t">
+                                    <div className="flex-1 min-w-0" data-oid="bh30b8c">
                                         <div
                                             className="flex items-center justify-between mb-1"
-                                            data-oid="dii2m0t"
+                                            data-oid="okug_0c"
                                         >
                                             <div
                                                 className="flex items-center space-x-2 space-x-reverse"
-                                                data-oid="n8_sx4e"
+                                                data-oid="1wk4uq."
                                             >
                                                 <h3
                                                     className="font-semibold text-gray-800 truncate"
-                                                    data-oid="t19mzxq"
+                                                    data-oid="2my.m-s"
                                                 >
                                                     {conversation.otherUser.name}
                                                 </h3>
                                                 {conversation.otherUser.isServiceProvider && (
                                                     <span
                                                         className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full"
-                                                        data-oid="d:i6oib"
+                                                        data-oid="ana-xiw"
                                                     >
                                                         مقدم خدمة
                                                     </span>
@@ -250,18 +250,18 @@ export default function MessagesPage() {
                                             </div>
                                             <div
                                                 className="flex items-center space-x-2 space-x-reverse"
-                                                data-oid="0l3wldi"
+                                                data-oid="w6amyh3"
                                             >
                                                 <span
                                                     className="text-xs text-gray-500"
-                                                    data-oid="fw61ae0"
+                                                    data-oid="e-12pi1"
                                                 >
                                                     {conversation.lastMessage.timestamp}
                                                 </span>
                                                 {conversation.unreadCount > 0 && (
                                                     <span
                                                         className="bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                                                        data-oid="-8f0sjw"
+                                                        data-oid="js.harw"
                                                     >
                                                         {conversation.unreadCount}
                                                     </span>
@@ -273,14 +273,14 @@ export default function MessagesPage() {
                                         {conversation.serviceInfo && (
                                             <div
                                                 className="flex items-center space-x-2 space-x-reverse mb-2"
-                                                data-oid="..8yn68"
+                                                data-oid="3lp6djc"
                                             >
-                                                <span className="text-sm" data-oid="h7_hdfb">
+                                                <span className="text-sm" data-oid="9jnlk:5">
                                                     {conversation.serviceInfo.icon}
                                                 </span>
                                                 <span
                                                     className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full"
-                                                    data-oid="t8y5ddd"
+                                                    data-oid="y.ri7xw"
                                                 >
                                                     {conversation.serviceInfo.name}
                                                 </span>
@@ -294,7 +294,7 @@ export default function MessagesPage() {
                                                     ? 'font-semibold text-gray-800'
                                                     : 'text-gray-600'
                                             }`}
-                                            data-oid="e8bqtyl"
+                                            data-oid="b3v9toa"
                                         >
                                             {conversation.lastMessage.senderId === 'user1' &&
                                                 'أنت: '}
@@ -306,16 +306,16 @@ export default function MessagesPage() {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center py-12" data-oid="8mks9dc">
-                        <div className="text-6xl mb-4" data-oid="1.wxpu:">
+                    <div className="text-center py-12" data-oid="27.iz4s">
+                        <div className="text-6xl mb-4" data-oid="60hba0f">
                             💬
                         </div>
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="c7-_dzd">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-2" data-oid="v871pno">
                             {activeTab === 'unread'
                                 ? 'لا توجد رسائل غير مقروءة'
                                 : 'لا توجد محادثات'}
                         </h3>
-                        <p className="text-gray-600 text-sm mb-6" data-oid="5q2surf">
+                        <p className="text-gray-600 text-sm mb-6" data-oid="77l3kek">
                             {activeTab === 'unread'
                                 ? 'جميع رسائلك مقروءة'
                                 : 'ابدأ محادثة مع مقدمي الخدمات من خلال العروض'}
@@ -324,7 +324,7 @@ export default function MessagesPage() {
                             <Link
                                 href="/offers"
                                 className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold inline-block"
-                                data-oid=":azh06u"
+                                data-oid="cqv9es-"
                             >
                                 عرض العروض المتاحة
                             </Link>
@@ -336,75 +336,75 @@ export default function MessagesPage() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="_1.38.1"
+                data-oid="13p_.7r"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="mo0a_pd">
-                    <div className="flex justify-around" data-oid="2:zsy5u">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="hhbkmnh">
+                    <div className="flex justify-around" data-oid="lr02jru">
                         <Link
                             href="/"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="dwi_mzx"
+                            data-oid="6cbq_i4"
                         >
-                            <span className="text-xl" data-oid="zh6sy1u">
+                            <span className="text-xl" data-oid="fpya_ab">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="xsnfvcf">
+                            <span className="text-xs" data-oid="lt00.4q">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/orders"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="tj:l0js"
+                            data-oid="96m_70r"
                         >
-                            <span className="text-xl" data-oid="rk3u7.5">
+                            <span className="text-xl" data-oid=":on5poh">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="e61y2jq">
+                            <span className="text-xs" data-oid="mp7vf9a">
                                 طلباتي
                             </span>
                         </Link>
                         <Link
                             href="/offers"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="s3knkl."
+                            data-oid="hcsa579"
                         >
-                            <span className="text-xl" data-oid="90ls_5w">
+                            <span className="text-xl" data-oid="-1o7ia2">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="qghfu4e">
+                            <span className="text-xs" data-oid=".aye5bv">
                                 العروض
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="cn3bahk"
+                            data-oid="7k2wzzw"
                         >
-                            <div className="relative" data-oid="sm0y-wz">
-                                <span className="text-xl" data-oid=".pmwn9a">
+                            <div className="relative" data-oid="2m3ewnv">
+                                <span className="text-xl" data-oid="q9z9cst">
                                     💬
                                 </span>
                                 {totalUnreadCount > 0 && (
                                     <span
                                         className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold"
-                                        data-oid="d.svipi"
+                                        data-oid="om26te0"
                                     >
                                         {totalUnreadCount}
                                     </span>
                                 )}
                             </div>
-                            <span className="text-xs font-semibold" data-oid=".lec_i-">
+                            <span className="text-xs font-semibold" data-oid="cwjs-0h">
                                 الرسائل
                             </span>
                         </button>
                         <button
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="e9ag0z-"
+                            data-oid="q-d08gi"
                         >
-                            <span className="text-xl" data-oid="gev7hr2">
+                            <span className="text-xl" data-oid="-24uny1">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid="f-utccp">
+                            <span className="text-xs" data-oid="0thdhd0">
                                 الملف الشخصي
                             </span>
                         </button>
@@ -413,7 +413,7 @@ export default function MessagesPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="_jut_j8"></div>
+            <div className="h-20" data-oid="ch7z.kz"></div>
         </div>
     );
 }

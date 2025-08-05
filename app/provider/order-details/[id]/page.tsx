@@ -92,14 +92,14 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
             <div
                 className="min-h-screen bg-gray-50 flex items-center justify-center"
                 dir="rtl"
-                data-oid="21.8z03"
+                data-oid="y3hpvpy"
             >
-                <div className="text-center" data-oid="z0cs_e8">
+                <div className="text-center" data-oid="40iww9d">
                     <div
                         className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"
-                        data-oid="1k8pnmw"
+                        data-oid="r4kko1:"
                     ></div>
-                    <p className="text-gray-600" data-oid="kkw8:d-">
+                    <p className="text-gray-600" data-oid="l7zbsfi">
                         جاري تحميل تفاصيل الطلب...
                     </p>
                 </div>
@@ -112,22 +112,22 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
             <div
                 className="min-h-screen bg-gray-50 flex items-center justify-center"
                 dir="rtl"
-                data-oid=".dekt1c"
+                data-oid="-jfr_xr"
             >
-                <div className="text-center" data-oid="_30ed4:">
-                    <div className="text-6xl mb-4" data-oid="pzevfi8">
+                <div className="text-center" data-oid="mmg60la">
+                    <div className="text-6xl mb-4" data-oid="k4kkq33">
                         ❌
                     </div>
-                    <h2 className="text-xl font-bold text-gray-800 mb-2" data-oid="n_pr2ke">
+                    <h2 className="text-xl font-bold text-gray-800 mb-2" data-oid="a3u15:s">
                         الطلب غير موجود
                     </h2>
-                    <p className="text-gray-600 mb-4" data-oid="4_.:0ll">
+                    <p className="text-gray-600 mb-4" data-oid="_vw:8m.">
                         لم يتم العثور على الطلب المطلوب
                     </p>
                     <Link
                         href="/provider/requests"
                         className="bg-blue-500 text-white px-6 py-2 rounded-xl"
-                        data-oid="_hz-bzd"
+                        data-oid=":v89oqu"
                     >
                         العودة للطلبات
                     </Link>
@@ -137,30 +137,30 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
     }
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="8ic122w">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="3yo-:2c">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid="fzw8ez:"
+                data-oid="zske6mz"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="1hxk:o8">
-                    <div className="flex items-center justify-between mb-4" data-oid="tvkne59">
-                        <Link href="/provider/requests" className="text-white" data-oid="b6_47.r">
-                            <span className="text-2xl" data-oid="esqn8-7">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="gilyk_m">
+                    <div className="flex items-center justify-between mb-4" data-oid="4f51uo2">
+                        <Link href="/provider/requests" className="text-white" data-oid="_fa9p:b">
+                            <span className="text-2xl" data-oid="6nk:0d1">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="5nks9jq">
+                        <h1 className="text-xl font-bold" data-oid="23q7pi9">
                             تفاصيل الطلب #{order.id}
                         </h1>
-                        <div className="w-8" data-oid="ejz8bns"></div>
+                        <div className="w-8" data-oid="bpl0.3x"></div>
                     </div>
-                    <div className="flex items-center justify-between" data-oid="q9etxkh">
-                        <OrderStatus status={order.status} data-oid="xssibbn" />
+                    <div className="flex items-center justify-between" data-oid="e6i:2fr">
+                        <OrderStatus status={order.status} data-oid="7mr9km9" />
                         {order.urgent && (
                             <span
                                 className="bg-red-500 text-white text-xs px-2 py-1 rounded-full"
-                                data-oid="c47h5ii"
+                                data-oid="bnmvwiz"
                             >
                                 عاجل
                             </span>
@@ -169,36 +169,36 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                 </div>
             </div>
 
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="1_n:w7t">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="-1pn7d9">
                 {/* Service Info Card */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid="apkolq1">
-                    <div className="flex items-start justify-between mb-4" data-oid="veadj6p">
-                        <div className="flex-1" data-oid="r9ttxu3">
-                            <h2 className="text-xl font-bold text-gray-800 mb-2" data-oid="99c_lgz">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid="73-rsc_">
+                    <div className="flex items-start justify-between mb-4" data-oid="v1jxjs-">
+                        <div className="flex-1" data-oid="gemp5t2">
+                            <h2 className="text-xl font-bold text-gray-800 mb-2" data-oid="akpeztg">
                                 {order.service}
                             </h2>
-                            <p className="text-sm text-gray-600 mb-2" data-oid="unjz2dw">
+                            <p className="text-sm text-gray-600 mb-2" data-oid="nhim:pt">
                                 تم الطلب: {order.createdAt}
                             </p>
-                            <p className="text-sm text-gray-600" data-oid="sw8w40h">
+                            <p className="text-sm text-gray-600" data-oid="rh5o48d">
                                 الموعد المحدد: {order.scheduledTime}
                             </p>
                         </div>
-                        <div className="text-left" data-oid="0gn.acg">
-                            <p className="text-2xl font-bold text-green-600" data-oid="o9nq8cw">
+                        <div className="text-left" data-oid="-5wk7u8">
+                            <p className="text-2xl font-bold text-green-600" data-oid="8x9348z">
                                 {order.price}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="9xsz_5d">
+                            <p className="text-xs text-gray-500" data-oid="r2y46yt">
                                 المدة المتوقعة: {order.estimatedDuration}
                             </p>
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-xl p-4" data-oid="t-oy4tp">
-                        <h3 className="font-semibold text-gray-800 mb-2" data-oid="oltzij.">
+                    <div className="bg-gray-50 rounded-xl p-4" data-oid="2oj5:mt">
+                        <h3 className="font-semibold text-gray-800 mb-2" data-oid="6rmw7ud">
                             وصف الخدمة:
                         </h3>
-                        <p className="text-sm text-gray-700" data-oid="brjju0l">
+                        <p className="text-sm text-gray-700" data-oid="uqyxgdy">
                             {order.description}
                         </p>
                     </div>
@@ -206,12 +206,12 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                     {order.notes && (
                         <div
                             className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mt-4"
-                            data-oid="duqw1ol"
+                            data-oid="59-7elb"
                         >
-                            <h3 className="font-semibold text-yellow-800 mb-2" data-oid="mh3x.je">
+                            <h3 className="font-semibold text-yellow-800 mb-2" data-oid="mb4q18v">
                                 ملاحظات مهمة:
                             </h3>
-                            <p className="text-sm text-yellow-700" data-oid="-34bhnb">
+                            <p className="text-sm text-yellow-700" data-oid="x4h-24y">
                                 {order.notes}
                             </p>
                         </div>
@@ -219,37 +219,37 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                 </div>
 
                 {/* Customer Info Card */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid=":.ho18o">
-                    <h3 className="font-bold text-gray-800 mb-4" data-oid="eg8muq_">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid="c15prgq">
+                    <h3 className="font-bold text-gray-800 mb-4" data-oid="j:yubrv">
                         معلومات العميل
                     </h3>
-                    <div className="flex items-center space-x-4 space-x-reverse" data-oid="1gw9i48">
-                        <div className="text-4xl" data-oid="0y.-:qt">
+                    <div className="flex items-center space-x-4 space-x-reverse" data-oid="l_mcyql">
+                        <div className="text-4xl" data-oid="xmjp0at">
                             {order.customer.avatar}
                         </div>
-                        <div className="flex-1" data-oid="tq64b15">
-                            <h4 className="font-semibold text-gray-800" data-oid="29y2y1_">
+                        <div className="flex-1" data-oid="ovtpf74">
+                            <h4 className="font-semibold text-gray-800" data-oid="vw4916o">
                                 {order.customer.name}
                             </h4>
                             <div
                                 className="flex items-center space-x-2 space-x-reverse mt-1"
-                                data-oid="t12jadw"
+                                data-oid="d1it7:0"
                             >
-                                <span className="text-yellow-500" data-oid="ukp22:k">
+                                <span className="text-yellow-500" data-oid="foj5z8f">
                                     ⭐
                                 </span>
-                                <span className="text-sm text-gray-600" data-oid="rm:p_9l">
+                                <span className="text-sm text-gray-600" data-oid="8ujz_tn">
                                     {order.customer.rating}
                                 </span>
                             </div>
-                            <p className="text-sm text-gray-600 mt-1" data-oid="rfdis7b">
+                            <p className="text-sm text-gray-600 mt-1" data-oid="fhs8ynj">
                                 {order.customer.phone}
                             </p>
                         </div>
                         <button
                             onClick={handleCallCustomer}
                             className="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition-colors"
-                            data-oid="bdudd_9"
+                            data-oid="g_i8j13"
                         >
                             📞
                         </button>
@@ -257,22 +257,22 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                 </div>
 
                 {/* Location Card */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid="ae:abvk">
-                    <h3 className="font-bold text-gray-800 mb-4" data-oid="mn3f1ie">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid=".tzl7u0">
+                    <h3 className="font-bold text-gray-800 mb-4" data-oid="95g8hy7">
                         موقع الخدمة
                     </h3>
-                    <div className="space-y-3" data-oid="2wwj3ra">
+                    <div className="space-y-3" data-oid="pznj_37">
                         <div
                             className="flex items-start space-x-3 space-x-reverse"
-                            data-oid="bw-0k:b"
+                            data-oid=".sr.vhs"
                         >
-                            <span className="text-xl mt-1" data-oid="68spzx2">
+                            <span className="text-xl mt-1" data-oid="v6mvv37">
                                 📍
                             </span>
-                            <div className="flex-1" data-oid="fkaqzcm">
+                            <div className="flex-1" data-oid="aedpjhp">
                                 <p
                                     className="text-sm text-gray-700 leading-relaxed"
-                                    data-oid=".3q5gkb"
+                                    data-oid="eqq9t91"
                                 >
                                     {order.location.address}
                                 </p>
@@ -280,15 +280,15 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                         </div>
                         <div
                             className="flex items-center justify-between text-sm text-gray-600"
-                            data-oid="xrd8si7"
+                            data-oid="dzon6at"
                         >
-                            <span data-oid="-7u6of-">📏 المسافة: {order.location.distance}</span>
-                            <span data-oid="6ioscfd">🌍 {order.location.coordinates}</span>
+                            <span data-oid="jy5.4:.">📏 المسافة: {order.location.distance}</span>
+                            <span data-oid="s_c:nzo">🌍 {order.location.coordinates}</span>
                         </div>
                         <button
                             onClick={handleOpenMaps}
                             className="w-full bg-blue-100 text-blue-600 py-3 rounded-xl font-semibold hover:bg-blue-200 transition-colors"
-                            data-oid="sl3fofo"
+                            data-oid="-::sg1n"
                         >
                             فتح في الخرائط 🗺️
                         </button>
@@ -296,11 +296,11 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                 </div>
 
                 {/* Progress Timeline */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid="2p:djvv">
-                    <h3 className="font-bold text-gray-800 mb-4" data-oid="apyx:9t">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4" data-oid="p-v4ft9">
+                    <h3 className="font-bold text-gray-800 mb-4" data-oid="ztpzbi0">
                         مراحل الطلب
                     </h3>
-                    <div className="space-y-4" data-oid="b9k3zwm">
+                    <div className="space-y-4" data-oid="a.yjurh">
                         <div
                             className={`flex items-center space-x-3 space-x-reverse ${
                                 ['accepted', 'in_progress', 'on_way', 'completed'].includes(
@@ -309,7 +309,7 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                                     ? 'text-green-600'
                                     : 'text-gray-400'
                             }`}
-                            data-oid="ei32_ml"
+                            data-oid="c3.uxli"
                         >
                             <div
                                 className={`w-4 h-4 rounded-full ${
@@ -319,9 +319,9 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                                         ? 'bg-green-500'
                                         : 'bg-gray-300'
                                 }`}
-                                data-oid="48ueoh3"
+                                data-oid="qj-2-_9"
                             ></div>
-                            <span className="text-sm" data-oid="e2n0o80">
+                            <span className="text-sm" data-oid="bp8-tj2">
                                 تم قبول الطلب
                             </span>
                         </div>
@@ -331,7 +331,7 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                                     ? 'text-green-600'
                                     : 'text-gray-400'
                             }`}
-                            data-oid="un-f-n-"
+                            data-oid="n7ggfi8"
                         >
                             <div
                                 className={`w-4 h-4 rounded-full ${
@@ -339,9 +339,9 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                                         ? 'bg-green-500'
                                         : 'bg-gray-300'
                                 }`}
-                                data-oid="8azct03"
+                                data-oid="7p3_ulq"
                             ></div>
-                            <span className="text-sm" data-oid="c.hwsoz">
+                            <span className="text-sm" data-oid="jx6fxv5">
                                 بدء تنفيذ الخدمة
                             </span>
                         </div>
@@ -351,7 +351,7 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                                     ? 'text-green-600'
                                     : 'text-gray-400'
                             }`}
-                            data-oid="4aj7wy-"
+                            data-oid="bm.8jv3"
                         >
                             <div
                                 className={`w-4 h-4 rounded-full ${
@@ -359,9 +359,9 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                                         ? 'bg-green-500'
                                         : 'bg-gray-300'
                                 }`}
-                                data-oid="nvzjf91"
+                                data-oid="9ax0bl5"
                             ></div>
-                            <span className="text-sm" data-oid=".rjdytp">
+                            <span className="text-sm" data-oid="z.64gsc">
                                 في الطريق للموقع
                             </span>
                         </div>
@@ -369,15 +369,15 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                             className={`flex items-center space-x-3 space-x-reverse ${
                                 order.status === 'completed' ? 'text-green-600' : 'text-gray-400'
                             }`}
-                            data-oid="okyi31c"
+                            data-oid=".qvwymy"
                         >
                             <div
                                 className={`w-4 h-4 rounded-full ${
                                     order.status === 'completed' ? 'bg-green-500' : 'bg-gray-300'
                                 }`}
-                                data-oid="i-9ay6z"
+                                data-oid="tf:1gh6"
                             ></div>
-                            <span className="text-sm" data-oid="-4dtdhn">
+                            <span className="text-sm" data-oid="g_k78cl">
                                 اكتمال الخدمة
                             </span>
                         </div>
@@ -385,32 +385,32 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                 </div>
 
                 {/* Action Buttons */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-20" data-oid="_pkkojh">
-                    <h3 className="font-bold text-gray-800 mb-4" data-oid="drfzkce">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-20" data-oid="pf5o7em">
+                    <h3 className="font-bold text-gray-800 mb-4" data-oid="kkmylsd">
                         إجراءات
                     </h3>
 
                     {order.status === 'accepted' && (
-                        <div className="space-y-3" data-oid="4h0l6nz">
+                        <div className="space-y-3" data-oid="iwxrkp0">
                             <button
                                 onClick={() => handleStatusUpdate('in_progress')}
                                 className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
-                                data-oid="x23vnrr"
+                                data-oid="_-i_9fz"
                             >
                                 بدء تنفيذ الخدمة 🚀
                             </button>
-                            <div className="flex space-x-3 space-x-reverse" data-oid="wiuc-r8">
+                            <div className="flex space-x-3 space-x-reverse" data-oid="dxx1.-v">
                                 <Link
                                     href={`/provider/chat/${order.id}`}
                                     className="flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold text-center hover:bg-gray-200 transition-colors"
-                                    data-oid="p55gzdm"
+                                    data-oid="rswp9si"
                                 >
                                     مراسلة العميل 💬
                                 </Link>
                                 <button
                                     onClick={handleCallCustomer}
                                     className="flex-1 bg-green-100 text-green-600 py-3 rounded-xl font-semibold hover:bg-green-200 transition-colors"
-                                    data-oid="89n4.2t"
+                                    data-oid="3m312q9"
                                 >
                                     اتصال 📞
                                 </button>
@@ -419,26 +419,26 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                     )}
 
                     {order.status === 'in_progress' && (
-                        <div className="space-y-3" data-oid="t79h3j5">
+                        <div className="space-y-3" data-oid="wkzywg7">
                             <button
                                 onClick={() => handleStatusUpdate('on_way')}
                                 className="w-full bg-orange-500 text-white py-3 rounded-xl font-semibold hover:bg-orange-600 transition-colors"
-                                data-oid="q_56rar"
+                                data-oid="ebqwq4b"
                             >
                                 في الطريق للموقع 🚗
                             </button>
-                            <div className="flex space-x-3 space-x-reverse" data-oid="ok6s_zz">
+                            <div className="flex space-x-3 space-x-reverse" data-oid="bsgywq:">
                                 <Link
                                     href={`/provider/chat/${order.id}`}
                                     className="flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold text-center hover:bg-gray-200 transition-colors"
-                                    data-oid="oqrhp2t"
+                                    data-oid="2ut0wr_"
                                 >
                                     مراسلة العميل 💬
                                 </Link>
                                 <button
                                     onClick={handleCallCustomer}
                                     className="flex-1 bg-green-100 text-green-600 py-3 rounded-xl font-semibold hover:bg-green-200 transition-colors"
-                                    data-oid="swax9mj"
+                                    data-oid="1uut2x1"
                                 >
                                     اتصال 📞
                                 </button>
@@ -447,26 +447,26 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                     )}
 
                     {order.status === 'on_way' && (
-                        <div className="space-y-3" data-oid="wmgeg8q">
+                        <div className="space-y-3" data-oid="z4bu9-n">
                             <button
                                 onClick={() => handleStatusUpdate('completed')}
                                 className="w-full bg-green-500 text-white py-3 rounded-xl font-semibold hover:bg-green-600 transition-colors"
-                                data-oid="dwvk1nw"
+                                data-oid="vvmy8p8"
                             >
                                 إنهاء الخدمة ✅
                             </button>
-                            <div className="flex space-x-3 space-x-reverse" data-oid="d9-h2g.">
+                            <div className="flex space-x-3 space-x-reverse" data-oid=":nq9xie">
                                 <Link
                                     href={`/provider/chat/${order.id}`}
                                     className="flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold text-center hover:bg-gray-200 transition-colors"
-                                    data-oid="7akfhln"
+                                    data-oid="b1nz0cl"
                                 >
                                     مراسلة العميل 💬
                                 </Link>
                                 <button
                                     onClick={handleCallCustomer}
                                     className="flex-1 bg-green-100 text-green-600 py-3 rounded-xl font-semibold hover:bg-green-200 transition-colors"
-                                    data-oid="hger660"
+                                    data-oid="9ot.8zh"
                                 >
                                     اتصال 📞
                                 </button>
@@ -475,23 +475,23 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                     )}
 
                     {order.status === 'completed' && (
-                        <div className="text-center py-4" data-oid="lmm1pco">
-                            <div className="text-6xl mb-4" data-oid="r33h_1z">
+                        <div className="text-center py-4" data-oid="dhg6725">
+                            <div className="text-6xl mb-4" data-oid="8shcjsg">
                                 🎉
                             </div>
                             <h4
                                 className="text-lg font-bold text-green-600 mb-2"
-                                data-oid="q-cnj.g"
+                                data-oid="0093awa"
                             >
                                 تم إنجاز الخدمة بنجاح!
                             </h4>
-                            <p className="text-sm text-gray-600 mb-4" data-oid="cvi_0e3">
+                            <p className="text-sm text-gray-600 mb-4" data-oid="i1y.dpc">
                                 شكراً لك على تقديم خدمة ممتازة
                             </p>
                             <Link
                                 href="/provider/earnings"
                                 className="bg-green-500 text-white px-6 py-2 rounded-xl font-semibold hover:bg-green-600 transition-colors"
-                                data-oid="n21r59u"
+                                data-oid="3z0j7_9"
                             >
                                 عرض الأرباح 💰
                             </Link>
@@ -499,14 +499,14 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                     )}
 
                     {order.status === 'cancelled' && (
-                        <div className="text-center py-4" data-oid="_0o7fpn">
-                            <div className="text-6xl mb-4" data-oid="kl1jp-:">
+                        <div className="text-center py-4" data-oid=".d8:cat">
+                            <div className="text-6xl mb-4" data-oid="d:eskki">
                                 ❌
                             </div>
-                            <h4 className="text-lg font-bold text-red-600 mb-2" data-oid="l_8yi60">
+                            <h4 className="text-lg font-bold text-red-600 mb-2" data-oid=".yo_2g1">
                                 تم إلغاء الطلب
                             </h4>
-                            <p className="text-sm text-gray-600" data-oid="hssc_9:">
+                            <p className="text-sm text-gray-600" data-oid="anhz5iv">
                                 هذا الطلب لم يعد متاحاً
                             </p>
                         </div>
@@ -517,67 +517,67 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="izl.w3e"
+                data-oid="s0znlya"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="75-76q4">
-                    <div className="flex justify-around" data-oid="3_mvezk">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="e69-62n">
+                    <div className="flex justify-around" data-oid="ti4qf_3">
                         <Link
                             href="/provider"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="jwr4k7m"
+                            data-oid="c9v3dx8"
                         >
-                            <span className="text-xl" data-oid="vws59sq">
+                            <span className="text-xl" data-oid="c-bpj4g">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="x_4cnsn">
+                            <span className="text-xs" data-oid="knj_v4j">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/provider/requests"
                             className="flex flex-col items-center space-y-1 text-green-600"
-                            data-oid="u.1_iy3"
+                            data-oid="u-_3ohd"
                         >
-                            <span className="text-xl" data-oid="8sgcgzl">
+                            <span className="text-xl" data-oid="se5rmp2">
                                 📋
                             </span>
-                            <span className="text-xs font-semibold" data-oid="vwf_xm9">
+                            <span className="text-xs font-semibold" data-oid="7x_6f.h">
                                 الطلبات
                             </span>
                         </Link>
                         <Link
                             href="/provider/earnings"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="13d05pd"
+                            data-oid="hc07sov"
                         >
-                            <span className="text-xl" data-oid="nnz_v87">
+                            <span className="text-xl" data-oid="ur4rpb4">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="9prjjtk">
+                            <span className="text-xs" data-oid="cp3mw:c">
                                 الأرباح
                             </span>
                         </Link>
                         <Link
                             href="/provider/messages"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="x3qkk-a"
+                            data-oid="2uu.msp"
                         >
-                            <span className="text-xl" data-oid="9n5axr0">
+                            <span className="text-xl" data-oid="xqyv9zi">
                                 💬
                             </span>
-                            <span className="text-xs" data-oid="jyl7vbd">
+                            <span className="text-xs" data-oid="k9s-il.">
                                 الرسائل
                             </span>
                         </Link>
                         <Link
                             href="/provider/profile"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="00pscpp"
+                            data-oid="psr32vl"
                         >
-                            <span className="text-xl" data-oid="dapo_xf">
+                            <span className="text-xl" data-oid="d7mu-3y">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid="h0vw9fa">
+                            <span className="text-xs" data-oid="o8d621p">
                                 الملف الشخصي
                             </span>
                         </Link>

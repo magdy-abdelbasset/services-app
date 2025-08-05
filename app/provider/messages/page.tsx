@@ -99,39 +99,39 @@ export default function ProviderMessages() {
     const totalUnread = conversations.reduce((sum, conv) => sum + conv.unread, 0);
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="ujehc3o">
+        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="nzigp5h">
             {/* Header */}
             <div
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid=".5iidxb"
+                data-oid="ubjyy.v"
             >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="z5lcy_x">
-                    <div className="flex items-center justify-between mb-4" data-oid="sasju92">
-                        <Link href="/provider" className="text-white" data-oid="4tav2or">
-                            <span className="text-2xl" data-oid="uze4v5g">
+                <div className="max-w-sm mx-auto px-4 py-6" data-oid="tciwv05">
+                    <div className="flex items-center justify-between mb-4" data-oid="u11g.18">
+                        <Link href="/provider" className="text-white" data-oid="z910-4t">
+                            <span className="text-2xl" data-oid="71tdbr5">
                                 ←
                             </span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="byr1449">
+                        <h1 className="text-xl font-bold" data-oid="2f8zu17">
                             الرسائل
                         </h1>
-                        <button className="text-white" data-oid="j5_p2ne">
-                            <span className="text-xl" data-oid="4hqz96g">
+                        <button className="text-white" data-oid="rjwh-0t">
+                            <span className="text-xl" data-oid="8su-j75">
                                 🔍
                             </span>
                         </button>
                     </div>
 
-                    <p className="text-white/90 text-sm" data-oid="1mb8x1g">
+                    <p className="text-white/90 text-sm" data-oid="qytdt-5">
                         تواصل مع عملائك بسهولة
                     </p>
                 </div>
             </div>
 
             {/* Filter Tabs */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid=".354qxi">
-                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="dulyknd">
-                    <div className="flex space-x-2 space-x-reverse" data-oid="5hf7mf8">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="u:nilsj">
+                <div className="bg-white rounded-2xl shadow-lg p-2 mb-6" data-oid="i5.1mva">
+                    <div className="flex space-x-2 space-x-reverse" data-oid="i8vnvm:">
                         <button
                             onClick={() => setActiveTab('all')}
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
@@ -139,7 +139,7 @@ export default function ProviderMessages() {
                                     ? 'bg-blue-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid=":5xd6qp"
+                            data-oid="otggn1q"
                         >
                             الكل ({conversations.length})
                         </button>
@@ -150,13 +150,13 @@ export default function ProviderMessages() {
                                     ? 'bg-red-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="m87-i.3"
+                            data-oid="3qdpvw8"
                         >
                             غير مقروءة ({conversations.filter((c) => c.unread > 0).length})
                             {totalUnread > 0 && (
                                 <span
                                     className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                                    data-oid="jfoa35n"
+                                    data-oid="q2fq5o6"
                                 >
                                     {totalUnread}
                                 </span>
@@ -169,7 +169,7 @@ export default function ProviderMessages() {
                                     ? 'bg-green-500 text-white'
                                     : 'text-gray-600 hover:bg-gray-100'
                             }`}
-                            data-oid="bnt17a5"
+                            data-oid="g7k__:i"
                         >
                             نشطة ({conversations.filter((c) => c.status === 'active').length})
                         </button>
@@ -178,55 +178,55 @@ export default function ProviderMessages() {
             </div>
 
             {/* Conversations List */}
-            <div className="max-w-sm mx-auto px-4" data-oid="phg2ghq">
-                <div className="space-y-3 mb-20" data-oid="d.9pj7n">
+            <div className="max-w-sm mx-auto px-4" data-oid="xyy3ftj">
+                <div className="space-y-3 mb-20" data-oid="zb6xqyo">
                     {filteredConversations.map((conversation) => (
                         <Link
                             key={conversation.id}
                             href={`/provider/chat/${conversation.id}`}
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 block hover:shadow-md transition-shadow"
-                            data-oid="yx437oy"
+                            data-oid="jdp1gyx"
                         >
                             <div
                                 className="flex items-start space-x-3 space-x-reverse"
-                                data-oid="pjkuskq"
+                                data-oid=".rmj9la"
                             >
                                 {/* Avatar */}
                                 <div
                                     className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0"
-                                    data-oid="-lzioxw"
+                                    data-oid="yvj7pia"
                                 >
-                                    <span className="text-2xl text-white" data-oid="75in0so">
+                                    <span className="text-2xl text-white" data-oid="ehcbm9p">
                                         {conversation.avatar}
                                     </span>
                                 </div>
 
                                 {/* Conversation Info */}
-                                <div className="flex-1 min-w-0" data-oid="3km0fxa">
+                                <div className="flex-1 min-w-0" data-oid="v9.t:-p">
                                     <div
                                         className="flex items-center justify-between mb-1"
-                                        data-oid="28tml5l"
+                                        data-oid="bsw0:86"
                                     >
                                         <h3
                                             className="font-semibold text-gray-800 truncate"
-                                            data-oid="zyaxugg"
+                                            data-oid="oez-46n"
                                         >
                                             {conversation.customer}
                                         </h3>
                                         <div
                                             className="flex items-center space-x-2 space-x-reverse"
-                                            data-oid="ny4ha03"
+                                            data-oid="8rllbtz"
                                         >
                                             <span
                                                 className={`text-xs px-2 py-1 rounded-full ${getStatusColor(conversation.status)}`}
-                                                data-oid="wo6l7k:"
+                                                data-oid="co8lb68"
                                             >
                                                 {getStatusText(conversation.status)}
                                             </span>
                                             {conversation.unread > 0 && (
                                                 <span
                                                     className="bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold"
-                                                    data-oid="gueieei"
+                                                    data-oid="ke5t09w"
                                                 >
                                                     {conversation.unread}
                                                 </span>
@@ -234,7 +234,7 @@ export default function ProviderMessages() {
                                         </div>
                                     </div>
 
-                                    <p className="text-sm text-gray-600 mb-1" data-oid="87-r2-u">
+                                    <p className="text-sm text-gray-600 mb-1" data-oid="x55n2e6">
                                         {conversation.service}
                                     </p>
 
@@ -244,19 +244,19 @@ export default function ProviderMessages() {
                                                 ? 'font-semibold text-gray-800'
                                                 : 'text-gray-500'
                                         }`}
-                                        data-oid="lb8:3em"
+                                        data-oid="lbq.nss"
                                     >
                                         {conversation.lastMessage}
                                     </p>
 
-                                    <p className="text-xs text-gray-400 mt-1" data-oid=".s:chkb">
+                                    <p className="text-xs text-gray-400 mt-1" data-oid="nt.zkww">
                                         {conversation.time}
                                     </p>
                                 </div>
 
                                 {/* Arrow */}
-                                <div className="text-gray-400 flex-shrink-0" data-oid="xmq4dna">
-                                    <span className="text-lg" data-oid="ga.hokq">
+                                <div className="text-gray-400 flex-shrink-0" data-oid="uh_zd_y">
+                                    <span className="text-lg" data-oid="w6rmlvs">
                                         ←
                                     </span>
                                 </div>
@@ -265,17 +265,17 @@ export default function ProviderMessages() {
                     ))}
 
                     {filteredConversations.length === 0 && (
-                        <div className="text-center py-12" data-oid="dzf7--s">
-                            <div className="text-6xl mb-4" data-oid="jmee26_">
+                        <div className="text-center py-12" data-oid="qfz3352">
+                            <div className="text-6xl mb-4" data-oid="1:05j6h">
                                 💬
                             </div>
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-2"
-                                data-oid="f8hd3le"
+                                data-oid=".92y75l"
                             >
                                 لا توجد رسائل
                             </h3>
-                            <p className="text-gray-600 text-sm" data-oid="sbllel7">
+                            <p className="text-gray-600 text-sm" data-oid="so86wf.">
                                 {activeTab === 'all' && 'لم تستلم أي رسائل بعد'}
                                 {activeTab === 'unread' && 'جميع الرسائل مقروءة'}
                                 {activeTab === 'active' && 'لا توجد محادثات نشطة'}
@@ -286,12 +286,12 @@ export default function ProviderMessages() {
             </div>
 
             {/* Quick Actions Floating Button */}
-            <div className="fixed bottom-24 left-4 z-50" data-oid="cfgsxlb">
+            <div className="fixed bottom-24 left-4 z-50" data-oid="5pihm2o">
                 <button
                     className="w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center"
-                    data-oid="imdxfv_"
+                    data-oid="x094vkl"
                 >
-                    <span className="text-2xl" data-oid="3gqel8j">
+                    <span className="text-2xl" data-oid="f6z0axw">
                         ✏️
                     </span>
                 </button>
@@ -300,60 +300,60 @@ export default function ProviderMessages() {
             {/* Bottom Navigation */}
             <div
                 className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="ny_1.87"
+                data-oid="5qif0eo"
             >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="6lz88d_">
-                    <div className="flex justify-around" data-oid="9furwhs">
+                <div className="max-w-sm mx-auto px-4 py-3" data-oid="nimt27h">
+                    <div className="flex justify-around" data-oid="ld03p1u">
                         <Link
                             href="/provider"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="3kzc.o1"
+                            data-oid="tun5xqf"
                         >
-                            <span className="text-xl" data-oid="7f4wb45">
+                            <span className="text-xl" data-oid="gk0ef2t">
                                 🏠
                             </span>
-                            <span className="text-xs" data-oid="ytlt984">
+                            <span className="text-xs" data-oid="nwr_ngi">
                                 الرئيسية
                             </span>
                         </Link>
                         <Link
                             href="/provider/requests"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="m-_vdqn"
+                            data-oid="k4mozk1"
                         >
-                            <span className="text-xl" data-oid="k_im.ub">
+                            <span className="text-xl" data-oid="ogxpmzf">
                                 📋
                             </span>
-                            <span className="text-xs" data-oid="pyxpt3m">
+                            <span className="text-xs" data-oid="x5ui6hl">
                                 الطلبات
                             </span>
                         </Link>
                         <Link
                             href="/provider/earnings"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="wmeigto"
+                            data-oid="8r5lite"
                         >
-                            <span className="text-xl" data-oid="wv.q-1p">
+                            <span className="text-xl" data-oid="qvniudz">
                                 💰
                             </span>
-                            <span className="text-xs" data-oid="ac_.9c_">
+                            <span className="text-xs" data-oid="62:aw64">
                                 الأرباح
                             </span>
                         </Link>
                         <button
                             className="flex flex-col items-center space-y-1 text-green-600 relative"
-                            data-oid="uifdqlz"
+                            data-oid="ld9f3o9"
                         >
-                            <span className="text-xl" data-oid=".y6h9dv">
+                            <span className="text-xl" data-oid="a1f-gg5">
                                 💬
                             </span>
-                            <span className="text-xs font-semibold" data-oid="_14i0pr">
+                            <span className="text-xs font-semibold" data-oid="f--v0yj">
                                 الرسائل
                             </span>
                             {totalUnread > 0 && (
                                 <span
                                     className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
-                                    data-oid="o9w_gnl"
+                                    data-oid=".k9lzx5"
                                 >
                                     {totalUnread}
                                 </span>
@@ -362,12 +362,12 @@ export default function ProviderMessages() {
                         <Link
                             href="/provider/profile"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="z1b_z5."
+                            data-oid="j6undf_"
                         >
-                            <span className="text-xl" data-oid="7.tx79t">
+                            <span className="text-xl" data-oid="venjjbl">
                                 👤
                             </span>
-                            <span className="text-xs" data-oid="m-vj6dl">
+                            <span className="text-xs" data-oid="vkhiuws">
                                 الملف الشخصي
                             </span>
                         </Link>
