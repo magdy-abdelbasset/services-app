@@ -491,6 +491,7 @@ export default function EditProvider() {
                                                 onChange={() => handleServiceToggle(service)}
                                                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 ml-2"
                                             />
+
                                             <span className="text-sm">{service}</span>
                                         </label>
                                     ))}
@@ -512,6 +513,7 @@ export default function EditProvider() {
                                                 onChange={() => handleServiceAreaToggle(city)}
                                                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 ml-2"
                                             />
+
                                             <span className="text-sm">{city}</span>
                                         </label>
                                     ))}
@@ -581,6 +583,7 @@ export default function EditProvider() {
                                                     onChange={() => handleWorkingDayToggle(day)}
                                                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 ml-1"
                                                 />
+
                                                 <span className="text-xs">{day}</span>
                                             </label>
                                         ))}
@@ -630,6 +633,7 @@ export default function EditProvider() {
                                                     }
                                                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                                 />
+
                                                 <span className="mr-2 text-sm">موافق عليها</span>
                                             </label>
                                         </div>
@@ -667,6 +671,7 @@ export default function EditProvider() {
                                                     }
                                                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                                 />
+
                                                 <span className="mr-2 text-sm">موافق عليها</span>
                                             </label>
                                         </div>
@@ -704,6 +709,7 @@ export default function EditProvider() {
                                                     }
                                                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                                 />
+
                                                 <span className="mr-2 text-sm">موافق عليها</span>
                                             </label>
                                         </div>
@@ -743,6 +749,7 @@ export default function EditProvider() {
                                         }
                                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 ml-2"
                                     />
+
                                     <span>مقدم خدمة موثق</span>
                                 </label>
                                 <p className="text-sm text-gray-600 mt-1">
@@ -772,6 +779,7 @@ export default function EditProvider() {
                                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         readOnly
                                     />
+
                                     <p className="text-sm text-gray-600 mt-1">
                                         هذا الحقل للعرض فقط
                                     </p>
@@ -865,6 +873,7 @@ export default function EditProvider() {
                                             }
                                             className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 ml-2"
                                         />
+
                                         <span>حساب موثق</span>
                                     </label>
 

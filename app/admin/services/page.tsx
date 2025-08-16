@@ -352,20 +352,16 @@ export default function ServicesManagement() {
     };
 
     return (
-        <div className="p-6" data-oid="8eaoi06">
-            <div className="mb-6" data-oid="fgi022p">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2" data-oid="gk2s-u0">
-                    إدارة الخدمات والتصنيفات
-                </h1>
-                <p className="text-gray-600" data-oid="wvx7jc5">
-                    إدارة تصنيفات الخدمات والخدمات المتاحة في التطبيق
-                </p>
+        <div className="p-6">
+            <div className="mb-6">
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">إدارة الخدمات والتصنيفات</h1>
+                <p className="text-gray-600">إدارة تصنيفات الخدمات والخدمات المتاحة في التطبيق</p>
             </div>
 
             {/* Tabs */}
-            <div className="mb-6" data-oid="1cvpcju">
-                <div className="border-b border-gray-200" data-oid="1h5tl8y">
-                    <nav className="-mb-px flex space-x-8 space-x-reverse" data-oid="l6xhsn.">
+            <div className="mb-6">
+                <div className="border-b border-gray-200">
+                    <nav className="-mb-px flex space-x-8 space-x-reverse">
                         <button
                             onClick={() => setActiveTab('categories')}
                             className={`py-2 px-1 border-b-2 font-medium text-sm ${
@@ -373,7 +369,6 @@ export default function ServicesManagement() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="pdux.xu"
                         >
                             التصنيفات الرئيسية
                         </button>
@@ -384,7 +379,6 @@ export default function ServicesManagement() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="subcategories-tab"
                         >
                             التصنيفات الفرعية
                         </button>
@@ -395,7 +389,6 @@ export default function ServicesManagement() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="gr_h::d"
                         >
                             الخدمات
                         </button>
@@ -405,72 +398,46 @@ export default function ServicesManagement() {
 
             {/* Categories Tab */}
             {activeTab === 'categories' && (
-                <div data-oid="egggosu">
-                    <div className="flex justify-between items-center mb-6" data-oid="5qxuapf">
-                        <h2 className="text-xl font-semibold text-gray-900" data-oid="dfow92v">
-                            تصنيفات الخدمات
-                        </h2>
+                <div>
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-xl font-semibold text-gray-900">تصنيفات الخدمات</h2>
                         <button
                             onClick={() => setShowAddModal(true)}
                             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                            data-oid="7f-iybt"
                         >
                             إضافة تصنيف جديد
                         </button>
                     </div>
 
-                    <div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                        data-oid="zuumh3o"
-                    >
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {categories.map((category) => (
-                            <div
-                                key={category.id}
-                                className="bg-white rounded-lg shadow p-6"
-                                data-oid=".qjys9."
-                            >
-                                <div
-                                    className="flex items-center justify-between mb-4"
-                                    data-oid="oe:k817"
-                                >
+                            <div key={category.id} className="bg-white rounded-lg shadow p-6">
+                                <div className="flex items-center justify-between mb-4">
                                     <div
                                         className={`w-12 h-12 ${category.color} rounded-lg flex items-center justify-center`}
-                                        data-oid="hkbml:_"
                                     >
-                                        <span className="text-2xl" data-oid="iwowv8c">
-                                            {category.icon}
-                                        </span>
+                                        <span className="text-2xl">{category.icon}</span>
                                     </div>
-                                    <div
-                                        className="flex items-center space-x-2 space-x-reverse"
-                                        data-oid="o--x2nc"
-                                    >
+                                    <div className="flex items-center space-x-2 space-x-reverse">
                                         <span
                                             className={`w-3 h-3 rounded-full ${category.active ? 'bg-green-500' : 'bg-red-500'}`}
-                                            data-oid="0ko6y72"
                                         ></span>
-                                        <span className="text-sm text-gray-500" data-oid="7k:w2.0">
+                                        <span className="text-sm text-gray-500">
                                             {category.active ? 'نشط' : 'غير نشط'}
                                         </span>
                                     </div>
                                 </div>
-                                <h3
-                                    className="text-lg font-semibold text-gray-900 mb-2"
-                                    data-oid="hp8.ws4"
-                                >
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
                                     {category.name}
                                 </h3>
-                                <div className="text-sm text-gray-600 mb-4" data-oid="p25u.wm">
-                                    <p data-oid="2809fw:">{category.servicesCount} خدمة متاحة</p>
-                                    <p data-oid=".7-:li_">
-                                        {category.subcategoriesCount} تصنيف فرعي
-                                    </p>
+                                <div className="text-sm text-gray-600 mb-4">
+                                    <p>{category.servicesCount} خدمة متاحة</p>
+                                    <p>{category.subcategoriesCount} تصنيف فرعي</p>
                                 </div>
-                                <div className="flex space-x-2 space-x-reverse" data-oid="rfktp6h">
+                                <div className="flex space-x-2 space-x-reverse">
                                     <button
                                         onClick={() => handleEditCategory(category)}
                                         className="flex-1 bg-blue-500 text-white py-2 px-3 rounded-md text-sm hover:bg-blue-600 transition-colors"
-                                        data-oid="-hscj-y"
                                     >
                                         تعديل
                                     </button>
@@ -480,7 +447,6 @@ export default function ServicesManagement() {
                                                 ? 'bg-red-500 text-white hover:bg-red-600'
                                                 : 'bg-green-500 text-white hover:bg-green-600'
                                         }`}
-                                        data-oid="jpp7u3l"
                                     >
                                         {category.active ? 'إلغاء تفعيل' : 'تفعيل'}
                                     </button>
@@ -493,150 +459,81 @@ export default function ServicesManagement() {
 
             {/* Subcategories Tab */}
             {activeTab === 'subcategories' && (
-                <div data-oid="subcategories-content">
-                    <div
-                        className="flex justify-between items-center mb-6"
-                        data-oid="subcategories-header"
-                    >
-                        <h2
-                            className="text-xl font-semibold text-gray-900"
-                            data-oid="subcategories-title"
-                        >
-                            التصنيفات الفرعية
-                        </h2>
+                <div>
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-xl font-semibold text-gray-900">التصنيفات الفرعية</h2>
                         <button
                             onClick={() => setShowAddModal(true)}
                             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                            data-oid="add-subcategory-btn"
                         >
                             إضافة تصنيف فرعي جديد
                         </button>
                     </div>
 
-                    <div
-                        className="bg-white rounded-lg shadow overflow-hidden"
-                        data-oid="subcategories-table-container"
-                    >
-                        <div className="overflow-x-auto" data-oid="subcategories-table-scroll">
-                            <table
-                                className="min-w-full divide-y divide-gray-200"
-                                data-oid="subcategories-table"
-                            >
-                                <thead className="bg-gray-50" data-oid="subcategories-table-head">
-                                    <tr data-oid="subcategories-table-head-row">
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="subcategory-name-header"
-                                        >
+                    <div className="bg-white rounded-lg shadow overflow-hidden">
+                        <div className="overflow-x-auto">
+                            <table className="min-w-full divide-y divide-gray-200">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             التصنيف الفرعي
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="parent-category-header"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             التصنيف الرئيسي
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="subcategory-services-header"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             عدد الخدمات
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="subcategory-status-header"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الحالة
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="subcategory-actions-header"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الإجراءات
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody
-                                    className="bg-white divide-y divide-gray-200"
-                                    data-oid="subcategories-table-body"
-                                >
+                                <tbody className="bg-white divide-y divide-gray-200">
                                     {subcategories.map((subcategory) => (
-                                        <tr
-                                            key={subcategory.id}
-                                            className="hover:bg-gray-50"
-                                            data-oid="subcategory-row"
-                                        >
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap"
-                                                data-oid="subcategory-name-cell"
-                                            >
-                                                <div
-                                                    className="flex items-center"
-                                                    data-oid="subcategory-name-content"
-                                                >
-                                                    <div
-                                                        className="text-2xl ml-3"
-                                                        data-oid="subcategory-icon"
-                                                    >
+                                        <tr key={subcategory.id} className="hover:bg-gray-50">
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                <div className="flex items-center">
+                                                    <div className="text-2xl ml-3">
                                                         {subcategory.icon}
                                                     </div>
-                                                    <div data-oid="subcategory-info">
-                                                        <div
-                                                            className="text-sm font-medium text-gray-900"
-                                                            data-oid="subcategory-name"
-                                                        >
+                                                    <div>
+                                                        <div className="text-sm font-medium text-gray-900">
                                                             {subcategory.name}
                                                         </div>
-                                                        <div
-                                                            className="text-sm text-gray-500"
-                                                            data-oid="subcategory-id"
-                                                        >
+                                                        <div className="text-sm text-gray-500">
                                                             ID: {subcategory.id}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                                data-oid="parent-category-cell"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                 {subcategory.categoryName}
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                                                data-oid="subcategory-services-cell"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                 {subcategory.servicesCount}
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap"
-                                                data-oid="subcategory-status-cell"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap">
                                                 <span
                                                     className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                                                         subcategory.active
                                                             ? 'bg-green-100 text-green-800'
                                                             : 'bg-red-100 text-red-800'
                                                     }`}
-                                                    data-oid="subcategory-status-badge"
                                                 >
                                                     {subcategory.active ? 'نشط' : 'غير نشط'}
                                                 </span>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                data-oid="subcategory-actions-cell"
-                                            >
-                                                <div
-                                                    className="flex space-x-2 space-x-reverse"
-                                                    data-oid="subcategory-actions"
-                                                >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                <div className="flex space-x-2 space-x-reverse">
                                                     <button
                                                         onClick={() =>
                                                             handleEditSubcategory(subcategory)
                                                         }
                                                         className="text-blue-600 hover:text-blue-900"
-                                                        data-oid="edit-subcategory-btn"
                                                     >
                                                         تعديل
                                                     </button>
@@ -646,7 +543,6 @@ export default function ServicesManagement() {
                                                                 ? 'text-red-600 hover:text-red-900'
                                                                 : 'text-green-600 hover:text-green-900'
                                                         }
-                                                        data-oid="toggle-subcategory-btn"
                                                     >
                                                         {subcategory.active
                                                             ? 'إلغاء تفعيل'
@@ -665,163 +561,89 @@ export default function ServicesManagement() {
 
             {/* Services Tab */}
             {activeTab === 'services' && (
-                <div data-oid="6eixzzu">
-                    <div className="flex justify-between items-center mb-6" data-oid="o-ch:dr">
-                        <h2 className="text-xl font-semibold text-gray-900" data-oid="9vohriy">
-                            الخدمات المتاحة
-                        </h2>
+                <div>
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-xl font-semibold text-gray-900">الخدمات المتاحة</h2>
                         <button
                             onClick={() => setShowAddModal(true)}
                             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                            data-oid="15w3cv_"
                         >
                             إضافة خدمة جديدة
                         </button>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow overflow-hidden" data-oid="8rx8i11">
-                        <div className="overflow-x-auto" data-oid="7jj0979">
-                            <table
-                                className="min-w-full divide-y divide-gray-200"
-                                data-oid="l._07_j"
-                            >
-                                <thead className="bg-gray-50" data-oid="df-nsy0">
-                                    <tr data-oid="r:0zyr1">
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="5-nqji6"
-                                        >
+                    <div className="bg-white rounded-lg shadow overflow-hidden">
+                        <div className="overflow-x-auto">
+                            <table className="min-w-full divide-y divide-gray-200">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الخدمة
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="cd.f-p2"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             التصنيف
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="subcategory-header"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             التصنيف الفرعي
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="d1yoa.3"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             عدد مقدمي الخدمة
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="wsxd7dx"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             متوسط السعر
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="ffx.uwz"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الحالة
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="79qqpu8"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الإجراءات
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody
-                                    className="bg-white divide-y divide-gray-200"
-                                    data-oid="zr0t.bw"
-                                >
+                                <tbody className="bg-white divide-y divide-gray-200">
                                     {services.map((service) => (
-                                        <tr
-                                            key={service.id}
-                                            className="hover:bg-gray-50"
-                                            data-oid="ciykoh-"
-                                        >
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap"
-                                                data-oid="su.r_vz"
-                                            >
-                                                <div
-                                                    className="flex items-center"
-                                                    data-oid="ll9wdeo"
-                                                >
-                                                    <div
-                                                        className="text-2xl ml-3"
-                                                        data-oid="u6dk3ir"
-                                                    >
+                                        <tr key={service.id} className="hover:bg-gray-50">
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                <div className="flex items-center">
+                                                    <div className="text-2xl ml-3">
                                                         {service.icon}
                                                     </div>
-                                                    <div data-oid="7kr74fc">
-                                                        <div
-                                                            className="text-sm font-medium text-gray-900"
-                                                            data-oid="vqfrtp-"
-                                                        >
+                                                    <div>
+                                                        <div className="text-sm font-medium text-gray-900">
                                                             {service.name}
                                                         </div>
-                                                        <div
-                                                            className="text-sm text-gray-500"
-                                                            data-oid="ivkgw-c"
-                                                        >
+                                                        <div className="text-sm text-gray-500">
                                                             ID: {service.id}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                                data-oid="wd4wv_6"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                 {service.category}
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                                data-oid="service-subcategory-cell"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                 {service.subcategory}
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                                                data-oid="44zotk6"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                 {service.providers}
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                                                data-oid="ed70e_9"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                 {service.avgPrice} ريال
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap"
-                                                data-oid="v2-9ehj"
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap">
                                                 <span
                                                     className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                                                         service.active
                                                             ? 'bg-green-100 text-green-800'
                                                             : 'bg-red-100 text-red-800'
                                                     }`}
-                                                    data-oid=".h2722k"
                                                 >
                                                     {service.active ? 'نشط' : 'غير نشط'}
                                                 </span>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                data-oid="0sc3h8l"
-                                            >
-                                                <div
-                                                    className="flex space-x-2 space-x-reverse"
-                                                    data-oid="az-d3l6"
-                                                >
-                                                    <button
-                                                        className="text-blue-600 hover:text-blue-900"
-                                                        data-oid="yo5aw9:"
-                                                    >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                <div className="flex space-x-2 space-x-reverse">
+                                                    <button className="text-blue-600 hover:text-blue-900">
                                                         تعديل
                                                     </button>
                                                     <button
@@ -830,7 +652,6 @@ export default function ServicesManagement() {
                                                                 ? 'text-red-600 hover:text-red-900'
                                                                 : 'text-green-600 hover:text-green-900'
                                                         }
-                                                        data-oid="jknmgzf"
                                                     >
                                                         {service.active ? 'إلغاء تفعيل' : 'تفعيل'}
                                                     </button>
@@ -847,15 +668,9 @@ export default function ServicesManagement() {
 
             {/* Add Modal */}
             {showAddModal && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                    data-oid="xjgl:mi"
-                >
-                    <div
-                        className="bg-white rounded-lg p-6 w-full max-w-md mx-4"
-                        data-oid="n.w0lzm"
-                    >
-                        <h3 className="text-lg font-medium text-gray-900 mb-4" data-oid="1mcryz6">
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-6 w-full max-w-md mx-4">
+                        <h3 className="text-lg font-medium text-gray-900 mb-4">
                             {activeTab === 'categories'
                                 ? 'إضافة تصنيف جديد'
                                 : activeTab === 'subcategories'
@@ -864,12 +679,9 @@ export default function ServicesManagement() {
                         </h3>
 
                         {activeTab === 'categories' ? (
-                            <div className="space-y-4" data-oid="my..sx5">
-                                <div data-oid="0d9fnwq">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="upgmov6"
-                                    >
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اسم التصنيف
                                     </label>
                                     <input
@@ -880,14 +692,10 @@ export default function ServicesManagement() {
                                             setNewCategory({ ...newCategory, name: e.target.value })
                                         }
                                         placeholder="مثال: خدمات المنزل"
-                                        data-oid="npeu6dx"
                                     />
                                 </div>
-                                <div data-oid="h375.t1">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="zrwog3."
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         الأيقونة
                                     </label>
                                     <input
@@ -898,14 +706,10 @@ export default function ServicesManagement() {
                                             setNewCategory({ ...newCategory, icon: e.target.value })
                                         }
                                         placeholder="🏠"
-                                        data-oid="kd5rzmw"
                                     />
                                 </div>
-                                <div data-oid="c0t_cc_">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="vzfj-yp"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اللون
                                     </label>
                                     <select
@@ -917,36 +721,20 @@ export default function ServicesManagement() {
                                                 color: e.target.value,
                                             })
                                         }
-                                        data-oid="pclvpk0"
                                     >
-                                        <option value="bg-blue-500" data-oid="k:bd-nv">
-                                            أزرق
-                                        </option>
-                                        <option value="bg-green-500" data-oid="q6ow6-4">
-                                            أخضر
-                                        </option>
-                                        <option value="bg-orange-500" data-oid="56o_vrl">
-                                            برتقالي
-                                        </option>
-                                        <option value="bg-purple-500" data-oid="60_lmj-">
-                                            بنفسجي
-                                        </option>
-                                        <option value="bg-pink-500" data-oid="tew2:p5">
-                                            وردي
-                                        </option>
-                                        <option value="bg-red-500" data-oid="la71kib">
-                                            أحمر
-                                        </option>
+                                        <option value="bg-blue-500">أزرق</option>
+                                        <option value="bg-green-500">أخضر</option>
+                                        <option value="bg-orange-500">برتقالي</option>
+                                        <option value="bg-purple-500">بنفسجي</option>
+                                        <option value="bg-pink-500">وردي</option>
+                                        <option value="bg-red-500">أحمر</option>
                                     </select>
                                 </div>
                             </div>
                         ) : activeTab === 'subcategories' ? (
-                            <div className="space-y-4" data-oid="subcategory-form">
-                                <div data-oid="subcategory-name-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="subcategory-name-label"
-                                    >
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اسم التصنيف الفرعي
                                     </label>
                                     <input
@@ -960,14 +748,10 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="مثال: تنظيف عام"
-                                        data-oid="subcategory-name-input"
                                     />
                                 </div>
-                                <div data-oid="subcategory-parent-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="subcategory-parent-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         التصنيف الرئيسي
                                     </label>
                                     <select
@@ -979,27 +763,17 @@ export default function ServicesManagement() {
                                                 categoryId: e.target.value,
                                             })
                                         }
-                                        data-oid="subcategory-parent-select"
                                     >
-                                        <option value="" data-oid="subcategory-parent-default">
-                                            اختر التصنيف الرئيسي
-                                        </option>
+                                        <option value="">اختر التصنيف الرئيسي</option>
                                         {categories.map((cat) => (
-                                            <option
-                                                key={cat.id}
-                                                value={cat.id.toString()}
-                                                data-oid="subcategory-parent-option"
-                                            >
+                                            <option key={cat.id} value={cat.id.toString()}>
                                                 {cat.name}
                                             </option>
                                         ))}
                                     </select>
                                 </div>
-                                <div data-oid="subcategory-icon-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="subcategory-icon-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         الأيقونة
                                     </label>
                                     <input
@@ -1013,17 +787,13 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="🧹"
-                                        data-oid="subcategory-icon-input"
                                     />
                                 </div>
                             </div>
                         ) : (
-                            <div className="space-y-4" data-oid="sqyo:wg">
-                                <div data-oid="noy:rua">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="grcql_w"
-                                    >
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اسم الخدمة
                                     </label>
                                     <input
@@ -1034,14 +804,10 @@ export default function ServicesManagement() {
                                             setNewService({ ...newService, name: e.target.value })
                                         }
                                         placeholder="مثال: تنظيف المنزل"
-                                        data-oid="gt0ya60"
                                     />
                                 </div>
-                                <div data-oid="n3u8yuc">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="4_0rpxf"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         التصنيف الرئيسي
                                     </label>
                                     <select
@@ -1054,27 +820,17 @@ export default function ServicesManagement() {
                                                 subcategory: '', // Reset subcategory when category changes
                                             })
                                         }
-                                        data-oid="c.-8bs7"
                                     >
-                                        <option value="" data-oid="3r-gg21">
-                                            اختر التصنيف الرئيسي
-                                        </option>
+                                        <option value="">اختر التصنيف الرئيسي</option>
                                         {categories.map((cat) => (
-                                            <option
-                                                key={cat.id}
-                                                value={cat.name}
-                                                data-oid="8yram1x"
-                                            >
+                                            <option key={cat.id} value={cat.name}>
                                                 {cat.name}
                                             </option>
                                         ))}
                                     </select>
                                 </div>
-                                <div data-oid="service-subcategory-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="service-subcategory-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         التصنيف الفرعي
                                     </label>
                                     <select
@@ -1087,31 +843,21 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         disabled={!newService.category}
-                                        data-oid="service-subcategory-select"
                                     >
-                                        <option value="" data-oid="service-subcategory-default">
-                                            اختر التصنيف الفرعي
-                                        </option>
+                                        <option value="">اختر التصنيف الفرعي</option>
                                         {subcategories
                                             .filter(
                                                 (sub) => sub.categoryName === newService.category,
                                             )
                                             .map((sub) => (
-                                                <option
-                                                    key={sub.id}
-                                                    value={sub.name}
-                                                    data-oid="service-subcategory-option"
-                                                >
+                                                <option key={sub.id} value={sub.name}>
                                                     {sub.name}
                                                 </option>
                                             ))}
                                     </select>
                                 </div>
-                                <div data-oid="u5c:0a2">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="ub04kui"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         الأيقونة
                                     </label>
                                     <input
@@ -1122,14 +868,10 @@ export default function ServicesManagement() {
                                             setNewService({ ...newService, icon: e.target.value })
                                         }
                                         placeholder="🏠"
-                                        data-oid="zutk2d0"
                                     />
                                 </div>
-                                <div data-oid="ufe9-n.">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="k9d7fvs"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         متوسط السعر (ريال)
                                     </label>
                                     <input
@@ -1143,13 +885,12 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="50"
-                                        data-oid="m8gjfcz"
                                     />
                                 </div>
                             </div>
                         )}
 
-                        <div className="flex space-x-3 space-x-reverse mt-6" data-oid="pmkwi_n">
+                        <div className="flex space-x-3 space-x-reverse mt-6">
                             <button
                                 onClick={
                                     activeTab === 'categories'
@@ -1159,14 +900,12 @@ export default function ServicesManagement() {
                                           : handleAddService
                                 }
                                 className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-                                data-oid="j14ghoo"
                             >
                                 إضافة
                             </button>
                             <button
                                 onClick={() => setShowAddModal(false)}
                                 className="flex-1 bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 transition-colors"
-                                data-oid="en:ohwo"
                             >
                                 إلغاء
                             </button>
@@ -1177,28 +916,16 @@ export default function ServicesManagement() {
 
             {/* Edit Modal */}
             {showEditModal && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                    data-oid="edit-modal-overlay"
-                >
-                    <div
-                        className="bg-white rounded-lg p-6 w-full max-w-md mx-4"
-                        data-oid="edit-modal-content"
-                    >
-                        <h3
-                            className="text-lg font-medium text-gray-900 mb-4"
-                            data-oid="edit-modal-title"
-                        >
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-6 w-full max-w-md mx-4">
+                        <h3 className="text-lg font-medium text-gray-900 mb-4">
                             {editingItem === 'category' ? 'تعديل التصنيف' : 'تعديل التصنيف الفرعي'}
                         </h3>
 
                         {editingItem === 'category' ? (
-                            <div className="space-y-4" data-oid="edit-category-form">
-                                <div data-oid="edit-category-name-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="edit-category-name-label"
-                                    >
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اسم التصنيف
                                     </label>
                                     <input
@@ -1212,14 +939,10 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="مثال: خدمات المنزل"
-                                        data-oid="edit-category-name-input"
                                     />
                                 </div>
-                                <div data-oid="edit-category-icon-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="edit-category-icon-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         الأيقونة
                                     </label>
                                     <input
@@ -1233,14 +956,10 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="🏠"
-                                        data-oid="edit-category-icon-input"
                                     />
                                 </div>
-                                <div data-oid="edit-category-color-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="edit-category-color-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اللون
                                     </label>
                                     <select
@@ -1252,42 +971,21 @@ export default function ServicesManagement() {
                                                 color: e.target.value,
                                             })
                                         }
-                                        data-oid="edit-category-color-select"
                                     >
-                                        <option value="bg-blue-500" data-oid="edit-color-blue">
-                                            أزرق
-                                        </option>
-                                        <option value="bg-green-500" data-oid="edit-color-green">
-                                            أخضر
-                                        </option>
-                                        <option value="bg-orange-500" data-oid="edit-color-orange">
-                                            برتقالي
-                                        </option>
-                                        <option value="bg-purple-500" data-oid="edit-color-purple">
-                                            بنفسجي
-                                        </option>
-                                        <option value="bg-pink-500" data-oid="edit-color-pink">
-                                            وردي
-                                        </option>
-                                        <option value="bg-red-500" data-oid="edit-color-red">
-                                            أحمر
-                                        </option>
-                                        <option
-                                            value="bg-emerald-500"
-                                            data-oid="edit-color-emerald"
-                                        >
-                                            أخضر زمردي
-                                        </option>
+                                        <option value="bg-blue-500">أزرق</option>
+                                        <option value="bg-green-500">أخضر</option>
+                                        <option value="bg-orange-500">برتقالي</option>
+                                        <option value="bg-purple-500">بنفسجي</option>
+                                        <option value="bg-pink-500">وردي</option>
+                                        <option value="bg-red-500">أحمر</option>
+                                        <option value="bg-emerald-500">أخضر زمردي</option>
                                     </select>
                                 </div>
                             </div>
                         ) : (
-                            <div className="space-y-4" data-oid="edit-subcategory-form">
-                                <div data-oid="edit-subcategory-name-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="edit-subcategory-name-label"
-                                    >
+                            <div className="space-y-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         اسم التصنيف الفرعي
                                     </label>
                                     <input
@@ -1301,14 +999,10 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="مثال: تنظيف عام"
-                                        data-oid="edit-subcategory-name-input"
                                     />
                                 </div>
-                                <div data-oid="edit-subcategory-parent-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="edit-subcategory-parent-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         التصنيف الرئيسي
                                     </label>
                                     <select
@@ -1320,27 +1014,17 @@ export default function ServicesManagement() {
                                                 categoryId: e.target.value,
                                             })
                                         }
-                                        data-oid="edit-subcategory-parent-select"
                                     >
-                                        <option value="" data-oid="edit-subcategory-parent-default">
-                                            اختر التصنيف الرئيسي
-                                        </option>
+                                        <option value="">اختر التصنيف الرئيسي</option>
                                         {categories.map((cat) => (
-                                            <option
-                                                key={cat.id}
-                                                value={cat.id.toString()}
-                                                data-oid="edit-subcategory-parent-option"
-                                            >
+                                            <option key={cat.id} value={cat.id.toString()}>
                                                 {cat.name}
                                             </option>
                                         ))}
                                     </select>
                                 </div>
-                                <div data-oid="edit-subcategory-icon-field">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                        data-oid="edit-subcategory-icon-label"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
                                         الأيقونة
                                     </label>
                                     <input
@@ -1354,16 +1038,12 @@ export default function ServicesManagement() {
                                             })
                                         }
                                         placeholder="🧹"
-                                        data-oid="edit-subcategory-icon-input"
                                     />
                                 </div>
                             </div>
                         )}
 
-                        <div
-                            className="flex space-x-3 space-x-reverse mt-6"
-                            data-oid="edit-modal-buttons"
-                        >
+                        <div className="flex space-x-3 space-x-reverse mt-6">
                             <button
                                 onClick={
                                     editingItem === 'category'
@@ -1371,14 +1051,12 @@ export default function ServicesManagement() {
                                         : handleUpdateSubcategory
                                 }
                                 className="flex-1 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-                                data-oid="edit-modal-save-btn"
                             >
                                 حفظ التغييرات
                             </button>
                             <button
                                 onClick={closeEditModal}
                                 className="flex-1 bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 transition-colors"
-                                data-oid="edit-modal-cancel-btn"
                             >
                                 إلغاء
                             </button>

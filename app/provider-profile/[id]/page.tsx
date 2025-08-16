@@ -190,127 +190,70 @@ export default function ProviderProfilePage() {
 
     if (!provider) {
         return (
-            <div
-                className="min-h-screen bg-gray-50 flex items-center justify-center"
-                dir="rtl"
-                data-oid="a_82g7l"
-            >
-                <div className="text-center" data-oid="29bev8:">
-                    <div
-                        className="animate-spin w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
-                        data-oid="u:iqel0"
-                    ></div>
-                    <p className="text-gray-600" data-oid="vfykiqg">
-                        جاري تحميل الملف الشخصي...
-                    </p>
+            <div className="min-h-screen bg-gray-50 flex items-center justify-center" dir="rtl">
+                <div className="text-center">
+                    <div className="animate-spin w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+                    <p className="text-gray-600">جاري تحميل الملف الشخصي...</p>
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="8codid8">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="jt6p_z3"
-            >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="5mdb:wb">
-                    <div className="flex items-center justify-between mb-6" data-oid="f_zjnop">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="max-w-sm mx-auto px-4 py-6">
+                    <div className="flex items-center justify-between mb-6">
                         <Link
                             href="/services"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="2kxuc5p"
                         >
-                            <span className="text-lg" data-oid="d1oy678">
-                                ←
-                            </span>
+                            <span className="text-lg">←</span>
                         </Link>
-                        <h1 className="text-lg font-bold" data-oid="ipv:dr6">
-                            الملف الشخصي
-                        </h1>
+                        <h1 className="text-lg font-bold">الملف الشخصي</h1>
                         <button
                             onClick={() => setShowContactModal(true)}
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="efqrzkm"
                         >
-                            <span className="text-lg" data-oid="cb5xbjd">
-                                📞
-                            </span>
+                            <span className="text-lg">📞</span>
                         </button>
                     </div>
 
                     {/* Provider Header Info */}
-                    <div className="text-center" data-oid="6n4qb8q">
-                        <div className="relative inline-block mb-4" data-oid="e4.qzjy">
-                            <div className="text-6xl" data-oid="pr5l1mg">
-                                {provider.avatar}
-                            </div>
+                    <div className="text-center">
+                        <div className="relative inline-block mb-4">
+                            <div className="text-6xl">{provider.avatar}</div>
                             {provider.isOnline && (
-                                <div
-                                    className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white"
-                                    data-oid="3ew1qfq"
-                                ></div>
+                                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white"></div>
                             )}
                         </div>
-                        <h2 className="text-2xl font-bold mb-2" data-oid="um_djm2">
-                            {provider.name}
-                        </h2>
-                        <div
-                            className="flex items-center justify-center space-x-4 space-x-reverse mb-4"
-                            data-oid="3feqe:c"
-                        >
-                            <div
-                                className="flex items-center space-x-1 space-x-reverse"
-                                data-oid="qr5y5n0"
-                            >
-                                <span className="text-yellow-400" data-oid="t9eh.-:">
-                                    ⭐
-                                </span>
-                                <span className="font-semibold" data-oid="kxzhvjt">
-                                    {provider.rating}
-                                </span>
+                        <h2 className="text-2xl font-bold mb-2">{provider.name}</h2>
+                        <div className="flex items-center justify-center space-x-4 space-x-reverse mb-4">
+                            <div className="flex items-center space-x-1 space-x-reverse">
+                                <span className="text-yellow-400">⭐</span>
+                                <span className="font-semibold">{provider.rating}</span>
                             </div>
-                            <span data-oid="b6pkqg3">({provider.completedJobs} خدمة مكتملة)</span>
+                            <span>({provider.completedJobs} خدمة مكتملة)</span>
                             {provider.verified && (
-                                <span
-                                    className="bg-white/20 text-white text-xs px-2 py-1 rounded-full"
-                                    data-oid=".zgy:v0"
-                                >
+                                <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">
                                     موثق ✓
                                 </span>
                             )}
                         </div>
-                        <p className="text-white/90 text-sm mb-4" data-oid=":ln7kz.">
-                            {provider.description}
-                        </p>
-                        <div
-                            className="flex items-center justify-center space-x-6 space-x-reverse text-sm"
-                            data-oid="is9w:dy"
-                        >
-                            <div className="text-center" data-oid="p1jliv3">
-                                <div className="font-bold" data-oid="j21amu0">
-                                    {provider.distance}
-                                </div>
-                                <div className="text-white/80" data-oid="0rnbbd1">
-                                    المسافة
-                                </div>
+                        <p className="text-white/90 text-sm mb-4">{provider.description}</p>
+                        <div className="flex items-center justify-center space-x-6 space-x-reverse text-sm">
+                            <div className="text-center">
+                                <div className="font-bold">{provider.distance}</div>
+                                <div className="text-white/80">المسافة</div>
                             </div>
-                            <div className="text-center" data-oid="7vzeffe">
-                                <div className="font-bold" data-oid="5f-f2im">
-                                    {provider.responseTime}
-                                </div>
-                                <div className="text-white/80" data-oid="14mbovh">
-                                    وقت الاستجابة
-                                </div>
+                            <div className="text-center">
+                                <div className="font-bold">{provider.responseTime}</div>
+                                <div className="text-white/80">وقت الاستجابة</div>
                             </div>
-                            <div className="text-center" data-oid="2a0zud6">
-                                <div className="font-bold" data-oid="o2:qqck">
-                                    {getJoinDuration()}
-                                </div>
-                                <div className="text-white/80" data-oid="x7lg4nq">
-                                    في الخدمة
-                                </div>
+                            <div className="text-center">
+                                <div className="font-bold">{getJoinDuration()}</div>
+                                <div className="text-white/80">في الخدمة</div>
                             </div>
                         </div>
                     </div>
@@ -318,9 +261,9 @@ export default function ProviderProfilePage() {
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="od6lpoi">
-                <div className="bg-white rounded-2xl shadow-lg p-1 mb-6" data-oid=".i..c2i">
-                    <div className="grid grid-cols-4 gap-1" data-oid="alu2o49">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10">
+                <div className="bg-white rounded-2xl shadow-lg p-1 mb-6">
+                    <div className="grid grid-cols-4 gap-1">
                         {[
                             { key: 'overview', label: 'نظرة عامة', icon: '📋' },
                             { key: 'services', label: 'الخدمات', icon: '🛠️' },
@@ -335,11 +278,8 @@ export default function ProviderProfilePage() {
                                         ? 'bg-blue-500 text-white'
                                         : 'text-gray-600 hover:bg-gray-50'
                                 }`}
-                                data-oid="4c-53sg"
                             >
-                                <div className="text-lg mb-1" data-oid="83rkmvw">
-                                    {tab.icon}
-                                </div>
+                                <div className="text-lg mb-1">{tab.icon}</div>
                                 {tab.label}
                             </button>
                         ))}
@@ -348,43 +288,24 @@ export default function ProviderProfilePage() {
             </div>
 
             {/* Tab Content */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="aj2ehj.">
+            <div className="max-w-sm mx-auto px-4 pb-6">
                 {/* Overview Tab */}
                 {activeTab === 'overview' && (
-                    <div className="space-y-4" data-oid=":blen9_">
+                    <div className="space-y-4">
                         {/* Bio */}
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="mc2egcy"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid="9x_dsmq"
-                            >
-                                نبذة شخصية
-                            </h3>
-                            <p className="text-gray-700 leading-relaxed" data-oid="9_bb-b3">
-                                {provider.bio}
-                            </p>
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-3">نبذة شخصية</h3>
+                            <p className="text-gray-700 leading-relaxed">{provider.bio}</p>
                         </div>
 
                         {/* Specialties */}
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="dgj1j5."
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-3"
-                                data-oid="3pn4ifs"
-                            >
-                                التخصصات
-                            </h3>
-                            <div className="flex flex-wrap gap-2" data-oid="4hj73qj">
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-3">التخصصات</h3>
+                            <div className="flex flex-wrap gap-2">
                                 {provider.specialties.map((specialty, index) => (
                                     <span
                                         key={index}
                                         className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                                        data-oid="4f2r5pw"
                                     >
                                         {specialty}
                                     </span>
@@ -393,89 +314,47 @@ export default function ProviderProfilePage() {
                         </div>
 
                         {/* Details */}
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="xai29ry"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-4"
-                                data-oid="v64wa7-"
-                            >
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-4">
                                 تفاصيل إضافية
                             </h3>
-                            <div className="space-y-3" data-oid="o3-tyl9">
-                                <div
-                                    className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid=":n.cexi"
-                                >
-                                    <span className="text-xl" data-oid="aa46h6f">
-                                        📍
-                                    </span>
-                                    <div data-oid="j-h0p33">
-                                        <div
-                                            className="font-semibold text-gray-800"
-                                            data-oid="_3aafpk"
-                                        >
-                                            الموقع
-                                        </div>
-                                        <div className="text-gray-600 text-sm" data-oid="pd5hke1">
+                            <div className="space-y-3">
+                                <div className="flex items-center space-x-3 space-x-reverse">
+                                    <span className="text-xl">📍</span>
+                                    <div>
+                                        <div className="font-semibold text-gray-800">الموقع</div>
+                                        <div className="text-gray-600 text-sm">
                                             {provider.location}
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="oa152uw"
-                                >
-                                    <span className="text-xl" data-oid="cujg._f">
-                                        🕒
-                                    </span>
-                                    <div data-oid="h3-yaeg">
-                                        <div
-                                            className="font-semibold text-gray-800"
-                                            data-oid="wzvnkxe"
-                                        >
+                                <div className="flex items-center space-x-3 space-x-reverse">
+                                    <span className="text-xl">🕒</span>
+                                    <div>
+                                        <div className="font-semibold text-gray-800">
                                             ساعات العمل
                                         </div>
-                                        <div className="text-gray-600 text-sm" data-oid="ywprn2.">
+                                        <div className="text-gray-600 text-sm">
                                             {provider.workingHours}
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="of-te8p"
-                                >
-                                    <span className="text-xl" data-oid="mtlsn7n">
-                                        🗣️
-                                    </span>
-                                    <div data-oid="wnerzqr">
-                                        <div
-                                            className="font-semibold text-gray-800"
-                                            data-oid="z8ok:-g"
-                                        >
-                                            اللغات
-                                        </div>
-                                        <div className="text-gray-600 text-sm" data-oid="0s69ek8">
+                                <div className="flex items-center space-x-3 space-x-reverse">
+                                    <span className="text-xl">🗣️</span>
+                                    <div>
+                                        <div className="font-semibold text-gray-800">اللغات</div>
+                                        <div className="text-gray-600 text-sm">
                                             {provider.languages.join(', ')}
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    className="flex items-center space-x-3 space-x-reverse"
-                                    data-oid="nzrfhg0"
-                                >
-                                    <span className="text-xl" data-oid="ikts01_">
-                                        📅
-                                    </span>
-                                    <div data-oid="bk2fgwn">
-                                        <div
-                                            className="font-semibold text-gray-800"
-                                            data-oid="nl:d9c1"
-                                        >
+                                <div className="flex items-center space-x-3 space-x-reverse">
+                                    <span className="text-xl">📅</span>
+                                    <div>
+                                        <div className="font-semibold text-gray-800">
                                             تاريخ الانضمام
                                         </div>
-                                        <div className="text-gray-600 text-sm" data-oid="mt.r9ra">
+                                        <div className="text-gray-600 text-sm">
                                             {formatDate(provider.joinDate)}
                                         </div>
                                     </div>
@@ -487,61 +366,35 @@ export default function ProviderProfilePage() {
 
                 {/* Services Tab */}
                 {activeTab === 'services' && (
-                    <div className="space-y-4" data-oid="667r5tt">
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="uth24e-"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-4"
-                                data-oid="jq0-1e:"
-                            >
+                    <div className="space-y-4">
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-4">
                                 الخدمات المتاحة
                             </h3>
-                            <div className="space-y-4" data-oid="1d54ds-">
+                            <div className="space-y-4">
                                 {provider.services.map((service) => (
                                     <div
                                         key={service.id}
                                         className="border border-gray-100 rounded-xl p-4"
-                                        data-oid="b68p2el"
                                     >
-                                        <div
-                                            className="flex justify-between items-start mb-2"
-                                            data-oid="u3lbrt1"
-                                        >
-                                            <h4
-                                                className="font-semibold text-gray-800"
-                                                data-oid="d.biu32"
-                                            >
+                                        <div className="flex justify-between items-start mb-2">
+                                            <h4 className="font-semibold text-gray-800">
                                                 {service.name}
                                             </h4>
-                                            <span
-                                                className="text-blue-600 font-bold"
-                                                data-oid="pkf7m64"
-                                            >
+                                            <span className="text-blue-600 font-bold">
                                                 {service.price}
                                             </span>
                                         </div>
-                                        <p
-                                            className="text-gray-600 text-sm mb-3"
-                                            data-oid=".xktn_5"
-                                        >
+                                        <p className="text-gray-600 text-sm mb-3">
                                             {service.description}
                                         </p>
-                                        <div
-                                            className="flex justify-between items-center"
-                                            data-oid="_myawag"
-                                        >
-                                            <span
-                                                className="text-gray-500 text-sm"
-                                                data-oid="xuns66l"
-                                            >
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-gray-500 text-sm">
                                                 ⏱️ {service.duration}
                                             </span>
                                             <button
                                                 onClick={() => handleRequestService(service)}
                                                 className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold"
-                                                data-oid="7xs0fvu"
                                             >
                                                 طلب الخدمة
                                             </button>
@@ -555,66 +408,33 @@ export default function ProviderProfilePage() {
 
                 {/* Reviews Tab */}
                 {activeTab === 'reviews' && (
-                    <div className="space-y-4" data-oid="9nfu5cw">
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="yplep:7"
-                        >
-                            <div
-                                className="flex justify-between items-center mb-4"
-                                data-oid="q8_8w.e"
-                            >
-                                <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    data-oid="74zvkwk"
-                                >
-                                    التقييمات
-                                </h3>
-                                <div
-                                    className="flex items-center space-x-2 space-x-reverse"
-                                    data-oid="vv8khxf"
-                                >
-                                    <span className="text-yellow-500" data-oid="tjqsv_o">
-                                        ⭐
-                                    </span>
-                                    <span className="font-bold" data-oid="3-6xr4e">
-                                        {provider.rating}
-                                    </span>
-                                    <span className="text-gray-500" data-oid="v_wd4yy">
+                    <div className="space-y-4">
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <div className="flex justify-between items-center mb-4">
+                                <h3 className="text-lg font-semibold text-gray-800">التقييمات</h3>
+                                <div className="flex items-center space-x-2 space-x-reverse">
+                                    <span className="text-yellow-500">⭐</span>
+                                    <span className="font-bold">{provider.rating}</span>
+                                    <span className="text-gray-500">
                                         ({provider.reviews.length})
                                     </span>
                                 </div>
                             </div>
 
-                            <div className="space-y-4" data-oid="z-0qhtz">
+                            <div className="space-y-4">
                                 {provider.reviews.map((review) => (
                                     <div
                                         key={review.id}
                                         className="border-b border-gray-100 pb-4 last:border-b-0"
-                                        data-oid=":coya.u"
                                     >
-                                        <div
-                                            className="flex items-start space-x-3 space-x-reverse mb-2"
-                                            data-oid="92vk409"
-                                        >
-                                            <div className="text-2xl" data-oid="6umcxbq">
-                                                {review.customerAvatar}
-                                            </div>
-                                            <div className="flex-1" data-oid="jnxkhvh">
-                                                <div
-                                                    className="flex justify-between items-start mb-1"
-                                                    data-oid="fw19c_6"
-                                                >
-                                                    <h4
-                                                        className="font-semibold text-gray-800"
-                                                        data-oid="usi_f4s"
-                                                    >
+                                        <div className="flex items-start space-x-3 space-x-reverse mb-2">
+                                            <div className="text-2xl">{review.customerAvatar}</div>
+                                            <div className="flex-1">
+                                                <div className="flex justify-between items-start mb-1">
+                                                    <h4 className="font-semibold text-gray-800">
                                                         {review.customerName}
                                                     </h4>
-                                                    <div
-                                                        className="flex items-center space-x-1 space-x-reverse"
-                                                        data-oid="l4nzyxu"
-                                                    >
+                                                    <div className="flex items-center space-x-1 space-x-reverse">
                                                         {[...Array(5)].map((_, i) => (
                                                             <span
                                                                 key={i}
@@ -623,29 +443,18 @@ export default function ProviderProfilePage() {
                                                                         ? 'text-yellow-500'
                                                                         : 'text-gray-300'
                                                                 }`}
-                                                                data-oid="8xbhhv5"
                                                             >
                                                                 ⭐
                                                             </span>
                                                         ))}
                                                     </div>
                                                 </div>
-                                                <p
-                                                    className="text-gray-700 text-sm mb-2"
-                                                    data-oid="nzrbhgj"
-                                                >
+                                                <p className="text-gray-700 text-sm mb-2">
                                                     {review.comment}
                                                 </p>
-                                                <div
-                                                    className="flex justify-between items-center text-xs text-gray-500"
-                                                    data-oid="qbo_xv6"
-                                                >
-                                                    <span data-oid="cj-yncc">
-                                                        {review.serviceName}
-                                                    </span>
-                                                    <span data-oid="slo47.s">
-                                                        {formatDate(review.date)}
-                                                    </span>
+                                                <div className="flex justify-between items-center text-xs text-gray-500">
+                                                    <span>{review.serviceName}</span>
+                                                    <span>{formatDate(review.date)}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -658,23 +467,16 @@ export default function ProviderProfilePage() {
 
                 {/* Gallery Tab */}
                 {activeTab === 'gallery' && (
-                    <div className="space-y-4" data-oid="bbw.9ut">
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="4nnfyym"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-4"
-                                data-oid="-rz8xtk"
-                            >
+                    <div className="space-y-4">
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-4">
                                 معرض الأعمال
                             </h3>
-                            <div className="grid grid-cols-2 gap-4" data-oid="k55fq68">
+                            <div className="grid grid-cols-2 gap-4">
                                 {provider.gallery.map((image, index) => (
                                     <div
                                         key={index}
                                         className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center text-4xl"
-                                        data-oid="x5reg3i"
                                     >
                                         {image}
                                     </div>
@@ -686,22 +488,17 @@ export default function ProviderProfilePage() {
             </div>
 
             {/* Fixed Bottom Actions */}
-            <div
-                className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4"
-                data-oid="lrvpw2_"
-            >
-                <div className="max-w-sm mx-auto flex space-x-3 space-x-reverse" data-oid="xuztvdr">
+            <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
+                <div className="max-w-sm mx-auto flex space-x-3 space-x-reverse">
                     <button
                         onClick={() => handleRequestService()}
                         className="flex-1 bg-blue-500 text-white py-4 rounded-2xl font-semibold"
-                        data-oid="8:8t:e7"
                     >
                         طلب خدمة - {provider.price}
                     </button>
                     <Link
                         href={`/chat/${provider.id}`}
                         className="px-6 py-4 bg-gray-100 text-gray-700 rounded-2xl flex items-center justify-center"
-                        data-oid="t1q4jxo"
                     >
                         💬
                     </Link>
@@ -713,73 +510,42 @@ export default function ProviderProfilePage() {
                 <div
                     className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
                     onClick={() => setShowContactModal(false)}
-                    data-oid="48wmjkj"
                 >
                     <div
                         className="bg-white w-full max-w-sm mx-4 rounded-3xl p-6"
                         onClick={(e) => e.stopPropagation()}
-                        data-oid="um8-hf:"
                     >
-                        <h3
-                            className="text-xl font-bold text-gray-800 mb-4 text-center"
-                            data-oid="1_n_87w"
-                        >
+                        <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
                             معلومات التواصل
                         </h3>
-                        <div className="space-y-4" data-oid="io45h_:">
-                            <div
-                                className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl"
-                                data-oid="_b-ipvv"
-                            >
-                                <span className="text-2xl" data-oid="6hlzw98">
-                                    📱
-                                </span>
-                                <div data-oid="f5.w256">
-                                    <div className="font-semibold text-gray-800" data-oid="rrucs94">
-                                        رقم الهاتف
-                                    </div>
-                                    <div className="text-gray-600" data-oid="raes018">
-                                        +966 50 123 4567
-                                    </div>
+                        <div className="space-y-4">
+                            <div className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl">
+                                <span className="text-2xl">📱</span>
+                                <div>
+                                    <div className="font-semibold text-gray-800">رقم الهاتف</div>
+                                    <div className="text-gray-600">+966 50 123 4567</div>
                                 </div>
                             </div>
-                            <div
-                                className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl"
-                                data-oid="vf4bcaa"
-                            >
-                                <span className="text-2xl" data-oid="b3iyqdc">
-                                    📧
-                                </span>
-                                <div data-oid="vh0txc1">
-                                    <div className="font-semibold text-gray-800" data-oid="jm-l1s9">
+                            <div className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl">
+                                <span className="text-2xl">📧</span>
+                                <div>
+                                    <div className="font-semibold text-gray-800">
                                         البريد الإلكتروني
                                     </div>
-                                    <div className="text-gray-600" data-oid="g_e67y:">
-                                        ahmed.ali@example.com
-                                    </div>
+                                    <div className="text-gray-600">ahmed.ali@example.com</div>
                                 </div>
                             </div>
-                            <div
-                                className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl"
-                                data-oid="l-hf0o0"
-                            >
-                                <span className="text-2xl" data-oid="yzh7tag">
-                                    💬
-                                </span>
-                                <div data-oid="l6u6was">
-                                    <div className="font-semibold text-gray-800" data-oid="jz6554s">
-                                        واتساب
-                                    </div>
-                                    <div className="text-gray-600" data-oid="rrupn2g">
-                                        +966 50 123 4567
-                                    </div>
+                            <div className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl">
+                                <span className="text-2xl">💬</span>
+                                <div>
+                                    <div className="font-semibold text-gray-800">واتساب</div>
+                                    <div className="text-gray-600">+966 50 123 4567</div>
                                 </div>
                             </div>
                         </div>
                         <button
                             onClick={() => setShowContactModal(false)}
                             className="w-full bg-blue-500 text-white py-3 rounded-xl font-semibold mt-6"
-                            data-oid="76ce_gp"
                         >
                             إغلاق
                         </button>
@@ -788,7 +554,7 @@ export default function ProviderProfilePage() {
             )}
 
             {/* Padding for bottom actions */}
-            <div className="h-24" data-oid="1xr1:x8"></div>
+            <div className="h-24"></div>
         </div>
     );
 }

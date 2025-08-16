@@ -35,20 +35,16 @@ export default function AdminSettings() {
     };
 
     return (
-        <div className="p-6" data-oid="4f.71d-">
-            <div className="mb-6" data-oid="d9i.l1v">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2" data-oid="96kevmr">
-                    إعدادات النظام
-                </h1>
-                <p className="text-gray-600" data-oid="1jufeu3">
-                    إدارة إعدادات التطبيق والنظام العامة
-                </p>
+        <div className="p-6">
+            <div className="mb-6">
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">إعدادات النظام</h1>
+                <p className="text-gray-600">إدارة إعدادات التطبيق والنظام العامة</p>
             </div>
 
             {/* Tabs */}
-            <div className="mb-6" data-oid="3372ujz">
-                <div className="border-b border-gray-200" data-oid="390sa3d">
-                    <nav className="-mb-px flex space-x-8 space-x-reverse" data-oid="vcepl1l">
+            <div className="mb-6">
+                <div className="border-b border-gray-200">
+                    <nav className="-mb-px flex space-x-8 space-x-reverse">
                         <button
                             onClick={() => setActiveTab('general')}
                             className={`py-2 px-1 border-b-2 font-medium text-sm ${
@@ -56,7 +52,6 @@ export default function AdminSettings() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="edmhu39"
                         >
                             الإعدادات العامة
                         </button>
@@ -67,7 +62,6 @@ export default function AdminSettings() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="y7d1_dj"
                         >
                             إعدادات الأعمال
                         </button>
@@ -78,7 +72,6 @@ export default function AdminSettings() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="r8q8_y6"
                         >
                             الإشعارات
                         </button>
@@ -89,7 +82,6 @@ export default function AdminSettings() {
                                     ? 'border-blue-500 text-blue-600'
                                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                             }`}
-                            data-oid="sgx5ccc"
                         >
                             الأمان
                         </button>
@@ -99,16 +91,11 @@ export default function AdminSettings() {
 
             {/* General Settings */}
             {activeTab === 'general' && (
-                <div className="bg-white rounded-lg shadow p-6" data-oid="ep46uof">
-                    <h3 className="text-lg font-medium text-gray-900 mb-6" data-oid="8y-ra17">
-                        الإعدادات العامة
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="yalb9tk">
-                        <div data-oid="w4jlz2o">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="t4aovl1"
-                            >
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-6">الإعدادات العامة</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 اسم التطبيق
                             </label>
                             <input
@@ -116,14 +103,10 @@ export default function AdminSettings() {
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 value={settings.appName}
                                 onChange={(e) => handleSettingChange('appName', e.target.value)}
-                                data-oid="6oz_ef."
                             />
                         </div>
-                        <div data-oid="qx2mex_">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="m97.wa3"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 بريد الدعم الفني
                             </label>
                             <input
@@ -133,14 +116,10 @@ export default function AdminSettings() {
                                 onChange={(e) =>
                                     handleSettingChange('supportEmail', e.target.value)
                                 }
-                                data-oid="0c3586q"
                             />
                         </div>
-                        <div className="md:col-span-2" data-oid="7fuqilo">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid=".an98e5"
-                            >
+                        <div className="md:col-span-2">
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 وصف التطبيق
                             </label>
                             <textarea
@@ -150,14 +129,10 @@ export default function AdminSettings() {
                                 onChange={(e) =>
                                     handleSettingChange('appDescription', e.target.value)
                                 }
-                                data-oid="mhc6_v6"
                             />
                         </div>
-                        <div data-oid="y2m9x8l">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="32kk.vm"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 رقم الدعم الفني
                             </label>
                             <input
@@ -167,11 +142,10 @@ export default function AdminSettings() {
                                 onChange={(e) =>
                                     handleSettingChange('supportPhone', e.target.value)
                                 }
-                                data-oid="bf-i7-9"
                             />
                         </div>
-                        <div data-oid="-ymk3rg">
-                            <label className="flex items-center" data-oid="wynxpg:">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -179,14 +153,11 @@ export default function AdminSettings() {
                                     onChange={(e) =>
                                         handleSettingChange('maintenanceMode', e.target.checked)
                                     }
-                                    data-oid="sjzf5fp"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="x0w47_q">
-                                    وضع الصيانة
-                                </span>
+                                <span className="mr-2 text-sm text-gray-700">وضع الصيانة</span>
                             </label>
-                            <p className="text-xs text-gray-500 mt-1" data-oid=":0:m4xk">
+                            <p className="text-xs text-gray-500 mt-1">
                                 تفعيل وضع الصيانة سيمنع المستخدمين من الوصول للتطبيق
                             </p>
                         </div>
@@ -196,16 +167,11 @@ export default function AdminSettings() {
 
             {/* Business Settings */}
             {activeTab === 'business' && (
-                <div className="bg-white rounded-lg shadow p-6" data-oid="l9bx628">
-                    <h3 className="text-lg font-medium text-gray-900 mb-6" data-oid="zed4qd7">
-                        إعدادات الأعمال
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="84..cuh">
-                        <div data-oid="qi-uig-">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="hsxehyv"
-                            >
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-6">إعدادات الأعمال</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 نسبة العمولة (%)
                             </label>
                             <input
@@ -217,18 +183,12 @@ export default function AdminSettings() {
                                 onChange={(e) =>
                                     handleSettingChange('commissionRate', parseInt(e.target.value))
                                 }
-                                data-oid=".n01wr9"
                             />
 
-                            <p className="text-xs text-gray-500 mt-1" data-oid="iu3o7dc">
-                                النسبة المئوية من كل طلب
-                            </p>
+                            <p className="text-xs text-gray-500 mt-1">النسبة المئوية من كل طلب</p>
                         </div>
-                        <div data-oid="f9lr34t">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="32le:7p"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 الحد الأدنى للطلب (ريال)
                             </label>
                             <input
@@ -239,14 +199,10 @@ export default function AdminSettings() {
                                 onChange={(e) =>
                                     handleSettingChange('minOrderAmount', parseInt(e.target.value))
                                 }
-                                data-oid="ude2d3x"
                             />
                         </div>
-                        <div data-oid="mr:9.df">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="p3w17zo"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 الحد الأقصى للطلب (ريال)
                             </label>
                             <input
@@ -257,11 +213,10 @@ export default function AdminSettings() {
                                 onChange={(e) =>
                                     handleSettingChange('maxOrderAmount', parseInt(e.target.value))
                                 }
-                                data-oid="8inydmk"
                             />
                         </div>
-                        <div data-oid="6z7za-6">
-                            <label className="flex items-center" data-oid="77xkmk1">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -272,16 +227,15 @@ export default function AdminSettings() {
                                             e.target.checked,
                                         )
                                     }
-                                    data-oid="ugknz4b"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="xyw2izt">
+                                <span className="mr-2 text-sm text-gray-700">
                                     الموافقة التلقائية على مقدمي الخدمات
                                 </span>
                             </label>
                         </div>
-                        <div data-oid="d35awi5">
-                            <label className="flex items-center" data-oid="os_jg0r">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -289,10 +243,9 @@ export default function AdminSettings() {
                                     onChange={(e) =>
                                         handleSettingChange('requireVerification', e.target.checked)
                                     }
-                                    data-oid="qv09jm."
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="qt39_io">
+                                <span className="mr-2 text-sm text-gray-700">
                                     طلب التحقق من الهوية
                                 </span>
                             </label>
@@ -303,13 +256,11 @@ export default function AdminSettings() {
 
             {/* Notifications Settings */}
             {activeTab === 'notifications' && (
-                <div className="bg-white rounded-lg shadow p-6" data-oid="q-q._78">
-                    <h3 className="text-lg font-medium text-gray-900 mb-6" data-oid=":hemyk8">
-                        إعدادات الإشعارات
-                    </h3>
-                    <div className="space-y-6" data-oid="k06ii74">
-                        <div data-oid="i7lr7kq">
-                            <label className="flex items-center" data-oid="v9--v4d">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-6">إعدادات الإشعارات</h3>
+                    <div className="space-y-6">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -317,19 +268,16 @@ export default function AdminSettings() {
                                     onChange={(e) =>
                                         handleSettingChange('enableNotifications', e.target.checked)
                                     }
-                                    data-oid="w9-h7kf"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid=".u8shl0">
-                                    تفعيل الإشعارات
-                                </span>
+                                <span className="mr-2 text-sm text-gray-700">تفعيل الإشعارات</span>
                             </label>
-                            <p className="text-xs text-gray-500 mt-1" data-oid="0p:btmx">
+                            <p className="text-xs text-gray-500 mt-1">
                                 تفعيل أو إلغاء جميع الإشعارات في التطبيق
                             </p>
                         </div>
-                        <div data-oid="xhwmw0s">
-                            <label className="flex items-center" data-oid="watv2gh">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -337,19 +285,18 @@ export default function AdminSettings() {
                                     onChange={(e) =>
                                         handleSettingChange('enableSMS', e.target.checked)
                                     }
-                                    data-oid="wjlmclz"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="5p_0z-0">
+                                <span className="mr-2 text-sm text-gray-700">
                                     إشعارات الرسائل النصية
                                 </span>
                             </label>
-                            <p className="text-xs text-gray-500 mt-1" data-oid="jc.ostd">
+                            <p className="text-xs text-gray-500 mt-1">
                                 إرسال إشعارات عبر الرسائل النصية
                             </p>
                         </div>
-                        <div data-oid="g2_5i09">
-                            <label className="flex items-center" data-oid="9fdv6:p">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -357,14 +304,13 @@ export default function AdminSettings() {
                                     onChange={(e) =>
                                         handleSettingChange('enableEmail', e.target.checked)
                                     }
-                                    data-oid="5f48fn4"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="o2f4xts">
+                                <span className="mr-2 text-sm text-gray-700">
                                     إشعارات البريد الإلكتروني
                                 </span>
                             </label>
-                            <p className="text-xs text-gray-500 mt-1" data-oid="jtnxdcs">
+                            <p className="text-xs text-gray-500 mt-1">
                                 إرسال إشعارات عبر البريد الإلكتروني
                             </p>
                         </div>
@@ -374,13 +320,11 @@ export default function AdminSettings() {
 
             {/* Security Settings */}
             {activeTab === 'security' && (
-                <div className="bg-white rounded-lg shadow p-6" data-oid="eub1rf8">
-                    <h3 className="text-lg font-medium text-gray-900 mb-6" data-oid="2e6rlo6">
-                        إعدادات الأمان
-                    </h3>
-                    <div className="space-y-6" data-oid="nd-47i9">
-                        <div data-oid="_2h:l5v">
-                            <label className="flex items-center" data-oid="_z-pm97">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-6">إعدادات الأمان</h3>
+                    <div className="space-y-6">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -388,19 +332,18 @@ export default function AdminSettings() {
                                     onChange={(e) =>
                                         handleSettingChange('allowRegistration', e.target.checked)
                                     }
-                                    data-oid="k0kgjcm"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="ju_fru6">
+                                <span className="mr-2 text-sm text-gray-700">
                                     السماح بالتسجيل الجديد
                                 </span>
                             </label>
-                            <p className="text-xs text-gray-500 mt-1" data-oid="4vd_phj">
+                            <p className="text-xs text-gray-500 mt-1">
                                 السماح للمستخدمين الجدد بإنشاء حسابات
                             </p>
                         </div>
-                        <div data-oid="hitycvr">
-                            <label className="flex items-center" data-oid="7487ih5">
+                        <div>
+                            <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
@@ -411,41 +354,28 @@ export default function AdminSettings() {
                                             e.target.checked,
                                         )
                                     }
-                                    data-oid="5i1hofp"
                                 />
 
-                                <span className="mr-2 text-sm text-gray-700" data-oid="0arf39f">
+                                <span className="mr-2 text-sm text-gray-700">
                                     طلب التحقق من رقم الهاتف
                                 </span>
                             </label>
-                            <p className="text-xs text-gray-500 mt-1" data-oid="7i52zze">
+                            <p className="text-xs text-gray-500 mt-1">
                                 إجبار المستخدمين على التحقق من أرقام هواتفهم
                             </p>
                         </div>
-                        <div className="border-t border-gray-200 pt-6" data-oid="u_1xlwz">
-                            <h4
-                                className="text-md font-medium text-gray-900 mb-4"
-                                data-oid="hy28gnj"
-                            >
+                        <div className="border-t border-gray-200 pt-6">
+                            <h4 className="text-md font-medium text-gray-900 mb-4">
                                 إجراءات الأمان
                             </h4>
-                            <div className="space-y-3" data-oid="a935rae">
-                                <button
-                                    className="w-full md:w-auto bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors"
-                                    data-oid="79c:qid"
-                                >
+                            <div className="space-y-3">
+                                <button className="w-full md:w-auto bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 transition-colors">
                                     تصدير نسخة احتياطية من البيانات
                                 </button>
-                                <button
-                                    className="w-full md:w-auto bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition-colors mr-3"
-                                    data-oid="cb92qik"
-                                >
+                                <button className="w-full md:w-auto bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition-colors mr-3">
                                     مسح ذاكرة التخزين المؤقت
                                 </button>
-                                <button
-                                    className="w-full md:w-auto bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-colors mr-3"
-                                    data-oid="lbgqpd5"
-                                >
+                                <button className="w-full md:w-auto bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-colors mr-3">
                                     عرض سجل النشاطات
                                 </button>
                             </div>
@@ -455,11 +385,10 @@ export default function AdminSettings() {
             )}
 
             {/* Save Button */}
-            <div className="mt-8 flex justify-end" data-oid="5apr4ft">
+            <div className="mt-8 flex justify-end">
                 <button
                     onClick={handleSave}
                     className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                    data-oid="tiqrrtq"
                 >
                     حفظ الإعدادات
                 </button>

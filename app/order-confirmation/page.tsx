@@ -26,173 +26,101 @@ export default function OrderConfirmationPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="ufr.rjy">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white"
-                data-oid="0sm:0ra"
-            >
-                <div className="max-w-sm mx-auto px-4 py-8" data-oid="2-:zg-n">
-                    <div className="text-center" data-oid="xqa:o9v">
-                        <div
-                            className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
-                            data-oid="nhbwe77"
-                        >
-                            <span className="text-4xl" data-oid="pz1ex56">
-                                ✅
-                            </span>
+            <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+                <div className="max-w-sm mx-auto px-4 py-8">
+                    <div className="text-center">
+                        <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span className="text-4xl">✅</span>
                         </div>
-                        <h1 className="text-2xl font-bold mb-2" data-oid="g4ra3rv">
-                            تم تأكيد طلبك!
-                        </h1>
-                        <p className="text-white/90 text-sm" data-oid="pxmfsni">
-                            رقم الطلب: #{orderDetails.id}
-                        </p>
+                        <h1 className="text-2xl font-bold mb-2">تم تأكيد طلبك!</h1>
+                        <p className="text-white/90 text-sm">رقم الطلب: #{orderDetails.id}</p>
                     </div>
                 </div>
             </div>
 
             {/* Order Status */}
-            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10" data-oid="ueg7z2d">
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-6" data-oid="g:1h7ie">
-                    <div className="text-center mb-6" data-oid="c2ihfi6">
-                        <div
-                            className="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold mb-4"
-                            data-oid="l9tsxeh"
-                        >
-                            <span
-                                className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"
-                                data-oid="0wt3-ec"
-                            ></span>
+            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                    <div className="text-center mb-6">
+                        <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                            <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2 animate-pulse"></span>
                             في انتظار موافقة مقدم الخدمة
                         </div>
-                        <p className="text-gray-600 text-sm" data-oid="m3jfqhb">
+                        <p className="text-gray-600 text-sm">
                             سيتم إشعارك فور موافقة مقدم الخدمة على طلبك
                         </p>
                     </div>
 
                     {/* Provider Info */}
-                    <div
-                        className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl mb-4"
-                        data-oid="s.4mt8c"
-                    >
-                        <div className="text-3xl" data-oid="xm9up7k">
-                            {orderDetails.providerAvatar}
-                        </div>
-                        <div className="flex-1" data-oid="3gazr5p">
-                            <h3 className="font-semibold text-gray-800" data-oid="2wz6lxo">
+                    <div className="flex items-center space-x-3 space-x-reverse p-4 bg-gray-50 rounded-xl mb-4">
+                        <div className="text-3xl">{orderDetails.providerAvatar}</div>
+                        <div className="flex-1">
+                            <h3 className="font-semibold text-gray-800">
                                 {orderDetails.providerName}
                             </h3>
-                            <p className="text-sm text-gray-600" data-oid="9h-c19:">
-                                {orderDetails.serviceName}
-                            </p>
+                            <p className="text-sm text-gray-600">{orderDetails.serviceName}</p>
                         </div>
-                        <div className="text-right" data-oid="5-64izy">
-                            <p className="font-bold text-blue-600" data-oid="t1t_qo:">
-                                {orderDetails.price}
-                            </p>
-                            <p className="text-xs text-gray-500" data-oid="0-l4t7h">
-                                المبلغ المتوقع
-                            </p>
+                        <div className="text-right">
+                            <p className="font-bold text-blue-600">{orderDetails.price}</p>
+                            <p className="text-xs text-gray-500">المبلغ المتوقع</p>
                         </div>
                     </div>
 
                     {/* Quick Actions */}
-                    <div className="grid grid-cols-2 gap-3" data-oid="39tw40a">
+                    <div className="grid grid-cols-2 gap-3">
                         <Link
                             href={`/chat/${orderDetails.id}`}
                             className="flex items-center justify-center space-x-2 space-x-reverse bg-blue-500 text-white py-3 rounded-xl font-semibold"
-                            data-oid="p3feuxx"
                         >
-                            <span data-oid="6ps1sde">💬</span>
-                            <span data-oid="lvukcau">تواصل</span>
+                            <span>💬</span>
+                            <span>تواصل</span>
                         </Link>
                         <button
                             onClick={() => setShowDetails(!showDetails)}
                             className="flex items-center justify-center space-x-2 space-x-reverse bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold"
-                            data-oid="3pwd:83"
                         >
-                            <span data-oid="zdio.ju">📋</span>
-                            <span data-oid="7d82:f.">التفاصيل</span>
+                            <span>📋</span>
+                            <span>التفاصيل</span>
                         </button>
                     </div>
                 </div>
 
                 {/* Order Details */}
                 {showDetails && (
-                    <div
-                        className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6"
-                        data-oid="bccd:j-"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="m41x-g8">
-                            تفاصيل الطلب
-                        </h3>
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4">تفاصيل الطلب</h3>
 
-                        <div className="space-y-3" data-oid="qkhjq4i">
-                            <div
-                                className="flex justify-between items-center py-2 border-b border-gray-100"
-                                data-oid="0m268w_"
-                            >
-                                <span className="text-gray-600" data-oid="us8kc9b">
-                                    التاريخ:
-                                </span>
-                                <span className="font-semibold" data-oid="vst:o_e">
-                                    {orderDetails.scheduledDate}
-                                </span>
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span className="text-gray-600">التاريخ:</span>
+                                <span className="font-semibold">{orderDetails.scheduledDate}</span>
                             </div>
-                            <div
-                                className="flex justify-between items-center py-2 border-b border-gray-100"
-                                data-oid="1w9331."
-                            >
-                                <span className="text-gray-600" data-oid="mil1im3">
-                                    الوقت:
-                                </span>
-                                <span className="font-semibold" data-oid="85oqxdf">
-                                    {orderDetails.scheduledTime}
-                                </span>
+                            <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span className="text-gray-600">الوقت:</span>
+                                <span className="font-semibold">{orderDetails.scheduledTime}</span>
                             </div>
-                            <div
-                                className="flex justify-between items-center py-2 border-b border-gray-100"
-                                data-oid="z3llsq1"
-                            >
-                                <span className="text-gray-600" data-oid="95kobts">
-                                    الوصول المتوقع:
-                                </span>
-                                <span className="font-semibold text-green-600" data-oid="4dnj1.g">
+                            <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span className="text-gray-600">الوصول المتوقع:</span>
+                                <span className="font-semibold text-green-600">
                                     {orderDetails.estimatedArrival}
                                 </span>
                             </div>
-                            <div className="py-2 border-b border-gray-100" data-oid="n7.7yw.">
-                                <span className="text-gray-600 block mb-2" data-oid="yjmd1_q">
-                                    العنوان:
-                                </span>
-                                <span
-                                    className="text-sm bg-gray-50 p-3 rounded-lg block"
-                                    data-oid=".e-03li"
-                                >
+                            <div className="py-2 border-b border-gray-100">
+                                <span className="text-gray-600 block mb-2">العنوان:</span>
+                                <span className="text-sm bg-gray-50 p-3 rounded-lg block">
                                     {orderDetails.address}
                                 </span>
                             </div>
-                            <div
-                                className="flex justify-between items-center py-2 border-b border-gray-100"
-                                data-oid="gql6hwu"
-                            >
-                                <span className="text-gray-600" data-oid="aspd.d4">
-                                    رقم الهاتف:
-                                </span>
-                                <span className="font-semibold" data-oid="kc5pg13">
-                                    {orderDetails.phoneNumber}
-                                </span>
+                            <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span className="text-gray-600">رقم الهاتف:</span>
+                                <span className="font-semibold">{orderDetails.phoneNumber}</span>
                             </div>
                             {orderDetails.notes && (
-                                <div className="py-2" data-oid="47pmjmd">
-                                    <span className="text-gray-600 block mb-2" data-oid="bfa0cz_">
-                                        ملاحظات:
-                                    </span>
-                                    <span
-                                        className="text-sm bg-gray-50 p-3 rounded-lg block"
-                                        data-oid="edm7lwp"
-                                    >
+                                <div className="py-2">
+                                    <span className="text-gray-600 block mb-2">ملاحظات:</span>
+                                    <span className="text-sm bg-gray-50 p-3 rounded-lg block">
                                         {orderDetails.notes}
                                     </span>
                                 </div>
@@ -202,64 +130,38 @@ export default function OrderConfirmationPage() {
                 )}
 
                 {/* Next Steps */}
-                <div className="bg-blue-50 rounded-2xl p-6 mb-6" data-oid="60uv.y2">
-                    <h3 className="text-lg font-semibold text-blue-800 mb-4" data-oid="ualqhos">
-                        الخطوات التالية
-                    </h3>
-                    <div className="space-y-3" data-oid=".ngamti">
-                        <div
-                            className="flex items-start space-x-3 space-x-reverse"
-                            data-oid="kcbw09u"
-                        >
-                            <div
-                                className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold"
-                                data-oid=":2a9dy5"
-                            >
+                <div className="bg-blue-50 rounded-2xl p-6 mb-6">
+                    <h3 className="text-lg font-semibold text-blue-800 mb-4">الخطوات التالية</h3>
+                    <div className="space-y-3">
+                        <div className="flex items-start space-x-3 space-x-reverse">
+                            <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
                                 1
                             </div>
-                            <div data-oid="72p-bu0">
-                                <p className="font-semibold text-blue-800" data-oid="eb.9yek">
-                                    انتظار الموافقة
-                                </p>
-                                <p className="text-sm text-blue-600" data-oid="fafgzbv">
+                            <div>
+                                <p className="font-semibold text-blue-800">انتظار الموافقة</p>
+                                <p className="text-sm text-blue-600">
                                     سيراجع مقدم الخدمة طلبك ويرد خلال دقائق
                                 </p>
                             </div>
                         </div>
-                        <div
-                            className="flex items-start space-x-3 space-x-reverse"
-                            data-oid="mlsxpwp"
-                        >
-                            <div
-                                className="w-6 h-6 bg-gray-300 text-white rounded-full flex items-center justify-center text-xs font-bold"
-                                data-oid="pu.51_i"
-                            >
+                        <div className="flex items-start space-x-3 space-x-reverse">
+                            <div className="w-6 h-6 bg-gray-300 text-white rounded-full flex items-center justify-center text-xs font-bold">
                                 2
                             </div>
-                            <div data-oid="ewgo0lr">
-                                <p className="font-semibold text-gray-600" data-oid="yi:qfm3">
-                                    تأكيد الموعد
-                                </p>
-                                <p className="text-sm text-gray-500" data-oid="x-kb08i">
+                            <div>
+                                <p className="font-semibold text-gray-600">تأكيد الموعد</p>
+                                <p className="text-sm text-gray-500">
                                     سيتم تأكيد الموعد والتفاصيل النهائية
                                 </p>
                             </div>
                         </div>
-                        <div
-                            className="flex items-start space-x-3 space-x-reverse"
-                            data-oid="gqub8m3"
-                        >
-                            <div
-                                className="w-6 h-6 bg-gray-300 text-white rounded-full flex items-center justify-center text-xs font-bold"
-                                data-oid="3ix8vrk"
-                            >
+                        <div className="flex items-start space-x-3 space-x-reverse">
+                            <div className="w-6 h-6 bg-gray-300 text-white rounded-full flex items-center justify-center text-xs font-bold">
                                 3
                             </div>
-                            <div data-oid="5ses:.k">
-                                <p className="font-semibold text-gray-600" data-oid="9.i9ta.">
-                                    تنفيذ الخدمة
-                                </p>
-                                <p className="text-sm text-gray-500" data-oid="6iwimqi">
+                            <div>
+                                <p className="font-semibold text-gray-600">تنفيذ الخدمة</p>
+                                <p className="text-sm text-gray-500">
                                     سيصل مقدم الخدمة في الموعد المحدد
                                 </p>
                             </div>
@@ -268,43 +170,30 @@ export default function OrderConfirmationPage() {
                 </div>
 
                 {/* Important Notes */}
-                <div className="bg-yellow-50 rounded-2xl p-6 mb-6" data-oid="m11buai">
-                    <div
-                        className="flex items-center space-x-2 space-x-reverse mb-3"
-                        data-oid="79.5r0q"
-                    >
-                        <span className="text-yellow-600" data-oid="a5lrpz1">
-                            ⚠️
-                        </span>
-                        <h3 className="font-semibold text-yellow-800" data-oid="6sqvi9k">
-                            ملاحظات مهمة
-                        </h3>
+                <div className="bg-yellow-50 rounded-2xl p-6 mb-6">
+                    <div className="flex items-center space-x-2 space-x-reverse mb-3">
+                        <span className="text-yellow-600">⚠️</span>
+                        <h3 className="font-semibold text-yellow-800">ملاحظات مهمة</h3>
                     </div>
-                    <ul className="text-sm text-yellow-700 space-y-2" data-oid="yip7_v8">
-                        <li data-oid="3o89f-n">
-                            • يمكنك إلغاء الطلب مجاناً قبل موافقة مقدم الخدمة
-                        </li>
-                        <li data-oid="3pgo_ye">• ستتلقى إشعارات فورية عن حالة طلبك</li>
-                        <li data-oid="ji489qy">
-                            • يمكنك التواصل مع مقدم الخدمة مباشرة عبر المحادثة
-                        </li>
-                        <li data-oid="0_0hs_t">• الدفع يتم بعد إنجاز الخدمة بنجاح</li>
+                    <ul className="text-sm text-yellow-700 space-y-2">
+                        <li>• يمكنك إلغاء الطلب مجاناً قبل موافقة مقدم الخدمة</li>
+                        <li>• ستتلقى إشعارات فورية عن حالة طلبك</li>
+                        <li>• يمكنك التواصل مع مقدم الخدمة مباشرة عبر المحادثة</li>
+                        <li>• الدفع يتم بعد إنجاز الخدمة بنجاح</li>
                     </ul>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="space-y-3" data-oid="_ydhoiq">
+                <div className="space-y-3">
                     <Link
                         href="/orders"
                         className="w-full bg-blue-500 text-white py-4 rounded-2xl font-bold text-center block"
-                        data-oid="luy599e"
                     >
                         عرض جميع طلباتي
                     </Link>
                     <Link
                         href="/"
                         className="w-full bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold text-center block"
-                        data-oid="lqg.yfa"
                     >
                         العودة للرئيسية
                     </Link>
@@ -312,7 +201,7 @@ export default function OrderConfirmationPage() {
             </div>
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="cr0k7kh"></div>
+            <div className="h-20"></div>
         </div>
     );
 }

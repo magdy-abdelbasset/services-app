@@ -258,24 +258,18 @@ export default function EditOrderPage() {
 
     if (loading) {
         return (
-            <div className="p-6" data-oid="j2e5cjn">
-                <div className="animate-pulse" data-oid="fxp_o1g">
-                    <div className="h-8 bg-gray-200 rounded w-1/4 mb-4" data-oid="s1m6rx_"></div>
-                    <div className="h-4 bg-gray-200 rounded w-1/2 mb-8" data-oid="rbv3gt1"></div>
-                    <div className="space-y-6" data-oid="vnufxne">
-                        <div className="bg-white rounded-lg shadow p-6" data-oid="5959xko">
-                            <div
-                                className="h-6 bg-gray-200 rounded w-1/3 mb-4"
-                                data-oid="2n6oth5"
-                            ></div>
-                            <div
-                                className="grid grid-cols-1 md:grid-cols-2 gap-4"
-                                data-oid="-pt30aw"
-                            >
-                                <div className="h-10 bg-gray-200 rounded" data-oid="18cwg_j"></div>
-                                <div className="h-10 bg-gray-200 rounded" data-oid="k5d6rsg"></div>
-                                <div className="h-10 bg-gray-200 rounded" data-oid="n7tfnl5"></div>
-                                <div className="h-10 bg-gray-200 rounded" data-oid="r7yh53j"></div>
+            <div className="p-6">
+                <div className="animate-pulse">
+                    <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+                    <div className="h-4 bg-gray-200 rounded w-1/2 mb-8"></div>
+                    <div className="space-y-6">
+                        <div className="bg-white rounded-lg shadow p-6">
+                            <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="h-10 bg-gray-200 rounded"></div>
+                                <div className="h-10 bg-gray-200 rounded"></div>
+                                <div className="h-10 bg-gray-200 rounded"></div>
+                                <div className="h-10 bg-gray-200 rounded"></div>
                             </div>
                         </div>
                     </div>
@@ -286,21 +280,14 @@ export default function EditOrderPage() {
 
     if (!formData) {
         return (
-            <div className="p-6" data-oid="6bvo_z3">
-                <div className="text-center py-12" data-oid="nsxy87m">
-                    <div className="text-6xl mb-4" data-oid="txjfmt2">
-                        ❌
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2" data-oid="h5va4g7">
-                        الطلب غير موجود
-                    </h2>
-                    <p className="text-gray-600 mb-6" data-oid="g_.uh_s">
-                        لم يتم العثور على الطلب المطلوب
-                    </p>
+            <div className="p-6">
+                <div className="text-center py-12">
+                    <div className="text-6xl mb-4">❌</div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">الطلب غير موجود</h2>
+                    <p className="text-gray-600 mb-6">لم يتم العثور على الطلب المطلوب</p>
                     <Link
                         href="/admin/orders"
                         className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                        data-oid="ez0qk0x"
                     >
                         العودة إلى قائمة الطلبات
                     </Link>
@@ -310,29 +297,25 @@ export default function EditOrderPage() {
     }
 
     return (
-        <div className="p-6" data-oid="g1208e.">
+        <div className="p-6">
             {/* Header */}
-            <div className="mb-6" data-oid="zmuijcw">
-                <div className="flex items-center justify-between mb-4" data-oid="3:7pewi">
-                    <div data-oid="4unfspv">
-                        <h1 className="text-2xl font-bold text-gray-900" data-oid="wba422y">
+            <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                    <div>
+                        <h1 className="text-2xl font-bold text-gray-900">
                             تعديل الطلب #{formData.id}
                         </h1>
-                        <p className="text-gray-600" data-oid="3vnkfn:">
-                            تعديل تفاصيل الطلب ومعلوماته
-                        </p>
+                        <p className="text-gray-600">تعديل تفاصيل الطلب ومعلوماته</p>
                     </div>
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="ur4dzbp">
+                    <div className="flex items-center space-x-3 space-x-reverse">
                         <div
                             className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(formData.status)}`}
-                            data-oid=".aoxiha"
                         >
                             {formData.status}
                         </div>
                         <Link
                             href={`/admin/orders/${orderId}`}
                             className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-colors"
-                            data-oid="b_ah9te"
                         >
                             إلغاء
                         </Link>
@@ -340,18 +323,15 @@ export default function EditOrderPage() {
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6" data-oid="nnicepy">
+            <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Order Status & Priority */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="w6u.dsi">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="92ksf9x">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
                         حالة الطلب والأولوية
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="sq7mv-0">
-                        <div data-oid=":_105tb">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="5p2kg-p"
-                            >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 حالة الطلب *
                             </label>
                             <select
@@ -360,43 +340,28 @@ export default function EditOrderPage() {
                                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                                     errors.status ? 'border-red-500' : 'border-gray-300'
                                 }`}
-                                data-oid="8jm2k9j"
                             >
                                 {statusOptions.map((option) => (
-                                    <option
-                                        key={option.value}
-                                        value={option.value}
-                                        data-oid="w0q7inp"
-                                    >
+                                    <option key={option.value} value={option.value}>
                                         {option.label}
                                     </option>
                                 ))}
                             </select>
                             {errors.status && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="2_4x_u9">
-                                    {errors.status}
-                                </p>
+                                <p className="text-red-500 text-sm mt-1">{errors.status}</p>
                             )}
                         </div>
-                        <div data-oid="-6ymidn">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="v75.5y-"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 الأولوية
                             </label>
                             <select
                                 value={formData.priority}
                                 onChange={(e) => handleInputChange('priority', e.target.value)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                data-oid="z.fdx6b"
                             >
                                 {priorityOptions.map((option) => (
-                                    <option
-                                        key={option.value}
-                                        value={option.value}
-                                        data-oid="ljzpvcw"
-                                    >
+                                    <option key={option.value} value={option.value}>
                                         {option.label}
                                     </option>
                                 ))}
@@ -406,16 +371,11 @@ export default function EditOrderPage() {
                 </div>
 
                 {/* Service Details */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="4ub4hug">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="_4jn58b">
-                        تفاصيل الخدمة
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="_407bsa">
-                        <div data-oid="j6o_n8i">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="91e9.zs"
-                            >
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">تفاصيل الخدمة</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 اسم الخدمة
                             </label>
                             <input
@@ -424,14 +384,10 @@ export default function EditOrderPage() {
                                 onChange={(e) => handleInputChange('service.name', e.target.value)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 readOnly
-                                data-oid="mrp9ip3"
                             />
                         </div>
-                        <div data-oid="8s2a7ro">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="67afsw0"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 الفئة
                             </label>
                             <input
@@ -439,14 +395,10 @@ export default function EditOrderPage() {
                                 value={formData.service.category}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                 readOnly
-                                data-oid="0lnf1ne"
                             />
                         </div>
-                        <div className="md:col-span-2" data-oid="qqz4sch">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="5fl7ywg"
-                            >
+                        <div className="md:col-span-2">
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 وصف الخدمة
                             </label>
                             <textarea
@@ -456,14 +408,10 @@ export default function EditOrderPage() {
                                 }
                                 rows={3}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                data-oid="ugdarvl"
                             />
                         </div>
-                        <div data-oid="yadr0cd">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="7ytjj2t"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 سعر الخدمة (ريال)
                             </label>
                             <input
@@ -478,14 +426,10 @@ export default function EditOrderPage() {
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 min="0"
                                 step="0.01"
-                                data-oid="644iuwc"
                             />
                         </div>
-                        <div data-oid="-cd91f-">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="cb_5xzr"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 المبلغ الإجمالي (ريال) *
                             </label>
                             <input
@@ -499,29 +443,21 @@ export default function EditOrderPage() {
                                 }`}
                                 min="0"
                                 step="0.01"
-                                data-oid="b9rzc7e"
                             />
 
                             {errors.amount && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="nr1nxf7">
-                                    {errors.amount}
-                                </p>
+                                <p className="text-red-500 text-sm mt-1">{errors.amount}</p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* Schedule & Location */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="4cbksd1">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="k3dd_h1">
-                        الموعد والموقع
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="s4i:n6g">
-                        <div data-oid=":iiw6nq">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="qr-.dv7"
-                            >
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">الموعد والموقع</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 تاريخ الخدمة *
                             </label>
                             <input
@@ -531,20 +467,14 @@ export default function EditOrderPage() {
                                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                                     errors.date ? 'border-red-500' : 'border-gray-300'
                                 }`}
-                                data-oid="68nwubs"
                             />
 
                             {errors.date && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="nxbipvu">
-                                    {errors.date}
-                                </p>
+                                <p className="text-red-500 text-sm mt-1">{errors.date}</p>
                             )}
                         </div>
-                        <div data-oid="z68t.9-">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="5mlj146"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 وقت الخدمة *
                             </label>
                             <input
@@ -554,20 +484,14 @@ export default function EditOrderPage() {
                                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                                     errors.time ? 'border-red-500' : 'border-gray-300'
                                 }`}
-                                data-oid="b0z009v"
                             />
 
                             {errors.time && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="4:63zr7">
-                                    {errors.time}
-                                </p>
+                                <p className="text-red-500 text-sm mt-1">{errors.time}</p>
                             )}
                         </div>
-                        <div data-oid="umq7z7u">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="0:n1bn."
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 المدينة *
                             </label>
                             <select
@@ -576,28 +500,22 @@ export default function EditOrderPage() {
                                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                                     errors['location.city'] ? 'border-red-500' : 'border-gray-300'
                                 }`}
-                                data-oid="9syewx-"
                             >
-                                <option value="" data-oid=".3cohun">
-                                    اختر المدينة
-                                </option>
+                                <option value="">اختر المدينة</option>
                                 {cities.map((city) => (
-                                    <option key={city} value={city} data-oid="wwi:bt5">
+                                    <option key={city} value={city}>
                                         {city}
                                     </option>
                                 ))}
                             </select>
                             {errors['location.city'] && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="j7-x11a">
+                                <p className="text-red-500 text-sm mt-1">
                                     {errors['location.city']}
                                 </p>
                             )}
                         </div>
-                        <div data-oid="pg1l3zz">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="nw2y8l6"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 العنوان التفصيلي *
                             </label>
                             <input
@@ -612,11 +530,10 @@ export default function EditOrderPage() {
                                         ? 'border-red-500'
                                         : 'border-gray-300'
                                 }`}
-                                data-oid="-1z1cic"
                             />
 
                             {errors['location.address'] && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="g2847ua">
+                                <p className="text-red-500 text-sm mt-1">
                                     {errors['location.address']}
                                 </p>
                             )}
@@ -625,16 +542,11 @@ export default function EditOrderPage() {
                 </div>
 
                 {/* Payment Information */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="x4.cvyn">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="__4:a_j">
-                        معلومات الدفع
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="8:9xr2u">
-                        <div data-oid="z8qg5h7">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="xx4j-s4"
-                            >
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">معلومات الدفع</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 طريقة الدفع *
                             </label>
                             <select
@@ -643,28 +555,20 @@ export default function EditOrderPage() {
                                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                                     errors.paymentMethod ? 'border-red-500' : 'border-gray-300'
                                 }`}
-                                data-oid="snyulur"
                             >
-                                <option value="" data-oid="ceurqk7">
-                                    اختر طريقة الدفع
-                                </option>
+                                <option value="">اختر طريقة الدفع</option>
                                 {paymentMethods.map((method) => (
-                                    <option key={method} value={method} data-oid="ajeks:a">
+                                    <option key={method} value={method}>
                                         {method}
                                     </option>
                                 ))}
                             </select>
                             {errors.paymentMethod && (
-                                <p className="text-red-500 text-sm mt-1" data-oid=":6lygt4">
-                                    {errors.paymentMethod}
-                                </p>
+                                <p className="text-red-500 text-sm mt-1">{errors.paymentMethod}</p>
                             )}
                         </div>
-                        <div data-oid="zmjl4s1">
-                            <label
-                                className="block text-sm font-medium text-gray-700 mb-2"
-                                data-oid="l1pxo47"
-                            >
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
                                 حالة الدفع *
                             </label>
                             <select
@@ -673,38 +577,28 @@ export default function EditOrderPage() {
                                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                                     errors.paymentStatus ? 'border-red-500' : 'border-gray-300'
                                 }`}
-                                data-oid="ruz50fy"
                             >
-                                <option value="" data-oid="qtag7bn">
-                                    اختر حالة الدفع
-                                </option>
+                                <option value="">اختر حالة الدفع</option>
                                 {paymentStatusOptions.map((status) => (
-                                    <option key={status} value={status} data-oid="4rb_1l0">
+                                    <option key={status} value={status}>
                                         {status}
                                     </option>
                                 ))}
                             </select>
                             {errors.paymentStatus && (
-                                <p className="text-red-500 text-sm mt-1" data-oid="2wxgt-6">
-                                    {errors.paymentStatus}
-                                </p>
+                                <p className="text-red-500 text-sm mt-1">{errors.paymentStatus}</p>
                             )}
                         </div>
                     </div>
                 </div>
 
                 {/* Customer & Provider Info (Read-only) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="i.fiqko">
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="41r7wxq">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid=".xozgbv">
-                            معلومات العميل
-                        </h3>
-                        <div className="space-y-3" data-oid="ygqq_iv">
-                            <div data-oid="6j-co8s">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="5-5ue.0"
-                                >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">معلومات العميل</h3>
+                        <div className="space-y-3">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     الاسم
                                 </label>
                                 <input
@@ -712,14 +606,10 @@ export default function EditOrderPage() {
                                     value={formData.customer.name}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                     readOnly
-                                    data-oid="qj4-ugv"
                                 />
                             </div>
-                            <div data-oid="0zb513l">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="z3yyq9v"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     رقم الهاتف
                                 </label>
                                 <input
@@ -727,14 +617,10 @@ export default function EditOrderPage() {
                                     value={formData.customer.phone}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                     readOnly
-                                    data-oid="4om0pq7"
                                 />
                             </div>
-                            <div data-oid="af10.um">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="re1kelz"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     البريد الإلكتروني
                                 </label>
                                 <input
@@ -742,22 +628,18 @@ export default function EditOrderPage() {
                                     value={formData.customer.email}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                     readOnly
-                                    data-oid="oftcae1"
                                 />
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="jgicxow">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="ihw7r:s">
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">
                             معلومات مقدم الخدمة
                         </h3>
-                        <div className="space-y-3" data-oid="t_pw7h2">
-                            <div data-oid="8v5nj_l">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="dhoii39"
-                                >
+                        <div className="space-y-3">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     الاسم
                                 </label>
                                 <input
@@ -765,14 +647,10 @@ export default function EditOrderPage() {
                                     value={formData.provider.name}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                     readOnly
-                                    data-oid="1f8_bew"
                                 />
                             </div>
-                            <div data-oid=":k1zq4v">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="gbu10l9"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     رقم الهاتف
                                 </label>
                                 <input
@@ -780,14 +658,10 @@ export default function EditOrderPage() {
                                     value={formData.provider.phone}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                     readOnly
-                                    data-oid="_w1m10x"
                                 />
                             </div>
-                            <div data-oid="l_e9gki">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="24_38o8"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     البريد الإلكتروني
                                 </label>
                                 <input
@@ -795,7 +669,6 @@ export default function EditOrderPage() {
                                     value={formData.provider.email}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-50"
                                     readOnly
-                                    data-oid="yl_gxgv"
                                 />
                             </div>
                         </div>
@@ -803,26 +676,22 @@ export default function EditOrderPage() {
                 </div>
 
                 {/* Additional Notes */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="qnmed0:">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="gwh0suh">
-                        ملاحظات إضافية
-                    </h3>
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">ملاحظات إضافية</h3>
                     <textarea
                         value={formData.notes || ''}
                         onChange={(e) => handleInputChange('notes', e.target.value)}
                         rows={4}
                         placeholder="أضف أي ملاحظات إضافية حول الطلب..."
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        data-oid="b_6ajt:"
                     />
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex justify-end space-x-4 space-x-reverse" data-oid="l_p-8fb">
+                <div className="flex justify-end space-x-4 space-x-reverse">
                     <Link
                         href={`/admin/orders/${orderId}`}
                         className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
-                        data-oid="w8_1ceq"
                     >
                         إلغاء
                     </Link>
@@ -830,14 +699,10 @@ export default function EditOrderPage() {
                         type="submit"
                         disabled={saving}
                         className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-                        data-oid="ax89xji"
                     >
                         {saving ? (
                             <>
-                                <div
-                                    className="animate-spin rounded-full h-4 w-4 border-b-2 border-white ml-2"
-                                    data-oid="gq2fuqi"
-                                ></div>
+                                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white ml-2"></div>
                                 جاري الحفظ...
                             </>
                         ) : (

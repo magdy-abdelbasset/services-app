@@ -195,48 +195,34 @@ export default function RequestServicePage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="haj1jmg">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="z:vmhm."
-            >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="v2k1w-g">
-                    <div className="flex items-center justify-between mb-4" data-oid=".n:kj5d">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="max-w-sm mx-auto px-4 py-6">
+                    <div className="flex items-center justify-between mb-4">
                         <Link
                             href="/services"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="hq:45_3"
                         >
-                            <span className="text-lg" data-oid="d5q0ofp">
-                                ←
-                            </span>
+                            <span className="text-lg">←</span>
                         </Link>
-                        <div className="text-center" data-oid="nebeq6a">
-                            <h1 className="text-lg font-bold" data-oid="jmn.6xz">
-                                طلب خدمة
-                            </h1>
-                            <p className="text-sm text-white/90" data-oid="9g2oai6">
-                                {getStepTitle()}
-                            </p>
+                        <div className="text-center">
+                            <h1 className="text-lg font-bold">طلب خدمة</h1>
+                            <p className="text-sm text-white/90">{getStepTitle()}</p>
                         </div>
-                        <div className="w-10 h-10" data-oid="y2dy4u6"></div>
+                        <div className="w-10 h-10"></div>
                     </div>
 
                     {/* Progress Bar */}
-                    <div
-                        className="flex items-center justify-center space-x-2 space-x-reverse"
-                        data-oid="9_k-o.l"
-                    >
+                    <div className="flex items-center justify-center space-x-2 space-x-reverse">
                         {[1, 2, 3, 4].map((step) => (
-                            <div key={step} className="flex items-center" data-oid="dmzxtsf">
+                            <div key={step} className="flex items-center">
                                 <div
                                     className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
                                         step <= currentStep
                                             ? 'bg-white text-blue-600'
                                             : 'bg-white/20 text-white/60'
                                     }`}
-                                    data-oid="zh.0bno"
                                 >
                                     {step}
                                 </div>
@@ -245,7 +231,6 @@ export default function RequestServicePage() {
                                         className={`w-8 h-1 mx-1 ${
                                             step < currentStep ? 'bg-white' : 'bg-white/20'
                                         }`}
-                                        data-oid="-5:-pyt"
                                     ></div>
                                 )}
                             </div>
@@ -255,52 +240,31 @@ export default function RequestServicePage() {
             </div>
 
             {/* Service Provider Info */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="jpoo5cw">
-                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6" data-oid="cgvgq:p">
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="sc-18am">
-                        <div className="relative" data-oid="qj6mkrq">
-                            <div className="text-3xl" data-oid="nzum8yw">
-                                {mockProvider.avatar}
-                            </div>
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10">
+                <div className="bg-white rounded-2xl shadow-lg p-4 mb-6">
+                    <div className="flex items-center space-x-3 space-x-reverse">
+                        <div className="relative">
+                            <div className="text-3xl">{mockProvider.avatar}</div>
                             {mockProvider.isOnline && (
-                                <div
-                                    className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"
-                                    data-oid="h6vai6j"
-                                ></div>
+                                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
                             )}
                         </div>
-                        <div className="flex-1" data-oid="-o0k5s5">
-                            <div
-                                className="flex items-center space-x-2 space-x-reverse mb-1"
-                                data-oid="8jb1blu"
-                            >
-                                <h3 className="font-semibold text-gray-800" data-oid="c0k8qry">
-                                    {mockProvider.name}
-                                </h3>
+                        <div className="flex-1">
+                            <div className="flex items-center space-x-2 space-x-reverse mb-1">
+                                <h3 className="font-semibold text-gray-800">{mockProvider.name}</h3>
                                 {mockProvider.verified && (
-                                    <span
-                                        className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full"
-                                        data-oid="nhpk9dd"
-                                    >
+                                    <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
                                         موثق
                                     </span>
                                 )}
                             </div>
-                            <div
-                                className="flex items-center space-x-3 space-x-reverse text-sm text-gray-600"
-                                data-oid="hgd9duy"
-                            >
-                                <div
-                                    className="flex items-center space-x-1 space-x-reverse"
-                                    data-oid="z_:yqt-"
-                                >
-                                    <span className="text-yellow-500" data-oid="oagaipv">
-                                        ⭐
-                                    </span>
-                                    <span data-oid="h9.ry.y">{mockProvider.rating}</span>
+                            <div className="flex items-center space-x-3 space-x-reverse text-sm text-gray-600">
+                                <div className="flex items-center space-x-1 space-x-reverse">
+                                    <span className="text-yellow-500">⭐</span>
+                                    <span>{mockProvider.rating}</span>
                                 </div>
-                                <span data-oid="6k7yjj4">{serviceRequest.serviceName}</span>
-                                <span className="font-semibold text-blue-600" data-oid="_tf_cz.">
+                                <span>{serviceRequest.serviceName}</span>
+                                <span className="font-semibold text-blue-600">
                                     {mockProvider.price}
                                 </span>
                             </div>
@@ -310,23 +274,17 @@ export default function RequestServicePage() {
             </div>
 
             {/* Form Steps */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid="9a_rpul">
+            <div className="max-w-sm mx-auto px-4 pb-6">
                 {/* Step 1: Contact Information */}
                 {currentStep === 1 && (
-                    <div
-                        className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                        data-oid="x:ypm20"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="__jusz5">
+                    <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4">
                             معلومات التواصل
                         </h3>
 
-                        <div className="space-y-4" data-oid="y2ccq2n">
-                            <div data-oid="22-:clc">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="k_5k_im"
-                                >
+                        <div className="space-y-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     العنوان *
                                 </label>
                                 <textarea
@@ -335,15 +293,11 @@ export default function RequestServicePage() {
                                     placeholder="أدخل عنوانك بالتفصيل..."
                                     className="w-full p-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 resize-none"
                                     rows={3}
-                                    data-oid="y_m9yht"
                                 />
                             </div>
 
-                            <div data-oid="dy-foco">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="1ggylxh"
-                                >
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     رقم الهاتف *
                                 </label>
                                 <input
@@ -354,18 +308,14 @@ export default function RequestServicePage() {
                                     }
                                     placeholder="05xxxxxxxx"
                                     className="w-full p-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500"
-                                    data-oid="2kueu3h"
                                 />
                             </div>
 
-                            <div data-oid=":1-7tb1">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="9mh9lzp"
-                                >
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     السعر المتوقع *
                                 </label>
-                                <div className="relative" data-oid=".l-uo:f">
+                                <div className="relative">
                                     <input
                                         type="number"
                                         value={serviceRequest.expectedPrice}
@@ -377,53 +327,36 @@ export default function RequestServicePage() {
                                         className={`w-full p-3 border rounded-xl outline-none focus:border-blue-500 ${
                                             priceError ? 'border-red-500' : 'border-gray-200'
                                         }`}
-                                        data-oid="iw6v-6m"
                                     />
 
-                                    <span
-                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
-                                        data-oid="v2q-3nk"
-                                    >
+                                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
                                         ريال
                                     </span>
                                 </div>
                                 {priceError && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="-12mls4">
-                                        {priceError}
-                                    </p>
+                                    <p className="text-red-500 text-xs mt-1">{priceError}</p>
                                 )}
-                                <div className="bg-blue-50 p-3 rounded-lg mt-2" data-oid="ut01vtd">
-                                    <div
-                                        className="flex items-center space-x-2 space-x-reverse mb-1"
-                                        data-oid="srlxwft"
-                                    >
-                                        <span className="text-blue-600" data-oid="6b16yvx">
-                                            💰
-                                        </span>
-                                        <span
-                                            className="text-sm font-semibold text-blue-800"
-                                            data-oid="iq-48.k"
-                                        >
+                                <div className="bg-blue-50 p-3 rounded-lg mt-2">
+                                    <div className="flex items-center space-x-2 space-x-reverse mb-1">
+                                        <span className="text-blue-600">💰</span>
+                                        <span className="text-sm font-semibold text-blue-800">
                                             معلومات السعر
                                         </span>
                                     </div>
-                                    <p className="text-xs text-blue-700" data-oid="bi-t.bp">
+                                    <p className="text-xs text-blue-700">
                                         الحد الأدنى لخدمة {serviceRequest.serviceName}:{' '}
                                         {getMinPrice()} ريال
-                                        <br data-oid="74gaj7f" />
+                                        <br />
                                         السعر المقترح من مقدم الخدمة: {mockProvider.price}
                                     </p>
                                 </div>
                             </div>
 
-                            <div data-oid=".u-ubxe">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="z8sml-j"
-                                >
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     مستوى الأولوية
                                 </label>
-                                <div className="grid grid-cols-3 gap-2" data-oid="gwpvrus">
+                                <div className="grid grid-cols-3 gap-2">
                                     {[
                                         { value: 'normal', label: 'عادي', color: 'bg-gray-100' },
                                         {
@@ -443,7 +376,6 @@ export default function RequestServicePage() {
                                                     ? 'bg-blue-500 text-white'
                                                     : `${option.color} text-gray-700`
                                             }`}
-                                            data-oid="2bs7lzg"
                                         >
                                             {option.label}
                                         </button>
@@ -456,20 +388,12 @@ export default function RequestServicePage() {
 
                 {/* Step 2: Schedule */}
                 {currentStep === 2 && (
-                    <div
-                        className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                        data-oid="_2j2yqc"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid=":9d_3gh">
-                            تحديد الموعد
-                        </h3>
+                    <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4">تحديد الموعد</h3>
 
-                        <div className="space-y-4" data-oid="1.8aoa.">
-                            <div data-oid="1g2o-3o">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="-j6x.b5"
-                                >
+                        <div className="space-y-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     التاريخ المطلوب *
                                 </label>
                                 <input
@@ -480,18 +404,14 @@ export default function RequestServicePage() {
                                     }
                                     min={getTomorrowDate()}
                                     className="w-full p-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500"
-                                    data-oid="10yna49"
                                 />
                             </div>
 
-                            <div data-oid="v-j7tnr">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="t44px-y"
-                                >
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     الوقت المفضل *
                                 </label>
-                                <div className="grid grid-cols-2 gap-3" data-oid=".3.ffh.">
+                                <div className="grid grid-cols-2 gap-3">
                                     {[
                                         '08:00',
                                         '09:00',
@@ -514,7 +434,6 @@ export default function RequestServicePage() {
                                                     ? 'bg-blue-500 text-white'
                                                     : 'bg-gray-100 text-gray-700'
                                             }`}
-                                            data-oid="r6d0osr"
                                         >
                                             {time}
                                         </button>
@@ -522,24 +441,16 @@ export default function RequestServicePage() {
                                 </div>
                             </div>
 
-                            <div className="bg-blue-50 p-4 rounded-xl" data-oid="4h77n4d">
-                                <div
-                                    className="flex items-center space-x-2 space-x-reverse mb-2"
-                                    data-oid="cfyimgj"
-                                >
-                                    <span className="text-blue-600" data-oid="4c.ns31">
-                                        ℹ️
-                                    </span>
-                                    <span
-                                        className="text-sm font-semibold text-blue-800"
-                                        data-oid="8buduqy"
-                                    >
+                            <div className="bg-blue-50 p-4 rounded-xl">
+                                <div className="flex items-center space-x-2 space-x-reverse mb-2">
+                                    <span className="text-blue-600">ℹ️</span>
+                                    <span className="text-sm font-semibold text-blue-800">
                                         معلومة مهمة
                                     </span>
                                 </div>
-                                <p className="text-sm text-blue-700" data-oid="e5cruru">
+                                <p className="text-sm text-blue-700">
                                     المدة المتوقعة للخدمة: {mockProvider.estimatedTime}
-                                    <br data-oid="w.fnad4" />
+                                    <br />
                                     وقت استجابة مقدم الخدمة: {mockProvider.responseTime}
                                 </p>
                             </div>
@@ -549,20 +460,12 @@ export default function RequestServicePage() {
 
                 {/* Step 3: Additional Details */}
                 {currentStep === 3 && (
-                    <div
-                        className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                        data-oid="0fb8zth"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4" data-oid="vbsl97-">
-                            تفاصيل إضافية
-                        </h3>
+                    <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4">تفاصيل إضافية</h3>
 
-                        <div className="space-y-4" data-oid="4y3de34">
-                            <div data-oid="pox8vqn">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="z_jia:i"
-                                >
+                        <div className="space-y-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     ملاحظات خاصة (اختياري)
                                 </label>
                                 <textarea
@@ -571,34 +474,20 @@ export default function RequestServicePage() {
                                     placeholder="أي تفاصيل إضافية تريد إخبار مقدم الخدمة بها..."
                                     className="w-full p-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 resize-none"
                                     rows={4}
-                                    data-oid="arm.r7w"
                                 />
                             </div>
 
-                            <div className="bg-yellow-50 p-4 rounded-xl" data-oid="qb_-sg7">
-                                <div
-                                    className="flex items-center space-x-2 space-x-reverse mb-2"
-                                    data-oid="z8rasnp"
-                                >
-                                    <span className="text-yellow-600" data-oid="kmrkwgh">
-                                        💡
-                                    </span>
-                                    <span
-                                        className="text-sm font-semibold text-yellow-800"
-                                        data-oid="91hs4w-"
-                                    >
+                            <div className="bg-yellow-50 p-4 rounded-xl">
+                                <div className="flex items-center space-x-2 space-x-reverse mb-2">
+                                    <span className="text-yellow-600">💡</span>
+                                    <span className="text-sm font-semibold text-yellow-800">
                                         نصائح مفيدة
                                     </span>
                                 </div>
-                                <ul
-                                    className="text-sm text-yellow-700 space-y-1"
-                                    data-oid=".or41h5"
-                                >
-                                    <li data-oid="dqgice4">• اذكر أي متطلبات خاصة للخدمة</li>
-                                    <li data-oid="sfzy:0c">
-                                        • حدد إذا كان هناك حيوانات أليفة في المنزل
-                                    </li>
-                                    <li data-oid="g-z.v76">• اذكر أي مواد تنظيف مفضلة أو محظورة</li>
+                                <ul className="text-sm text-yellow-700 space-y-1">
+                                    <li>• اذكر أي متطلبات خاصة للخدمة</li>
+                                    <li>• حدد إذا كان هناك حيوانات أليفة في المنزل</li>
+                                    <li>• اذكر أي مواد تنظيف مفضلة أو محظورة</li>
                                 </ul>
                             </div>
                         </div>
@@ -607,98 +496,51 @@ export default function RequestServicePage() {
 
                 {/* Step 4: Review */}
                 {currentStep === 4 && (
-                    <div className="space-y-4" data-oid=".315gmn">
-                        <div
-                            className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
-                            data-oid="yate38h"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-4"
-                                data-oid="2_7c40n"
-                            >
+                    <div className="space-y-4">
+                        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h3 className="text-lg font-semibold text-gray-800 mb-4">
                                 مراجعة الطلب
                             </h3>
 
-                            <div className="space-y-4" data-oid="c14z4wi">
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="d5zukpg"
-                                >
-                                    <span className="text-gray-600" data-oid="o0:xo4g">
-                                        الخدمة:
-                                    </span>
-                                    <span className="font-semibold" data-oid="o_zfprm">
+                            <div className="space-y-4">
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">الخدمة:</span>
+                                    <span className="font-semibold">
                                         {serviceRequest.serviceName}
                                     </span>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="v6nszqk"
-                                >
-                                    <span className="text-gray-600" data-oid="d_.1ihz">
-                                        مقدم الخدمة:
-                                    </span>
-                                    <span className="font-semibold" data-oid="9v_zbik">
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">مقدم الخدمة:</span>
+                                    <span className="font-semibold">
                                         {serviceRequest.providerName}
                                     </span>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="lo.wv-d"
-                                >
-                                    <span className="text-gray-600" data-oid="3o74m_y">
-                                        السعر المتوقع:
-                                    </span>
-                                    <span
-                                        className="font-semibold text-blue-600"
-                                        data-oid="oynpaui"
-                                    >
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">السعر المتوقع:</span>
+                                    <span className="font-semibold text-blue-600">
                                         {serviceRequest.expectedPrice} ريال
                                     </span>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="3:0m6vv"
-                                >
-                                    <span className="text-gray-600" data-oid="ckkl710">
-                                        سعر مقدم الخدمة:
-                                    </span>
-                                    <span
-                                        className="font-semibold text-gray-600"
-                                        data-oid="b7u5aek"
-                                    >
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">سعر مقدم الخدمة:</span>
+                                    <span className="font-semibold text-gray-600">
                                         {serviceRequest.price}
                                     </span>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="jglm1q2"
-                                >
-                                    <span className="text-gray-600" data-oid="lnlmq1r">
-                                        التاريخ:
-                                    </span>
-                                    <span className="font-semibold" data-oid="sqajsjo">
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">التاريخ:</span>
+                                    <span className="font-semibold">
                                         {serviceRequest.scheduledDate}
                                     </span>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="sc5xzph"
-                                >
-                                    <span className="text-gray-600" data-oid="t_khsf-">
-                                        الوقت:
-                                    </span>
-                                    <span className="font-semibold" data-oid="kje98-4">
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">الوقت:</span>
+                                    <span className="font-semibold">
                                         {serviceRequest.scheduledTime}
                                     </span>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center py-2 border-b border-gray-100"
-                                    data-oid="1g5-n5p"
-                                >
-                                    <span className="text-gray-600" data-oid="h1st_go">
-                                        الأولوية:
-                                    </span>
+                                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                    <span className="text-gray-600">الأولوية:</span>
                                     <span
                                         className={`font-semibold ${
                                             serviceRequest.urgency === 'asap'
@@ -707,7 +549,6 @@ export default function RequestServicePage() {
                                                   ? 'text-orange-600'
                                                   : 'text-gray-600'
                                         }`}
-                                        data-oid="lr9dwqy"
                                     >
                                         {serviceRequest.urgency === 'asap'
                                             ? 'فوري'
@@ -716,29 +557,16 @@ export default function RequestServicePage() {
                                               : 'عادي'}
                                     </span>
                                 </div>
-                                <div className="py-2" data-oid="4it61ml">
-                                    <span className="text-gray-600 block mb-2" data-oid="etbw-mf">
-                                        العنوان:
-                                    </span>
-                                    <span
-                                        className="text-sm bg-gray-50 p-3 rounded-lg block"
-                                        data-oid="y4yy6l6"
-                                    >
+                                <div className="py-2">
+                                    <span className="text-gray-600 block mb-2">العنوان:</span>
+                                    <span className="text-sm bg-gray-50 p-3 rounded-lg block">
                                         {serviceRequest.address}
                                     </span>
                                 </div>
                                 {serviceRequest.notes && (
-                                    <div className="py-2" data-oid="mrhg0f.">
-                                        <span
-                                            className="text-gray-600 block mb-2"
-                                            data-oid="88axwsr"
-                                        >
-                                            ملاحظات:
-                                        </span>
-                                        <span
-                                            className="text-sm bg-gray-50 p-3 rounded-lg block"
-                                            data-oid="7xiz-1c"
-                                        >
+                                    <div className="py-2">
+                                        <span className="text-gray-600 block mb-2">ملاحظات:</span>
+                                        <span className="text-sm bg-gray-50 p-3 rounded-lg block">
                                             {serviceRequest.notes}
                                         </span>
                                     </div>
@@ -763,12 +591,8 @@ export default function RequestServicePage() {
                                               ? 'bg-yellow-50'
                                               : 'bg-blue-50'
                                     }`}
-                                    data-oid="xv_ca8o"
                                 >
-                                    <div
-                                        className="flex items-center space-x-2 space-x-reverse mb-2"
-                                        data-oid=":c.x501"
-                                    >
+                                    <div className="flex items-center space-x-2 space-x-reverse mb-2">
                                         <span
                                             className={
                                                 priceDifference > 0
@@ -777,7 +601,6 @@ export default function RequestServicePage() {
                                                       ? 'text-yellow-600'
                                                       : 'text-blue-600'
                                             }
-                                            data-oid="bi8ylwe"
                                         >
                                             {priceDifference > 0
                                                 ? '💰'
@@ -793,7 +616,6 @@ export default function RequestServicePage() {
                                                       ? 'text-yellow-800'
                                                       : 'text-blue-800'
                                             }`}
-                                            data-oid=":m4t-uv"
                                         >
                                             مقارنة الأسعار
                                         </span>
@@ -806,7 +628,6 @@ export default function RequestServicePage() {
                                                   ? 'text-yellow-700'
                                                   : 'text-blue-700'
                                         }`}
-                                        data-oid="z5:1jrf"
                                     >
                                         {priceDifference > 0
                                             ? `السعر المتوقع أعلى بـ ${priceDifference} ريال من سعر مقدم الخدمة`
@@ -818,22 +639,14 @@ export default function RequestServicePage() {
                             );
                         })()}
 
-                        <div className="bg-green-50 p-4 rounded-xl" data-oid="0gmm8f.">
-                            <div
-                                className="flex items-center space-x-2 space-x-reverse mb-2"
-                                data-oid="9rs:v_5"
-                            >
-                                <span className="text-green-600" data-oid="iwww0xz">
-                                    ✅
-                                </span>
-                                <span
-                                    className="text-sm font-semibold text-green-800"
-                                    data-oid="2e6dp9t"
-                                >
+                        <div className="bg-green-50 p-4 rounded-xl">
+                            <div className="flex items-center space-x-2 space-x-reverse mb-2">
+                                <span className="text-green-600">✅</span>
+                                <span className="text-sm font-semibold text-green-800">
                                     ضمان الخدمة
                                 </span>
                             </div>
-                            <p className="text-sm text-green-700" data-oid="0:3te8o">
+                            <p className="text-sm text-green-700">
                                 جميع الخدمات مضمونة 100% ويمكنك إلغاء الطلب قبل وصول مقدم الخدمة
                             </p>
                         </div>
@@ -841,12 +654,11 @@ export default function RequestServicePage() {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex space-x-3 space-x-reverse mt-6" data-oid="fpncnz5">
+                <div className="flex space-x-3 space-x-reverse mt-6">
                     {currentStep > 1 && (
                         <button
                             onClick={handlePrevStep}
                             className="flex-1 bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold"
-                            data-oid="ytkw0e3"
                         >
                             السابق
                         </button>
@@ -861,7 +673,6 @@ export default function RequestServicePage() {
                                     ? 'bg-blue-500 text-white'
                                     : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                             }`}
-                            data-oid="j8ir4ky"
                         >
                             التالي
                         </button>
@@ -874,7 +685,6 @@ export default function RequestServicePage() {
                                     ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                     : 'bg-green-500 text-white'
                             }`}
-                            data-oid="kb82s8f"
                         >
                             {isSubmitting ? 'جاري الإرسال...' : 'تأكيد الطلب'}
                         </button>
@@ -884,22 +694,11 @@ export default function RequestServicePage() {
 
             {/* Loading Modal */}
             {isSubmitting && (
-                <div
-                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-                    data-oid="uw2k9:5"
-                >
-                    <div
-                        className="bg-white w-full max-w-sm mx-4 rounded-3xl p-8 text-center"
-                        data-oid="gog92-:"
-                    >
-                        <div
-                            className="animate-spin w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"
-                            data-oid="p26v9y0"
-                        ></div>
-                        <h3 className="text-xl font-bold text-gray-800 mb-2" data-oid="n-hb-a_">
-                            جاري إرسال طلبك
-                        </h3>
-                        <p className="text-gray-600 text-sm" data-oid="-kt3wyr">
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                    <div className="bg-white w-full max-w-sm mx-4 rounded-3xl p-8 text-center">
+                        <div className="animate-spin w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"></div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">جاري إرسال طلبك</h3>
+                        <p className="text-gray-600 text-sm">
                             يرجى الانتظار بينما نرسل طلبك لمقدم الخدمة...
                         </p>
                     </div>
@@ -907,7 +706,7 @@ export default function RequestServicePage() {
             )}
 
             {/* Padding for bottom navigation */}
-            <div className="h-20" data-oid="l67pq9q"></div>
+            <div className="h-20"></div>
         </div>
     );
 }

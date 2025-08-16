@@ -244,70 +244,54 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="q8rlc.3">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="f1_rckt"
-            >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="4.xhcqg">
-                    <div className="flex items-center justify-between mb-4" data-oid="5ekpd9f">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="max-w-sm mx-auto px-4 py-6">
+                    <div className="flex items-center justify-between mb-4">
                         <Link
                             href="/login"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="pw38ibr"
                         >
-                            <span className="text-lg" data-oid="qm4ruyl">
-                                ←
-                            </span>
+                            <span className="text-lg">←</span>
                         </Link>
-                        <h1 className="text-xl font-bold" data-oid="p295a35">
-                            إنشاء حساب جديد
-                        </h1>
-                        <div className="w-10" data-oid="21_e3nb"></div>
+                        <h1 className="text-xl font-bold">إنشاء حساب جديد</h1>
+                        <div className="w-10"></div>
                     </div>
-                    <p className="text-white/90 text-sm text-center" data-oid="n.-dy10">
+                    <p className="text-white/90 text-sm text-center">
                         انضم إلينا واحصل على أفضل الخدمات
                     </p>
                 </div>
             </div>
 
             {/* Progress Indicator */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10 mb-6" data-oid="78x59gw">
-                <div className="bg-white rounded-2xl shadow-lg p-4" data-oid="ypgb:7-">
-                    <div className="flex items-center justify-between mb-2" data-oid="wc-a5er">
-                        <span className="text-sm text-gray-600" data-oid="dvkk3ri">
-                            الخطوة {currentStep} من 2
-                        </span>
-                        <span className="text-sm text-gray-600" data-oid="66cvpnz">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10 mb-6">
+                <div className="bg-white rounded-2xl shadow-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm text-gray-600">الخطوة {currentStep} من 2</span>
+                        <span className="text-sm text-gray-600">
                             {currentStep === 1 ? 'المعلومات الأساسية' : 'كلمة المرور والتفضيلات'}
                         </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2" data-oid="kf:sd8k">
+                    <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
                             className="bg-blue-500 h-2 rounded-full transition-all duration-300"
                             style={{ width: `${(currentStep / 2) * 100}%` }}
-                            data-oid="zt_s_77"
                         ></div>
                     </div>
                 </div>
             </div>
 
             {/* Registration Form */}
-            <div className="max-w-sm mx-auto px-4 pb-6" data-oid=":oq2ibb">
-                <form onSubmit={handleSubmit} className="space-y-6" data-oid="rc7n.rg">
+            <div className="max-w-sm mx-auto px-4 pb-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Step 1: Basic Information */}
                     {currentStep === 1 && (
-                        <div className="space-y-4" data-oid="18a9pqt">
+                        <div className="space-y-4">
                             {/* User Type Selection */}
-                            <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="pr8zcxi"
-                            >
-                                <h3 className="font-semibold text-gray-800 mb-3" data-oid="-diu6tr">
-                                    نوع الحساب
-                                </h3>
-                                <div className="grid grid-cols-2 gap-3" data-oid="ox6ugyc">
+                            <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                <h3 className="font-semibold text-gray-800 mb-3">نوع الحساب</h3>
+                                <div className="grid grid-cols-2 gap-3">
                                     <button
                                         type="button"
                                         onClick={() => handleInputChange('userType', 'customer')}
@@ -316,17 +300,10 @@ export default function RegisterPage() {
                                                 ? 'border-blue-500 bg-blue-50 text-blue-700'
                                                 : 'border-gray-200 bg-white text-gray-700'
                                         }`}
-                                        data-oid="kklbhns"
                                     >
-                                        <div className="text-2xl mb-2" data-oid="e8s2vz0">
-                                            👤
-                                        </div>
-                                        <div className="font-semibold text-sm" data-oid="4upesd.">
-                                            عميل
-                                        </div>
-                                        <div className="text-xs text-gray-600" data-oid=":tpfq:1">
-                                            أطلب الخدمات
-                                        </div>
+                                        <div className="text-2xl mb-2">👤</div>
+                                        <div className="font-semibold text-sm">عميل</div>
+                                        <div className="text-xs text-gray-600">أطلب الخدمات</div>
                                     </button>
                                     <button
                                         type="button"
@@ -336,31 +313,18 @@ export default function RegisterPage() {
                                                 ? 'border-blue-500 bg-blue-50 text-blue-700'
                                                 : 'border-gray-200 bg-white text-gray-700'
                                         }`}
-                                        data-oid="t-ot:la"
                                     >
-                                        <div className="text-2xl mb-2" data-oid="op7ewct">
-                                            🔧
-                                        </div>
-                                        <div className="font-semibold text-sm" data-oid="380o749">
-                                            مقدم خدمة
-                                        </div>
-                                        <div className="text-xs text-gray-600" data-oid="2g6.dxk">
-                                            أقدم الخدمات
-                                        </div>
+                                        <div className="text-2xl mb-2">🔧</div>
+                                        <div className="font-semibold text-sm">مقدم خدمة</div>
+                                        <div className="text-xs text-gray-600">أقدم الخدمات</div>
                                     </button>
                                 </div>
                             </div>
 
                             {/* Name Fields */}
-                            <div className="grid grid-cols-2 gap-3" data-oid="t0h8t2d">
-                                <div
-                                    className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    data-oid=".xluc1x"
-                                >
-                                    <label
-                                        className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="i0d25lb"
-                                    >
+                            <div className="grid grid-cols-2 gap-3">
+                                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         الاسم الأول *
                                     </label>
                                     <input
@@ -375,24 +339,17 @@ export default function RegisterPage() {
                                                 : 'border-gray-300 focus:border-blue-500'
                                         }`}
                                         placeholder="أدخل اسمك الأول"
-                                        data-oid="hws1do0"
                                     />
 
                                     {errors.firstName && (
-                                        <p className="text-red-500 text-xs mt-1" data-oid="yt1c2a_">
+                                        <p className="text-red-500 text-xs mt-1">
                                             {errors.firstName}
                                         </p>
                                     )}
                                 </div>
 
-                                <div
-                                    className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    data-oid="w3jahu."
-                                >
-                                    <label
-                                        className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="0hx5.er"
-                                    >
+                                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         اسم العائلة *
                                     </label>
                                     <input
@@ -407,11 +364,10 @@ export default function RegisterPage() {
                                                 : 'border-gray-300 focus:border-blue-500'
                                         }`}
                                         placeholder="أدخل اسم العائلة"
-                                        data-oid="7it:dv1"
                                     />
 
                                     {errors.lastName && (
-                                        <p className="text-red-500 text-xs mt-1" data-oid="y9trv7_">
+                                        <p className="text-red-500 text-xs mt-1">
                                             {errors.lastName}
                                         </p>
                                     )}
@@ -419,14 +375,8 @@ export default function RegisterPage() {
                             </div>
 
                             {/* Email Field */}
-                            <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="-aak5b7"
-                            >
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="a_k.qj7"
-                                >
+                            <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     البريد الإلكتروني *
                                 </label>
                                 <input
@@ -440,31 +390,22 @@ export default function RegisterPage() {
                                     }`}
                                     placeholder="example@email.com"
                                     dir="ltr"
-                                    data-oid="c81njww"
                                 />
 
                                 {errors.email && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="ngwch_n">
-                                        {errors.email}
-                                    </p>
+                                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
                                 )}
                             </div>
 
                             {/* Phone Field - Enhanced */}
-                            <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border-2 border-blue-200"
-                                data-oid="7qk-gdz"
-                            >
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="q17mfmp"
-                                >
+                            <div className="bg-white rounded-2xl p-4 shadow-sm border-2 border-blue-200">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     رقم الجوال *
-                                    <span className="text-blue-600 text-xs mr-1" data-oid="61-uu-x">
+                                    <span className="text-blue-600 text-xs mr-1">
                                         (مطلوب للتحقق)
                                     </span>
                                 </label>
-                                <div className="flex space-x-2 space-x-reverse" data-oid="o0qpda2">
+                                <div className="flex space-x-2 space-x-reverse">
                                     <input
                                         type="tel"
                                         value={formData.phone}
@@ -481,7 +422,6 @@ export default function RegisterPage() {
                                         }`}
                                         placeholder="05xxxxxxxx"
                                         dir="ltr"
-                                        data-oid="r1e.-v9"
                                     />
 
                                     <button
@@ -495,37 +435,25 @@ export default function RegisterPage() {
                                                   ? 'bg-blue-500 text-white hover:bg-blue-600'
                                                   : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                         }`}
-                                        data-oid="1r-gtpz"
                                     >
                                         {isPhoneVerified ? '✓ مؤكد' : 'تحقق'}
                                     </button>
                                 </div>
 
                                 {errors.phone && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="6.jz_s-">
-                                        {errors.phone}
-                                    </p>
+                                    <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
                                 )}
 
                                 {isPhoneVerified && (
-                                    <p
-                                        className="text-green-600 text-xs mt-1 flex items-center"
-                                        data-oid="lzork3d"
-                                    >
-                                        <span className="mr-1" data-oid="etj6rul">
-                                            ✓
-                                        </span>
+                                    <p className="text-green-600 text-xs mt-1 flex items-center">
+                                        <span className="mr-1">✓</span>
                                         تم تأكيد رقم الجوال بنجاح
                                     </p>
                                 )}
 
-                                <div className="mt-2 text-xs text-gray-600" data-oid="ygcqsy0">
-                                    <p data-oid="o82-6vg">
-                                        • سيتم إرسال رمز تحقق عبر الرسائل النصية
-                                    </p>
-                                    <p data-oid="tlflu4w">
-                                        • رقم الجوال مطلوب لتأمين حسابك وإرسال الإشعارات
-                                    </p>
+                                <div className="mt-2 text-xs text-gray-600">
+                                    <p>• سيتم إرسال رمز تحقق عبر الرسائل النصية</p>
+                                    <p>• رقم الجوال مطلوب لتأمين حسابك وإرسال الإشعارات</p>
                                 </div>
                             </div>
 
@@ -534,7 +462,6 @@ export default function RegisterPage() {
                                 type="button"
                                 onClick={nextStep}
                                 className="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-colors"
-                                data-oid="qevt:20"
                             >
                                 التالي
                             </button>
@@ -543,19 +470,13 @@ export default function RegisterPage() {
 
                     {/* Step 2: Password and Preferences */}
                     {currentStep === 2 && (
-                        <div className="space-y-4" data-oid="-w_uqo.">
+                        <div className="space-y-4">
                             {/* Password Field */}
-                            <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="3tjoszz"
-                            >
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="yjiqyp_"
-                                >
+                            <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     كلمة المرور *
                                 </label>
-                                <div className="relative" data-oid="epd_glp">
+                                <div className="relative">
                                     <input
                                         type={showPassword ? 'text' : 'password'}
                                         value={formData.password}
@@ -569,48 +490,35 @@ export default function RegisterPage() {
                                         }`}
                                         placeholder="أدخل كلمة مرور قوية"
                                         dir="ltr"
-                                        data-oid="kl_4ckq"
                                     />
 
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
                                         className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                                        data-oid="h.-iew8"
                                     >
                                         {showPassword ? '🙈' : '👁️'}
                                     </button>
                                 </div>
                                 {errors.password && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="68k7d.r">
-                                        {errors.password}
-                                    </p>
+                                    <p className="text-red-500 text-xs mt-1">{errors.password}</p>
                                 )}
-                                <div className="mt-2 text-xs text-gray-600" data-oid="4.8iha9">
-                                    <p data-oid="46zj6ps">كلمة المرور يجب أن تحتوي على:</p>
-                                    <ul
-                                        className="list-disc list-inside mt-1 space-y-1"
-                                        data-oid="sy4jnqu"
-                                    >
-                                        <li data-oid="n7:w:tx">8 أحرف على الأقل</li>
-                                        <li data-oid="kl_hdia">حروف كبيرة وصغيرة</li>
-                                        <li data-oid="dgkjt4s">أرقام</li>
+                                <div className="mt-2 text-xs text-gray-600">
+                                    <p>كلمة المرور يجب أن تحتوي على:</p>
+                                    <ul className="list-disc list-inside mt-1 space-y-1">
+                                        <li>8 أحرف على الأقل</li>
+                                        <li>حروف كبيرة وصغيرة</li>
+                                        <li>أرقام</li>
                                     </ul>
                                 </div>
                             </div>
 
                             {/* Confirm Password Field */}
-                            <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="9k536to"
-                            >
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="egrvwbo"
-                                >
+                            <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     تأكيد كلمة المرور *
                                 </label>
-                                <div className="relative" data-oid="r6jm.2m">
+                                <div className="relative">
                                     <input
                                         type={showConfirmPassword ? 'text' : 'password'}
                                         value={formData.confirmPassword}
@@ -624,34 +532,26 @@ export default function RegisterPage() {
                                         }`}
                                         placeholder="أعد إدخال كلمة المرور"
                                         dir="ltr"
-                                        data-oid="ep7xf88"
                                     />
 
                                     <button
                                         type="button"
                                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                                         className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                                        data-oid="s783so0"
                                     >
                                         {showConfirmPassword ? '🙈' : '👁️'}
                                     </button>
                                 </div>
                                 {errors.confirmPassword && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="nnb9a_j">
+                                    <p className="text-red-500 text-xs mt-1">
                                         {errors.confirmPassword}
                                     </p>
                                 )}
                             </div>
 
                             {/* Terms Agreement */}
-                            <div
-                                className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                data-oid="k2a5hmt"
-                            >
-                                <label
-                                    className="flex items-start space-x-3 space-x-reverse cursor-pointer"
-                                    data-oid="wrvo53n"
-                                >
+                            <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                                <label className="flex items-start space-x-3 space-x-reverse cursor-pointer">
                                     <input
                                         type="checkbox"
                                         checked={formData.agreeToTerms}
@@ -659,30 +559,21 @@ export default function RegisterPage() {
                                             handleInputChange('agreeToTerms', e.target.checked)
                                         }
                                         className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                                        data-oid="30juae6"
                                     />
 
-                                    <div className="text-sm text-gray-700" data-oid="nzbhlx_">
-                                        <span data-oid="c5as9j_">أوافق على </span>
-                                        <Link
-                                            href="/terms"
-                                            className="text-blue-600 underline"
-                                            data-oid="0jb.h2x"
-                                        >
+                                    <div className="text-sm text-gray-700">
+                                        <span>أوافق على </span>
+                                        <Link href="/terms" className="text-blue-600 underline">
                                             الشروط والأحكام
                                         </Link>
-                                        <span data-oid="-7s:bl8"> و </span>
-                                        <Link
-                                            href="/privacy"
-                                            className="text-blue-600 underline"
-                                            data-oid="s4n1p2g"
-                                        >
+                                        <span> و </span>
+                                        <Link href="/privacy" className="text-blue-600 underline">
                                             سياسة الخصوصية
                                         </Link>
                                     </div>
                                 </label>
                                 {errors.agreeToTerms && (
-                                    <p className="text-red-500 text-xs mt-1" data-oid="6ssiqw8">
+                                    <p className="text-red-500 text-xs mt-1">
                                         {errors.agreeToTerms}
                                     </p>
                                 )}
@@ -690,23 +581,17 @@ export default function RegisterPage() {
 
                             {/* Error Message */}
                             {errors.general && (
-                                <div
-                                    className="bg-red-50 border border-red-200 rounded-2xl p-4"
-                                    data-oid="bduwazw"
-                                >
-                                    <p className="text-red-600 text-sm" data-oid="9hfckjg">
-                                        {errors.general}
-                                    </p>
+                                <div className="bg-red-50 border border-red-200 rounded-2xl p-4">
+                                    <p className="text-red-600 text-sm">{errors.general}</p>
                                 </div>
                             )}
 
                             {/* Action Buttons */}
-                            <div className="flex space-x-3 space-x-reverse" data-oid="zsiwnxa">
+                            <div className="flex space-x-3 space-x-reverse">
                                 <button
                                     type="button"
                                     onClick={prevStep}
                                     className="flex-1 bg-gray-100 text-gray-700 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition-colors"
-                                    data-oid="kwm:h:n"
                                 >
                                     السابق
                                 </button>
@@ -714,18 +599,11 @@ export default function RegisterPage() {
                                     type="submit"
                                     disabled={isLoading}
                                     className="flex-1 bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                                    data-oid="8xtlcww"
                                 >
                                     {isLoading ? (
-                                        <div
-                                            className="flex items-center justify-center space-x-2 space-x-reverse"
-                                            data-oid="a0xt-.3"
-                                        >
-                                            <div
-                                                className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                                                data-oid="ahagai."
-                                            ></div>
-                                            <span data-oid="oh7o2nl">جاري إنشاء الحساب...</span>
+                                        <div className="flex items-center justify-center space-x-2 space-x-reverse">
+                                            <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></div>
+                                            <span>جاري إنشاء الحساب...</span>
                                         </div>
                                     ) : (
                                         'إنشاء الحساب'
@@ -737,56 +615,41 @@ export default function RegisterPage() {
                 </form>
 
                 {/* Login Link */}
-                <div className="mt-6 text-center" data-oid="e8s.u53">
-                    <p className="text-gray-600 text-sm" data-oid="5u4o0:b">
+                <div className="mt-6 text-center">
+                    <p className="text-gray-600 text-sm">
                         لديك حساب بالفعل؟{' '}
-                        <Link
-                            href="/login"
-                            className="text-blue-600 font-semibold"
-                            data-oid="viw.zd:"
-                        >
+                        <Link href="/login" className="text-blue-600 font-semibold">
                             تسجيل الدخول
                         </Link>
                     </p>
                 </div>
 
                 {/* Social Registration */}
-                <div className="mt-6" data-oid="49t8pp1">
-                    <div className="relative" data-oid="hs81:y_">
-                        <div className="absolute inset-0 flex items-center" data-oid="smpve-q">
-                            <div
-                                className="w-full border-t border-gray-300"
-                                data-oid="fr_lqbf"
-                            ></div>
+                <div className="mt-6">
+                    <div className="relative">
+                        <div className="absolute inset-0 flex items-center">
+                            <div className="w-full border-t border-gray-300"></div>
                         </div>
-                        <div className="relative flex justify-center text-sm" data-oid="cfmm2.u">
-                            <span className="px-2 bg-gray-50 text-gray-500" data-oid="xekiomg">
-                                أو
-                            </span>
+                        <div className="relative flex justify-center text-sm">
+                            <span className="px-2 bg-gray-50 text-gray-500">أو</span>
                         </div>
                     </div>
 
-                    <div className="mt-6 space-y-3" data-oid="-i3h4uh">
+                    <div className="mt-6 space-y-3">
                         <button
                             type="button"
                             className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-2xl font-semibold flex items-center justify-center space-x-2 space-x-reverse hover:bg-gray-50 transition-colors"
-                            data-oid="eopowan"
                         >
-                            <span className="text-xl" data-oid="4yg.r66">
-                                📱
-                            </span>
-                            <span data-oid="fcy4nh9">التسجيل باستخدام أبشر</span>
+                            <span className="text-xl">📱</span>
+                            <span>التسجيل باستخدام أبشر</span>
                         </button>
 
                         <button
                             type="button"
                             className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-2xl font-semibold flex items-center justify-center space-x-2 space-x-reverse hover:bg-gray-50 transition-colors"
-                            data-oid=".0z8-j:"
                         >
-                            <span className="text-xl" data-oid="4un9nz5">
-                                🍎
-                            </span>
-                            <span data-oid="30imx6k">التسجيل باستخدام Apple</span>
+                            <span className="text-xl">🍎</span>
+                            <span>التسجيل باستخدام Apple</span>
                         </button>
                     </div>
                 </div>

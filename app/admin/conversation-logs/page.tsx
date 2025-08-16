@@ -231,105 +231,63 @@ export default function ConversationLogsPage() {
     };
 
     return (
-        <div className="p-6" data-oid="conv-logs-main">
-            <div className="mb-6" data-oid="conv-logs-header">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2" data-oid="conv-logs-title">
-                    سجل المحادثات للطلبات
-                </h1>
-                <p className="text-gray-600" data-oid="conv-logs-desc">
+        <div className="p-6">
+            <div className="mb-6">
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">سجل المحادثات للطلبات</h1>
+                <p className="text-gray-600">
                     متابعة ومراقبة جميع المحادثات بين العملاء ومقدمي الخدمات
                 </p>
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6" data-oid="conv-logs-stats">
-                <div className="bg-white rounded-lg shadow p-4" data-oid="stat-total">
-                    <div className="flex items-center" data-oid="stat-total-content">
-                        <div
-                            className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center ml-3"
-                            data-oid="stat-total-icon"
-                        >
-                            <span className="text-white text-sm" data-oid="stat-total-emoji">
-                                💬
-                            </span>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center">
+                        <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center ml-3">
+                            <span className="text-white text-sm">💬</span>
                         </div>
-                        <div data-oid="stat-total-text">
-                            <p className="text-sm text-gray-600" data-oid="stat-total-label">
-                                إجمالي المحادثات
-                            </p>
-                            <p
-                                className="text-xl font-semibold text-gray-900"
-                                data-oid="stat-total-value"
-                            >
+                        <div>
+                            <p className="text-sm text-gray-600">إجمالي المحادثات</p>
+                            <p className="text-xl font-semibold text-gray-900">
                                 {stats.totalConversations}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="bg-white rounded-lg shadow p-4" data-oid="stat-active">
-                    <div className="flex items-center" data-oid="stat-active-content">
-                        <div
-                            className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center ml-3"
-                            data-oid="stat-active-icon"
-                        >
-                            <span className="text-white text-sm" data-oid="stat-active-emoji">
-                                🟢
-                            </span>
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center">
+                        <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center ml-3">
+                            <span className="text-white text-sm">🟢</span>
                         </div>
-                        <div data-oid="stat-active-text">
-                            <p className="text-sm text-gray-600" data-oid="stat-active-label">
-                                المحادثات النشطة
-                            </p>
-                            <p
-                                className="text-xl font-semibold text-gray-900"
-                                data-oid="stat-active-value"
-                            >
+                        <div>
+                            <p className="text-sm text-gray-600">المحادثات النشطة</p>
+                            <p className="text-xl font-semibold text-gray-900">
                                 {stats.activeConversations}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="bg-white rounded-lg shadow p-4" data-oid="stat-completed">
-                    <div className="flex items-center" data-oid="stat-completed-content">
-                        <div
-                            className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center ml-3"
-                            data-oid="stat-completed-icon"
-                        >
-                            <span className="text-white text-sm" data-oid="stat-completed-emoji">
-                                ✅
-                            </span>
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center">
+                        <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center ml-3">
+                            <span className="text-white text-sm">✅</span>
                         </div>
-                        <div data-oid="stat-completed-text">
-                            <p className="text-sm text-gray-600" data-oid="stat-completed-label">
-                                المحادثات المكتملة
-                            </p>
-                            <p
-                                className="text-xl font-semibold text-gray-900"
-                                data-oid="stat-completed-value"
-                            >
+                        <div>
+                            <p className="text-sm text-gray-600">المحادثات المكتملة</p>
+                            <p className="text-xl font-semibold text-gray-900">
                                 {stats.completedConversations}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="bg-white rounded-lg shadow p-4" data-oid="stat-issues">
-                    <div className="flex items-center" data-oid="stat-issues-content">
-                        <div
-                            className="w-8 h-8 bg-red-500 rounded-md flex items-center justify-center ml-3"
-                            data-oid="stat-issues-icon"
-                        >
-                            <span className="text-white text-sm" data-oid="stat-issues-emoji">
-                                ⚠️
-                            </span>
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center">
+                        <div className="w-8 h-8 bg-red-500 rounded-md flex items-center justify-center ml-3">
+                            <span className="text-white text-sm">⚠️</span>
                         </div>
-                        <div data-oid="stat-issues-text">
-                            <p className="text-sm text-gray-600" data-oid="stat-issues-label">
-                                محادثات بها مشاكل
-                            </p>
-                            <p
-                                className="text-xl font-semibold text-gray-900"
-                                data-oid="stat-issues-value"
-                            >
+                        <div>
+                            <p className="text-sm text-gray-600">محادثات بها مشاكل</p>
+                            <p className="text-xl font-semibold text-gray-900">
                                 {stats.conversationsWithIssues}
                             </p>
                         </div>
@@ -337,23 +295,14 @@ export default function ConversationLogsPage() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid="conv-logs-layout">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Conversations List */}
-                <div className="lg:col-span-2" data-oid="conv-logs-list-section">
+                <div className="lg:col-span-2">
                     {/* Filters */}
-                    <div
-                        className="bg-white rounded-lg shadow mb-6 p-6"
-                        data-oid="conv-logs-filters"
-                    >
-                        <div
-                            className="grid grid-cols-1 md:grid-cols-5 gap-4"
-                            data-oid="conv-logs-filters-grid"
-                        >
-                            <div data-oid="filter-search">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="filter-search-label"
-                                >
+                    <div className="bg-white rounded-lg shadow mb-6 p-6">
+                        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     البحث
                                 </label>
                                 <input
@@ -362,95 +311,55 @@ export default function ConversationLogsPage() {
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    data-oid="filter-search-input"
                                 />
                             </div>
-                            <div data-oid="filter-status">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="filter-status-label"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     حالة المحادثة
                                 </label>
                                 <select
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     value={statusFilter}
                                     onChange={(e) => setStatusFilter(e.target.value)}
-                                    data-oid="filter-status-select"
                                 >
-                                    <option value="الكل" data-oid="filter-status-all">
-                                        جميع الحالات
-                                    </option>
-                                    <option value="نشط" data-oid="filter-status-active">
-                                        نشط
-                                    </option>
-                                    <option value="مكتمل" data-oid="filter-status-completed">
-                                        مكتمل
-                                    </option>
-                                    <option value="متوقف" data-oid="filter-status-stopped">
-                                        متوقف
-                                    </option>
+                                    <option value="الكل">جميع الحالات</option>
+                                    <option value="نشط">نشط</option>
+                                    <option value="مكتمل">مكتمل</option>
+                                    <option value="متوقف">متوقف</option>
                                 </select>
                             </div>
-                            <div data-oid="filter-priority">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="filter-priority-label"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     الأولوية
                                 </label>
                                 <select
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     value={priorityFilter}
                                     onChange={(e) => setPriorityFilter(e.target.value)}
-                                    data-oid="filter-priority-select"
                                 >
-                                    <option value="الكل" data-oid="filter-priority-all">
-                                        جميع الأولويات
-                                    </option>
-                                    <option value="عاجل" data-oid="filter-priority-urgent">
-                                        عاجل
-                                    </option>
-                                    <option value="مهم" data-oid="filter-priority-important">
-                                        مهم
-                                    </option>
-                                    <option value="عادي" data-oid="filter-priority-normal">
-                                        عادي
-                                    </option>
+                                    <option value="الكل">جميع الأولويات</option>
+                                    <option value="عاجل">عاجل</option>
+                                    <option value="مهم">مهم</option>
+                                    <option value="عادي">عادي</option>
                                 </select>
                             </div>
-                            <div data-oid="filter-issues">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="filter-issues-label"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     المشاكل
                                 </label>
-                                <label
-                                    className="flex items-center"
-                                    data-oid="filter-issues-checkbox"
-                                >
+                                <label className="flex items-center">
                                     <input
                                         type="checkbox"
                                         checked={showIssuesOnly}
                                         onChange={(e) => setShowIssuesOnly(e.target.checked)}
                                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                                        data-oid="filter-issues-input"
                                     />
 
-                                    <span
-                                        className="mr-2 text-sm text-gray-700"
-                                        data-oid="filter-issues-text"
-                                    >
-                                        المشاكل فقط
-                                    </span>
+                                    <span className="mr-2 text-sm text-gray-700">المشاكل فقط</span>
                                 </label>
                             </div>
-                            <div className="flex items-end" data-oid="filter-export">
-                                <button
-                                    className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                                    data-oid="filter-export-btn"
-                                >
+                            <div className="flex items-end">
+                                <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
                                     تصدير التقرير
                                 </button>
                             </div>
@@ -458,226 +367,117 @@ export default function ConversationLogsPage() {
                     </div>
 
                     {/* Conversations Table */}
-                    <div
-                        className="bg-white rounded-lg shadow overflow-hidden"
-                        data-oid="conv-logs-table"
-                    >
-                        <div
-                            className="px-6 py-4 border-b border-gray-200"
-                            data-oid="conv-logs-table-header"
-                        >
-                            <h3
-                                className="text-lg font-medium text-gray-900"
-                                data-oid="conv-logs-table-title"
-                            >
-                                سجل المحادثات
-                            </h3>
+                    <div className="bg-white rounded-lg shadow overflow-hidden">
+                        <div className="px-6 py-4 border-b border-gray-200">
+                            <h3 className="text-lg font-medium text-gray-900">سجل المحادثات</h3>
                         </div>
-                        <div className="overflow-x-auto" data-oid="conv-logs-table-container">
-                            <table
-                                className="min-w-full divide-y divide-gray-200"
-                                data-oid="conv-logs-table-element"
-                            >
-                                <thead className="bg-gray-50" data-oid="conv-logs-table-head">
-                                    <tr data-oid="conv-logs-table-head-row">
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-order"
-                                        >
+                        <div className="overflow-x-auto">
+                            <table className="min-w-full divide-y divide-gray-200">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             رقم الطلب
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-participants"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             المشاركون
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-service"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الخدمة
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-messages"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الرسائل
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-last-activity"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             آخر نشاط
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-status"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الحالة
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-priority"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الأولوية
                                         </th>
-                                        <th
-                                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                            data-oid="th-actions"
-                                        >
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             الإجراءات
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody
-                                    className="bg-white divide-y divide-gray-200"
-                                    data-oid="conv-logs-table-body"
-                                >
+                                <tbody className="bg-white divide-y divide-gray-200">
                                     {filteredLogs.map((log) => (
-                                        <tr
-                                            key={log.id}
-                                            className="hover:bg-gray-50"
-                                            data-oid={`conv-row-${log.id}`}
-                                        >
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                                                data-oid={`order-${log.id}`}
-                                            >
-                                                <div
-                                                    className="flex items-center"
-                                                    data-oid={`order-content-${log.id}`}
-                                                >
-                                                    <span data-oid={`order-id-${log.id}`}>
-                                                        #{log.orderId}
-                                                    </span>
+                                        <tr key={log.id} className="hover:bg-gray-50">
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                                <div className="flex items-center">
+                                                    <span>#{log.orderId}</span>
                                                     {log.hasIssues && (
-                                                        <span
-                                                            className="mr-2 text-red-500"
-                                                            data-oid={`issue-icon-${log.id}`}
-                                                        >
+                                                        <span className="mr-2 text-red-500">
                                                             ⚠️
                                                         </span>
                                                     )}
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                                                data-oid={`participants-${log.id}`}
-                                            >
-                                                <div data-oid={`customer-${log.id}`}>
-                                                    <div
-                                                        className="font-medium"
-                                                        data-oid={`customer-name-${log.id}`}
-                                                    >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                                <div>
+                                                    <div className="font-medium">
                                                         {log.customer}
                                                     </div>
-                                                    <div
-                                                        className="text-gray-500"
-                                                        data-oid={`provider-name-${log.id}`}
-                                                    >
+                                                    <div className="text-gray-500">
                                                         {log.provider}
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                                data-oid={`service-${log.id}`}
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                 {log.service}
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                                                data-oid={`messages-${log.id}`}
-                                            >
-                                                <div
-                                                    className="flex items-center"
-                                                    data-oid={`messages-content-${log.id}`}
-                                                >
-                                                    <span
-                                                        className="ml-1"
-                                                        data-oid={`messages-icon-${log.id}`}
-                                                    >
-                                                        💬
-                                                    </span>
-                                                    <span data-oid={`messages-count-${log.id}`}>
-                                                        {log.messageCount}
-                                                    </span>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                                <div className="flex items-center">
+                                                    <span className="ml-1">💬</span>
+                                                    <span>{log.messageCount}</span>
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                                data-oid={`last-activity-${log.id}`}
-                                            >
-                                                <div data-oid={`last-activity-content-${log.id}`}>
-                                                    <div data-oid={`last-activity-date-${log.id}`}>
-                                                        {log.lastActivity.split(' ')[0]}
-                                                    </div>
-                                                    <div
-                                                        className="text-xs text-gray-400"
-                                                        data-oid={`last-activity-time-${log.id}`}
-                                                    >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                <div>
+                                                    <div>{log.lastActivity.split(' ')[0]}</div>
+                                                    <div className="text-xs text-gray-400">
                                                         {log.lastActivity.split(' ')[1]}
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap"
-                                                data-oid={`status-${log.id}`}
-                                            >
-                                                <div
-                                                    className="space-y-1"
-                                                    data-oid={`status-content-${log.id}`}
-                                                >
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                <div className="space-y-1">
                                                     <span
                                                         className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(log.status)}`}
-                                                        data-oid={`conv-status-${log.id}`}
                                                     >
                                                         {log.status}
                                                     </span>
-                                                    <div data-oid={`order-status-${log.id}`}>
+                                                    <div>
                                                         <span
                                                             className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getOrderStatusColor(log.orderStatus)}`}
-                                                            data-oid={`order-status-badge-${log.id}`}
                                                         >
                                                             {log.orderStatus}
                                                         </span>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap"
-                                                data-oid={`priority-${log.id}`}
-                                            >
+                                            <td className="px-6 py-4 whitespace-nowrap">
                                                 <span
                                                     className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getPriorityColor(log.priority)}`}
-                                                    data-oid={`priority-badge-${log.id}`}
                                                 >
                                                     {log.priority}
                                                 </span>
                                             </td>
-                                            <td
-                                                className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                                data-oid={`actions-${log.id}`}
-                                            >
-                                                <div
-                                                    className="flex space-x-2 space-x-reverse"
-                                                    data-oid={`actions-content-${log.id}`}
-                                                >
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                <div className="flex space-x-2 space-x-reverse">
                                                     <button
                                                         onClick={() => {
                                                             setSelectedConversation(log);
                                                             loadMessages(log.id);
                                                         }}
                                                         className="text-blue-600 hover:text-blue-900"
-                                                        data-oid={`view-btn-${log.id}`}
                                                     >
                                                         عرض المحادثة
                                                     </button>
                                                     <Link
                                                         href={`/admin/orders/${log.orderId}`}
                                                         className="text-green-600 hover:text-green-900"
-                                                        data-oid={`order-btn-${log.id}`}
                                                     >
                                                         عرض الطلب
                                                     </Link>
@@ -692,116 +492,53 @@ export default function ConversationLogsPage() {
                 </div>
 
                 {/* Conversation Details */}
-                <div className="space-y-6" data-oid="conv-details-section">
+                <div className="space-y-6">
                     {selectedConversation ? (
                         <>
                             {/* Conversation Info */}
-                            <div className="bg-white rounded-lg shadow p-6" data-oid="conv-info">
-                                <h3
-                                    className="text-lg font-medium text-gray-900 mb-4"
-                                    data-oid="conv-info-title"
-                                >
+                            <div className="bg-white rounded-lg shadow p-6">
+                                <h3 className="text-lg font-medium text-gray-900 mb-4">
                                     تفاصيل المحادثة #{selectedConversation.orderId}
                                 </h3>
-                                <div className="space-y-3" data-oid="conv-info-details">
-                                    <div
-                                        className="flex justify-between"
-                                        data-oid="conv-info-customer"
-                                    >
-                                        <span
-                                            className="text-sm text-gray-600"
-                                            data-oid="conv-info-customer-label"
-                                        >
-                                            العميل:
-                                        </span>
-                                        <span
-                                            className="text-sm font-medium text-gray-900"
-                                            data-oid="conv-info-customer-value"
-                                        >
+                                <div className="space-y-3">
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-600">العميل:</span>
+                                        <span className="text-sm font-medium text-gray-900">
                                             {selectedConversation.customer}
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex justify-between"
-                                        data-oid="conv-info-provider"
-                                    >
-                                        <span
-                                            className="text-sm text-gray-600"
-                                            data-oid="conv-info-provider-label"
-                                        >
-                                            مقدم الخدمة:
-                                        </span>
-                                        <span
-                                            className="text-sm font-medium text-gray-900"
-                                            data-oid="conv-info-provider-value"
-                                        >
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-600">مقدم الخدمة:</span>
+                                        <span className="text-sm font-medium text-gray-900">
                                             {selectedConversation.provider}
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex justify-between"
-                                        data-oid="conv-info-service"
-                                    >
-                                        <span
-                                            className="text-sm text-gray-600"
-                                            data-oid="conv-info-service-label"
-                                        >
-                                            الخدمة:
-                                        </span>
-                                        <span
-                                            className="text-sm font-medium text-gray-900"
-                                            data-oid="conv-info-service-value"
-                                        >
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-600">الخدمة:</span>
+                                        <span className="text-sm font-medium text-gray-900">
                                             {selectedConversation.service}
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex justify-between"
-                                        data-oid="conv-info-messages"
-                                    >
-                                        <span
-                                            className="text-sm text-gray-600"
-                                            data-oid="conv-info-messages-label"
-                                        >
-                                            عدد الرسائل:
-                                        </span>
-                                        <span
-                                            className="text-sm font-medium text-gray-900"
-                                            data-oid="conv-info-messages-value"
-                                        >
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-600">عدد الرسائل:</span>
+                                        <span className="text-sm font-medium text-gray-900">
                                             {selectedConversation.messageCount}
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex justify-between"
-                                        data-oid="conv-info-status"
-                                    >
-                                        <span
-                                            className="text-sm text-gray-600"
-                                            data-oid="conv-info-status-label"
-                                        >
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-600">
                                             حالة المحادثة:
                                         </span>
                                         <span
                                             className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(selectedConversation.status)}`}
-                                            data-oid="conv-info-status-value"
                                         >
                                             {selectedConversation.status}
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex justify-between"
-                                        data-oid="conv-info-priority"
-                                    >
-                                        <span
-                                            className="text-sm text-gray-600"
-                                            data-oid="conv-info-priority-label"
-                                        >
-                                            الأولوية:
-                                        </span>
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-600">الأولوية:</span>
                                         <span
                                             className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getPriorityColor(selectedConversation.priority)}`}
-                                            data-oid="conv-info-priority-value"
                                         >
                                             {selectedConversation.priority}
                                         </span>
@@ -810,28 +547,16 @@ export default function ConversationLogsPage() {
                             </div>
 
                             {/* Messages */}
-                            <div className="bg-white rounded-lg shadow" data-oid="conv-messages">
-                                <div
-                                    className="px-6 py-4 border-b border-gray-200"
-                                    data-oid="conv-messages-header"
-                                >
-                                    <h3
-                                        className="text-lg font-medium text-gray-900"
-                                        data-oid="conv-messages-title"
-                                    >
-                                        الرسائل
-                                    </h3>
+                            <div className="bg-white rounded-lg shadow">
+                                <div className="px-6 py-4 border-b border-gray-200">
+                                    <h3 className="text-lg font-medium text-gray-900">الرسائل</h3>
                                 </div>
-                                <div
-                                    className="p-6 max-h-96 overflow-y-auto"
-                                    data-oid="conv-messages-container"
-                                >
-                                    <div className="space-y-4" data-oid="conv-messages-list">
+                                <div className="p-6 max-h-96 overflow-y-auto">
+                                    <div className="space-y-4">
                                         {messages.map((message) => (
                                             <div
                                                 key={message.id}
                                                 className={`flex ${message.senderType === 'customer' ? 'justify-start' : 'justify-end'}`}
-                                                data-oid={`message-${message.id}`}
                                             >
                                                 <div
                                                     className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
@@ -839,43 +564,27 @@ export default function ConversationLogsPage() {
                                                             ? 'bg-gray-100 text-gray-800'
                                                             : 'bg-blue-500 text-white'
                                                     }`}
-                                                    data-oid={`message-bubble-${message.id}`}
                                                 >
-                                                    <div
-                                                        className="text-xs font-medium mb-1"
-                                                        data-oid={`message-sender-${message.id}`}
-                                                    >
+                                                    <div className="text-xs font-medium mb-1">
                                                         {message.senderName}
                                                         {message.type === 'offer' && (
-                                                            <span
-                                                                className="mr-2 bg-green-500 text-white px-2 py-0.5 rounded-full text-xs"
-                                                                data-oid={`message-offer-${message.id}`}
-                                                            >
+                                                            <span className="mr-2 bg-green-500 text-white px-2 py-0.5 rounded-full text-xs">
                                                                 عرض سعر
                                                             </span>
                                                         )}
                                                         {message.type === 'complaint' && (
-                                                            <span
-                                                                className="mr-2 bg-red-500 text-white px-2 py-0.5 rounded-full text-xs"
-                                                                data-oid={`message-complaint-${message.id}`}
-                                                            >
+                                                            <span className="mr-2 bg-red-500 text-white px-2 py-0.5 rounded-full text-xs">
                                                                 شكوى
                                                             </span>
                                                         )}
                                                     </div>
-                                                    <p
-                                                        className="text-sm"
-                                                        data-oid={`message-content-${message.id}`}
-                                                    >
-                                                        {message.content}
-                                                    </p>
+                                                    <p className="text-sm">{message.content}</p>
                                                     <div
                                                         className={`text-xs mt-1 ${
                                                             message.senderType === 'customer'
                                                                 ? 'text-gray-500'
                                                                 : 'text-blue-100'
                                                         }`}
-                                                        data-oid={`message-timestamp-${message.id}`}
                                                     >
                                                         {message.timestamp}
                                                     </div>
@@ -887,59 +596,33 @@ export default function ConversationLogsPage() {
                             </div>
 
                             {/* Actions */}
-                            <div className="bg-white rounded-lg shadow p-6" data-oid="conv-actions">
-                                <h3
-                                    className="text-lg font-medium text-gray-900 mb-4"
-                                    data-oid="conv-actions-title"
-                                >
+                            <div className="bg-white rounded-lg shadow p-6">
+                                <h3 className="text-lg font-medium text-gray-900 mb-4">
                                     إجراءات إدارية
                                 </h3>
-                                <div className="space-y-3" data-oid="conv-actions-buttons">
-                                    <button
-                                        className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-                                        data-oid="conv-action-export"
-                                    >
+                                <div className="space-y-3">
+                                    <button className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors">
                                         تصدير المحادثة
                                     </button>
-                                    <button
-                                        className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors"
-                                        data-oid="conv-action-flag"
-                                    >
+                                    <button className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors">
                                         وضع علامة للمراجعة
                                     </button>
-                                    <button
-                                        className="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors"
-                                        data-oid="conv-action-resolve"
-                                    >
+                                    <button className="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors">
                                         حل المشكلة
                                     </button>
-                                    <button
-                                        className="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition-colors"
-                                        data-oid="conv-action-escalate"
-                                    >
+                                    <button className="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition-colors">
                                         تصعيد للإدارة العليا
                                     </button>
                                 </div>
                             </div>
                         </>
                     ) : (
-                        <div
-                            className="bg-white rounded-lg shadow p-6 text-center"
-                            data-oid="conv-no-selection"
-                        >
-                            <div
-                                className="text-gray-400 text-6xl mb-4"
-                                data-oid="conv-no-selection-icon"
-                            >
-                                💬
-                            </div>
-                            <h3
-                                className="text-lg font-medium text-gray-900 mb-2"
-                                data-oid="conv-no-selection-title"
-                            >
+                        <div className="bg-white rounded-lg shadow p-6 text-center">
+                            <div className="text-gray-400 text-6xl mb-4">💬</div>
+                            <h3 className="text-lg font-medium text-gray-900 mb-2">
                                 اختر محادثة لعرض التفاصيل
                             </h3>
-                            <p className="text-gray-600" data-oid="conv-no-selection-desc">
+                            <p className="text-gray-600">
                                 انقر على "عرض المحادثة" لأي محادثة في القائمة لعرض تفاصيلها والرسائل
                             </p>
                         </div>

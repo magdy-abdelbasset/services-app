@@ -47,41 +47,27 @@ export default function Analytics() {
     ];
 
     return (
-        <div className="p-6" data-oid="k83kujq">
-            <div className="mb-6" data-oid="nr:dzbk">
-                <div className="flex justify-between items-center" data-oid="alsk9u7">
-                    <div data-oid="a22lqjl">
-                        <h1 className="text-2xl font-bold text-gray-900 mb-2" data-oid="gsiw7fl">
+        <div className="p-6">
+            <div className="mb-6">
+                <div className="flex justify-between items-center">
+                    <div>
+                        <h1 className="text-2xl font-bold text-gray-900 mb-2">
                             التقارير والإحصائيات
                         </h1>
-                        <p className="text-gray-600" data-oid="g7plim3">
-                            تحليل شامل لأداء التطبيق والخدمات
-                        </p>
+                        <p className="text-gray-600">تحليل شامل لأداء التطبيق والخدمات</p>
                     </div>
-                    <div className="flex items-center space-x-4 space-x-reverse" data-oid="0qdayld">
+                    <div className="flex items-center space-x-4 space-x-reverse">
                         <select
                             className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             value={timeRange}
                             onChange={(e) => setTimeRange(e.target.value)}
-                            data-oid="fmvmnot"
                         >
-                            <option value="7" data-oid="3wfy0m6">
-                                آخر 7 أيام
-                            </option>
-                            <option value="30" data-oid="1:i:if9">
-                                آخر 30 يوم
-                            </option>
-                            <option value="90" data-oid="dvdu1:l">
-                                آخر 3 أشهر
-                            </option>
-                            <option value="365" data-oid="fmcwbcg">
-                                آخر سنة
-                            </option>
+                            <option value="7">آخر 7 أيام</option>
+                            <option value="30">آخر 30 يوم</option>
+                            <option value="90">آخر 3 أشهر</option>
+                            <option value="365">آخر سنة</option>
                         </select>
-                        <button
-                            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                            data-oid="5xuw.pn"
-                        >
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
                             تصدير التقرير
                         </button>
                     </div>
@@ -89,201 +75,128 @@ export default function Analytics() {
             </div>
 
             {/* Key Metrics */}
-            <div
-                className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8"
-                data-oid="lov:qi8"
-            >
-                <div className="bg-white rounded-lg shadow p-4" data-oid="_yu7ram">
-                    <div className="flex items-center justify-between" data-oid="s:en7bm">
-                        <div data-oid=":vdqj41">
-                            <p className="text-sm text-gray-600" data-oid="7gbpdof">
-                                إجمالي الإيرادات
-                            </p>
-                            <p className="text-2xl font-bold text-gray-900" data-oid="s.765q2">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-sm text-gray-600">إجمالي الإيرادات</p>
+                            <p className="text-2xl font-bold text-gray-900">
                                 {stats.totalRevenue.toLocaleString()}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="tv1o2eu">
-                                ريال سعودي
-                            </p>
+                            <p className="text-xs text-gray-500">ريال سعودي</p>
                         </div>
-                        <div
-                            className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center"
-                            data-oid="m65.7cp"
-                        >
-                            <span className="text-white text-sm" data-oid="jy31g9b">
-                                💰
-                            </span>
+                        <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
+                            <span className="text-white text-sm">💰</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow p-4" data-oid="4nu3pho">
-                    <div className="flex items-center justify-between" data-oid="4mhb_m3">
-                        <div data-oid="ap2vs.6">
-                            <p className="text-sm text-gray-600" data-oid="v4i8tiq">
-                                إجمالي الطلبات
-                            </p>
-                            <p className="text-2xl font-bold text-gray-900" data-oid="sao:g2z">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-sm text-gray-600">إجمالي الطلبات</p>
+                            <p className="text-2xl font-bold text-gray-900">
                                 {stats.totalOrders.toLocaleString()}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="5ry:tsq">
-                                طلب
-                            </p>
+                            <p className="text-xs text-gray-500">طلب</p>
                         </div>
-                        <div
-                            className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center"
-                            data-oid="mo2ldk3"
-                        >
-                            <span className="text-white text-sm" data-oid="bi3f5g4">
-                                📋
-                            </span>
+                        <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center">
+                            <span className="text-white text-sm">📋</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow p-4" data-oid="pnm8zm9">
-                    <div className="flex items-center justify-between" data-oid="wvcvtnf">
-                        <div data-oid="crw4mu_">
-                            <p className="text-sm text-gray-600" data-oid="6ytp82i">
-                                متوسط قيمة الطلب
-                            </p>
-                            <p className="text-2xl font-bold text-gray-900" data-oid="3o5qiel">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-sm text-gray-600">متوسط قيمة الطلب</p>
+                            <p className="text-2xl font-bold text-gray-900">
                                 {stats.avgOrderValue}
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="4.sl3pv">
-                                ريال
-                            </p>
+                            <p className="text-xs text-gray-500">ريال</p>
                         </div>
-                        <div
-                            className="w-8 h-8 bg-purple-500 rounded-md flex items-center justify-center"
-                            data-oid="5mqg11l"
-                        >
-                            <span className="text-white text-sm" data-oid="6nr-z86">
-                                📊
-                            </span>
+                        <div className="w-8 h-8 bg-purple-500 rounded-md flex items-center justify-center">
+                            <span className="text-white text-sm">📊</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow p-4" data-oid="q0fq6ay">
-                    <div className="flex items-center justify-between" data-oid="ovh6a2g">
-                        <div data-oid="bcjawmr">
-                            <p className="text-sm text-gray-600" data-oid="m3uqzcd">
-                                نمو العملاء
-                            </p>
-                            <p className="text-2xl font-bold text-green-600" data-oid=".qlc8de">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-sm text-gray-600">نمو العملاء</p>
+                            <p className="text-2xl font-bold text-green-600">
                                 +{stats.customerGrowth}%
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="8gz2.d3">
-                                شهرياً
-                            </p>
+                            <p className="text-xs text-gray-500">شهرياً</p>
                         </div>
-                        <div
-                            className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center"
-                            data-oid="iavnnjb"
-                        >
-                            <span className="text-white text-sm" data-oid="msa9kfx">
-                                📈
-                            </span>
+                        <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
+                            <span className="text-white text-sm">📈</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow p-4" data-oid="ohz7to_">
-                    <div className="flex items-center justify-between" data-oid="6nk9tq0">
-                        <div data-oid="m9xtcx0">
-                            <p className="text-sm text-gray-600" data-oid="9rp_.k.">
-                                نمو مقدمي الخدمة
-                            </p>
-                            <p className="text-2xl font-bold text-blue-600" data-oid="kdjr9_j">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-sm text-gray-600">نمو مقدمي الخدمة</p>
+                            <p className="text-2xl font-bold text-blue-600">
                                 +{stats.providerGrowth}%
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="ic8fazb">
-                                شهرياً
-                            </p>
+                            <p className="text-xs text-gray-500">شهرياً</p>
                         </div>
-                        <div
-                            className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center"
-                            data-oid="dsiarjr"
-                        >
-                            <span className="text-white text-sm" data-oid="k124exz">
-                                🔧
-                            </span>
+                        <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center">
+                            <span className="text-white text-sm">🔧</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow p-4" data-oid="h2-5dve">
-                    <div className="flex items-center justify-between" data-oid=":qf747.">
-                        <div data-oid="17o7:87">
-                            <p className="text-sm text-gray-600" data-oid="pu40:rf">
-                                معدل الإنجاز
-                            </p>
-                            <p className="text-2xl font-bold text-green-600" data-oid="ergii59">
+                <div className="bg-white rounded-lg shadow p-4">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-sm text-gray-600">معدل الإنجاز</p>
+                            <p className="text-2xl font-bold text-green-600">
                                 {stats.completionRate}%
                             </p>
-                            <p className="text-xs text-gray-500" data-oid="zf4jd3d">
-                                من الطلبات
-                            </p>
+                            <p className="text-xs text-gray-500">من الطلبات</p>
                         </div>
-                        <div
-                            className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center"
-                            data-oid="oktdqpf"
-                        >
-                            <span className="text-white text-sm" data-oid="lo_puum">
-                                ✅
-                            </span>
+                        <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
+                            <span className="text-white text-sm">✅</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8" data-oid="e3swx5h">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 {/* Monthly Performance */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="hcgqe.c">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4" data-oid="01cnw1z">
-                        الأداء الشهري
-                    </h3>
-                    <div className="space-y-4" data-oid="-1j8_df">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">الأداء الشهري</h3>
+                    <div className="space-y-4">
                         {monthlyData.map((month, index) => (
                             <div
                                 key={index}
                                 className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
-                                data-oid="sk9rwup"
                             >
-                                <div className="flex-1" data-oid="dq1e_p5">
-                                    <div
-                                        className="flex justify-between items-center mb-1"
-                                        data-oid="dufsgv9"
-                                    >
-                                        <span
-                                            className="font-medium text-gray-900"
-                                            data-oid="o4ewifc"
-                                        >
+                                <div className="flex-1">
+                                    <div className="flex justify-between items-center mb-1">
+                                        <span className="font-medium text-gray-900">
                                             {month.month}
                                         </span>
-                                        <span className="text-sm text-gray-600" data-oid="o34i.hv">
+                                        <span className="text-sm text-gray-600">
                                             {month.orders} طلب
                                         </span>
                                     </div>
-                                    <div
-                                        className="w-full bg-gray-200 rounded-full h-2"
-                                        data-oid="r.79gxc"
-                                    >
+                                    <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div
                                             className="bg-blue-500 h-2 rounded-full"
                                             style={{ width: `${(month.revenue / 65000) * 100}%` }}
-                                            data-oid="4-sokkh"
                                         ></div>
                                     </div>
-                                    <div
-                                        className="flex justify-between items-center mt-1"
-                                        data-oid=".qe7o3l"
-                                    >
-                                        <span className="text-sm text-gray-500" data-oid="7r43gy1">
+                                    <div className="flex justify-between items-center mt-1">
+                                        <span className="text-sm text-gray-500">
                                             {month.revenue.toLocaleString()} ريال
                                         </span>
-                                        <span className="text-sm text-gray-500" data-oid="5u6m9ls">
+                                        <span className="text-sm text-gray-500">
                                             {month.customers} عميل جديد
                                         </span>
                                     </div>
@@ -294,44 +207,29 @@ export default function Analytics() {
                 </div>
 
                 {/* Top Services */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="2rhsxtc">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4" data-oid="_gvk0t1">
-                        أفضل الخدمات
-                    </h3>
-                    <div className="space-y-4" data-oid="5h75hu3">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">أفضل الخدمات</h3>
+                    <div className="space-y-4">
                         {topServices.map((service, index) => (
                             <div
                                 key={index}
                                 className="flex items-center justify-between p-3 border border-gray-200 rounded-lg"
-                                data-oid="_b6m4e1"
                             >
-                                <div className="flex-1" data-oid=".q3xk2a">
-                                    <div
-                                        className="flex justify-between items-center mb-1"
-                                        data-oid="fd9sjt8"
-                                    >
-                                        <span
-                                            className="font-medium text-gray-900"
-                                            data-oid="w8guxxn"
-                                        >
+                                <div className="flex-1">
+                                    <div className="flex justify-between items-center mb-1">
+                                        <span className="font-medium text-gray-900">
                                             {service.name}
                                         </span>
                                         <span
                                             className={`text-sm ${service.growth >= 0 ? 'text-green-600' : 'text-red-600'}`}
-                                            data-oid="3sgr_57"
                                         >
                                             {service.growth >= 0 ? '+' : ''}
                                             {service.growth}%
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex justify-between items-center text-sm text-gray-600"
-                                        data-oid="16ky9c_"
-                                    >
-                                        <span data-oid=":4m7lp3">{service.orders} طلب</span>
-                                        <span data-oid="g119pqr">
-                                            {service.revenue.toLocaleString()} ريال
-                                        </span>
+                                    <div className="flex justify-between items-center text-sm text-gray-600">
+                                        <span>{service.orders} طلب</span>
+                                        <span>{service.revenue.toLocaleString()} ريال</span>
                                     </div>
                                 </div>
                             </div>
@@ -340,55 +238,38 @@ export default function Analytics() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" data-oid="vlxz57p">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Top Providers */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="qts7teq">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4" data-oid="sa212nb">
-                        أفضل مقدمي الخدمات
-                    </h3>
-                    <div className="space-y-4" data-oid="1envtcq">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">أفضل مقدمي الخدمات</h3>
+                    <div className="space-y-4">
                         {topProviders.map((provider, index) => (
                             <div
                                 key={index}
                                 className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
-                                data-oid="o6qy6p5"
                             >
-                                <div className="flex items-center" data-oid="xph9r-j">
-                                    <div
-                                        className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center ml-3"
-                                        data-oid="j0z449k"
-                                    >
-                                        <span
-                                            className="text-white font-semibold"
-                                            data-oid="mqkkn.1"
-                                        >
+                                <div className="flex items-center">
+                                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center ml-3">
+                                        <span className="text-white font-semibold">
                                             {provider.name.charAt(0)}
                                         </span>
                                     </div>
-                                    <div data-oid="xhkmawg">
-                                        <div
-                                            className="font-medium text-gray-900"
-                                            data-oid="p2:nb1y"
-                                        >
+                                    <div>
+                                        <div className="font-medium text-gray-900">
                                             {provider.name}
                                         </div>
-                                        <div className="text-sm text-gray-600" data-oid="mysz4w0">
+                                        <div className="text-sm text-gray-600">
                                             {provider.orders} طلب مكتمل
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-left" data-oid="tfmxbd6">
-                                    <div className="font-medium text-gray-900" data-oid="mw0y:_z">
+                                <div className="text-left">
+                                    <div className="font-medium text-gray-900">
                                         {provider.revenue.toLocaleString()} ريال
                                     </div>
-                                    <div
-                                        className="flex items-center text-sm text-gray-600"
-                                        data-oid="2tskeyz"
-                                    >
-                                        <span className="text-yellow-500 ml-1" data-oid="9:ilm2.">
-                                            ⭐
-                                        </span>
-                                        <span data-oid="1g3ks3b">{provider.rating}</span>
+                                    <div className="flex items-center text-sm text-gray-600">
+                                        <span className="text-yellow-500 ml-1">⭐</span>
+                                        <span>{provider.rating}</span>
                                     </div>
                                 </div>
                             </div>
@@ -397,46 +278,26 @@ export default function Analytics() {
                 </div>
 
                 {/* City Statistics */}
-                <div className="bg-white rounded-lg shadow p-6" data-oid="ukqsmav">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4" data-oid="f3ebn:q">
-                        إحصائيات المدن
-                    </h3>
-                    <div className="space-y-4" data-oid="nbrqwvj">
+                <div className="bg-white rounded-lg shadow p-6">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">إحصائيات المدن</h3>
+                    <div className="space-y-4">
                         {cityStats.map((city, index) => (
-                            <div
-                                key={index}
-                                className="p-3 border border-gray-200 rounded-lg"
-                                data-oid="rs7n-ao"
-                            >
-                                <div
-                                    className="flex justify-between items-center mb-2"
-                                    data-oid="s5y473a"
-                                >
-                                    <span className="font-medium text-gray-900" data-oid="ymk-u94">
-                                        {city.city}
-                                    </span>
-                                    <span className="text-sm text-gray-600" data-oid="je-6:so">
+                            <div key={index} className="p-3 border border-gray-200 rounded-lg">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="font-medium text-gray-900">{city.city}</span>
+                                    <span className="text-sm text-gray-600">
                                         {city.percentage}%
                                     </span>
                                 </div>
-                                <div
-                                    className="w-full bg-gray-200 rounded-full h-2 mb-2"
-                                    data-oid="m2r42wa"
-                                >
+                                <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
                                     <div
                                         className="bg-blue-500 h-2 rounded-full"
                                         style={{ width: `${city.percentage}%` }}
-                                        data-oid="ih045l3"
                                     ></div>
                                 </div>
-                                <div
-                                    className="flex justify-between items-center text-sm text-gray-600"
-                                    data-oid="woba813"
-                                >
-                                    <span data-oid="7lo2zvr">{city.orders} طلب</span>
-                                    <span data-oid="i79a9yl">
-                                        {city.revenue.toLocaleString()} ريال
-                                    </span>
+                                <div className="flex justify-between items-center text-sm text-gray-600">
+                                    <span>{city.orders} طلب</span>
+                                    <span>{city.revenue.toLocaleString()} ريال</span>
                                 </div>
                             </div>
                         ))}

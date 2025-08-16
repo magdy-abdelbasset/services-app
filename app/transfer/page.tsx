@@ -187,53 +187,36 @@ export default function TransferPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="8yeu.:6">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                data-oid="9vq:yfe"
-            >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="fbqc.my">
-                    <div className="flex items-center justify-between mb-6" data-oid="qrsvabu">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <div className="max-w-sm mx-auto px-4 py-6">
+                    <div className="flex items-center justify-between mb-6">
                         <Link
                             href="/wallet"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="bat3aw4"
                         >
-                            <span className="text-lg" data-oid="it_rx0r">
-                                ←
-                            </span>
+                            <span className="text-lg">←</span>
                         </Link>
-                        <div className="text-center" data-oid="p1voci0">
-                            <h1 className="text-lg font-bold" data-oid="nzxxoqn">
-                                تحويل الرصيد
-                            </h1>
-                            <p className="text-sm text-white/90" data-oid="38t9_mi">
-                                حول الأموال بسهولة
-                            </p>
+                        <div className="text-center">
+                            <h1 className="text-lg font-bold">تحويل الرصيد</h1>
+                            <p className="text-sm text-white/90">حول الأموال بسهولة</p>
                         </div>
-                        <div className="w-10 h-10" data-oid="pxpsmiy"></div>
+                        <div className="w-10 h-10"></div>
                     </div>
 
                     {/* Balance Display */}
-                    <div
-                        className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center"
-                        data-oid="dq7af_t"
-                    >
-                        <p className="text-white/80 text-sm mb-1" data-oid=":hb725c">
-                            رصيدك المتاح
-                        </p>
-                        <h2 className="text-2xl font-bold" data-oid="m50h9de">
-                            {currentBalance.toFixed(2)} ريال
-                        </h2>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 text-center">
+                        <p className="text-white/80 text-sm mb-1">رصيدك المتاح</p>
+                        <h2 className="text-2xl font-bold">{currentBalance.toFixed(2)} ريال</h2>
                     </div>
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10" data-oid="n8b3opx">
-                <div className="bg-white rounded-2xl shadow-lg" data-oid="ldwp1dl">
-                    <div className="flex border-b border-gray-100" data-oid="f8a5ow4">
+            <div className="max-w-sm mx-auto px-4 -mt-4 relative z-10">
+                <div className="bg-white rounded-2xl shadow-lg">
+                    <div className="flex border-b border-gray-100">
                         <button
                             onClick={() => setActiveTab('transfer')}
                             className={`flex-1 py-4 text-sm font-semibold ${
@@ -241,7 +224,6 @@ export default function TransferPage() {
                                     ? 'text-blue-600 border-b-2 border-blue-600'
                                     : 'text-gray-500'
                             }`}
-                            data-oid="h7e7ul7"
                         >
                             تحويل جديد
                         </button>
@@ -252,7 +234,6 @@ export default function TransferPage() {
                                     ? 'text-purple-600 border-b-2 border-purple-600'
                                     : 'text-gray-500'
                             }`}
-                            data-oid="3ujx5fs"
                         >
                             سجل التحويلات
                         </button>
@@ -260,87 +241,57 @@ export default function TransferPage() {
 
                     {/* Transfer Tab */}
                     {activeTab === 'transfer' && (
-                        <div className="p-6" data-oid="byv_48e">
+                        <div className="p-6">
                             {/* Recipient Input */}
-                            <div className="mb-6" data-oid="5wbw1o.">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="vjzk:7l"
-                                >
+                            <div className="mb-6">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     رقم الهاتف أو اسم المستلم
                                 </label>
-                                <div className="relative" data-oid="t1vciz1">
+                                <div className="relative">
                                     <input
                                         type="text"
                                         value={recipientPhone}
                                         onChange={(e) => setRecipientPhone(e.target.value)}
                                         placeholder="أدخل رقم الهاتف أو ابحث عن جهة اتصال"
                                         className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                        data-oid="c0xfvog"
                                     />
 
-                                    <div
-                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                                        data-oid="j0es-s:"
-                                    >
+                                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                                         📱
                                     </div>
                                 </div>
                                 {recipientName && (
-                                    <p className="text-sm text-green-600 mt-2" data-oid="il5u:y4">
-                                        ✓ {recipientName}
-                                    </p>
+                                    <p className="text-sm text-green-600 mt-2">✓ {recipientName}</p>
                                 )}
                             </div>
 
                             {/* Recent Contacts */}
                             {recipientPhone === '' && (
-                                <div className="mb-6" data-oid="tg8n3ro">
-                                    <h3
-                                        className="text-sm font-semibold text-gray-700 mb-3"
-                                        data-oid="9pe3i0y"
-                                    >
+                                <div className="mb-6">
+                                    <h3 className="text-sm font-semibold text-gray-700 mb-3">
                                         جهات الاتصال الأخيرة
                                     </h3>
-                                    <div className="space-y-2" data-oid="sgeobbe">
+                                    <div className="space-y-2">
                                         {filteredContacts.slice(0, 3).map((contact) => (
                                             <button
                                                 key={contact.id}
                                                 onClick={() => handleContactSelect(contact)}
                                                 className="w-full p-3 bg-gray-50 rounded-xl flex items-center space-x-3 space-x-reverse hover:bg-gray-100 transition-colors"
-                                                data-oid="gt56b-h"
                                             >
-                                                <div
-                                                    className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center"
-                                                    data-oid="f:dn02u"
-                                                >
-                                                    <span
-                                                        className="text-blue-600 font-semibold"
-                                                        data-oid="a7g727c"
-                                                    >
+                                                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                                    <span className="text-blue-600 font-semibold">
                                                         {contact.name.charAt(0)}
                                                     </span>
                                                 </div>
-                                                <div
-                                                    className="flex-1 text-right"
-                                                    data-oid="je9ube-"
-                                                >
-                                                    <p
-                                                        className="font-semibold text-gray-800 text-sm"
-                                                        data-oid="5bsw4lt"
-                                                    >
+                                                <div className="flex-1 text-right">
+                                                    <p className="font-semibold text-gray-800 text-sm">
                                                         {contact.name}
                                                     </p>
-                                                    <p
-                                                        className="text-xs text-gray-500"
-                                                        data-oid="0xvhjfj"
-                                                    >
+                                                    <p className="text-xs text-gray-500">
                                                         {contact.phone}
                                                     </p>
                                                 </div>
-                                                <div className="text-gray-400" data-oid="d78igf1">
-                                                    ←
-                                                </div>
+                                                <div className="text-gray-400">←</div>
                                             </button>
                                         ))}
                                     </div>
@@ -348,47 +299,36 @@ export default function TransferPage() {
                             )}
 
                             {/* Amount Input */}
-                            <div className="mb-6" data-oid="efyfmtj">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="y.hwjrl"
-                                >
+                            <div className="mb-6">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     المبلغ
                                 </label>
-                                <div className="relative" data-oid="i.y-rrb">
+                                <div className="relative">
                                     <input
                                         type="number"
                                         value={transferAmount}
                                         onChange={(e) => setTransferAmount(e.target.value)}
                                         placeholder="0.00"
                                         className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center text-xl font-bold"
-                                        data-oid="zp2lc9j"
                                     />
 
-                                    <div
-                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                                        data-oid="e4-fybp"
-                                    >
+                                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                                         ريال
                                     </div>
                                 </div>
                             </div>
 
                             {/* Quick Amount Buttons */}
-                            <div className="mb-6" data-oid="1.cvcmj">
-                                <p
-                                    className="text-sm font-semibold text-gray-700 mb-3"
-                                    data-oid="r.2k68_"
-                                >
+                            <div className="mb-6">
+                                <p className="text-sm font-semibold text-gray-700 mb-3">
                                     مبالغ سريعة
                                 </p>
-                                <div className="grid grid-cols-4 gap-2" data-oid="0f7few5">
+                                <div className="grid grid-cols-4 gap-2">
                                     {[25, 50, 100, 200].map((amount) => (
                                         <button
                                             key={amount}
                                             onClick={() => handleQuickAmount(amount)}
                                             className="p-3 bg-gray-100 rounded-xl text-sm font-semibold text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors"
-                                            data-oid="j:b7.c9"
                                         >
                                             {amount}
                                         </button>
@@ -397,11 +337,8 @@ export default function TransferPage() {
                             </div>
 
                             {/* Transfer Note */}
-                            <div className="mb-6" data-oid="7orae6c">
-                                <label
-                                    className="block text-sm font-semibold text-gray-700 mb-2"
-                                    data-oid="pbn-z-m"
-                                >
+                            <div className="mb-6">
+                                <label className="block text-sm font-semibold text-gray-700 mb-2">
                                     ملاحظة (اختيارية)
                                 </label>
                                 <textarea
@@ -410,7 +347,6 @@ export default function TransferPage() {
                                     placeholder="أضف ملاحظة للتحويل..."
                                     rows={3}
                                     className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                                    data-oid="b6aomey"
                                 />
                             </div>
 
@@ -429,7 +365,6 @@ export default function TransferPage() {
                                         ? 'bg-blue-500 text-white hover:bg-blue-600'
                                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                 } transition-colors`}
-                                data-oid="qds2:91"
                             >
                                 تحويل الرصيد
                             </button>
@@ -438,66 +373,38 @@ export default function TransferPage() {
 
                     {/* History Tab */}
                     {activeTab === 'history' && (
-                        <div className="max-h-96 overflow-y-auto" data-oid="tpzlipg">
+                        <div className="max-h-96 overflow-y-auto">
                             {transferHistory.length > 0 ? (
-                                <div className="divide-y divide-gray-100" data-oid="melqrmf">
+                                <div className="divide-y divide-gray-100">
                                     {transferHistory.map((transfer) => (
-                                        <div key={transfer.id} className="p-4" data-oid="kfmygyo">
-                                            <div
-                                                className="flex items-center space-x-3 space-x-reverse"
-                                                data-oid="0xfi4fc"
-                                            >
-                                                <div
-                                                    className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center"
-                                                    data-oid="tre7kap"
-                                                >
-                                                    <span
-                                                        className="text-purple-600"
-                                                        data-oid="g_zj5m2"
-                                                    >
-                                                        💸
-                                                    </span>
+                                        <div key={transfer.id} className="p-4">
+                                            <div className="flex items-center space-x-3 space-x-reverse">
+                                                <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                                    <span className="text-purple-600">💸</span>
                                                 </div>
-                                                <div className="flex-1" data-oid="t_q7fyz">
-                                                    <h4
-                                                        className="font-semibold text-gray-800 text-sm"
-                                                        data-oid="9e9j0w6"
-                                                    >
+                                                <div className="flex-1">
+                                                    <h4 className="font-semibold text-gray-800 text-sm">
                                                         تحويل إلى {transfer.recipientName}
                                                     </h4>
-                                                    <p
-                                                        className="text-xs text-gray-500 mt-1"
-                                                        data-oid="h7b8ws1"
-                                                    >
+                                                    <p className="text-xs text-gray-500 mt-1">
                                                         {transfer.recipientPhone}
                                                     </p>
-                                                    <div
-                                                        className="flex items-center space-x-2 space-x-reverse text-xs text-gray-500 mt-1"
-                                                        data-oid="nnjg66b"
-                                                    >
-                                                        <span data-oid="v0e_e6q">
-                                                            {transfer.date}
-                                                        </span>
-                                                        <span data-oid="95tbc6f">•</span>
+                                                    <div className="flex items-center space-x-2 space-x-reverse text-xs text-gray-500 mt-1">
+                                                        <span>{transfer.date}</span>
+                                                        <span>•</span>
                                                         <span
                                                             className={getStatusColor(
                                                                 transfer.status,
                                                             )}
-                                                            data-oid="ersx0eb"
                                                         >
                                                             {getStatusText(transfer.status)}
                                                         </span>
-                                                        <span data-oid="p96zzbu">•</span>
-                                                        <span data-oid="lln1.3g">
-                                                            {transfer.reference}
-                                                        </span>
+                                                        <span>•</span>
+                                                        <span>{transfer.reference}</span>
                                                     </div>
                                                 </div>
-                                                <div className="text-right" data-oid="k56.1y:">
-                                                    <p
-                                                        className="font-bold text-red-600"
-                                                        data-oid="7o14xuj"
-                                                    >
+                                                <div className="text-right">
+                                                    <p className="font-bold text-red-600">
                                                         -{transfer.amount} ريال
                                                     </p>
                                                 </div>
@@ -506,13 +413,9 @@ export default function TransferPage() {
                                     ))}
                                 </div>
                             ) : (
-                                <div className="p-8 text-center" data-oid="webjnn7">
-                                    <div className="text-4xl mb-4" data-oid="7vwd1dt">
-                                        💸
-                                    </div>
-                                    <p className="text-gray-500" data-oid="w0y4ry0">
-                                        لا توجد تحويلات سابقة
-                                    </p>
+                                <div className="p-8 text-center">
+                                    <div className="text-4xl mb-4">💸</div>
+                                    <p className="text-gray-500">لا توجد تحويلات سابقة</p>
                                 </div>
                             )}
                         </div>
@@ -522,82 +425,55 @@ export default function TransferPage() {
 
             {/* Confirmation Modal */}
             {showConfirmModal && (
-                <div
-                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-                    data-oid="_l5bx1v"
-                >
-                    <div
-                        className="bg-white w-full max-w-sm mx-4 rounded-3xl p-6"
-                        data-oid="_j6:_vq"
-                    >
-                        <div className="text-center mb-6" data-oid="bu-r:h1">
-                            <div
-                                className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                                data-oid="aaxvgkf"
-                            >
-                                <span className="text-2xl" data-oid="ka:_yj9">
-                                    💸
-                                </span>
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                    <div className="bg-white w-full max-w-sm mx-4 rounded-3xl p-6">
+                        <div className="text-center mb-6">
+                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span className="text-2xl">💸</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-800 mb-2" data-oid="bg4h.p4">
-                                تأكيد التحويل
-                            </h3>
-                            <p className="text-gray-600 text-sm" data-oid="l3npcur">
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">تأكيد التحويل</h3>
+                            <p className="text-gray-600 text-sm">
                                 يرجى مراجعة تفاصيل التحويل قبل التأكيد
                             </p>
                         </div>
 
-                        <div className="bg-gray-50 rounded-2xl p-4 mb-6" data-oid="z417s28">
-                            <div className="space-y-3" data-oid="yo8ok1s">
-                                <div className="flex justify-between" data-oid="z:cyvxg">
-                                    <span className="text-gray-600" data-oid="0h27r_3">
-                                        المستلم:
-                                    </span>
-                                    <span className="font-semibold" data-oid="1s59_k-">
+                        <div className="bg-gray-50 rounded-2xl p-4 mb-6">
+                            <div className="space-y-3">
+                                <div className="flex justify-between">
+                                    <span className="text-gray-600">المستلم:</span>
+                                    <span className="font-semibold">
                                         {recipientName || recipientPhone}
                                     </span>
                                 </div>
-                                <div className="flex justify-between" data-oid="szzuusr">
-                                    <span className="text-gray-600" data-oid="mjo3hgy">
-                                        رقم الهاتف:
-                                    </span>
-                                    <span className="font-semibold" data-oid="_-ldqv1">
-                                        {recipientPhone}
-                                    </span>
+                                <div className="flex justify-between">
+                                    <span className="text-gray-600">رقم الهاتف:</span>
+                                    <span className="font-semibold">{recipientPhone}</span>
                                 </div>
-                                <div className="flex justify-between" data-oid=".uuiq46">
-                                    <span className="text-gray-600" data-oid="fj2xxc8">
-                                        المبلغ:
-                                    </span>
-                                    <span className="font-bold text-blue-600" data-oid="5a7gmvi">
+                                <div className="flex justify-between">
+                                    <span className="text-gray-600">المبلغ:</span>
+                                    <span className="font-bold text-blue-600">
                                         {transferAmount} ريال
                                     </span>
                                 </div>
                                 {transferNote && (
-                                    <div className="flex justify-between" data-oid="fjxv2mb">
-                                        <span className="text-gray-600" data-oid=":9ssf4m">
-                                            الملاحظة:
-                                        </span>
-                                        <span className="font-semibold" data-oid="a0qkrq7">
-                                            {transferNote}
-                                        </span>
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-600">الملاحظة:</span>
+                                        <span className="font-semibold">{transferNote}</span>
                                     </div>
                                 )}
                             </div>
                         </div>
 
-                        <div className="flex space-x-3 space-x-reverse" data-oid="7fjmjx0">
+                        <div className="flex space-x-3 space-x-reverse">
                             <button
                                 onClick={() => setShowConfirmModal(false)}
                                 className="flex-1 py-3 bg-gray-200 text-gray-700 rounded-xl font-semibold"
-                                data-oid=":f0ss2f"
                             >
                                 إلغاء
                             </button>
                             <button
                                 onClick={confirmTransfer}
                                 className="flex-1 py-3 bg-blue-500 text-white rounded-xl font-semibold"
-                                data-oid="xicr2et"
                             >
                                 تأكيد التحويل
                             </button>
@@ -608,22 +484,13 @@ export default function TransferPage() {
 
             {/* Processing Modal */}
             {isProcessingTransfer && (
-                <div
-                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-                    data-oid="cw-k0xu"
-                >
-                    <div
-                        className="bg-white w-full max-w-sm mx-4 rounded-3xl p-8 text-center"
-                        data-oid="uh8cnqw"
-                    >
-                        <div
-                            className="animate-spin w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"
-                            data-oid="e0hcews"
-                        ></div>
-                        <h3 className="text-xl font-bold text-gray-800 mb-2" data-oid="c42-n8c">
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                    <div className="bg-white w-full max-w-sm mx-4 rounded-3xl p-8 text-center">
+                        <div className="animate-spin w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-6"></div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">
                             جاري معالجة التحويل
                         </h3>
-                        <p className="text-gray-600 text-sm" data-oid="z4.j_nl">
+                        <p className="text-gray-600 text-sm">
                             يرجى الانتظار بينما نعالج عملية التحويل...
                         </p>
                     </div>
@@ -631,7 +498,7 @@ export default function TransferPage() {
             )}
 
             {/* Bottom Navigation Space */}
-            <div className="h-20" data-oid="51a:_wn"></div>
+            <div className="h-20"></div>
         </div>
     );
 }

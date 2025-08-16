@@ -296,27 +296,18 @@ export default function AdminWalletTransactionsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="7hum9kb">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div className="bg-white shadow-sm border-b" data-oid="j8f-exz">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="m6p9l5m">
-                    <div className="flex justify-between items-center py-4" data-oid="qp4kkg6">
-                        <div
-                            className="flex items-center space-x-4 space-x-reverse"
-                            data-oid="gs:iwy8"
-                        >
-                            <h1 className="text-2xl font-bold text-gray-900" data-oid="ca6intb">
+            <div className="bg-white shadow-sm border-b">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center py-4">
+                        <div className="flex items-center space-x-4 space-x-reverse">
+                            <h1 className="text-2xl font-bold text-gray-900">
                                 سجل معاملات المحفظة
                             </h1>
                         </div>
-                        <div
-                            className="flex items-center space-x-4 space-x-reverse"
-                            data-oid="skp5_c5"
-                        >
-                            <button
-                                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-                                data-oid="3659bjs"
-                            >
+                        <div className="flex items-center space-x-4 space-x-reverse">
+                            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
                                 تصدير التقرير
                             </button>
                         </div>
@@ -324,107 +315,73 @@ export default function AdminWalletTransactionsPage() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" data-oid="4.9jbh6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 {/* Statistics Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8" data-oid="boj5j.0">
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="re3i_f5">
-                        <div className="flex items-center" data-oid="5cyerzr">
-                            <div className="flex-shrink-0" data-oid="odys6bu">
-                                <div
-                                    className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center"
-                                    data-oid="ni06iwh"
-                                >
-                                    <span className="text-white text-lg" data-oid="6ewjs9y">
-                                        📊
-                                    </span>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <div className="flex items-center">
+                            <div className="flex-shrink-0">
+                                <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center">
+                                    <span className="text-white text-lg">📊</span>
                                 </div>
                             </div>
-                            <div className="mr-4 flex-1" data-oid="h70.lk-">
-                                <p className="text-sm font-medium text-gray-600" data-oid="p.2bo_m">
+                            <div className="mr-4 flex-1">
+                                <p className="text-sm font-medium text-gray-600">
                                     إجمالي المعاملات
                                 </p>
-                                <p
-                                    className="text-2xl font-semibold text-gray-900"
-                                    data-oid="gvcob:2"
-                                >
+                                <p className="text-2xl font-semibold text-gray-900">
                                     {totalTransactions.toLocaleString()}
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="whw-6wz">
-                        <div className="flex items-center" data-oid="t44mw22">
-                            <div className="flex-shrink-0" data-oid="e831geo">
-                                <div
-                                    className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center"
-                                    data-oid="6tgui_j"
-                                >
-                                    <span className="text-white text-lg" data-oid="y_7__ns">
-                                        💰
-                                    </span>
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <div className="flex items-center">
+                            <div className="flex-shrink-0">
+                                <div className="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
+                                    <span className="text-white text-lg">💰</span>
                                 </div>
                             </div>
-                            <div className="mr-4 flex-1" data-oid="rh7e5xc">
-                                <p className="text-sm font-medium text-gray-600" data-oid="4-:9.4:">
+                            <div className="mr-4 flex-1">
+                                <p className="text-sm font-medium text-gray-600">
                                     إجمالي الإيداعات
                                 </p>
-                                <p
-                                    className="text-2xl font-semibold text-gray-900"
-                                    data-oid="sb3bji3"
-                                >
+                                <p className="text-2xl font-semibold text-gray-900">
                                     {totalCredits.toLocaleString()} ريال
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="q9iw_au">
-                        <div className="flex items-center" data-oid="3jd1.ga">
-                            <div className="flex-shrink-0" data-oid="lr0w:ot">
-                                <div
-                                    className="w-8 h-8 bg-red-500 rounded-md flex items-center justify-center"
-                                    data-oid="hz14e4h"
-                                >
-                                    <span className="text-white text-lg" data-oid="0i07wyz">
-                                        💸
-                                    </span>
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <div className="flex items-center">
+                            <div className="flex-shrink-0">
+                                <div className="w-8 h-8 bg-red-500 rounded-md flex items-center justify-center">
+                                    <span className="text-white text-lg">💸</span>
                                 </div>
                             </div>
-                            <div className="mr-4 flex-1" data-oid="h84ruts">
-                                <p className="text-sm font-medium text-gray-600" data-oid="6g._npr">
+                            <div className="mr-4 flex-1">
+                                <p className="text-sm font-medium text-gray-600">
                                     إجمالي المدفوعات
                                 </p>
-                                <p
-                                    className="text-2xl font-semibold text-gray-900"
-                                    data-oid="gbpapt8"
-                                >
+                                <p className="text-2xl font-semibold text-gray-900">
                                     {totalDebits.toLocaleString()} ريال
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="w35byii">
-                        <div className="flex items-center" data-oid="003w2cc">
-                            <div className="flex-shrink-0" data-oid="uhfzp27">
-                                <div
-                                    className="w-8 h-8 bg-yellow-500 rounded-md flex items-center justify-center"
-                                    data-oid="uhka.fc"
-                                >
-                                    <span className="text-white text-lg" data-oid="j5t3:xr">
-                                        ⏳
-                                    </span>
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <div className="flex items-center">
+                            <div className="flex-shrink-0">
+                                <div className="w-8 h-8 bg-yellow-500 rounded-md flex items-center justify-center">
+                                    <span className="text-white text-lg">⏳</span>
                                 </div>
                             </div>
-                            <div className="mr-4 flex-1" data-oid="9j7u10p">
-                                <p className="text-sm font-medium text-gray-600" data-oid="ay8vaot">
-                                    معاملات معلقة
-                                </p>
-                                <p
-                                    className="text-2xl font-semibold text-gray-900"
-                                    data-oid="13tvufx"
-                                >
+                            <div className="mr-4 flex-1">
+                                <p className="text-sm font-medium text-gray-600">معاملات معلقة</p>
+                                <p className="text-2xl font-semibold text-gray-900">
                                     {pendingTransactions}
                                 </p>
                             </div>
@@ -433,17 +390,11 @@ export default function AdminWalletTransactionsPage() {
                 </div>
 
                 {/* Filters and Search */}
-                <div className="bg-white rounded-lg shadow mb-6" data-oid="ivtb36w">
-                    <div className="p-6" data-oid="cxoe7wx">
-                        <div
-                            className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4"
-                            data-oid="k.:jczb"
-                        >
-                            <div data-oid="i0_:8en">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="y_9:upr"
-                                >
+                <div className="bg-white rounded-lg shadow mb-6">
+                    <div className="p-6">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     البحث
                                 </label>
                                 <input
@@ -452,67 +403,42 @@ export default function AdminWalletTransactionsPage() {
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    data-oid="-sd.wcg"
                                 />
                             </div>
-                            <div data-oid="8fe0rg_">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="ls-sbzl"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     الفترة الزمنية
                                 </label>
                                 <select
                                     value={dateFilter}
                                     onChange={(e) => setDateFilter(e.target.value)}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    data-oid="vxg8uz6"
                                 >
-                                    <option value="all" data-oid="pk6hgn7">
-                                        جميع الفترات
-                                    </option>
-                                    <option value="today" data-oid="bwk94r0">
-                                        اليوم
-                                    </option>
-                                    <option value="week" data-oid="z4i7:gj">
-                                        آخر أسبوع
-                                    </option>
-                                    <option value="month" data-oid="hq1_6ty">
-                                        آخر شهر
-                                    </option>
+                                    <option value="all">جميع الفترات</option>
+                                    <option value="today">اليوم</option>
+                                    <option value="week">آخر أسبوع</option>
+                                    <option value="month">آخر شهر</option>
                                 </select>
                             </div>
-                            <div data-oid="um6_kyo">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-2"
-                                    data-oid="e935gj_"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">
                                     الحالة
                                 </label>
                                 <select
                                     value={statusFilter}
                                     onChange={(e) => setStatusFilter(e.target.value)}
                                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    data-oid="16z7jtm"
                                 >
-                                    <option value="all" data-oid="134tuix">
-                                        جميع الحالات
-                                    </option>
-                                    <option value="completed" data-oid="mqjdo6c">
-                                        مكتملة
-                                    </option>
-                                    <option value="pending" data-oid="3l40o-d">
-                                        قيد المعالجة
-                                    </option>
-                                    <option value="failed" data-oid="t1tt.ob">
-                                        فاشلة
-                                    </option>
+                                    <option value="all">جميع الحالات</option>
+                                    <option value="completed">مكتملة</option>
+                                    <option value="pending">قيد المعالجة</option>
+                                    <option value="failed">فاشلة</option>
                                 </select>
                             </div>
                         </div>
 
                         {/* Tabs */}
-                        <div className="flex border-b border-gray-200" data-oid="492ek63">
+                        <div className="flex border-b border-gray-200">
                             <button
                                 onClick={() => setActiveTab('all')}
                                 className={`px-4 py-2 text-sm font-medium ${
@@ -520,7 +446,6 @@ export default function AdminWalletTransactionsPage() {
                                         ? 'text-blue-600 border-b-2 border-blue-600'
                                         : 'text-gray-500 hover:text-gray-700'
                                 }`}
-                                data-oid="ss30iod"
                             >
                                 جميع المعاملات ({walletTransactions.length})
                             </button>
@@ -531,7 +456,6 @@ export default function AdminWalletTransactionsPage() {
                                         ? 'text-green-600 border-b-2 border-green-600'
                                         : 'text-gray-500 hover:text-gray-700'
                                 }`}
-                                data-oid="d8faqyi"
                             >
                                 الإيداعات (
                                 {walletTransactions.filter((t) => t.type === 'credit').length})
@@ -543,7 +467,6 @@ export default function AdminWalletTransactionsPage() {
                                         ? 'text-red-600 border-b-2 border-red-600'
                                         : 'text-gray-500 hover:text-gray-700'
                                 }`}
-                                data-oid="6txful:"
                             >
                                 المدفوعات (
                                 {walletTransactions.filter((t) => t.type === 'debit').length})
@@ -555,7 +478,6 @@ export default function AdminWalletTransactionsPage() {
                                         ? 'text-yellow-600 border-b-2 border-yellow-600'
                                         : 'text-gray-500 hover:text-gray-700'
                                 }`}
-                                data-oid="02gh:kb"
                             >
                                 معلقة (
                                 {walletTransactions.filter((t) => t.status === 'pending').length})
@@ -565,183 +487,105 @@ export default function AdminWalletTransactionsPage() {
                 </div>
 
                 {/* Transactions Table */}
-                <div className="bg-white rounded-lg shadow overflow-hidden" data-oid="ojvauis">
-                    <div className="overflow-x-auto" data-oid="xytiyy6">
-                        <table className="min-w-full divide-y divide-gray-200" data-oid="7.1.49_">
-                            <thead className="bg-gray-50" data-oid="p6yq.e4">
-                                <tr data-oid="34f7wug">
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="vv5u8uf"
-                                    >
+                <div className="bg-white rounded-lg shadow overflow-hidden">
+                    <div className="overflow-x-auto">
+                        <table className="min-w-full divide-y divide-gray-200">
+                            <thead className="bg-gray-50">
+                                <tr>
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         رقم المعاملة
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="uy9110x"
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         المستخدم
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="edogicg"
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         النوع
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="-ploy25"
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         المبلغ
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="wde8-:i"
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         الوصف
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="7_7.t.."
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         التاريخ
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="h3l:t8."
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         الحالة
                                     </th>
-                                    <th
-                                        className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="0cc5c6x"
-                                    >
+                                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         إجراءات
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody className="bg-white divide-y divide-gray-200" data-oid="y-5_z.i">
+                            <tbody className="bg-white divide-y divide-gray-200">
                                 {paginatedTransactions.map((transaction) => (
-                                    <tr
-                                        key={transaction.id}
-                                        className="hover:bg-gray-50"
-                                        data-oid="zq5jejl"
-                                    >
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                                            data-oid="o.8f4.6"
-                                        >
-                                            <div
-                                                className="flex items-center space-x-2 space-x-reverse"
-                                                data-oid="e3d_amc"
-                                            >
-                                                <span className="text-lg" data-oid="jj7fysk">
+                                    <tr key={transaction.id} className="hover:bg-gray-50">
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                            <div className="flex items-center space-x-2 space-x-reverse">
+                                                <span className="text-lg">
                                                     {getTransactionIcon(transaction)}
                                                 </span>
-                                                <span data-oid="2j5ani:">
-                                                    {transaction.transactionId}
-                                                </span>
+                                                <span>{transaction.transactionId}</span>
                                             </div>
                                         </td>
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap"
-                                            data-oid="9627v83"
-                                        >
-                                            <div data-oid="8af7s3.">
-                                                <div
-                                                    className="text-sm font-medium text-gray-900"
-                                                    data-oid="106qm_t"
-                                                >
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <div>
+                                                <div className="text-sm font-medium text-gray-900">
                                                     {transaction.userName}
                                                 </div>
-                                                <div
-                                                    className="text-sm text-gray-500"
-                                                    data-oid="_lo3ji8"
-                                                >
+                                                <div className="text-sm text-gray-500">
                                                     {transaction.userEmail}
                                                 </div>
                                             </div>
                                         </td>
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap"
-                                            data-oid="kadt7cu"
-                                        >
+                                        <td className="px-6 py-4 whitespace-nowrap">
                                             <span
                                                 className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                                                     transaction.type === 'credit'
                                                         ? 'bg-green-100 text-green-800'
                                                         : 'bg-red-100 text-red-800'
                                                 }`}
-                                                data-oid="vai5mp4"
                                             >
                                                 {getCategoryText(transaction.category)}
                                             </span>
                                         </td>
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap text-sm"
-                                            data-oid="21bvbgi"
-                                        >
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm">
                                             <span
                                                 className={`font-bold ${
                                                     transaction.type === 'credit'
                                                         ? 'text-green-600'
                                                         : 'text-red-600'
                                                 }`}
-                                                data-oid="hyzx0ep"
                                             >
                                                 {transaction.type === 'credit' ? '+' : '-'}
                                                 {transaction.amount} ريال
                                             </span>
                                         </td>
-                                        <td
-                                            className="px-6 py-4 text-sm text-gray-900 max-w-xs truncate"
-                                            data-oid="5u7i:r_"
-                                        >
+                                        <td className="px-6 py-4 text-sm text-gray-900 max-w-xs truncate">
                                             {transaction.description}
                                         </td>
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                                            data-oid="p.wj42m"
-                                        >
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {formatDate(transaction.date)}
                                         </td>
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap"
-                                            data-oid="jmo.0a9"
-                                        >
+                                        <td className="px-6 py-4 whitespace-nowrap">
                                             <span
                                                 className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(transaction.status)}`}
-                                                data-oid="gjbtkwt"
                                             >
                                                 {getStatusText(transaction.status)}
                                             </span>
                                         </td>
-                                        <td
-                                            className="px-6 py-4 whitespace-nowrap text-sm font-medium"
-                                            data-oid="k7sblnk"
-                                        >
-                                            <div
-                                                className="flex space-x-2 space-x-reverse"
-                                                data-oid="utvu.7g"
-                                            >
-                                                <button
-                                                    className="text-blue-600 hover:text-blue-900"
-                                                    data-oid="i0icdlf"
-                                                >
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            <div className="flex space-x-2 space-x-reverse">
+                                                <button className="text-blue-600 hover:text-blue-900">
                                                     عرض
                                                 </button>
                                                 {transaction.status === 'pending' && (
                                                     <>
-                                                        <button
-                                                            className="text-green-600 hover:text-green-900"
-                                                            data-oid="x_27rs7"
-                                                        >
+                                                        <button className="text-green-600 hover:text-green-900">
                                                             موافقة
                                                         </button>
-                                                        <button
-                                                            className="text-red-600 hover:text-red-900"
-                                                            data-oid="od.2o1:"
-                                                        >
+                                                        <button className="text-red-600 hover:text-red-900">
                                                             رفض
                                                         </button>
                                                     </>
@@ -756,19 +600,12 @@ export default function AdminWalletTransactionsPage() {
 
                     {/* Pagination */}
                     {totalPages > 1 && (
-                        <div
-                            className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
-                            data-oid="wga.h8i"
-                        >
-                            <div
-                                className="flex-1 flex justify-between sm:hidden"
-                                data-oid="a2lk:us"
-                            >
+                        <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                            <div className="flex-1 flex justify-between sm:hidden">
                                 <button
                                     onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                                     disabled={currentPage === 1}
                                     className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
-                                    data-oid="syp4tqx"
                                 >
                                     السابق
                                 </button>
@@ -778,40 +615,32 @@ export default function AdminWalletTransactionsPage() {
                                     }
                                     disabled={currentPage === totalPages}
                                     className="mr-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
-                                    data-oid="330hjcr"
                                 >
                                     التالي
                                 </button>
                             </div>
-                            <div
-                                className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
-                                data-oid="jddfh_l"
-                            >
-                                <div data-oid="j9rsj3n">
-                                    <p className="text-sm text-gray-700" data-oid="1z6vbj1">
-                                        عرض{' '}
-                                        <span className="font-medium" data-oid="x4450c7">
-                                            {startIndex + 1}
-                                        </span>{' '}
+                            <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                                <div>
+                                    <p className="text-sm text-gray-700">
+                                        عرض <span className="font-medium">{startIndex + 1}</span>{' '}
                                         إلى{' '}
-                                        <span className="font-medium" data-oid="ez.iikj">
+                                        <span className="font-medium">
                                             {Math.min(
                                                 startIndex + itemsPerPage,
                                                 filteredTransactions.length,
                                             )}
                                         </span>{' '}
                                         من{' '}
-                                        <span className="font-medium" data-oid="x27lcsu">
+                                        <span className="font-medium">
                                             {filteredTransactions.length}
                                         </span>{' '}
                                         نتيجة
                                     </p>
                                 </div>
-                                <div data-oid="2wrk0fc">
+                                <div>
                                     <nav
                                         className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
                                         aria-label="Pagination"
-                                        data-oid="co_dolx"
                                     >
                                         <button
                                             onClick={() =>
@@ -819,7 +648,6 @@ export default function AdminWalletTransactionsPage() {
                                             }
                                             disabled={currentPage === 1}
                                             className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
-                                            data-oid="uyyw05z"
                                         >
                                             السابق
                                         </button>
@@ -833,7 +661,6 @@ export default function AdminWalletTransactionsPage() {
                                                             ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
                                                             : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
                                                     }`}
-                                                    data-oid="3lk55uq"
                                                 >
                                                     {page}
                                                 </button>
@@ -847,7 +674,6 @@ export default function AdminWalletTransactionsPage() {
                                             }
                                             disabled={currentPage === totalPages}
                                             className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
-                                            data-oid="s-75ffh"
                                         >
                                             التالي
                                         </button>
@@ -860,16 +686,10 @@ export default function AdminWalletTransactionsPage() {
 
                 {/* Empty State */}
                 {filteredTransactions.length === 0 && (
-                    <div className="bg-white rounded-lg shadow p-8 text-center" data-oid="c:n6han">
-                        <div className="text-4xl mb-4" data-oid="ulbetzs">
-                            📊
-                        </div>
-                        <h3 className="text-lg font-medium text-gray-900 mb-2" data-oid="w4mywne">
-                            لا توجد معاملات
-                        </h3>
-                        <p className="text-gray-500" data-oid="9p1l:zs">
-                            لا توجد معاملات تطابق المعايير المحددة
-                        </p>
+                    <div className="bg-white rounded-lg shadow p-8 text-center">
+                        <div className="text-4xl mb-4">📊</div>
+                        <h3 className="text-lg font-medium text-gray-900 mb-2">لا توجد معاملات</h3>
+                        <p className="text-gray-500">لا توجد معاملات تطابق المعايير المحددة</p>
                     </div>
                 )}
             </div>

@@ -180,48 +180,27 @@ export default function OrderDetailPage() {
 
     if (loading) {
         return (
-            <div className="p-6" data-oid="7v7q6s8">
-                <div className="animate-pulse" data-oid="vh68pvs">
-                    <div className="h-8 bg-gray-200 rounded w-1/4 mb-4" data-oid=":30ryqe"></div>
-                    <div className="h-4 bg-gray-200 rounded w-1/2 mb-8" data-oid="hceh:xg"></div>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid="6rtnh5y">
-                        <div className="lg:col-span-2 space-y-6" data-oid="0oyzta8">
-                            <div className="bg-white rounded-lg shadow p-6" data-oid="ykru.hc">
-                                <div
-                                    className="h-6 bg-gray-200 rounded w-1/3 mb-4"
-                                    data-oid="77.2l6e"
-                                ></div>
-                                <div className="space-y-3" data-oid="3.:i1em">
-                                    <div
-                                        className="h-4 bg-gray-200 rounded"
-                                        data-oid="57a7_to"
-                                    ></div>
-                                    <div
-                                        className="h-4 bg-gray-200 rounded w-3/4"
-                                        data-oid="_y.i8on"
-                                    ></div>
-                                    <div
-                                        className="h-4 bg-gray-200 rounded w-1/2"
-                                        data-oid="vl-y1ez"
-                                    ></div>
+            <div className="p-6">
+                <div className="animate-pulse">
+                    <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+                    <div className="h-4 bg-gray-200 rounded w-1/2 mb-8"></div>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div className="lg:col-span-2 space-y-6">
+                            <div className="bg-white rounded-lg shadow p-6">
+                                <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
+                                <div className="space-y-3">
+                                    <div className="h-4 bg-gray-200 rounded"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-1/2"></div>
                                 </div>
                             </div>
                         </div>
-                        <div className="space-y-6" data-oid="io7pz9s">
-                            <div className="bg-white rounded-lg shadow p-6" data-oid="22vbbar">
-                                <div
-                                    className="h-6 bg-gray-200 rounded w-1/2 mb-4"
-                                    data-oid="_8cpgx8"
-                                ></div>
-                                <div className="space-y-3" data-oid="e39p_9f">
-                                    <div
-                                        className="h-4 bg-gray-200 rounded"
-                                        data-oid="t9diaef"
-                                    ></div>
-                                    <div
-                                        className="h-4 bg-gray-200 rounded w-2/3"
-                                        data-oid="noun3_e"
-                                    ></div>
+                        <div className="space-y-6">
+                            <div className="bg-white rounded-lg shadow p-6">
+                                <div className="h-6 bg-gray-200 rounded w-1/2 mb-4"></div>
+                                <div className="space-y-3">
+                                    <div className="h-4 bg-gray-200 rounded"></div>
+                                    <div className="h-4 bg-gray-200 rounded w-2/3"></div>
                                 </div>
                             </div>
                         </div>
@@ -233,21 +212,14 @@ export default function OrderDetailPage() {
 
     if (!order) {
         return (
-            <div className="p-6" data-oid="zptzq28">
-                <div className="text-center py-12" data-oid="6l8kf54">
-                    <div className="text-6xl mb-4" data-oid="2obmbsi">
-                        ❌
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2" data-oid="-nutfpy">
-                        الطلب غير موجود
-                    </h2>
-                    <p className="text-gray-600 mb-6" data-oid="ypeesu0">
-                        لم يتم العثور على الطلب المطلوب
-                    </p>
+            <div className="p-6">
+                <div className="text-center py-12">
+                    <div className="text-6xl mb-4">❌</div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">الطلب غير موجود</h2>
+                    <p className="text-gray-600 mb-6">لم يتم العثور على الطلب المطلوب</p>
                     <Link
                         href="/admin/orders"
                         className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors"
-                        data-oid="x9gx4de"
                     >
                         العودة إلى قائمة الطلبات
                     </Link>
@@ -257,32 +229,28 @@ export default function OrderDetailPage() {
     }
 
     return (
-        <div className="p-6" data-oid="0zlajvf">
+        <div className="p-6">
             {/* Header */}
-            <div className="mb-6" data-oid="r__ktw:">
-                <div className="flex items-center justify-between mb-4" data-oid="0vm1ff6">
-                    <div data-oid="o6xqe60">
-                        <h1 className="text-2xl font-bold text-gray-900" data-oid="qxqyqx8">
+            <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                    <div>
+                        <h1 className="text-2xl font-bold text-gray-900">
                             تفاصيل الطلب #{order.id}
                         </h1>
-                        <p className="text-gray-600" data-oid="t_typ8_">
+                        <p className="text-gray-600">
                             تم الإنشاء في {formatDateTime(order.createdAt)}
                         </p>
                     </div>
-                    <div className="flex items-center space-x-3 space-x-reverse" data-oid="zzaprj2">
+                    <div className="flex items-center space-x-3 space-x-reverse">
                         <div
                             className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(order.status)}`}
-                            data-oid="yhhb974"
                         >
-                            <span className="ml-2" data-oid="uojhnm0">
-                                {getStatusIcon(order.status)}
-                            </span>
+                            <span className="ml-2">{getStatusIcon(order.status)}</span>
                             {order.status}
                         </div>
                         <Link
                             href="/admin/orders"
                             className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-colors"
-                            data-oid="5gs8:yg"
                         >
                             العودة
                         </Link>
@@ -290,276 +258,173 @@ export default function OrderDetailPage() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" data-oid="s.b6zwf">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Main Content */}
-                <div className="lg:col-span-2 space-y-6" data-oid="wg:z_g4">
+                <div className="lg:col-span-2 space-y-6">
                     {/* Service Details */}
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="zheejru">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="ucqeqp8">
-                            تفاصيل الخدمة
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="kwn121p">
-                            <div data-oid="y4e1b7a">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="izgqzha"
-                                >
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">تفاصيل الخدمة</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     اسم الخدمة
                                 </label>
-                                <p className="text-gray-900" data-oid="i0h-mlg">
-                                    {order.service.name}
-                                </p>
+                                <p className="text-gray-900">{order.service.name}</p>
                             </div>
-                            <div data-oid="u-zknwu">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="e-viad6"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     الفئة
                                 </label>
-                                <p className="text-gray-900" data-oid="-:5e0f3">
-                                    {order.service.category}
-                                </p>
+                                <p className="text-gray-900">{order.service.category}</p>
                             </div>
-                            <div className="md:col-span-2" data-oid="f_ugzfi">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="c46i86t"
-                                >
+                            <div className="md:col-span-2">
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     الوصف
                                 </label>
-                                <p className="text-gray-900" data-oid="9j0q3xt">
-                                    {order.service.description}
-                                </p>
+                                <p className="text-gray-900">{order.service.description}</p>
                             </div>
-                            <div data-oid=".db68sr">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="mdznw.r"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     السعر
                                 </label>
-                                <p className="text-gray-900 font-semibold" data-oid="r14xx3f">
+                                <p className="text-gray-900 font-semibold">
                                     {order.service.price} ريال
                                 </p>
                             </div>
-                            <div data-oid="38y00dn">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="9eeqy7x"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     المبلغ الإجمالي
                                 </label>
-                                <p className="text-gray-900 font-semibold" data-oid=".uwp41i">
-                                    {order.amount} ريال
-                                </p>
+                                <p className="text-gray-900 font-semibold">{order.amount} ريال</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Customer & Provider Info */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-oid="h_78jvj">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Customer */}
-                        <div className="bg-white rounded-lg shadow p-6" data-oid="flbkpe.">
-                            <h3
-                                className="text-lg font-semibold text-gray-900 mb-4"
-                                data-oid="-1a9oly"
-                            >
+                        <div className="bg-white rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4">
                                 معلومات العميل
                             </h3>
-                            <div className="space-y-3" data-oid="oo4syrd">
-                                <div className="flex items-center" data-oid="ecye2v4">
-                                    <div
-                                        className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center ml-3"
-                                        data-oid="uwi-0nu"
-                                    >
-                                        <span
-                                            className="text-white font-semibold"
-                                            data-oid="bvaxgte"
-                                        >
+                            <div className="space-y-3">
+                                <div className="flex items-center">
+                                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center ml-3">
+                                        <span className="text-white font-semibold">
                                             {order.customer.name.charAt(0)}
                                         </span>
                                     </div>
-                                    <div data-oid="m6i_1-x">
-                                        <p className="font-medium text-gray-900" data-oid="rfza04f">
+                                    <div>
+                                        <p className="font-medium text-gray-900">
                                             {order.customer.name}
                                         </p>
-                                        <p className="text-sm text-gray-600" data-oid="ra0c842">
-                                            عميل
-                                        </p>
+                                        <p className="text-sm text-gray-600">عميل</p>
                                     </div>
                                 </div>
-                                <div data-oid="mp7rvjb">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-1"
-                                        data-oid="o9ho3a4"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">
                                         رقم الهاتف
                                     </label>
-                                    <p className="text-gray-900" data-oid="4en:gex">
-                                        {order.customer.phone}
-                                    </p>
+                                    <p className="text-gray-900">{order.customer.phone}</p>
                                 </div>
-                                <div data-oid="kw:cp7l">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-1"
-                                        data-oid=".y-unm8"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">
                                         البريد الإلكتروني
                                     </label>
-                                    <p className="text-gray-900" data-oid="k2yangk">
-                                        {order.customer.email}
-                                    </p>
+                                    <p className="text-gray-900">{order.customer.email}</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Provider */}
-                        <div className="bg-white rounded-lg shadow p-6" data-oid="p0.oaiy">
-                            <h3
-                                className="text-lg font-semibold text-gray-900 mb-4"
-                                data-oid="hl9qjac"
-                            >
+                        <div className="bg-white rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4">
                                 معلومات مقدم الخدمة
                             </h3>
-                            <div className="space-y-3" data-oid="tlp60f1">
-                                <div className="flex items-center" data-oid="0b.0d-y">
-                                    <div
-                                        className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center ml-3"
-                                        data-oid="6:bn6cp"
-                                    >
-                                        <span
-                                            className="text-white font-semibold"
-                                            data-oid="0jugnvf"
-                                        >
+                            <div className="space-y-3">
+                                <div className="flex items-center">
+                                    <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center ml-3">
+                                        <span className="text-white font-semibold">
                                             {order.provider.name.charAt(0)}
                                         </span>
                                     </div>
-                                    <div data-oid="p3w4.j1">
-                                        <p className="font-medium text-gray-900" data-oid="nqmfz:e">
+                                    <div>
+                                        <p className="font-medium text-gray-900">
                                             {order.provider.name}
                                         </p>
-                                        <div className="flex items-center" data-oid=":mjevuj">
-                                            <span
-                                                className="text-yellow-500 ml-1"
-                                                data-oid="8p43x1l"
-                                            >
-                                                ⭐
-                                            </span>
-                                            <span
-                                                className="text-sm text-gray-600"
-                                                data-oid="w0luw7."
-                                            >
+                                        <div className="flex items-center">
+                                            <span className="text-yellow-500 ml-1">⭐</span>
+                                            <span className="text-sm text-gray-600">
                                                 {order.provider.rating}
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div data-oid="to41iwi">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-1"
-                                        data-oid="jhy4rpz"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">
                                         رقم الهاتف
                                     </label>
-                                    <p className="text-gray-900" data-oid="zltrslk">
-                                        {order.provider.phone}
-                                    </p>
+                                    <p className="text-gray-900">{order.provider.phone}</p>
                                 </div>
-                                <div data-oid="mufgczb">
-                                    <label
-                                        className="block text-sm font-medium text-gray-700 mb-1"
-                                        data-oid="xg3.sgz"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">
                                         البريد الإلكتروني
                                     </label>
-                                    <p className="text-gray-900" data-oid="rmpl4jw">
-                                        {order.provider.email}
-                                    </p>
+                                    <p className="text-gray-900">{order.provider.email}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Location & Schedule */}
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="cvsia9g">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid=":i2g__2">
-                            الموقع والموعد
-                        </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-oid="d_fuh-g">
-                            <div data-oid="_xgj-.a">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid=":r2tqup"
-                                >
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">الموقع والموعد</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     العنوان
                                 </label>
-                                <p className="text-gray-900" data-oid="k829all">
-                                    {order.location.address}
-                                </p>
+                                <p className="text-gray-900">{order.location.address}</p>
                             </div>
-                            <div data-oid="4xz50xf">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="ejw63r0"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     المدينة
                                 </label>
-                                <p className="text-gray-900" data-oid="-:0t5b4">
-                                    {order.location.city}
-                                </p>
+                                <p className="text-gray-900">{order.location.city}</p>
                             </div>
-                            <div data-oid="vew6z5k">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="mav6y9g"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     التاريخ
                                 </label>
-                                <p className="text-gray-900" data-oid="bnt_kva">
-                                    {order.date}
-                                </p>
+                                <p className="text-gray-900">{order.date}</p>
                             </div>
-                            <div data-oid="jti9z0y">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="l-u:lkm"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     الوقت
                                 </label>
-                                <p className="text-gray-900" data-oid="uk3._y_">
-                                    {order.time}
-                                </p>
+                                <p className="text-gray-900">{order.time}</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Notes */}
                     {order.notes && (
-                        <div className="bg-white rounded-lg shadow p-6" data-oid="5znqfxp">
-                            <h3
-                                className="text-lg font-semibold text-gray-900 mb-4"
-                                data-oid="a7876j7"
-                            >
+                        <div className="bg-white rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4">
                                 ملاحظات إضافية
                             </h3>
-                            <p className="text-gray-900" data-oid="1filgi1">
-                                {order.notes}
-                            </p>
+                            <p className="text-gray-900">{order.notes}</p>
                         </div>
                     )}
 
                     {/* Review & Rating */}
                     {order.rating && (
-                        <div className="bg-white rounded-lg shadow p-6" data-oid="i5zjzua">
-                            <h3
-                                className="text-lg font-semibold text-gray-900 mb-4"
-                                data-oid="roxwg--"
-                            >
+                        <div className="bg-white rounded-lg shadow p-6">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-4">
                                 التقييم والمراجعة
                             </h3>
-                            <div className="flex items-center mb-3" data-oid="6rcu3g.">
-                                <div className="flex items-center ml-3" data-oid="cq2.6tw">
+                            <div className="flex items-center mb-3">
+                                <div className="flex items-center ml-3">
                                     {[...Array(5)].map((_, i) => (
                                         <span
                                             key={i}
@@ -568,21 +433,15 @@ export default function OrderDetailPage() {
                                                     ? 'text-yellow-500'
                                                     : 'text-gray-300'
                                             }`}
-                                            data-oid="ggkgc0z"
                                         >
                                             ⭐
                                         </span>
                                     ))}
                                 </div>
-                                <span className="text-sm text-gray-600" data-oid=".7kuhtk">
-                                    ({order.rating} من 5)
-                                </span>
+                                <span className="text-sm text-gray-600">({order.rating} من 5)</span>
                             </div>
                             {order.review && (
-                                <p
-                                    className="text-gray-900 bg-gray-50 p-3 rounded-md"
-                                    data-oid="-8bj0ui"
-                                >
+                                <p className="text-gray-900 bg-gray-50 p-3 rounded-md">
                                     {order.review}
                                 </p>
                             )}
@@ -591,29 +450,19 @@ export default function OrderDetailPage() {
                 </div>
 
                 {/* Sidebar */}
-                <div className="space-y-6" data-oid="i2tvnw2">
+                <div className="space-y-6">
                     {/* Payment Info */}
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="1smho_7">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="xjq:g-i">
-                            معلومات الدفع
-                        </h3>
-                        <div className="space-y-3" data-oid="0bi4moj">
-                            <div data-oid="muph46.">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="mqx.n3t"
-                                >
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">معلومات الدفع</h3>
+                        <div className="space-y-3">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     طريقة الدفع
                                 </label>
-                                <p className="text-gray-900" data-oid="kes37u4">
-                                    {order.paymentMethod}
-                                </p>
+                                <p className="text-gray-900">{order.paymentMethod}</p>
                             </div>
-                            <div data-oid="0qs1nx7">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="47bwt.n"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     حالة الدفع
                                 </label>
                                 <span
@@ -622,19 +471,15 @@ export default function OrderDetailPage() {
                                             ? 'bg-green-100 text-green-800'
                                             : 'bg-red-100 text-red-800'
                                     }`}
-                                    data-oid="w5hz4uf"
                                 >
                                     {order.paymentStatus}
                                 </span>
                             </div>
-                            <div data-oid="q_qtu8.">
-                                <label
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                    data-oid="7qf.o2-"
-                                >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
                                     المبلغ الإجمالي
                                 </label>
-                                <p className="text-xl font-bold text-gray-900" data-oid="bt9.urg">
+                                <p className="text-xl font-bold text-gray-900">
                                     {order.amount} ريال
                                 </p>
                             </div>
@@ -642,35 +487,20 @@ export default function OrderDetailPage() {
                     </div>
 
                     {/* Timeline */}
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="8on8gv.">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="j3rzpu8">
-                            تتبع الطلب
-                        </h3>
-                        <div className="space-y-4" data-oid="4kto0t5">
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">تتبع الطلب</h3>
+                        <div className="space-y-4">
                             {order.timeline.map((event, index) => (
-                                <div key={index} className="flex items-start" data-oid="8tji0sa">
-                                    <div
-                                        className="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center ml-3"
-                                        data-oid="0.1wz:."
-                                    >
-                                        <span
-                                            className="text-white text-xs font-semibold"
-                                            data-oid="vi3rj0q"
-                                        >
+                                <div key={index} className="flex items-start">
+                                    <div className="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center ml-3">
+                                        <span className="text-white text-xs font-semibold">
                                             {index + 1}
                                         </span>
                                     </div>
-                                    <div className="flex-1" data-oid="sqv27q.">
-                                        <p className="font-medium text-gray-900" data-oid="rr19xzt">
-                                            {event.status}
-                                        </p>
-                                        <p className="text-sm text-gray-600" data-oid="mms7jc7">
-                                            {event.description}
-                                        </p>
-                                        <p
-                                            className="text-xs text-gray-500 mt-1"
-                                            data-oid="njoot6w"
-                                        >
+                                    <div className="flex-1">
+                                        <p className="font-medium text-gray-900">{event.status}</p>
+                                        <p className="text-sm text-gray-600">{event.description}</p>
+                                        <p className="text-xs text-gray-500 mt-1">
                                             {formatDateTime(event.timestamp)}
                                         </p>
                                     </div>
@@ -680,36 +510,24 @@ export default function OrderDetailPage() {
                     </div>
 
                     {/* Actions */}
-                    <div className="bg-white rounded-lg shadow p-6" data-oid="si9qehc">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4" data-oid="4e4514x">
-                            الإجراءات
-                        </h3>
-                        <div className="space-y-3" data-oid="f8jmnz1">
+                    <div className="bg-white rounded-lg shadow p-6">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">الإجراءات</h3>
+                        <div className="space-y-3">
                             <Link
                                 href={`/admin/orders/${order.id}/edit`}
                                 className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors text-center block"
-                                data-oid="98tp4vf"
                             >
                                 تعديل الطلب
                             </Link>
-                            <button
-                                className="w-full bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
-                                data-oid="uwy:hye"
-                            >
+                            <button className="w-full bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors">
                                 إرسال رسالة
                             </button>
                             {order.status !== 'ملغي' && order.status !== 'مكتمل' && (
-                                <button
-                                    className="w-full bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition-colors"
-                                    data-oid="0wv7tos"
-                                >
+                                <button className="w-full bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition-colors">
                                     إلغاء الطلب
                                 </button>
                             )}
-                            <button
-                                className="w-full bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-colors"
-                                data-oid="hl5fmx-"
-                            >
+                            <button className="w-full bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition-colors">
                                 طباعة التفاصيل
                             </button>
                         </div>

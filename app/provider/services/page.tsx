@@ -320,96 +320,67 @@ export default function ProviderServicesPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50" dir="rtl" data-oid="q:8d8na">
+        <div className="min-h-screen bg-gray-50" dir="rtl">
             {/* Header */}
-            <div
-                className="bg-gradient-to-r from-green-600 to-blue-600 text-white"
-                data-oid="el-zc82"
-            >
-                <div className="max-w-sm mx-auto px-4 py-6" data-oid="2otrk6w">
-                    <div className="flex items-center justify-between mb-4" data-oid="t1ekoa3">
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white">
+                <div className="max-w-sm mx-auto px-4 py-6">
+                    <div className="flex items-center justify-between mb-4">
                         <Link
                             href="/provider"
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="il3pypi"
                         >
-                            <span className="text-lg" data-oid="zmpsyme">
-                                ←
-                            </span>
+                            <span className="text-lg">←</span>
                         </Link>
-                        <div className="text-center" data-oid="6_h:q35">
-                            <h1 className="text-lg font-bold" data-oid="r4djhv.">
-                                إدارة خدماتي
-                            </h1>
-                            <p className="text-sm text-white/90" data-oid="r4jjvyq">
+                        <div className="text-center">
+                            <h1 className="text-lg font-bold">إدارة خدماتي</h1>
+                            <p className="text-sm text-white/90">
                                 {services.length} خدمة • {activeServices.length} نشطة
                             </p>
                         </div>
                         <button
                             onClick={() => setShowAddModal(true)}
                             className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                            data-oid="e0uwgt."
                         >
-                            <span className="text-lg" data-oid="_602qm0">
-                                +
-                            </span>
+                            <span className="text-lg">+</span>
                         </button>
                     </div>
                 </div>
             </div>
 
             {/* Stats Cards */}
-            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10" data-oid="babk1j:">
-                <div className="grid grid-cols-3 gap-3 mb-6" data-oid="4kmi.-.">
-                    <div
-                        className="bg-white rounded-2xl p-3 shadow-lg text-center"
-                        data-oid="k-ybb36"
-                    >
-                        <p className="text-xl font-bold text-green-600" data-oid="bo4749p">
-                            {activeServices.length}
-                        </p>
-                        <p className="text-xs text-gray-600" data-oid="zgapo6b">
-                            خدمة نشطة
-                        </p>
+            <div className="max-w-sm mx-auto px-4 -mt-6 relative z-10">
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                    <div className="bg-white rounded-2xl p-3 shadow-lg text-center">
+                        <p className="text-xl font-bold text-green-600">{activeServices.length}</p>
+                        <p className="text-xs text-gray-600">خدمة نشطة</p>
                     </div>
-                    <div
-                        className="bg-white rounded-2xl p-3 shadow-lg text-center"
-                        data-oid="i599_9o"
-                    >
-                        <p className="text-xl font-bold text-blue-600" data-oid="maiuq0y">
+                    <div className="bg-white rounded-2xl p-3 shadow-lg text-center">
+                        <p className="text-xl font-bold text-blue-600">
                             {services.reduce((sum, service) => sum + service.completedJobs, 0)}
                         </p>
-                        <p className="text-xs text-gray-600" data-oid="4ez-w_-">
-                            إجمالي الطلبات
-                        </p>
+                        <p className="text-xs text-gray-600">إجمالي الطلبات</p>
                     </div>
-                    <div
-                        className="bg-white rounded-2xl p-3 shadow-lg text-center"
-                        data-oid="o2oayu_"
-                    >
-                        <p className="text-xl font-bold text-orange-600" data-oid="3bsyxlc">
+                    <div className="bg-white rounded-2xl p-3 shadow-lg text-center">
+                        <p className="text-xl font-bold text-orange-600">
                             {(
                                 services.reduce((sum, service) => sum + service.rating, 0) /
                                 services.length
                             ).toFixed(1)}
                         </p>
-                        <p className="text-xs text-gray-600" data-oid="bk7i1wm">
-                            متوسط التقييم
-                        </p>
+                        <p className="text-xs text-gray-600">متوسط التقييم</p>
                     </div>
                 </div>
             </div>
 
             {/* Tabs */}
-            <div className="max-w-sm mx-auto px-4 mb-4" data-oid="9p_0bet">
-                <div className="bg-white rounded-2xl p-1 shadow-sm" data-oid="mwot7-p">
-                    <div className="flex" data-oid="imob2j1">
+            <div className="max-w-sm mx-auto px-4 mb-4">
+                <div className="bg-white rounded-2xl p-1 shadow-sm">
+                    <div className="flex">
                         <button
                             onClick={() => setActiveTab('active')}
                             className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-colors ${
                                 activeTab === 'active' ? 'bg-green-500 text-white' : 'text-gray-600'
                             }`}
-                            data-oid="3n_m:1g"
                         >
                             نشطة ({activeServices.length})
                         </button>
@@ -420,7 +391,6 @@ export default function ProviderServicesPage() {
                                     ? 'bg-gray-500 text-white'
                                     : 'text-gray-600'
                             }`}
-                            data-oid="zcd82mn"
                         >
                             غير نشطة ({inactiveServices.length})
                         </button>
@@ -429,28 +399,18 @@ export default function ProviderServicesPage() {
             </div>
 
             {/* Services List */}
-            <div className="max-w-sm mx-auto px-4 pb-24" data-oid="yds4:xf">
-                <div className="space-y-4" data-oid="wl8ldua">
+            <div className="max-w-sm mx-auto px-4 pb-24">
+                <div className="space-y-4">
                     {(activeTab === 'active' ? activeServices : inactiveServices).map((service) => (
                         <div
                             key={service.id}
                             className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                            data-oid="2n61ucm"
                         >
                             {/* Service Header */}
-                            <div
-                                className="flex items-start justify-between mb-3"
-                                data-oid="j55x:8-"
-                            >
-                                <div className="flex-1" data-oid="lz-k7al">
-                                    <div
-                                        className="flex items-center space-x-2 space-x-reverse mb-1"
-                                        data-oid="hgl5a.5"
-                                    >
-                                        <h3
-                                            className="font-semibold text-gray-800"
-                                            data-oid="11u0d9j"
-                                        >
+                            <div className="flex items-start justify-between mb-3">
+                                <div className="flex-1">
+                                    <div className="flex items-center space-x-2 space-x-reverse mb-1">
+                                        <h3 className="font-semibold text-gray-800">
                                             {service.name}
                                         </h3>
                                         <span
@@ -459,119 +419,75 @@ export default function ProviderServicesPage() {
                                                     ? 'bg-green-100 text-green-600'
                                                     : 'bg-gray-100 text-gray-600'
                                             }`}
-                                            data-oid="g-y8j_x"
                                         >
                                             {service.isActive ? 'نشطة' : 'غير نشطة'}
                                         </span>
                                     </div>
-                                    <div
-                                        className="flex items-center space-x-2 space-x-reverse mb-1"
-                                        data-oid="2fqcr47"
-                                    >
-                                        <p className="text-sm text-gray-600" data-oid="0i1dbhk">
-                                            {service.category}
-                                        </p>
-                                        <span className="text-gray-400" data-oid="th1_17u">
-                                            •
-                                        </span>
-                                        <p
-                                            className="text-sm text-blue-600 font-medium"
-                                            data-oid="zqh26y_"
-                                        >
+                                    <div className="flex items-center space-x-2 space-x-reverse mb-1">
+                                        <p className="text-sm text-gray-600">{service.category}</p>
+                                        <span className="text-gray-400">•</span>
+                                        <p className="text-sm text-blue-600 font-medium">
                                             {service.subCategory}
                                         </p>
                                     </div>
-                                    <p className="text-sm text-gray-500" data-oid=":zrefmz">
-                                        {service.description}
-                                    </p>
+                                    <p className="text-sm text-gray-500">{service.description}</p>
                                 </div>
-                                <div className="text-left" data-oid="th0kd35">
-                                    <p
-                                        className="text-lg font-bold text-green-600"
-                                        data-oid="jzjiqj7"
-                                    >
+                                <div className="text-left">
+                                    <p className="text-lg font-bold text-green-600">
                                         {service.price} ريال
                                     </p>
-                                    <p className="text-xs text-gray-500" data-oid=".8qhk.p">
-                                        {service.duration}
-                                    </p>
+                                    <p className="text-xs text-gray-500">{service.duration}</p>
                                 </div>
                             </div>
 
                             {/* Service Stats */}
-                            <div className="bg-gray-50 rounded-xl p-3 mb-3" data-oid="cr-6m3w">
-                                <div
-                                    className="grid grid-cols-3 gap-4 text-center"
-                                    data-oid=":nh1na8"
-                                >
-                                    <div data-oid="wdhb-0s">
-                                        <div
-                                            className="flex items-center justify-center space-x-1 space-x-reverse"
-                                            data-oid="c5cqgrh"
-                                        >
-                                            <span className="text-yellow-500" data-oid="9aawe3y">
-                                                ⭐
-                                            </span>
-                                            <p
-                                                className="text-sm font-bold text-orange-600"
-                                                data-oid=":9zuvgg"
-                                            >
+                            <div className="bg-gray-50 rounded-xl p-3 mb-3">
+                                <div className="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <div className="flex items-center justify-center space-x-1 space-x-reverse">
+                                            <span className="text-yellow-500">⭐</span>
+                                            <p className="text-sm font-bold text-orange-600">
                                                 {service.rating}
                                             </p>
                                         </div>
-                                        <p className="text-xs text-gray-500" data-oid="qvb5dy4">
-                                            التقييم
-                                        </p>
+                                        <p className="text-xs text-gray-500">التقييم</p>
                                     </div>
-                                    <div data-oid="gwix.v_">
-                                        <p
-                                            className="text-sm font-bold text-blue-600"
-                                            data-oid="q1384j:"
-                                        >
+                                    <div>
+                                        <p className="text-sm font-bold text-blue-600">
                                             {service.completedJobs}
                                         </p>
-                                        <p className="text-xs text-gray-500" data-oid="dptsjik">
-                                            طلب مكتمل
-                                        </p>
+                                        <p className="text-xs text-gray-500">طلب مكتمل</p>
                                     </div>
-                                    <div data-oid="v1y1e7g">
-                                        <p
-                                            className="text-sm font-bold text-purple-600"
-                                            data-oid="ojr__9m"
-                                        >
+                                    <div>
+                                        <p className="text-sm font-bold text-purple-600">
                                             {service.availability.days.length} أيام
                                         </p>
-                                        <p className="text-xs text-gray-500" data-oid="5.uxm51">
-                                            متاح
-                                        </p>
+                                        <p className="text-xs text-gray-500">متاح</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Availability */}
-                            <div className="mb-3" data-oid="s4ic0tp">
-                                <p className="text-sm text-gray-600 mb-2" data-oid="x.2b:sf">
-                                    أوقات العمل:
-                                </p>
-                                <div className="flex flex-wrap gap-1 mb-2" data-oid="kubff--">
+                            <div className="mb-3">
+                                <p className="text-sm text-gray-600 mb-2">أوقات العمل:</p>
+                                <div className="flex flex-wrap gap-1 mb-2">
                                     {service.availability.days.map((day) => (
                                         <span
                                             key={day}
                                             className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
-                                            data-oid="i8-lbzb"
                                         >
                                             {day}
                                         </span>
                                     ))}
                                 </div>
-                                <p className="text-xs text-gray-500" data-oid="h7:9ctq">
+                                <p className="text-xs text-gray-500">
                                     من {service.availability.startTime} إلى{' '}
                                     {service.availability.endTime}
                                 </p>
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="flex space-x-2 space-x-reverse" data-oid=":g_7zrp">
+                            <div className="flex space-x-2 space-x-reverse">
                                 <button
                                     onClick={() => toggleServiceStatus(service.id)}
                                     className={`flex-1 py-2 rounded-xl font-semibold text-sm ${
@@ -579,21 +495,18 @@ export default function ProviderServicesPage() {
                                             ? 'bg-gray-200 text-gray-700'
                                             : 'bg-green-500 text-white'
                                     }`}
-                                    data-oid="a0oyd2s"
                                 >
                                     {service.isActive ? 'إيقاف' : 'تفعيل'}
                                 </button>
                                 <button
                                     onClick={() => handleEditService(service)}
                                     className="flex-1 bg-blue-500 text-white py-2 rounded-xl font-semibold text-sm"
-                                    data-oid="v3japoy"
                                 >
                                     تعديل
                                 </button>
                                 <button
                                     onClick={() => deleteService(service.id)}
                                     className="px-4 py-2 bg-red-100 text-red-600 rounded-xl"
-                                    data-oid="he7x29c"
                                 >
                                     🗑️
                                 </button>
@@ -602,19 +515,16 @@ export default function ProviderServicesPage() {
                     ))}
 
                     {(activeTab === 'active' ? activeServices : inactiveServices).length === 0 && (
-                        <div className="text-center py-12" data-oid="f3qllso">
-                            <div className="text-6xl mb-4" data-oid="igrif_a">
+                        <div className="text-center py-12">
+                            <div className="text-6xl mb-4">
                                 {activeTab === 'active' ? '📋' : '😴'}
                             </div>
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                data-oid="rwwt:6h"
-                            >
+                            <h3 className="text-lg font-semibold text-gray-800 mb-2">
                                 {activeTab === 'active'
                                     ? 'لا توجد خدمات نشطة'
                                     : 'لا توجد خدمات غير نشطة'}
                             </h3>
-                            <p className="text-gray-600 text-sm mb-6" data-oid="2u77yj5">
+                            <p className="text-gray-600 text-sm mb-6">
                                 {activeTab === 'active'
                                     ? 'قم بإضافة خدمة جديدة أو تفعيل خدمة موجودة'
                                     : 'جميع خدماتك نشطة حالياً'}
@@ -623,7 +533,6 @@ export default function ProviderServicesPage() {
                                 <button
                                     onClick={() => setShowAddModal(true)}
                                     className="bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold"
-                                    data-oid="7i5h-:g"
                                 >
                                     إضافة خدمة جديدة
                                 </button>
@@ -635,31 +544,19 @@ export default function ProviderServicesPage() {
 
             {/* Add/Edit Service Modal */}
             {showAddModal && (
-                <div className="fixed inset-0 bg-black/50 flex items-end z-50" data-oid="---k.6x">
-                    <div
-                        className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-y-auto"
-                        data-oid="al2ruc2"
-                    >
-                        <div className="p-6" data-oid="pp5b-1y">
-                            <div
-                                className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-6"
-                                data-oid="4cm3anq"
-                            ></div>
+                <div className="fixed inset-0 bg-black/50 flex items-end z-50">
+                    <div className="bg-white w-full max-w-sm mx-auto rounded-t-3xl max-h-[90vh] overflow-y-auto">
+                        <div className="p-6">
+                            <div className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-6"></div>
 
-                            <h2
-                                className="text-xl font-bold text-gray-800 mb-6 text-center"
-                                data-oid="w8s.ude"
-                            >
+                            <h2 className="text-xl font-bold text-gray-800 mb-6 text-center">
                                 {editingService ? 'تعديل الخدمة' : 'إضافة خدمة جديدة'}
                             </h2>
 
-                            <div className="space-y-4" data-oid="mj72mit">
+                            <div className="space-y-4">
                                 {/* Service Name */}
-                                <div data-oid="q:la2fv">
-                                    <label
-                                        className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="k0_10ej"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         اسم الخدمة *
                                     </label>
                                     <input
@@ -670,16 +567,12 @@ export default function ProviderServicesPage() {
                                         }
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                         placeholder="مثال: تنظيف المنزل العام"
-                                        data-oid="_3nxh-t"
                                     />
                                 </div>
 
                                 {/* Category */}
-                                <div data-oid="gcbhtmq">
-                                    <label
-                                        className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="a216ecl"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         التصنيف الرئيسي *
                                     </label>
                                     <select
@@ -697,17 +590,10 @@ export default function ProviderServicesPage() {
                                             });
                                         }}
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                        data-oid="086_:4s"
                                     >
-                                        <option value="" data-oid="vav_.bo">
-                                            اختر التصنيف الرئيسي
-                                        </option>
+                                        <option value="">اختر التصنيف الرئيسي</option>
                                         {serviceCategories.map((category) => (
-                                            <option
-                                                key={category.id}
-                                                value={category.name}
-                                                data-oid="id3f47x"
-                                            >
+                                            <option key={category.id} value={category.name}>
                                                 {category.icon} {category.name}
                                             </option>
                                         ))}
@@ -716,11 +602,8 @@ export default function ProviderServicesPage() {
 
                                 {/* Sub Category */}
                                 {selectedCategory && (
-                                    <div data-oid="rfsmzjp">
-                                        <label
-                                            className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="71zs7_m"
-                                        >
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
                                             التصنيف الفرعي *
                                         </label>
                                         <select
@@ -732,18 +615,11 @@ export default function ProviderServicesPage() {
                                                 })
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                            data-oid=":ry5ryf"
                                         >
-                                            <option value="" data-oid="o-w:fx1">
-                                                اختر التصنيف الفرعي
-                                            </option>
+                                            <option value="">اختر التصنيف الفرعي</option>
                                             {selectedCategory.subCategories.map(
                                                 (subCategory, index) => (
-                                                    <option
-                                                        key={index}
-                                                        value={subCategory}
-                                                        data-oid="t7t-x19"
-                                                    >
+                                                    <option key={index} value={subCategory}>
                                                         {subCategory}
                                                     </option>
                                                 ),
@@ -753,11 +629,8 @@ export default function ProviderServicesPage() {
                                 )}
 
                                 {/* Description */}
-                                <div data-oid="1tb.oqq">
-                                    <label
-                                        className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid=".:q8m3m"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         وصف الخدمة
                                     </label>
                                     <textarea
@@ -770,17 +643,13 @@ export default function ProviderServicesPage() {
                                         }
                                         className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500 h-20 resize-none"
                                         placeholder="وصف مختصر للخدمة..."
-                                        data-oid="z.vsji3"
                                     />
                                 </div>
 
                                 {/* Price and Duration */}
-                                <div className="grid grid-cols-2 gap-4" data-oid="nlgoluj">
-                                    <div data-oid="hlshn8e">
-                                        <label
-                                            className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="1-3js8-"
-                                        >
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
                                             السعر (ريال) *
                                         </label>
                                         <input
@@ -794,14 +663,10 @@ export default function ProviderServicesPage() {
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                             placeholder="45"
-                                            data-oid="zuaa65z"
                                         />
                                     </div>
-                                    <div data-oid="6uq4s5-">
-                                        <label
-                                            className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="mn6hw6m"
-                                        >
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
                                             المدة المتوقعة
                                         </label>
                                         <input
@@ -815,20 +680,16 @@ export default function ProviderServicesPage() {
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
                                             placeholder="2-3 ساعات"
-                                            data-oid=":h34icb"
                                         />
                                     </div>
                                 </div>
 
                                 {/* Working Days */}
-                                <div data-oid="a8s_lgi">
-                                    <label
-                                        className="block text-sm font-semibold text-gray-700 mb-2"
-                                        data-oid="1gers8b"
-                                    >
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
                                         أيام العمل
                                     </label>
-                                    <div className="grid grid-cols-4 gap-2" data-oid="9saegzo">
+                                    <div className="grid grid-cols-4 gap-2">
                                         {weekDays.map((day) => (
                                             <button
                                                 key={day}
@@ -839,7 +700,6 @@ export default function ProviderServicesPage() {
                                                         ? 'bg-blue-500 text-white'
                                                         : 'bg-gray-100 text-gray-700'
                                                 }`}
-                                                data-oid="m:3ewv1"
                                             >
                                                 {day}
                                             </button>
@@ -848,12 +708,9 @@ export default function ProviderServicesPage() {
                                 </div>
 
                                 {/* Working Hours */}
-                                <div className="grid grid-cols-2 gap-4" data-oid="ux-d5m2">
-                                    <div data-oid="cs4dfbe">
-                                        <label
-                                            className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="aj772u0"
-                                        >
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
                                             من الساعة
                                         </label>
                                         <input
@@ -869,14 +726,10 @@ export default function ProviderServicesPage() {
                                                 })
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                            data-oid="d7j0xsk"
                                         />
                                     </div>
-                                    <div data-oid="wvs15m3">
-                                        <label
-                                            className="block text-sm font-semibold text-gray-700 mb-2"
-                                            data-oid="nrqv9dr"
-                                        >
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
                                             إلى الساعة
                                         </label>
                                         <input
@@ -892,24 +745,17 @@ export default function ProviderServicesPage() {
                                                 })
                                             }
                                             className="w-full p-3 border border-gray-300 rounded-xl outline-none focus:border-blue-500"
-                                            data-oid="tg94imo"
                                         />
                                     </div>
                                 </div>
 
                                 {/* Active Status */}
-                                <div
-                                    className="flex items-center justify-between p-3 bg-gray-50 rounded-xl"
-                                    data-oid="14qmqye"
-                                >
-                                    <div data-oid="8pgoh:a">
-                                        <h4
-                                            className="font-semibold text-gray-800"
-                                            data-oid="bhirydy"
-                                        >
+                                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+                                    <div>
+                                        <h4 className="font-semibold text-gray-800">
                                             تفعيل الخدمة
                                         </h4>
-                                        <p className="text-sm text-gray-600" data-oid="ejjxc22">
+                                        <p className="text-sm text-gray-600">
                                             {newService.isActive
                                                 ? 'الخدمة متاحة للعملاء'
                                                 : 'الخدمة غير متاحة'}
@@ -926,7 +772,6 @@ export default function ProviderServicesPage() {
                                         className={`w-14 h-8 rounded-full transition-colors ${
                                             newService.isActive ? 'bg-green-500' : 'bg-gray-400'
                                         } relative`}
-                                        data-oid="j.6ks-v"
                                     >
                                         <div
                                             className={`w-6 h-6 bg-white rounded-full absolute top-1 transition-transform ${
@@ -934,14 +779,13 @@ export default function ProviderServicesPage() {
                                                     ? 'translate-x-6'
                                                     : 'translate-x-1'
                                             }`}
-                                            data-oid="6kbfu_b"
                                         ></div>
                                     </button>
                                 </div>
                             </div>
 
                             {/* Modal Actions */}
-                            <div className="flex space-x-3 space-x-reverse mt-6" data-oid="584oj8-">
+                            <div className="flex space-x-3 space-x-reverse mt-6">
                                 <button
                                     onClick={() => {
                                         setShowAddModal(false);
@@ -963,7 +807,6 @@ export default function ProviderServicesPage() {
                                         setSelectedCategory(null);
                                     }}
                                     className="flex-1 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold"
-                                    data-oid="fyvj8-4"
                                 >
                                     إلغاء
                                 </button>
@@ -972,7 +815,6 @@ export default function ProviderServicesPage() {
                                         editingService ? handleUpdateService : handleAddService
                                     }
                                     className="flex-1 bg-blue-500 text-white py-3 rounded-xl font-semibold"
-                                    data-oid="e:m4d5p"
                                 >
                                     {editingService ? 'حفظ التعديلات' : 'إضافة الخدمة'}
                                 </button>
@@ -983,71 +825,43 @@ export default function ProviderServicesPage() {
             )}
 
             {/* Bottom Navigation */}
-            <div
-                className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200"
-                data-oid="87-kgj0"
-            >
-                <div className="max-w-sm mx-auto px-4 py-3" data-oid="-yq9bgu">
-                    <div className="flex justify-around" data-oid="3e.fd3e">
+            <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+                <div className="max-w-sm mx-auto px-4 py-3">
+                    <div className="flex justify-around">
                         <Link
                             href="/provider"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="szcdq_3"
                         >
-                            <span className="text-xl" data-oid="3gq-_.a">
-                                🏠
-                            </span>
-                            <span className="text-xs" data-oid="xj8p1wx">
-                                الرئيسية
-                            </span>
+                            <span className="text-xl">🏠</span>
+                            <span className="text-xs">الرئيسية</span>
                         </Link>
                         <Link
                             href="/provider/requests"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="k:2z987"
                         >
-                            <span className="text-xl" data-oid="66f8:hg">
-                                📋
-                            </span>
-                            <span className="text-xs" data-oid="50:e2lc">
-                                الطلبات
-                            </span>
+                            <span className="text-xl">📋</span>
+                            <span className="text-xs">الطلبات</span>
                         </Link>
                         <Link
                             href="/provider/services"
                             className="flex flex-col items-center space-y-1 text-blue-600"
-                            data-oid="9f4mgqw"
                         >
-                            <span className="text-xl" data-oid="07e1gqc">
-                                🛠️
-                            </span>
-                            <span className="text-xs font-semibold" data-oid="4k9.m8w">
-                                خدماتي
-                            </span>
+                            <span className="text-xl">🛠️</span>
+                            <span className="text-xs font-semibold">خدماتي</span>
                         </Link>
                         <Link
                             href="/provider/earnings"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="0icm1d1"
                         >
-                            <span className="text-xl" data-oid="-6t3kt0">
-                                💰
-                            </span>
-                            <span className="text-xs" data-oid=".j4cf0d">
-                                الأرباح
-                            </span>
+                            <span className="text-xl">💰</span>
+                            <span className="text-xs">الأرباح</span>
                         </Link>
                         <Link
                             href="/provider/profile"
                             className="flex flex-col items-center space-y-1 text-gray-400"
-                            data-oid="ihuo.5m"
                         >
-                            <span className="text-xl" data-oid=".11sjsx">
-                                👤
-                            </span>
-                            <span className="text-xs" data-oid="_cgspj7">
-                                الملف الشخصي
-                            </span>
+                            <span className="text-xl">👤</span>
+                            <span className="text-xs">الملف الشخصي</span>
                         </Link>
                     </div>
                 </div>
